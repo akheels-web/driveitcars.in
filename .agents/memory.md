@@ -96,3 +96,8 @@
   - **Mobile Header Action Buttons (Minimalist Design)**:
   - User requested removing the mobile Call button completely from the header bar to keep the design clean and uncluttered.
   - Mobile header now displays exclusively the prominent DRIVEIT Logo on the left (`col-8`) and the dark hamburger Menu button on the right (`col-4`), with full Call and WhatsApp options conveniently available in the slide-over drawer and floating buttons.
+
+## Git Repository & Deployment Remote
+- **Remote Origin**: `https://github.com/akheels-web/driveitcars.in.git`
+- **Pushed Branches**: `main` (default tracking branch) and `master`.
+- **Status**: Clean working tree with all 63 Next.js static pages, Sanity CMS schemas, mobile responsive enhancements, and public assets pushed.
