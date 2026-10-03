@@ -1,0 +1,43 @@
+import { defineField, defineType } from 'sanity'
+
+export const landingPageType = defineType({
+  name: 'landingPage',
+  title: 'Landing Page',
+  type: 'document',
+  fields: [
+    defineField({
+      name: 'title',
+      title: 'Page Title',
+      type: 'string',
+      initialValue: 'Homepage',
+    }),
+    defineField({
+      name: 'heroBanners',
+      title: 'Hero Banners (Slider)',
+      type: 'array',
+      description: 'Add multiple banners here to create a slider on the homepage.',
+      of: [
+        {
+          type: 'object',
+          fields: [
+            { name: 'image', type: 'image', title: 'Banner Image', description: 'Recommended size: 1920x800 pixels. Keep under 1MB.' },
+            { name: 'heading', type: 'string', title: 'Heading Text', description: 'e.g. Drive Your Dream Car' },
+            { name: 'subheading', type: 'string', title: 'Subheading Text' },
+            { name: 'buttonText', type: 'string', title: 'Button Text', description: 'e.g. Book Now' },
+            { name: 'buttonLink', type: 'string', title: 'Button Link', description: 'e.g. /self-drive-car' }
+          ]
+        }
+      ]
+    }),
+    defineField({
+      name: 'seoTitle',
+      title: 'SEO Title',
+      type: 'string',
+    }),
+    defineField({
+      name: 'seoDescription',
+      title: 'SEO Description',
+      type: 'text',
+    }),
+  ],
+})
