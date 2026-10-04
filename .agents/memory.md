@@ -115,7 +115,8 @@
     - 10 Fleet Vehicles (`car`): Swift, Baleno, Dzire, Creta, Innova Crysta, Thar 4x4, Fortuner 4x4, Evoque, 35-Seater Bus, Verna with full specs, rates, and badges.
     - 3 Offers (`offer`): Weekend, Monthly, Wedding deals with coupon codes.
     - 3 Customer Testimonials (`testimonial`): 5-star verified reviews.
-- **Live Frontend Mapping**:
-  - Homepage (`src/app/page.jsx`) binds dynamic hero banners, about section headings, and passes Sanity fleet data to `<CarOffersSection initialCars={formattedCars} />`.
-  - Added 'Hatchbacks' tab and dynamic price formatting to `CarOffersSection.jsx`.
+- **Schema Fields & Image Guidelines**:
+  - Added `badge` (string) and `badgeColor` (color picker / preset list) to `car.js`, eliminating "Unknown fields found" warnings in Sanity Studio.
+  - Added explicit, prominent image dimension guides and recommended aspect ratios to `car.js` (800x450px), `landingPage.js` (1920x800px), `offer.js` (1200x600px), and `siteSettings.js` (250x60px).
+
 
