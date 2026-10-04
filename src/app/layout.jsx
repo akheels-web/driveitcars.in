@@ -1,7 +1,5 @@
 import './globals.css'
-import Header from '@/components/Header'
-import Footer from '@/components/Footer'
-import GlobalFaqHandler from '@/components/GlobalFaqHandler'
+import SiteLayoutWrapper from '@/components/SiteLayoutWrapper'
 
 export const metadata = {
   title: 'Book Self Drive Cars & Luxury Car Rentals in Hyderabad | DriveIt',
@@ -29,10 +27,9 @@ export default function RootLayout({ children }) {
         <link rel="stylesheet" href="/assets/css/responsive.css" />
       </head>
       <body>
-        <GlobalFaqHandler />
-        <Header />
-        {children}
-        <Footer />
+        <SiteLayoutWrapper>
+          {children}
+        </SiteLayoutWrapper>
         
         {/* Scripts */}
         <script src="/assets/js/jquery-3.2.1.min.js"></script>

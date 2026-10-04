@@ -9,10 +9,7 @@ export default function Header() {
   const [areaAccordionOpen, setAreaAccordionOpen] = useState(false);
   const pathname = usePathname();
 
-  // Do not render website header inside Sanity Studio
-  if (pathname?.startsWith('/studio')) {
-    return null;
-  }
+  // Close mobile menu on route change
   useEffect(() => {
     setMobileMenuOpen(false);
     setAreaAccordionOpen(false);
@@ -29,6 +26,11 @@ export default function Header() {
       document.body.style.overflow = '';
     };
   }, [mobileMenuOpen]);
+
+  // Do not render website header inside Sanity Studio
+  if (pathname?.startsWith('/studio')) {
+    return null;
+  }
 
   return (
     <>
