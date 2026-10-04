@@ -119,6 +119,10 @@
 - **Obsolete jQuery Script Elimination**:
   - Purged obsolete static HTML template jQuery scripts (`jquery-3.2.1`, `bootstrap.min.js`, `owl.carousel.min.js`, `slicknav.min.js`, etc.) from `SiteLayoutWrapper.jsx`.
   - All slider, mobile navigation, FAQ accordions, and pricing toggles are now 100% native React components (`HeroSlider.jsx`, `Header.jsx`, `FaqSection.jsx`, `CarOffersSection.jsx`).
-  - Completely resolved `Cannot read properties of undefined (reading 'fn')` runtime TypeError.
+- **Privacy Policy & Terms & Conditions Redesign**:
+  - Rebuilt [src/app/privacy/page.jsx](file:///e:/Github/driveitcars/public_html/src/app/privacy/page.jsx) and [src/app/terms-conditions/page.jsx](file:///e:/Github/driveitcars/public_html/src/app/terms-conditions/page.jsx) with an executive legal layout.
+  - Features: dark gradient hero breadcrumbs, sticky Table of Contents sidebar for rapid navigation, card-based section layout, security deposit comparison table, 80 km/h speed limit alert callouts, KYC documentation checklists (Locals vs Outstation/NRI), cancellation matrix, and Grievance Officer details.
+  - Eliminated legacy duplicate menus, all-caps text, and broken HTML formatting.
+
 
 
