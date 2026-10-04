@@ -116,8 +116,8 @@
     - 10 Fleet Vehicles (`car`): Swift, Baleno, Dzire, Creta, Innova Crysta, Thar 4x4, Fortuner 4x4, Evoque, 35-Seater Bus, Verna with full specs, rates, and badges.
     - 3 Offers (`offer`): Weekend, Monthly, Wedding deals with coupon codes.
     - 3 Customer Testimonials (`testimonial`): 5-star verified reviews.
-- **Schema Fields & Image Guidelines**:
-  - Added `badge` (string) and `badgeColor` (color picker / preset list) to `car.js`, eliminating "Unknown fields found" warnings in Sanity Studio.
-  - Added explicit, prominent image dimension guides and recommended aspect ratios to `car.js` (800x450px), `landingPage.js` (1920x800px), `offer.js` (1200x600px), and `siteSettings.js` (250x60px).
+- **Script Tag Modernization (`next/script`)**:
+  - Removed raw `<script src="...">` tags from `src/app/layout.jsx` that triggered the Turbopack / React 19 console warning (`Encountered a script tag while rendering React component`).
+  - Migrated legacy scripts to Next.js native `<Script src="..." strategy="afterInteractive" />` inside `SiteLayoutWrapper.jsx`. Scripts are now safely loaded on customer-facing pages and completely omitted on `/studio`.
 
 
