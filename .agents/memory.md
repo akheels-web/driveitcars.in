@@ -162,3 +162,7 @@
   - Apex `driveitcars.in` and `www.driveitcars.in` successfully verified on Vercel (`d08923095b177c5a.vercel-dns-017.com`).
   - Production build status is `Ready` on Vercel (`bom1` Mumbai Edge).
   - Any temporary `DNS_PROBE_FINISHED_NXDOMAIN` in client browsers is due to local router/ISP negative DNS caching (NXDOMAIN cached before `www` was created), resolved via TTL expiry, switching to Google DNS/DoH, or testing on mobile cellular data.
+- **Sanity CMS Live Updates & Dynamic Rendering**:
+  - `src/sanity/lib/client.js`: Set `useCdn: false` so API requests hit the live Sanity dataset without waiting for Edge CDN cache invalidation.
+  - `src/app/page.jsx`, `src/app/blog/page.jsx`, `src/app/blog/[slug]/page.jsx`: Configured with `export const dynamic = 'force-dynamic'` and `export const revalidate = 0`. This switches routes from build-time static generation (`○`) to server-rendered on demand (`ƒ`), allowing slider banners, cars, and blog posts updated in Sanity Studio to reflect immediately on the live website upon publish.
+  - `src/components/HeroSlider.jsx`: Added support for custom slide destination links (`slide.link || "/self-drive-car"`).
