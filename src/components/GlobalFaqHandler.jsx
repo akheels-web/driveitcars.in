@@ -1,9 +1,14 @@
 'use client';
 
 import { useEffect } from 'react';
+import { usePathname } from 'next/navigation';
 
 export default function GlobalFaqHandler() {
+  const pathname = usePathname();
+
   useEffect(() => {
+    if (pathname?.startsWith('/studio')) return;
+
     function handleFaqClick(e) {
       const btn = e.target.closest(
         '.faq_accordian_header a, .faq_accordian_header button, .faq-item button, [data-toggle="collapse"]'

@@ -101,3 +101,21 @@
 - **Remote Origin**: `https://github.com/akheels-web/driveitcars.in.git`
 - **Pushed Branches**: `main` (default tracking branch) and `master`.
 - **Status**: Clean working tree with all 63 Next.js static pages, Sanity CMS schemas, mobile responsive enhancements, and public assets pushed.
+
+## Sanity Studio & CMS Architecture Overhaul
+- **Fullscreen Studio Isolation**:
+  - `Header.jsx`, `Footer.jsx` (including floating contact buttons), and `GlobalFaqHandler.jsx` now check `pathname?.startsWith('/studio')` and return `null`, giving Sanity Studio a pristine, full-screen editor layout free of header/footer overlays.
+  - Eliminated conflicting nested `<html><body>` tags in `src/app/studio/[[...tool]]/layout.jsx`.
+- **Singleton Structure Configuration (`sanity.config.js`)**:
+  - Configured custom structure where `Site Settings` and `Landing Page (Home)` are singletons using `S.document().schemaType(...).documentId(...)`. Clicking them in the Studio sidebar immediately opens the document editor rather than an empty "No documents of this type" list.
+- **Dataset Seeding (30 Documents)**:
+  - Seeded complete data into `production` dataset:
+    - `siteSettings`: Title, description, phone (+91 6300041186), WhatsApp, email, physical office address, working hours, and logo asset.
+    - `landingPage`: 3 hero slider banners with CDN image assets, About section badge/heading/paragraphs, SEO meta.
+    - 10 Fleet Vehicles (`car`): Swift, Baleno, Dzire, Creta, Innova Crysta, Thar 4x4, Fortuner 4x4, Evoque, 35-Seater Bus, Verna with full specs, rates, and badges.
+    - 3 Offers (`offer`): Weekend, Monthly, Wedding deals with coupon codes.
+    - 3 Customer Testimonials (`testimonial`): 5-star verified reviews.
+- **Live Frontend Mapping**:
+  - Homepage (`src/app/page.jsx`) binds dynamic hero banners, about section headings, and passes Sanity fleet data to `<CarOffersSection initialCars={formattedCars} />`.
+  - Added 'Hatchbacks' tab and dynamic price formatting to `CarOffersSection.jsx`.
+

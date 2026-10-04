@@ -9,7 +9,10 @@ export default function Header() {
   const [areaAccordionOpen, setAreaAccordionOpen] = useState(false);
   const pathname = usePathname();
 
-  // Close mobile menu on route change
+  // Do not render website header inside Sanity Studio
+  if (pathname?.startsWith('/studio')) {
+    return null;
+  }
   useEffect(() => {
     setMobileMenuOpen(false);
     setAreaAccordionOpen(false);

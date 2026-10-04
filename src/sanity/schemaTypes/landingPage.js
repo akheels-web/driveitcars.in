@@ -30,6 +30,28 @@ export const landingPageType = defineType({
       ]
     }),
     defineField({
+      name: 'aboutBadge',
+      title: 'About Section Badge',
+      type: 'string',
+      initialValue: "Hyderabad's Premier Car Rental",
+    }),
+    defineField({
+      name: 'aboutHeading',
+      title: 'About Section Heading',
+      type: 'string',
+      initialValue: 'Experience True Freedom of the Open Road with DriveIt',
+    }),
+    defineField({
+      name: 'aboutDescription1',
+      title: 'About Section Paragraph 1',
+      type: 'text',
+    }),
+    defineField({
+      name: 'aboutDescription2',
+      title: 'About Section Paragraph 2',
+      type: 'text',
+    }),
+    defineField({
       name: 'seoTitle',
       title: 'SEO Title',
       type: 'string',

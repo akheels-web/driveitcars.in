@@ -70,7 +70,20 @@ export default async function Page() {
   }
 
   const banners = landingPage?.heroBanners || [];
-  const displayCars = cars && cars.length > 0 ? cars : DEFAULT_CARS;
+  const formattedCars = (cars && cars.length > 0)
+    ? cars.map((c) => {
+        let imgUrl = null;
+        if (c.image) {
+          try {
+            imgUrl = urlFor(c.image)?.url();
+          } catch (err) {}
+        }
+        return {
+          ...c,
+          imageUrl: imgUrl || '/assets/img/cars/Swift.png',
+        };
+      })
+    : [];
 
   return (
     <>
@@ -94,7 +107,7 @@ export default async function Page() {
       />
 
       {/* ========== Daily & Monthly Car Rental Offers (Interactive Explore Section) ========== */}
-      <CarOffersSection />
+      <CarOffersSection initialCars={formattedCars} />
 
       {/* ========== REDESIGNED ABOUT DRIVEIT SECTION ========== */}
       <section className="about-driveit-modern section_70" id="about" style={{ background: '#ffffff', padding: '80px 0' }}>
@@ -117,16 +130,20 @@ export default async function Page() {
                     marginBottom: '14px',
                   }}
                 >
-                  <i className="fa fa-car" style={{ marginRight: 6 }} /> Hyderabad's Premier Car Rental
+                  <i className="fa fa-car" style={{ marginRight: 6 }} /> {landingPage?.aboutBadge || "Hyderabad's Premier Car Rental"}
                 </span>
                 <h2 style={{ fontSize: '34px', fontWeight: 800, color: '#111827', lineHeight: '1.25', marginBottom: '18px' }}>
-                  Experience True Freedom of the Open Road with <span style={{ color: '#ffb907' }}>DriveIt</span>
+                  {landingPage?.aboutHeading ? (
+                    landingPage.aboutHeading
+                  ) : (
+                    <>Experience True Freedom of the Open Road with <span style={{ color: '#ffb907' }}>DriveIt</span></>
+                  )}
                 </h2>
                 <p style={{ color: '#4b5563', fontSize: '15px', lineHeight: '1.7', marginBottom: '16px' }}>
-                  DriveIt is Hyderabad’s trusted self-drive car rental and luxury travel platform. Whether you need an affordable hatchback for daily commutes, a luxury sedan for VIP transfers, a spacious 7-seater SUV for a family weekend getaway, or luxury buses for weddings, we make booking fast, transparent, and seamless.
+                  {landingPage?.aboutDescription1 || "DriveIt is Hyderabad’s trusted self-drive car rental and luxury travel platform. Whether you need an affordable hatchback for daily commutes, a luxury sedan for VIP transfers, a spacious 7-seater SUV for a family weekend getaway, or luxury buses for weddings, we make booking fast, transparent, and seamless."}
                 </p>
                 <p style={{ color: '#4b5563', fontSize: '15px', lineHeight: '1.7', marginBottom: '24px' }}>
-                  Enjoy unlimited freedom with no driver interference. Choose flexible daily, weekly, or monthly subscription plans with hassle-free doorstep delivery across 20+ localities including Hitech City, Gachibowli, Banjara Hills, Jubilee Hills, and Shamshabad Airport.
+                  {landingPage?.aboutDescription2 || "Enjoy unlimited freedom with no driver interference. Choose flexible daily, weekly, or monthly subscription plans with hassle-free doorstep delivery across 20+ localities including Hitech City, Gachibowli, Banjara Hills, Jubilee Hills, and Shamshabad Airport."}
                 </p>
 
                 {/* 4 Feature Highlights Grid */}

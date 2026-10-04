@@ -96,12 +96,50 @@ const CAR_OFFERS = [
   },
 ];
 
-export default function CarOffersSection() {
+export default function CarOffersSection({ initialCars = [] }) {
   const [activeTab, setActiveTab] = useState('all');
   const [planType, setPlanType] = useState('daily'); // 'daily' | 'monthly'
 
-  const filteredCars = CAR_OFFERS.filter((car) => {
+  const activeFleet = (initialCars && initialCars.length > 0)
+    ? initialCars.map((car, idx) => {
+        let cat = 'sedan';
+        if (['suv5', 'suv7', 'suv'].includes(car.category)) cat = 'suv';
+        else if (['luxury'].includes(car.category)) cat = 'luxury';
+        else if (['sedan'].includes(car.category)) cat = 'sedan';
+        else if (['hatchback'].includes(car.category)) cat = 'hatchback';
+        
+        const dailyPriceStr = typeof car.pricePerDay === 'number' 
+          ? car.pricePerDay.toLocaleString('en-IN') 
+          : String(car.pricePerDay || '1,999');
+          
+        const monthlyPriceStr = typeof car.pricePerMonth === 'number' && car.pricePerMonth > 0
+          ? car.pricePerMonth.toLocaleString('en-IN')
+          : String(car.pricePerMonth || '29,999');
+
+        return {
+          id: car._id || car.id || idx,
+          name: car.name,
+          category: cat,
+          rawCategory: car.category,
+          badge: car.badge || (cat === 'luxury' ? 'VIP Luxury' : 'Popular Deal'),
+          badgeColor: car.badgeColor || (cat === 'luxury' ? '#d97706' : '#ffb907'),
+          dailyPrice: dailyPriceStr,
+          monthlyPrice: monthlyPriceStr,
+          monthlySavings: car.monthlySavings || 'Save 50%',
+          seats: car.seats || 5,
+          transmission: car.transmission || 'Manual',
+          fuel: car.fuelType || car.fuel || 'Petrol',
+          image: car.imageUrl || car.image || '/assets/img/cars/Swift.png',
+          features: car.features && car.features.length > 0 
+            ? car.features 
+            : ['Zero Security Deposit', 'Doorstep Delivery', '100% Sanitized'],
+        };
+      })
+    : CAR_OFFERS;
+
+  const filteredCars = activeFleet.filter((car) => {
     if (activeTab === 'all') return true;
+    if (activeTab === 'hatchback') return car.category === 'hatchback';
     if (activeTab === 'suv') return car.category === 'suv';
     if (activeTab === 'sedan') return car.category === 'sedan';
     if (activeTab === 'luxury') return car.category === 'luxury';
@@ -241,6 +279,7 @@ export default function CarOffersSection() {
         >
           {[
             { id: 'all', label: 'All Fleet' },
+            { id: 'hatchback', label: 'Hatchbacks' },
             { id: 'sedan', label: 'Sedans' },
             { id: 'suv', label: 'SUVs & 7-Seaters' },
             { id: 'luxury', label: 'Luxury Cars' },

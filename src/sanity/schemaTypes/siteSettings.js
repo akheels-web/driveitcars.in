@@ -27,9 +27,26 @@ export const siteSettingsType = defineType({
       type: 'string',
     }),
     defineField({
+      name: 'whatsappNumber',
+      title: 'WhatsApp Number',
+      type: 'string',
+    }),
+    defineField({
       name: 'email',
       title: 'Email Address',
       type: 'string',
+    }),
+    defineField({
+      name: 'address',
+      title: 'Office Address',
+      type: 'string',
+      description: 'e.g. Masab Tank, Hyderabad, Telangana 500028',
+    }),
+    defineField({
+      name: 'workingHours',
+      title: 'Working Hours',
+      type: 'string',
+      description: 'e.g. Mon to Sun: 7:00am – 10:00pm',
     }),
     defineField({
       name: 'socialLinks',
