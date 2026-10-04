@@ -90,13 +90,35 @@ export const carType = defineType({
     }),
     defineField({
       name: 'image',
-      title: 'Vehicle Image',
+      title: 'Vehicle Image 📷 (Recommended: 800 x 450 px)',
       type: 'image',
-      description: 'Upload a clean photo or PNG cutout of the vehicle. Recommended: PNG with transparent or clean background.',
+      description: '📌 IMAGE SIZING & GUIDELINES: Recommended size is 800 x 450 pixels (16:9 landscape ratio, minimum 600 x 350 px). Best with a clean transparent PNG cutout or studio background so the car displays sharply across desktop and mobile cards without cropping. Keep file size under 500 KB.',
       options: {
         hotspot: true,
       },
       validation: (Rule) => Rule.required(),
+    }),
+    defineField({
+      name: 'badge',
+      title: 'Promo Badge Tag',
+      type: 'string',
+      description: 'Optional highlight pill text shown on the car card (e.g. "Popular Daily Deal", "Top Rated SUV", "Weekend Explorer", "Executive VIP Choice").',
+    }),
+    defineField({
+      name: 'badgeColor',
+      title: 'Promo Badge Color',
+      type: 'string',
+      description: 'Color for the badge pill. Choose from presets or enter custom Hex.',
+      options: {
+        list: [
+          { title: '🟢 Emerald Green (#10b981) - Deals & Savings', value: '#10b981' },
+          { title: '🟡 DriveIt Gold (#ffb907) - Top Rated', value: '#ffb907' },
+          { title: '🔵 Royal Blue (#3b82f6) - Family & Groups', value: '#3b82f6' },
+          { title: '🔴 Sport Red (#ef4444) - Adventure & 4x4', value: '#ef4444' },
+          { title: '🟣 Executive Purple (#8b5cf6) - VIP & Escort', value: '#8b5cf6' },
+          { title: '🟠 Amber Gold (#d97706) - Luxury Wedding', value: '#d97706' },
+        ],
+      },
     }),
     defineField({
       name: 'seats',

@@ -20,7 +20,13 @@ export const landingPageType = defineType({
         {
           type: 'object',
           fields: [
-            { name: 'image', type: 'image', title: 'Banner Image', description: 'Recommended size: 1920x800 pixels. Keep under 1MB.' },
+            { 
+              name: 'image', 
+              type: 'image', 
+              title: 'Banner Image 📷 (Recommended: 1920 x 800 px)', 
+              description: '📌 BANNER SIZING: Recommended size is 1920 x 800 pixels (or 16:9 / 2.4:1 widescreen ratio, minimum 1280 x 600 px). Keep file size under 1 MB for fast loading.',
+              options: { hotspot: true }
+            },
             { name: 'heading', type: 'string', title: 'Heading Text', description: 'e.g. Drive Your Dream Car' },
             { name: 'subheading', type: 'string', title: 'Subheading Text' },
             { name: 'buttonText', type: 'string', title: 'Button Text', description: 'e.g. Book Now' },

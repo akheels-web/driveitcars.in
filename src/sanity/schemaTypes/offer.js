@@ -20,9 +20,9 @@ export const offerType = defineType({
     }),
     defineField({
       name: 'image',
-      title: 'Promo Image / Banner',
+      title: 'Promo Image / Banner 📷 (Recommended: 1200 x 600 px)',
       type: 'image',
-      description: 'Upload the promo banner. Recommended size: 1200x600 pixels (2:1 aspect ratio). Keep file size under 500KB.',
+      description: '📌 PROMO SIZING: Recommended dimensions are 1200 x 600 pixels (2:1 landscape ratio). Keep file size under 500 KB for optimal performance.',
       options: {
         hotspot: true,
       },

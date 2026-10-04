@@ -17,9 +17,9 @@ export const siteSettingsType = defineType({
     }),
     defineField({
       name: 'logo',
-      title: 'Site Logo',
+      title: 'Site Logo 📷 (Recommended: 250 x 60 px)',
       type: 'image',
-      description: 'Upload your site logo. Recommended size: 250x60 pixels (transparent PNG).',
+      description: '📌 LOGO SIZING: Upload your brand logo. Recommended dimensions: 250 x 60 pixels (horizontal format) as a transparent PNG. Keep file size under 100 KB.',
     }),
     defineField({
       name: 'phoneNumber',
