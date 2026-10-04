@@ -9,7 +9,7 @@ export default function reviewsPage() {
                      <h3>Google Reviews</h3>
                      <ul>
                         <li><i className="fa fa-home"></i></li>
-                        <li><a href="/index-2">Home</a></li>
+                        <li><a href="/">Home</a></li>
                         <li><i className="fa fa-angle-right"></i></li>
                         <li>Google Reviews</li>
                      </ul>

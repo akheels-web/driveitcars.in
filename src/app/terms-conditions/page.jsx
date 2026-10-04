@@ -57,9 +57,15 @@ export default function TermsConditionsPage() {
                 <p style={{ color: '#cbd5e1', fontSize: '15px', maxWidth: '680px', margin: '0 auto 16px' }}>
                   Please review the terms of service governing your self-drive vehicle hire, KYC requirements, deposit settlement, and road safety regulations.
                 </p>
-                <div style={{ color: '#94a3b8', fontSize: '13px' }}>
+                <div style={{ color: '#94a3b8', fontSize: '13px', marginBottom: '14px' }}>
                   Effective Version: <strong style={{ color: '#ffb907' }}>{lastUpdated}</strong>
                 </div>
+                <ul>
+                  <li><i className="fa fa-home"></i></li>
+                  <li><a href="/">Home</a></li>
+                  <li><i className="fa fa-angle-right"></i></li>
+                  <li>Terms &amp; Conditions</li>
+                </ul>
               </div>
             </div>
           </div>

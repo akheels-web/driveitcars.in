@@ -8,8 +8,8 @@ export default function outstationBusPage() {
                   <div className="breadcromb-box">
                      <h3>Outstation</h3>
                      <ul>
-                        <li><i className="fa fa-Home"></i></li>
-                        <li><a href="/index">Home</a></li>
+                        <li><i className="fa fa-home"></i></li>
+                        <li><a href="/">Home</a></li>
                         <li><i className="fa fa-angle-right"></i></li>
                         <li>Outstation</li>
                      </ul>

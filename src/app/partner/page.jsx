@@ -9,7 +9,7 @@ export default function partnerPage() {
                      <h3>Partner With Us</h3>
                      <ul>
                         <li><i className="fa fa-home"></i></li>
-                        <li><a href="/index-2">Home</a></li>
+                        <li><a href="/">Home</a></li>
                         <li><i className="fa fa-angle-right"></i></li>
                         <li>Partner With Us</li>
                      </ul>

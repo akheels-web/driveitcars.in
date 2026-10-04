@@ -124,5 +124,28 @@
   - Features: dark gradient hero breadcrumbs, sticky Table of Contents sidebar for rapid navigation, card-based section layout, security deposit comparison table, 80 km/h speed limit alert callouts, KYC documentation checklists (Locals vs Outstation/NRI), cancellation matrix, and Grievance Officer details.
   - Eliminated legacy duplicate menus, all-caps text, and broken HTML formatting.
 
+## Contact Page Redesign & Site-Wide Breadcrumb Overhaul
+- **Contact Page Complete Redesign (`src/app/contact/page.jsx` & `ContactClient.jsx`)**:
+  - **Executive Breadcrumb Banner**: Dark gradient hero overlay with eyebrow badge (`✦ 24/7 RESERVATIONS & CUSTOMER CARE`), crisp H1, and breadcrumb capsule trail.
+  - **Quick Contact Strip**: 4 modern cards for Direct Hotline (`+91 6300041186`), WhatsApp Fleet Desk (`24/7 Active`), Central Hub (`Masab Tank, HYD`), and Doorstep Delivery (`All 26 Hubs`).
+  - **Balanced 2-Column Workspace**:
+    - **Interactive Booking Form**: Name, Phone, Email, Vehicle Category, Pickup Date & Time, Duration, Location, and Notes.
+    - **Refined Inquiry Buttons**: Single-line 50/50 grid layout (`grid-template-columns: 1fr 1fr; gap: 14px;`) with `white-space: nowrap`, centered icons, and balanced 50px heights:
+      - Primary WhatsApp button: `Inquire via WhatsApp` (emerald `#25D366` with pre-filled enquiry text).
+      - Online Submission button: `Submit Online` (dark slate `#0f172a` with gold hover).
+    - **Central Operations Hub Details**: Official address at `Mehar Mansion, Rd No 2, Shantinagar Colony, Masab Tank`, operating hours (`7:00 AM – 10:00 PM`), click-to-call, email, KYC trust badges (10-min digital verification, zero deposit on select cars, sanitized fleet), and social links.
+  - **Interactive Google Map Card**: Embedded iframe for Masab Tank hub with "Open in Google Maps" action button.
+  - **Booking FAQ Section**: Powered by `<FaqSection />` covering turnaround time, office walk-ins, airport delivery, and deposits.
+- **Site-Wide Breadcrumbs Overhaul (47 Pages Fixed)**:
+  - **Icon Case Sensitivity Bug**: Fixed `fa-Home` (capital H) to `fa-home` across 45 pages where the Home icon was completely invisible.
+  - **Broken Home Route Resolution**: Repaired `href="/index"`, `href="/index-2"`, and `href=""` to `href="/"` across 47 pages, preventing broken navigation and 404s.
+  - **Modern Breadcrumb Design System (`globals.css`)**:
+    - High-contrast dark vignette gradient overlay (`rgba(11, 17, 32, 0.84)` to `rgba(15, 23, 42, 0.94)`).
+    - Glassmorphism pill capsule (`background: rgba(15, 23, 42, 0.68); backdrop-filter: blur(12px); border-radius: 50px; border: 1px solid rgba(255, 255, 255, 0.16);`).
+    - Golden icon glow on `fa-home` and muted `fa-angle-right` dividers.
+    - Active page highlighted in `#ffb907` gold.
+  - All 63 static Next.js production routes build cleanly with zero errors.
+
+
 
 

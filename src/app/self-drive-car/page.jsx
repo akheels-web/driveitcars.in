@@ -9,8 +9,8 @@ export default function selfDriveCarPage() {
                   <div className="breadcromb-box">
                      <h3>Self Drive Cars</h3>
                      <ul>
-                        <li><i className="fa fa-Home"></i></li>
-                        <li><a href="/index">Home</a></li>
+                        <li><i className="fa fa-home"></i></li>
+                        <li><a href="/">Home</a></li>
                         <li><i className="fa fa-angle-right"></i></li>
                         <li>Self Drive Cars</li>
                      </ul>

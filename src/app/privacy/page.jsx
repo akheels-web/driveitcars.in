@@ -56,9 +56,15 @@ export default function PrivacyPage() {
                 <p style={{ color: '#cbd5e1', fontSize: '15px', maxWidth: '640px', margin: '0 auto 16px' }}>
                   Your privacy and data security are fundamental to our services. Learn how we handle your personal details, KYC records, and trip information.
                 </p>
-                <div style={{ color: '#94a3b8', fontSize: '13px' }}>
+                <div style={{ color: '#94a3b8', fontSize: '13px', marginBottom: '14px' }}>
                   Last Updated: <strong style={{ color: '#ffb907' }}>{lastUpdated}</strong>
                 </div>
+                <ul>
+                  <li><i className="fa fa-home"></i></li>
+                  <li><a href="/">Home</a></li>
+                  <li><i className="fa fa-angle-right"></i></li>
+                  <li>Privacy Policy</li>
+                </ul>
               </div>
             </div>
           </div>
