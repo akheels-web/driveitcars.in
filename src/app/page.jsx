@@ -5,6 +5,8 @@ import Link from 'next/link';
 import HeroSlider from '../components/HeroSlider';
 import CarOffersSection from '../components/CarOffersSection';
 import FaqSection from '../components/FaqSection';
+export const dynamic = 'force-dynamic';
+export const revalidate = 0;
 
 const builder = imageUrlBuilder(client);
 function urlFor(source) {
@@ -98,6 +100,7 @@ export default async function Page() {
                     ? {
                         src: img.url(),
                         alt: b.heading || 'DriveIt Cars Hyderabad',
+                        link: b.buttonLink || '/self-drive-car',
                       }
                     : null;
                 })

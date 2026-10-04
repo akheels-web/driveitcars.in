@@ -3,11 +3,15 @@ import imageUrlBuilder from '@sanity/image-url';
 import { PortableText } from '@portabletext/react';
 import Link from 'next/link';
 
+export const dynamic = 'force-dynamic';
+export const revalidate = 0;
+
 const builder = imageUrlBuilder(client);
 function urlFor(source) { return builder.image(source); }
 
 export default async function BlogPost({ params }) {
-  const { slug } = params;
+  const resolvedParams = await params;
+  const slug = resolvedParams?.slug;
   const post = await client.fetch(`*[_type == "post" && slug.current == $slug][0]`, { slug });
 
   if (!post) {

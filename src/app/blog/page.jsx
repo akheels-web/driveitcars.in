@@ -1,6 +1,8 @@
 import { client } from '../../sanity/lib/client';
 import imageUrlBuilder from '@sanity/image-url';
 import Link from 'next/link';
+export const dynamic = 'force-dynamic';
+export const revalidate = 0;
 
 const builder = imageUrlBuilder(client);
 function urlFor(source) { return builder.image(source); }

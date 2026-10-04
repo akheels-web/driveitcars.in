@@ -146,6 +146,19 @@
     - Active page highlighted in `#ffb907` gold.
   - All 63 static Next.js production routes build cleanly with zero errors.
 
-
-
-
+## Cloudflare DNS Configuration & Audit (Vercel & Hostinger Email)
+- **Website (Vercel)**:
+  - `driveitcars.in` (A): `76.76.21.21` (Points to Vercel).
+  - `www.driveitcars.in` (CNAME): Must be added pointing to `cname.vercel-dns.com` (or `driveitcars.in`).
+  - Delete legacy Hostinger `AAAA` records (`2a02:4780:...`) to prevent IPv6 traffic from routing to old Hostinger server.
+  - Delete or redirect legacy WordPress `blog.driveitcars.in` (`217.21.95.158`) since blogs are now integrated natively in Next.js (`/blog`) via Sanity CMS.
+- **Email (Hostinger)**:
+  - Keep `MX` records (`mx1.hostinger.com`, `mx2.hostinger.com`) on **DNS only**.
+  - Keep SPF (`v=spf1 include:_spf.mail.hostinger.com ~all`) and DMARC (`v=DMARC1; p=none`) on **DNS only**.
+  - **DKIM CNAMEs** (`hostingemail-a`, `-b`, `-c`): MUST be set to **DNS only (Grey cloud)**; proxied orange cloud breaks DKIM cryptographic signature verification.
+  - Mail auto-config (`autoconfig`, `autodiscover`): Switch to **DNS only** to prevent mail client connection issues.
+- **Cloudflare SSL/TLS Mode**: Must be set to **Full (Strict)** to avoid `ERR_TOO_MANY_REDIRECTS` loops with Vercel's edge.
+- **Vercel Production Verification**:
+  - Apex `driveitcars.in` and `www.driveitcars.in` successfully verified on Vercel (`d08923095b177c5a.vercel-dns-017.com`).
+  - Production build status is `Ready` on Vercel (`bom1` Mumbai Edge).
+  - Any temporary `DNS_PROBE_FINISHED_NXDOMAIN` in client browsers is due to local router/ISP negative DNS caching (NXDOMAIN cached before `www` was created), resolved via TTL expiry, switching to Google DNS/DoH, or testing on mobile cellular data.

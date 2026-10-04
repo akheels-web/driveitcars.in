@@ -87,7 +87,7 @@ export default function HeroSlider({ customBanners = null }) {
               position: 'relative',
             }}
           >
-            <Link href="/self-drive-car" style={{ display: 'block', width: '100%' }}>
+            <Link href={slide.link || "/self-drive-car"} style={{ display: 'block', width: '100%' }}>
               <img
                 src={slide.src || slide}
                 alt={slide.alt || `DriveIt Slide ${idx + 1}`}
