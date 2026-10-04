@@ -116,8 +116,9 @@
     - 10 Fleet Vehicles (`car`): Swift, Baleno, Dzire, Creta, Innova Crysta, Thar 4x4, Fortuner 4x4, Evoque, 35-Seater Bus, Verna with full specs, rates, and badges.
     - 3 Offers (`offer`): Weekend, Monthly, Wedding deals with coupon codes.
     - 3 Customer Testimonials (`testimonial`): 5-star verified reviews.
-- **Script Tag Modernization (`next/script`)**:
-  - Removed raw `<script src="...">` tags from `src/app/layout.jsx` that triggered the Turbopack / React 19 console warning (`Encountered a script tag while rendering React component`).
-  - Migrated legacy scripts to Next.js native `<Script src="..." strategy="afterInteractive" />` inside `SiteLayoutWrapper.jsx`. Scripts are now safely loaded on customer-facing pages and completely omitted on `/studio`.
+- **Obsolete jQuery Script Elimination**:
+  - Purged obsolete static HTML template jQuery scripts (`jquery-3.2.1`, `bootstrap.min.js`, `owl.carousel.min.js`, `slicknav.min.js`, etc.) from `SiteLayoutWrapper.jsx`.
+  - All slider, mobile navigation, FAQ accordions, and pricing toggles are now 100% native React components (`HeroSlider.jsx`, `Header.jsx`, `FaqSection.jsx`, `CarOffersSection.jsx`).
+  - Completely resolved `Cannot read properties of undefined (reading 'fn')` runtime TypeError.
 
 
