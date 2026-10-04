@@ -3,11 +3,13 @@
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
+import { useSiteSettings } from '../context/SiteSettingsContext';
 
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [areaAccordionOpen, setAreaAccordionOpen] = useState(false);
   const pathname = usePathname();
+  const settings = useSiteSettings();
 
   // Close mobile menu on route change
   useEffect(() => {
@@ -43,8 +45,8 @@ export default function Header() {
                 <i className="fa fa-phone" style={{ color: '#ffb907', marginRight: 6 }} />
                 <span>
                   Need Help? Call:{' '}
-                  <a href="tel:+916300041186" style={{ color: '#ffb907', fontWeight: 700 }}>
-                    +91 6300041186
+                  <a href={`tel:${(settings.phoneNumber || '+916300041186').replace(/\s+/g, '')}`} style={{ color: '#ffb907', fontWeight: 700 }}>
+                    {settings.phoneNumber}
                   </a>
                 </span>
               </div>
@@ -52,7 +54,7 @@ export default function Header() {
             <div className="col-lg-6 col-12 text-lg-end text-center mt-lg-0 mt-1 d-none d-sm-block">
               <div className="header-top-right">
                 <i className="fa fa-envelope" style={{ color: '#ffb907', marginRight: 4 }} />
-                <a href="mailto:driveitcars@gmail.com">driveitcars@gmail.com</a>
+                <a href={`mailto:${settings.email || 'driveitcars@gmail.com'}`}>{settings.email}</a>
                 <span className="mx-2" style={{ color: '#555' }}>|</span>
                 <i className="fa fa-map-marker" style={{ color: '#ffb907', marginRight: 4 }} />
                 <span>Masab Tank, Hyd</span>
@@ -72,7 +74,7 @@ export default function Header() {
                 <Link href="/" onClick={() => setMobileMenuOpen(false)}>
                   <img
                     loading="lazy"
-                    src="/logo.png"
+                    src={settings.logoUrl || '/logo.png'}
                     alt="Driveit Cars - Self Drive Cars in Hyderabad"
                     className="main-header-logo"
                     style={{

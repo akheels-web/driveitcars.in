@@ -14,11 +14,11 @@ export default defineConfig({
     structureTool({
       structure: (S) =>
         S.list()
-          .title('Content')
+          .title('Website Content Manager')
           .items([
-            // Singleton: Site Settings (Opens directly without blank lists)
+            // Singleton: Site Settings & Global Footer
             S.listItem()
-              .title('Site Settings')
+              .title('Site Settings & Global Footer')
               .id('siteSettings')
               .child(
                 S.document()
@@ -26,9 +26,9 @@ export default defineConfig({
                   .documentId('siteSettings')
               ),
 
-            // Singleton: Landing Page (Opens directly without blank lists)
+            // Singleton: Landing Page (Home)
             S.listItem()
-              .title('Landing Page (Home)')
+              .title('Landing Page (Home Sections)')
               .id('landingPage')
               .child(
                 S.document()
@@ -39,6 +39,8 @@ export default defineConfig({
             S.divider(),
 
             // Collections
+            S.documentTypeListItem('locationPage').title('Location Pages (26 Localities)'),
+            S.documentTypeListItem('categoryPage').title('Service & Fleet Pages'),
             S.documentTypeListItem('car').title('Fleet Vehicles (Cars & Buses)'),
             S.documentTypeListItem('offer').title('Offers & Promos'),
             S.documentTypeListItem('testimonial').title('Customer Testimonials'),

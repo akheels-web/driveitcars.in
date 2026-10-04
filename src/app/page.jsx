@@ -151,111 +151,43 @@ export default async function Page() {
 
                 {/* 4 Feature Highlights Grid */}
                 <div className="row g-3" style={{ marginBottom: '28px' }}>
-                  <div className="col-sm-6 mb-3">
-                    <div style={{ display: 'flex', alignItems: 'flex-start', gap: '12px' }}>
-                      <div
-                        style={{
-                          width: '40px',
-                          height: '40px',
-                          borderRadius: '10px',
-                          background: '#fff8e6',
-                          color: '#ffb907',
-                          display: 'flex',
-                          alignItems: 'center',
-                          justifyContent: 'center',
-                          fontSize: '18px',
-                          flexShrink: 0,
-                        }}
-                      >
-                        <i className="fa fa-shield" />
-                      </div>
-                      <div>
-                        <h5 style={{ fontSize: '15px', fontWeight: 700, color: '#111827', margin: '0 0 2px' }}>Fully Insured Fleet</h5>
-                        <p style={{ fontSize: '13px', color: '#6b7280', margin: 0 }}>Sanitized &amp; safety-inspected</p>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div className="col-sm-6 mb-3">
-                    <div style={{ display: 'flex', alignItems: 'flex-start', gap: '12px' }}>
-                      <div
-                        style={{
-                          width: '40px',
-                          height: '40px',
-                          borderRadius: '10px',
-                          background: '#fff8e6',
-                          color: '#ffb907',
-                          display: 'flex',
-                          alignItems: 'center',
-                          justifyContent: 'center',
-                          fontSize: '18px',
-                          flexShrink: 0,
-                        }}
-                      >
-                        <i className="fa fa-tag" />
-                      </div>
-                      <div>
-                        <h5 style={{ fontSize: '15px', fontWeight: 700, color: '#111827', margin: '0 0 2px' }}>Transparent Pricing</h5>
-                        <p style={{ fontSize: '13px', color: '#6b7280', margin: 0 }}>Zero hidden fees or surprises</p>
+                  {(landingPage?.aboutFeatures && landingPage.aboutFeatures.length > 0 ? landingPage.aboutFeatures : [
+                    { icon: 'fa-shield', title: 'Fully Insured Fleet', description: 'Sanitized & safety-inspected' },
+                    { icon: 'fa-tag', title: 'Transparent Pricing', description: 'Zero hidden fees or surprises' },
+                    { icon: 'fa-map-marker', title: 'Doorstep Delivery', description: 'Prompt delivery anywhere in Hyd' },
+                    { icon: 'fa-headphones', title: '24/7 Road Assistance', description: 'Dedicated customer care team' },
+                  ]).map((feat, idx) => (
+                    <div className="col-sm-6 mb-3" key={idx}>
+                      <div style={{ display: 'flex', alignItems: 'flex-start', gap: '12px' }}>
+                        <div
+                          style={{
+                            width: '40px',
+                            height: '40px',
+                            borderRadius: '10px',
+                            background: '#fff8e6',
+                            color: '#ffb907',
+                            display: 'flex',
+                            alignItems: 'center',
+                            justifyContent: 'center',
+                            fontSize: '18px',
+                            flexShrink: 0,
+                          }}
+                        >
+                          <i className={`fa ${feat.icon || 'fa-check'}`} />
+                        </div>
+                        <div>
+                          <h5 style={{ fontSize: '15px', fontWeight: 700, color: '#111827', margin: '0 0 2px' }}>{feat.title}</h5>
+                          <p style={{ fontSize: '13px', color: '#6b7280', margin: 0 }}>{feat.description}</p>
+                        </div>
                       </div>
                     </div>
-                  </div>
-
-                  <div className="col-sm-6 mb-3">
-                    <div style={{ display: 'flex', alignItems: 'flex-start', gap: '12px' }}>
-                      <div
-                        style={{
-                          width: '40px',
-                          height: '40px',
-                          borderRadius: '10px',
-                          background: '#fff8e6',
-                          color: '#ffb907',
-                          display: 'flex',
-                          alignItems: 'center',
-                          justifyContent: 'center',
-                          fontSize: '18px',
-                          flexShrink: 0,
-                        }}
-                      >
-                        <i className="fa fa-map-marker" />
-                      </div>
-                      <div>
-                        <h5 style={{ fontSize: '15px', fontWeight: 700, color: '#111827', margin: '0 0 2px' }}>Doorstep Delivery</h5>
-                        <p style={{ fontSize: '13px', color: '#6b7280', margin: 0 }}>Prompt delivery anywhere in Hyd</p>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div className="col-sm-6 mb-3">
-                    <div style={{ display: 'flex', alignItems: 'flex-start', gap: '12px' }}>
-                      <div
-                        style={{
-                          width: '40px',
-                          height: '40px',
-                          borderRadius: '10px',
-                          background: '#fff8e6',
-                          color: '#ffb907',
-                          display: 'flex',
-                          alignItems: 'center',
-                          justifyContent: 'center',
-                          fontSize: '18px',
-                          flexShrink: 0,
-                        }}
-                      >
-                        <i className="fa fa-headphones" />
-                      </div>
-                      <div>
-                        <h5 style={{ fontSize: '15px', fontWeight: 700, color: '#111827', margin: '0 0 2px' }}>24/7 Road Assistance</h5>
-                        <p style={{ fontSize: '13px', color: '#6b7280', margin: 0 }}>Dedicated customer care team</p>
-                      </div>
-                    </div>
-                  </div>
+                  ))}
                 </div>
 
                 {/* Call to Actions */}
                 <div style={{ display: 'flex', gap: '14px', flexWrap: 'wrap', alignItems: 'center' }}>
                   <Link
-                    href="/self-drive-car"
+                    href={landingPage?.aboutCtaLink || "/self-drive-car"}
                     className="gauto-btn"
                     style={{
                       background: '#ffb907',
@@ -269,10 +201,10 @@ export default async function Page() {
                       gap: '8px',
                     }}
                   >
-                    Explore Fleet <i className="fa fa-arrow-right" />
+                    {landingPage?.aboutCtaText || "Explore Fleet"} <i className="fa fa-arrow-right" />
                   </Link>
                   <a
-                    href="tel:+916300041186"
+                    href={`tel:${(landingPage?.aboutPhone || '+916300041186').replace(/\s+/g, '')}`}
                     style={{
                       color: '#111827',
                       fontWeight: 700,
@@ -286,7 +218,7 @@ export default async function Page() {
                       border: '1px solid #e5e7eb',
                     }}
                   >
-                    <i className="fa fa-phone" style={{ color: '#ffb907' }} /> +91 6300041186
+                    <i className="fa fa-phone" style={{ color: '#ffb907' }} /> {landingPage?.aboutPhone || "+91 6300041186"}
                   </a>
                 </div>
               </div>
@@ -306,7 +238,7 @@ export default async function Page() {
                 }}
               >
                 <img
-                  src="/image2.avif"
+                  src={landingPage?.aboutImage ? urlFor(landingPage.aboutImage)?.url() : '/image2.avif'}
                   alt="Self drive car rental in Hyderabad"
                   className="img-fluid"
                   style={{
@@ -336,12 +268,20 @@ export default async function Page() {
                   }}
                 >
                   <div>
-                    <div style={{ color: '#ffb907', fontWeight: 800, fontSize: '18px' }}>10,000+ Trips</div>
-                    <div style={{ fontSize: '12px', color: '#d1d5db' }}>Happy Travelers in Hyderabad</div>
+                    <div style={{ color: '#ffb907', fontWeight: 800, fontSize: '18px' }}>
+                      {landingPage?.aboutStat1Number || '10,000+ Trips'}
+                    </div>
+                    <div style={{ fontSize: '12px', color: '#d1d5db' }}>
+                      {landingPage?.aboutStat1Label || 'Happy Travelers in Hyderabad'}
+                    </div>
                   </div>
                   <div style={{ textAlign: 'right' }}>
-                    <div style={{ color: '#ffb907', fontWeight: 800, fontSize: '16px' }}>★ 4.9 / 5.0</div>
-                    <div style={{ fontSize: '12px', color: '#d1d5db' }}>Verified Customer Rating</div>
+                    <div style={{ color: '#ffb907', fontWeight: 800, fontSize: '16px' }}>
+                      {landingPage?.aboutStat2Number || '★ 4.9 / 5.0'}
+                    </div>
+                    <div style={{ fontSize: '12px', color: '#d1d5db' }}>
+                      {landingPage?.aboutStat2Label || 'Verified Customer Rating'}
+                    </div>
                   </div>
                 </div>
               </div>
@@ -365,41 +305,27 @@ export default async function Page() {
                 marginBottom: '6px',
               }}
             >
-              Easy 4-Step Process
+              {landingPage?.bookingBadge || "Easy 4-Step Process"}
             </span>
             <h2 style={{ fontSize: '32px', fontWeight: 800, color: '#111827' }}>
-              How To Book a Self-Drive Car Online
+              {landingPage?.bookingHeading || "How To Book a Self-Drive Car Online"}
             </h2>
           </div>
           <div className="row">
-            <div className="col-md-3">
-              <div className="step-box">
-                <div className="step-num">1</div>
-                <h4>Choose Your Car</h4>
-                <p>Select from our wide range of hatchbacks, sedans, and SUVs.</p>
+            {(landingPage?.bookingSteps && landingPage.bookingSteps.length > 0 ? landingPage.bookingSteps : [
+              { stepNumber: '1', title: 'Choose Your Car', description: 'Select from our wide range of hatchbacks, sedans, and SUVs.' },
+              { stepNumber: '2', title: 'Enter Dates & Details', description: 'Choose your rental duration and preferred doorstep delivery location.' },
+              { stepNumber: '3', title: 'Quick Verification', description: 'Submit your Driving License and ID proof via instant WhatsApp.' },
+              { stepNumber: '4', title: 'Drive & Return', description: 'Enjoy your trip with unlimited freedom and return smoothly.' },
+            ]).map((step, idx) => (
+              <div className="col-md-3" key={idx}>
+                <div className="step-box">
+                  <div className="step-num">{step.stepNumber || idx + 1}</div>
+                  <h4>{step.title}</h4>
+                  <p>{step.description}</p>
+                </div>
               </div>
-            </div>
-            <div className="col-md-3">
-              <div className="step-box">
-                <div className="step-num">2</div>
-                <h4>Enter Dates &amp; Details</h4>
-                <p>Choose your rental duration and preferred doorstep delivery location.</p>
-              </div>
-            </div>
-            <div className="col-md-3">
-              <div className="step-box">
-                <div className="step-num">3</div>
-                <h4>Quick Verification</h4>
-                <p>Submit your Driving License and ID proof via instant WhatsApp.</p>
-              </div>
-            </div>
-            <div className="col-md-3">
-              <div className="step-box">
-                <div className="step-num">4</div>
-                <h4>Drive &amp; Return</h4>
-                <p>Enjoy your trip with unlimited freedom and return smoothly.</p>
-              </div>
-            </div>
+            ))}
           </div>
         </div>
       </section>
@@ -410,10 +336,10 @@ export default async function Page() {
           <div className="row align-items-center">
             <div className="col-lg-3 text-lg-start text-center mb-lg-0 mb-3">
               <span style={{ color: '#ffb907', fontSize: '11px', fontWeight: 800, letterSpacing: '1.5px', textTransform: 'uppercase', display: 'block', marginBottom: '2px' }}>
-                Why Drive With Us
+                {landingPage?.advantageSubtitle || "Why Drive With Us"}
               </span>
               <h3 style={{ color: '#ffffff', fontSize: '22px', fontWeight: 800, margin: 0 }}>
-                The DRIVEIT Advantage
+                {landingPage?.advantageTitle || "The DRIVEIT Advantage"}
               </h3>
             </div>
             <div className="col-lg-9">
@@ -424,34 +350,20 @@ export default async function Page() {
                   gap: '12px',
                 }}
               >
-                <div style={{ display: 'flex', alignItems: 'center', gap: '12px', background: 'rgba(255,255,255,0.06)', padding: '12px 14px', borderRadius: '10px', border: '1px solid rgba(255,255,255,0.1)' }}>
-                  <i className="fa fa-key" style={{ color: '#ffb907', fontSize: '20px', flexShrink: 0 }} />
-                  <div>
-                    <h5 style={{ color: '#ffffff', fontSize: '13px', fontWeight: 700, margin: '0 0 2px' }}>100% Privacy</h5>
-                    <p style={{ color: '#94a3b8', fontSize: '11px', margin: 0 }}>No driver interference</p>
+                {(landingPage?.advantageItems && landingPage.advantageItems.length > 0 ? landingPage.advantageItems : [
+                  { icon: 'fa-key', title: '100% Privacy', subtitle: 'No driver interference' },
+                  { icon: 'fa-shield', title: 'Zero Deposit', subtitle: 'Quick verification' },
+                  { icon: 'fa-tag', title: 'Best Rates', subtitle: 'No hidden charges' },
+                  { icon: 'fa-map-marker', title: 'Doorstep Drop', subtitle: 'Across all Hyderabad' },
+                ]).map((adv, idx) => (
+                  <div key={idx} style={{ display: 'flex', alignItems: 'center', gap: '12px', background: 'rgba(255,255,255,0.06)', padding: '12px 14px', borderRadius: '10px', border: '1px solid rgba(255,255,255,0.1)' }}>
+                    <i className={`fa ${adv.icon || 'fa-check'}`} style={{ color: '#ffb907', fontSize: '20px', flexShrink: 0 }} />
+                    <div>
+                      <h5 style={{ color: '#ffffff', fontSize: '13px', fontWeight: 700, margin: '0 0 2px' }}>{adv.title}</h5>
+                      <p style={{ color: '#94a3b8', fontSize: '11px', margin: 0 }}>{adv.subtitle}</p>
+                    </div>
                   </div>
-                </div>
-                <div style={{ display: 'flex', alignItems: 'center', gap: '12px', background: 'rgba(255,255,255,0.06)', padding: '12px 14px', borderRadius: '10px', border: '1px solid rgba(255,255,255,0.1)' }}>
-                  <i className="fa fa-shield" style={{ color: '#ffb907', fontSize: '20px', flexShrink: 0 }} />
-                  <div>
-                    <h5 style={{ color: '#ffffff', fontSize: '13px', fontWeight: 700, margin: '0 0 2px' }}>Zero Deposit</h5>
-                    <p style={{ color: '#94a3b8', fontSize: '11px', margin: 0 }}>Quick verification</p>
-                  </div>
-                </div>
-                <div style={{ display: 'flex', alignItems: 'center', gap: '12px', background: 'rgba(255,255,255,0.06)', padding: '12px 14px', borderRadius: '10px', border: '1px solid rgba(255,255,255,0.1)' }}>
-                  <i className="fa fa-tag" style={{ color: '#ffb907', fontSize: '20px', flexShrink: 0 }} />
-                  <div>
-                    <h5 style={{ color: '#ffffff', fontSize: '13px', fontWeight: 700, margin: '0 0 2px' }}>Best Rates</h5>
-                    <p style={{ color: '#94a3b8', fontSize: '11px', margin: 0 }}>No hidden charges</p>
-                  </div>
-                </div>
-                <div style={{ display: 'flex', alignItems: 'center', gap: '12px', background: 'rgba(255,255,255,0.06)', padding: '12px 14px', borderRadius: '10px', border: '1px solid rgba(255,255,255,0.1)' }}>
-                  <i className="fa fa-map-marker" style={{ color: '#ffb907', fontSize: '20px', flexShrink: 0 }} />
-                  <div>
-                    <h5 style={{ color: '#ffffff', fontSize: '13px', fontWeight: 700, margin: '0 0 2px' }}>Doorstep Drop</h5>
-                    <p style={{ color: '#94a3b8', fontSize: '11px', margin: 0 }}>Across all Hyderabad</p>
-                  </div>
-                </div>
+                ))}
               </div>
             </div>
           </div>
@@ -474,7 +386,7 @@ export default async function Page() {
                 clear: 'both',
               }}
             >
-              Why Travelers Trust Us
+              {landingPage?.whyChooseSubtitle || "Why Travelers Trust Us"}
             </h4>
             <h2
               style={{
@@ -487,52 +399,26 @@ export default async function Page() {
                 lineHeight: 1.3,
               }}
             >
-              Why Choose DriveIt Cars?
+              {landingPage?.whyChooseHeading || "Why Choose DriveIt Cars?"}
             </h2>
           </div>
           <div className="row">
-            <div className="col-md-4 mb-4">
-              <div className="icon-box">
-                <div className="icon"><i className="fa fa-shield-alt" /></div>
-                <h4>Trustworthy &amp; Reliable</h4>
-                <p>Fully insured, well-maintained cars with transparent pricing and no hidden charges.</p>
+            {(landingPage?.whyChooseCards && landingPage.whyChooseCards.length > 0 ? landingPage.whyChooseCards : [
+              { icon: 'fa-shield-alt', title: 'Trustworthy & Reliable', description: 'Fully insured, well-maintained cars with transparent pricing and no hidden charges.' },
+              { icon: 'fa-car', title: 'Wide Fleet Variety', description: 'From hatchbacks to luxury SUVs and buses, we have the perfect vehicle for every need.' },
+              { icon: 'fa-clock', title: 'Flexible Rental Plans', description: 'Hourly, daily, weekly, and customized rentals – pay only for what you use.' },
+              { icon: 'fa-rupee-sign', title: 'Competitive Rates', description: 'Affordable prices without compromising on quality, safety, or service.' },
+              { icon: 'fa-headset', title: '24/7 On-Road Support', description: 'Our team is always available to assist you with bookings, queries, and road assistance.' },
+              { icon: 'fa-handshake', title: 'Hassle-free Booking', description: 'Easy online booking, quick verification, and doorstep delivery options available.' },
+            ]).map((card, idx) => (
+              <div className="col-md-4 mb-4" key={idx}>
+                <div className="icon-box">
+                  <div className="icon"><i className={`fa ${card.icon || 'fa-check'}`} /></div>
+                  <h4>{card.title}</h4>
+                  <p>{card.description}</p>
+                </div>
               </div>
-            </div>
-            <div className="col-md-4 mb-4">
-              <div className="icon-box">
-                <div className="icon"><i className="fa fa-car" /></div>
-                <h4>Wide Fleet Variety</h4>
-                <p>From hatchbacks to luxury SUVs and buses, we have the perfect vehicle for every need.</p>
-              </div>
-            </div>
-            <div className="col-md-4 mb-4">
-              <div className="icon-box">
-                <div className="icon"><i className="fa fa-clock" /></div>
-                <h4>Flexible Rental Plans</h4>
-                <p>Hourly, daily, weekly, and customized rentals – pay only for what you use.</p>
-              </div>
-            </div>
-            <div className="col-md-4 mb-4">
-              <div className="icon-box">
-                <div className="icon"><i className="fa fa-rupee-sign" /></div>
-                <h4>Competitive Rates</h4>
-                <p>Affordable prices without compromising on quality, safety, or service.</p>
-              </div>
-            </div>
-            <div className="col-md-4 mb-4">
-              <div className="icon-box">
-                <div className="icon"><i className="fa fa-headset" /></div>
-                <h4>24/7 On-Road Support</h4>
-                <p>Our team is always available to assist you with bookings, queries, and road assistance.</p>
-              </div>
-            </div>
-            <div className="col-md-4 mb-4">
-              <div className="icon-box">
-                <div className="icon"><i className="fa fa-handshake" /></div>
-                <h4>Hassle-free Booking</h4>
-                <p>Easy online booking, quick verification, and doorstep delivery options available.</p>
-              </div>
-            </div>
+            ))}
           </div>
         </div>
       </section>
@@ -546,17 +432,21 @@ export default async function Page() {
           <div className="row align-items-center">
             <div className="col-md-6">
               <div className="promo-box-left">
-                <img loading="lazy" src="/assets/img/toyota-offer-2.png" alt="Hourly self drive car rental Hyderabad" />
+                <img
+                  loading="lazy"
+                  src={landingPage?.partnerImage ? urlFor(landingPage.partnerImage)?.url() : '/assets/img/toyota-offer-2.png'}
+                  alt="Hourly self drive car rental Hyderabad"
+                />
               </div>
             </div>
             <div className="col-md-6">
               <div className="promo-box-right">
-                <h3>Share your Car and Earn</h3>
+                <h3>{landingPage?.partnerHeading || "Share your Car and Earn"}</h3>
                 <p style={{ color: '#bbb', marginBottom: '20px' }}>
-                  Have an idle car? Partner with DriveIt and earn guaranteed monthly income with full vehicle insurance coverage.
+                  {landingPage?.partnerDescription || "Have an idle car? Partner with DriveIt and earn guaranteed monthly income with full vehicle insurance coverage."}
                 </p>
-                <Link href="/partner" className="gauto-btn">
-                  Partner With Us
+                <Link href={landingPage?.partnerButtonLink || "/partner"} className="gauto-btn">
+                  {landingPage?.partnerButtonText || "Partner With Us"}
                 </Link>
               </div>
             </div>
@@ -568,7 +458,7 @@ export default async function Page() {
       <section className="gauto-contact-area">
         <div className="container-full">
           <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3807.231332524019!2d78.45280357383254!3d17.400682483488747!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb97844e874967%3A0xec0fefe2fefa1e15!2sDRIVEIT%20Self%20drive%20Cars%20%7C%20Car%20Rentals%20in%20Hyderabad%20%7C%20Rent%20a%20Car%20in%20Hyderabad!5e0!3m2!1sen!2sin!4v1695815700234!5m2!1sen!2sin"
+            src={landingPage?.mapEmbedUrl || "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3807.231332524019!2d78.45280357383254!3d17.400682483488747!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb97844e874967%3A0xec0fefe2fefa1e15!2sDRIVEIT%20Self%20drive%20Cars%20%7C%20Car%20Rentals%20in%20Hyderabad%20%7C%20Rent%20a%20Car%20in%20Hyderabad!5e0!3m2!1sen!2sin!4v1695815700234!5m2!1sen!2sin"}
             width="100%"
             height={280}
             style={{ border: 0, display: 'block' }}

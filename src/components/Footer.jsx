@@ -2,9 +2,11 @@
 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
+import { useSiteSettings } from '../context/SiteSettingsContext';
 
 export default function Footer() {
   const pathname = usePathname();
+  const settings = useSiteSettings();
 
   // Do not render website footer or floating buttons inside Sanity Studio
   if (pathname?.startsWith('/studio')) {
@@ -24,21 +26,22 @@ export default function Footer() {
                     <Link href="/">
                       <img
                         loading="lazy"
-                        src="/logo2.png"
+                        src={settings.footerLogoUrl || settings.logoUrl || '/logo2.png'}
                         alt="DriveIt Self Drive Cars Hyderabad"
                         style={{ height: '60px', maxHeight: '66px', width: 'auto', maxWidth: '230px', objectFit: 'contain', display: 'block' }}
                       />
                     </Link>
                   </div>
                   <p style={{ color: '#aaa', fontSize: '14px', lineHeight: '1.7', marginBottom: '16px' }}>
-                    DriveIt is Hyderabad’s leading car rental platform offering premium self-drive cars, luxury wedding cars, and group travel buses with transparent pricing and doorstep delivery.
+                    {settings.footerAbout}
                   </p>
                   <div className="footer-trust-tags" style={{ marginBottom: '18px' }}>
-                    <span style={{ display: 'inline-block', fontSize: '12px', background: 'rgba(255,185,7,0.12)', color: '#ffb907', padding: '3px 8px', borderRadius: '4px', marginRight: '6px', marginBottom: '6px' }}>✓ 100% Insured</span>
-                    <span style={{ display: 'inline-block', fontSize: '12px', background: 'rgba(255,185,7,0.12)', color: '#ffb907', padding: '3px 8px', borderRadius: '4px', marginRight: '6px', marginBottom: '6px' }}>✓ 24/7 Road Support</span>
-                    <span style={{ display: 'inline-block', fontSize: '12px', background: 'rgba(255,185,7,0.12)', color: '#ffb907', padding: '3px 8px', borderRadius: '4px', marginBottom: '6px' }}>✓ Sanitized Cars</span>
+                    {(settings.footerTrustTags || ['100% Insured', '24/7 Road Support', 'Sanitized Cars']).map((tag, idx) => (
+                      <span key={idx} style={{ display: 'inline-block', fontSize: '12px', background: 'rgba(255,185,7,0.12)', color: '#ffb907', padding: '3px 8px', borderRadius: '4px', marginRight: '6px', marginBottom: '6px' }}>
+                        ✓ {tag}
+                      </span>
+                    ))}
                   </div>
-
                 </div>
               </div>
 
@@ -89,20 +92,24 @@ export default function Footer() {
                   <div className="footer-address">
                     <p style={{ color: '#aaa', fontSize: '14px', lineHeight: '1.6', marginBottom: 14 }}>
                       <i className="fa fa-map-marker" style={{ color: '#ffb907', marginRight: 8 }} />
-                      10-2-289/83, Mehar Mansion, Rd Number 2, Shantinagar Colony, Masab Tank, Hyderabad, Telangana 500028.
+                      {settings.address}
                     </p>
                     <ul style={{ listStyle: 'none', padding: 0, margin: '0 0 16px', color: '#bbb', fontSize: '14px' }}>
                       <li style={{ marginBottom: 8 }}>
                         <i className="fa fa-phone" style={{ color: '#ffb907', marginRight: 8 }} />
-                        <a href="tel:+916300041186" style={{ color: '#ffb907', fontWeight: 600 }}>+91 6300041186</a>
+                        <a href={`tel:${(settings.phoneNumber || '+916300041186').replace(/\s+/g, '')}`} style={{ color: '#ffb907', fontWeight: 600 }}>
+                          {settings.phoneNumber}
+                        </a>
                       </li>
                       <li style={{ marginBottom: 8 }}>
                         <i className="fa fa-envelope" style={{ color: '#ffb907', marginRight: 8 }} />
-                        <a href="mailto:driveitcars@gmail.com" style={{ color: '#bbb' }}>driveitcars@gmail.com</a>
+                        <a href={`mailto:${settings.email || 'driveitcars@gmail.com'}`} style={{ color: '#bbb' }}>
+                          {settings.email}
+                        </a>
                       </li>
                       <li style={{ marginBottom: 8 }}>
                         <i className="fa fa-clock-o" style={{ color: '#ffb907', marginRight: 8 }} />
-                        <span>Mon - Sun: 7:00 AM – 10:00 PM</span>
+                        <span>{settings.workingHours}</span>
                       </li>
                     </ul>
                     <div className="footer-policy-links" style={{ display: 'flex', gap: '12px', flexWrap: 'wrap', fontSize: '13px' }}>
@@ -125,7 +132,7 @@ export default function Footer() {
             <div className="row align-items-center">
               <div className="col-md-6 text-md-start text-center mb-md-0 mb-2">
                 <div className="copyright" style={{ color: '#888', fontSize: '13px' }}>
-                  Copyright © 2026. <span style={{ color: '#ffb907' }}>DRIVEIT CARS</span>. All Rights Reserved.
+                  {settings.copyrightText}
                 </div>
               </div>
               <div className="col-md-6 text-md-end text-center">
@@ -140,8 +147,8 @@ export default function Footer() {
 
       {/* Floating Buttons */}
       <a href="#" id="chatFloatBtn" className="chat-float-btn" aria-label="Online Chat"><i className="fa fa-comment" /><span className="tooltip-chat">Online Chat</span></a>
-      <a href="https://api.whatsapp.com/send?phone=+916300041186&text=Hi%20DRIVEIT%20Cars%20I%20want%20to%20book%20" target="_blank" className="whatsapp-float" aria-label="WhatsApp Us"><i className="fa fa-whatsapp" /></a>
-      <a href="tel:+916300041186" className="phone-float" aria-label="Call Us"><i className="fa fa-phone" /></a>
+      <a href={`https://api.whatsapp.com/send?phone=${(settings.whatsappNumber || '+916300041186').replace(/[^0-9]/g, '')}&text=Hi%20DRIVEIT%20Cars%20I%20want%20to%20book%20`} target="_blank" className="whatsapp-float" aria-label="WhatsApp Us"><i className="fa fa-whatsapp" /></a>
+      <a href={`tel:${(settings.phoneNumber || '+916300041186').replace(/\s+/g, '')}`} className="phone-float" aria-label="Call Us"><i className="fa fa-phone" /></a>
     </>
   );
 }

@@ -4,7 +4,18 @@ import { offerType } from './offer'
 import { testimonialType } from './testimonial'
 import { siteSettingsType } from './siteSettings'
 import { landingPageType } from './landingPage'
+import { locationPageType } from './locationPage'
+import { categoryPageType } from './categoryPage'
 
 export const schema = {
-  types: [siteSettingsType, landingPageType, postType, carType, offerType, testimonialType],
+  types: [
+    siteSettingsType,
+    landingPageType,
+    locationPageType,
+    categoryPageType,
+    carType,
+    offerType,
+    testimonialType,
+    postType,
+  ],
 }
