@@ -68,7 +68,7 @@
 ## Area Services & Locality Route Alignment
 - **Missing Locality Route Resolution (Zero 404s)**:
   - Root cause: 10 locality pages were named with a `-luxury-car-rental` suffix (e.g. `/gachibowli-luxury-car-rental`), while the Header dropdown and Footer linked to clean short paths (`/gachibowli`, `/lb-nagar`, `/mehdipatnam`, `/tarnaka`, etc.), causing 404 empty pages when clicked.
-  - Fix: Created matching routes for all 10 short paths (`/gachibowli`, `/guttala-begumpet`, `/habsiguda`, `/khairatabad`, `/lb-nagar`, `/mehdipatnam`, `/nampally`, `/sheikpet`, `/tarnaka`, `/tolichowki`), each populated with complete area SEO content, full 21-car fleet cards, direct call button, car-specific WhatsApp enquiry, and `<FaqSection />`. Both short and long URLs are preserved for seamless SEO backlink compatibility.
+  - Fix: Created matching routes for all 10 short paths (`/gachibowli`, `/guttala-begumpet`, `/habsiguda`, `/khairatabad`, `/lb-nagar`, `/mehdipatnam`, `/nampally`, `/Shaikpet`, `/tarnaka`, `/tolichowki`), each populated with complete area SEO content, full 21-car fleet cards, direct call button, car-specific WhatsApp enquiry, and `<FaqSection />`. Both short and long URLs are preserved for seamless SEO backlink compatibility.
 - **Area Service Dropdown Expansion**:
   - Aligned `Header.jsx` Area Service dropdown to display all 26 Hyderabad service localities, cleanly divided into two balanced 13-item columns (`Section 1 (A – K)` and `Section 2 (L – Y)`).
   - Total static production routes expanded to 63/63, all compiling cleanly with 0 errors.
@@ -189,4 +189,21 @@
   - **Structured Data (`SeoSchema.jsx`)**: Built and embedded Google-compliant JSON-LD schemas (`AutoRental`, `CarRental`, `LocalBusiness`, `FAQPage`, and `BreadcrumbList`) across all landing pages for rich snippet visibility.
   - **Navigation & Internal Linking**: Added `Kondapur` and `Madhapur` to desktop & mobile Area Service dropdowns (`Header.jsx`) and integrated exact-match keyword anchors in `Footer.jsx`.
   - **Zero Compile Errors**: Verified clean build via `npm run build` with 68 static and dynamic Next.js App Router routes compiling without error.
+
+## Airport Targeting Keywords Overhaul (RGIA Shamshabad)
+- **Keywords Deployed & Optimized**:
+  1. `Hyderabad Airport car rental`: High-authority landing page at `/hyderabad-airport-car-rental` with RGIA terminal handover, 24/7 service.
+  2. `HYD Airport self drive`: Dedicated self-drive airport fleet (Creta, Thar 4x4, Innova Crysta, Dzire) with 10-minute terminal handover.
+  3. `airport pickup Hyderabad`: Punctual chauffeur meet-and-greet with flight tracking and luggage loading at arrival gate.
+  4. `airport drop Hyderabad`: On-time pickup from all 26+ Hyderabad zones (HITEC City, Gachibowli, Banjara Hills, Secunderabad) with zero surge pricing.
+  5. `airport luxury car rental Hyderabad`: VIP arrivals in Mercedes-Benz, BMW, Audi, Range Rover Evoque, and Fortuner Legender.
+  6. `airport chauffeur service Hyderabad`: Verified, executive highway chauffeurs with FASTag, English/Hindi/Telugu fluency.
+  7. `airport SUV rental Hyderabad`: 5 & 7-seater SUVs with luggage capacity for 4–6 international check-in suitcases.
+- **Architectural & Technical Enhancements**:
+  - **New High-Intent Route**: Built `src/app/hyderabad-airport-car-rental/page.jsx` with full SEO metadata, `AutoRental` schema for RGIA Shamshabad, `FAQPage` schema, travel time table to key Hyderabad tech corridors.
+  - **Cabs Page Enhancement**: Upgraded `src/app/cabs/page.jsx` with full metadata, `AutoRental` & `FAQPage` schemas targeting airport pickups and drops.
+  - **Sitemap Priority**: Registered `/hyderabad-airport-car-rental` in `src/app/sitemap.js` as Tier 1 Core Hub (1.0 Priority, Daily Frequency).
+  - **Navigation Integration**: Added "Airport Rental" in `Header.jsx` desktop menu and mobile navigation drawer; added exact-match airport keyword anchors in `Footer.jsx` and `self-drive-car/page.jsx`.
+  - **Build Verification**: 69/69 Next.js App Router routes compiling cleanly with 0 errors.
+
 

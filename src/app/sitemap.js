@@ -8,6 +8,7 @@ export default async function sitemap() {
   const coreHubs = [
     { path: '', priority: 1.0, changeFrequency: 'daily' },
     { path: '/self-drive-car', priority: 1.0, changeFrequency: 'daily' },
+    { path: '/hyderabad-airport-car-rental', priority: 1.0, changeFrequency: 'daily' },
     { path: '/self-drive-suv-hyderabad', priority: 1.0, changeFrequency: 'daily' },
     { path: '/luxurycars', priority: 1.0, changeFrequency: 'daily' },
     { path: '/weekend-self-drive-cars-hyderabad', priority: 1.0, changeFrequency: 'daily' },
@@ -50,7 +51,7 @@ export default async function sitemap() {
     '/nampally',
     '/outstation-bus',
     '/secunderabad',
-    '/sheikpet',
+    '/Shaikpet',
     '/sr-nagar',
     '/sun-city',
     '/tarnaka',

@@ -78,7 +78,7 @@ export const carType = defineType({
           { title: '📍 Mehdipatnam', value: 'mehdipatnam-luxury-car-rental' },
           { title: '📍 Nampally', value: 'nampally-luxury-car-rental' },
           { title: '📍 Secunderabad', value: 'secunderabad' },
-          { title: '📍 Sheikpet', value: 'sheikpet-luxury-car-rental' },
+          { title: '📍 Shaikpet', value: 'Shaikpet-luxury-car-rental' },
           { title: '📍 SR Nagar', value: 'sr-nagar' },
           { title: '📍 Sun City', value: 'sun-city' },
           { title: '📍 Tarnaka', value: 'tarnaka-luxury-car-rental' },

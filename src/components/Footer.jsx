@@ -49,17 +49,17 @@ export default function Footer() {
               <div className="col-lg-3 col-md-6 mb-4">
                 <div className="single-footer">
                   <h3 style={{ fontSize: '17px', color: '#fff', borderBottom: '2px solid #ffb907', paddingBottom: '10px', marginBottom: '18px', display: 'inline-block' }}>
-                    Self Drive &amp; Fleet
+                    Self Drive &amp; Airport
                   </h3>
                   <ul className="footer-links-list" style={{ listStyle: 'none', padding: 0, margin: 0 }}>
                     <li style={{ marginBottom: 10 }}><Link href="/self-drive-car" style={{ color: '#bbb', fontSize: '14px', transition: '0.2s' }}>Self Drive Cars Hyderabad</Link></li>
-                    <li style={{ marginBottom: 10 }}><Link href="/self-drive-suv-hyderabad" style={{ color: '#ffb907', fontWeight: 600, fontSize: '14px', transition: '0.2s' }}>Self Drive SUV Hyderabad</Link></li>
-                    <li style={{ marginBottom: 10 }}><Link href="/luxurycars" style={{ color: '#bbb', fontSize: '14px', transition: '0.2s' }}>Luxury Self Drive Cars</Link></li>
+                    <li style={{ marginBottom: 10 }}><Link href="/hyderabad-airport-car-rental" style={{ color: '#ffb907', fontWeight: 600, fontSize: '14px', transition: '0.2s' }}>Hyderabad Airport Car Rental</Link></li>
+                    <li style={{ marginBottom: 10 }}><Link href="/hyderabad-airport-car-rental#self-drive" style={{ color: '#ffb907', fontWeight: 600, fontSize: '14px', transition: '0.2s' }}>HYD Airport Self Drive</Link></li>
+                    <li style={{ marginBottom: 10 }}><Link href="/cabs" style={{ color: '#bbb', fontSize: '14px', transition: '0.2s' }}>Airport Pickup &amp; Drop Hyderabad</Link></li>
+                    <li style={{ marginBottom: 10 }}><Link href="/self-drive-suv-hyderabad" style={{ color: '#bbb', fontSize: '14px', transition: '0.2s' }}>Self Drive SUV Hyderabad</Link></li>
+                    <li style={{ marginBottom: 10 }}><Link href="/luxurycars" style={{ color: '#bbb', fontSize: '14px', transition: '0.2s' }}>Airport Luxury Car Rental</Link></li>
                     <li style={{ marginBottom: 10 }}><Link href="/weekend-self-drive-cars-hyderabad" style={{ color: '#bbb', fontSize: '14px', transition: '0.2s' }}>Weekend Self Drive Cars</Link></li>
                     <li style={{ marginBottom: 10 }}><Link href="/monthly-self-drive-cars-hyderabad" style={{ color: '#bbb', fontSize: '14px', transition: '0.2s' }}>Monthly Self Drive Cars</Link></li>
-                    <li style={{ marginBottom: 10 }}><Link href="/suv5" style={{ color: '#bbb', fontSize: '14px', transition: '0.2s' }}>5-Seater SUVs (Creta, Thar)</Link></li>
-                    <li style={{ marginBottom: 10 }}><Link href="/suv7" style={{ color: '#bbb', fontSize: '14px', transition: '0.2s' }}>7-Seater SUVs (Innova Crysta)</Link></li>
-                    <li style={{ marginBottom: 10 }}><Link href="/luxury-buses" style={{ color: '#bbb', fontSize: '14px', transition: '0.2s' }}>Luxury Buses &amp; Coaches</Link></li>
                   </ul>
                 </div>
               </div>

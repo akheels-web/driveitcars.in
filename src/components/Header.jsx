@@ -157,6 +157,7 @@ export default function Header() {
                   <ul id="gauto_navigation">
                     <li><Link href="/">Home</Link></li>
                     <li><Link href="/self-drive-car">Self Drive Cars</Link></li>
+                    <li><Link href="/hyderabad-airport-car-rental">Airport Rental</Link></li>
                     <li><Link href="/luxurycars">Luxury Cars</Link></li>
                     <li><Link href="/luxury-buses">Luxury Buses</Link></li>
                     <li><Link href="/cabs">Cabs</Link></li>
@@ -200,7 +201,7 @@ export default function Header() {
                             <Link href="/mehdipatnam">Mehdipatnam</Link>
                             <Link href="/nampally">Nampally</Link>
                             <Link href="/secunderabad">Secunderabad</Link>
-                            <Link href="/sheikpet">Sheikpet</Link>
+                            <Link href="/Shaikpet">Shaikpet</Link>
                             <Link href="/sr-nagar">SR Nagar</Link>
                             <Link href="/sun-city">Sun City</Link>
                             <Link href="/tarnaka">Tarnaka</Link>
@@ -314,6 +315,15 @@ export default function Header() {
                 className="mobile-nav-link"
               >
                 <i className="fa fa-car" /> Self Drive Cars
+              </Link>
+            </li>
+            <li className="mobile-nav-item">
+              <Link
+                href="/hyderabad-airport-car-rental"
+                onClick={() => setMobileMenuOpen(false)}
+                className="mobile-nav-link"
+              >
+                <i className="fa fa-plane" /> Airport Car Rental
               </Link>
             </li>
             <li className="mobile-nav-item">
@@ -437,7 +447,7 @@ export default function Header() {
                         { name: 'Mehdipatnam', href: '/mehdipatnam' },
                         { name: 'Nampally', href: '/nampally' },
                         { name: 'Secunderabad', href: '/secunderabad' },
-                        { name: 'Sheikpet', href: '/sheikpet' },
+                        { name: 'Shaikpet', href: '/Shaikpet' },
                         { name: 'SR Nagar', href: '/sr-nagar' },
                         { name: 'Sun City', href: '/sun-city' },
                         { name: 'Tarnaka', href: '/tarnaka' },

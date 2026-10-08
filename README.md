@@ -23,7 +23,7 @@
 Dedicated SEO landing pages with localized content, custom car cards, route landmarks, and unified FAQs across 26 major Hyderabad hubs:
 - **West Zone**: Gachibowli, Hitech City, Jubilee Hills, Banjara Hills, Film Nagar, Guttala Begumpet.
 - **North & East Zone**: Secunderabad, Begumpet, Bowenpally, Kukatpally, Ameerpet, SR Nagar, Tarnaka, Habsiguda, LB Nagar.
-- **Central & South Zone**: Masab Tank, Khairatabad, Nampally, Mehdipatnam, Tolichowki, Sheikpet, Langer House, Sun City, Vijay Nagar Colony, Himmatnagar, Yousufguda.
+- **Central & South Zone**: Masab Tank, Khairatabad, Nampally, Mehdipatnam, Tolichowki, Shaikpet, Langer House, Sun City, Vijay Nagar Colony, Himmatnagar, Yousufguda.
 
 ### 🛠️ Embedded Headless CMS (Sanity v3)
 - Built-in studio accessible at [`/studio`](https://driveitcars.in/studio).

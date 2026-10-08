@@ -1,6 +1,45 @@
 import HeroSlider from '@/components/HeroSlider';
 import FaqSection from '@/components/FaqSection';
 import Link from 'next/link';
+import SeoSchema, {
+  buildCarRentalSchema,
+  buildBreadcrumbSchema,
+  buildFaqSchema,
+} from '@/components/SeoSchema';
+
+export const metadata = {
+  title: 'Airport Pickup & Drop Hyderabad | Chauffeur Cab Services | DRIVEIT',
+  description:
+    'Book 24/7 airport pickup & drop in Hyderabad. Chauffeur driven sedans, Innova Crysta & luxury cabs at RGIA Shamshabad. Zero surge pricing, flight tracking.',
+  alternates: {
+    canonical: 'https://www.driveitcars.in/cabs',
+  },
+  openGraph: {
+    title: 'Airport Pickup & Drop Hyderabad | Chauffeur Cabs | DRIVEIT',
+    description:
+      'Reliable airport transfers in Hyderabad. Verified chauffeurs, clean AC cars, zero surge pricing at Rajiv Gandhi International Airport.',
+    url: 'https://www.driveitcars.in/cabs',
+    siteName: 'DRIVEIT Cars Hyderabad',
+  },
+};
+
+const CAB_FAQS = [
+  {
+    question: 'How do airport pickup and drop transfers work with DRIVEIT?',
+    answer:
+      'We provide fixed-rate airport pickup and airport drop services between Rajiv Gandhi International Airport (RGIA Shamshabad) and any location in Hyderabad. Our drivers track your flight arrival time and wait at the arrival gate with zero cancellation risk.',
+  },
+  {
+    question: 'Is there surge pricing during night or peak morning airport hours?',
+    answer:
+      'No. DRIVEIT operates on a transparent, flat pricing policy with zero surge pricing, even during midnight and early-morning hours.',
+  },
+  {
+    question: 'Can I book an Innova Crysta for large group airport transfers?',
+    answer:
+      'Yes, we provide 7-seater and 8-seater Innova Crysta and MUVs with massive luggage capacity for international and domestic arrivals.',
+  },
+];
 
 const CABS_FLEET = [
   {
@@ -60,8 +99,26 @@ const CABS_FLEET = [
 ];
 
 export default function cabsPage() {
+  const rentalSchema = buildCarRentalSchema({
+    name: 'DRIVEIT Airport Pickup & Drop Hyderabad',
+    description:
+      'Reliable 24/7 airport pickup & drop transfers and chauffeur cab services in Hyderabad at Rajiv Gandhi International Airport (RGIA).',
+    url: 'https://www.driveitcars.in/cabs',
+    areaServed: ['Rajiv Gandhi International Airport (RGIA)', 'Hyderabad', 'HITEC City', 'Gachibowli', 'Telangana'],
+  });
+
+  const breadcrumbSchema = buildBreadcrumbSchema([
+    { name: 'Home', url: '/' },
+    { name: 'Airport Pickup & Drop Cabs', url: '/cabs' },
+  ]);
+
+  const faqSchema = buildFaqSchema(CAB_FAQS);
+
   return (
     <>
+      <SeoSchema schema={rentalSchema} />
+      <SeoSchema schema={breadcrumbSchema} />
+      <SeoSchema schema={faqSchema} />
       {/* ========== HERO SLIDER ========== */}
       <HeroSlider />
 
@@ -258,7 +315,11 @@ export default function cabsPage() {
       </section>
 
       {/* ========== UNIFIED FAQ ACCORDION COMPONENT ========== */}
-      <FaqSection />
+      <FaqSection
+        items={CAB_FAQS}
+        title="Frequently Asked Questions — Airport Pickup & Drop Hyderabad"
+        subtitle="Common questions about chauffeur cab bookings, airport transfers, and luggage capacity"
+      />
     </>
   );
 }
