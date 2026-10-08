@@ -177,6 +177,30 @@ export default function Footer() {
                 </div>
               </div>
             </div>
+
+            {/* Corporate & Executive Car Rentals SEO Strip */}
+            <div className="row mt-3 pt-3" style={{ borderTop: '1px solid rgba(255,255,255,0.05)' }}>
+              <div className="col-12">
+                <div style={{ marginBottom: '10px' }}>
+                  <span style={{ color: '#ffb907', fontSize: '13px', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.8px' }}>
+                    ✦ Corporate &amp; Business Car Rentals Hyderabad:
+                  </span>
+                </div>
+                <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px 16px', fontSize: '13px', alignItems: 'center' }}>
+                  <Link href="/corporate-car-rental-hyderabad" style={{ color: '#ffb907', fontWeight: 600 }}>Corporate Car Rental Hyderabad</Link>
+                  <span style={{ color: '#444' }}>•</span>
+                  <Link href="/luxury-chauffeur-hyderabad" style={{ color: '#ffb907', fontWeight: 600 }}>Executive Chauffeur Hyderabad</Link>
+                  <span style={{ color: '#444' }}>•</span>
+                  <Link href="/monthly-corporate-car-rental-hyderabad" style={{ color: '#ffb907', fontWeight: 600 }}>Monthly Corporate Car Rental Hyderabad</Link>
+                  <span style={{ color: '#444' }}>•</span>
+                  <Link href="/monthly-corporate-car-rental-hyderabad" style={{ color: '#bbb' }}>Corporate Fleet Lease Hyderabad</Link>
+                  <span style={{ color: '#444' }}>•</span>
+                  <Link href="/vip-car-rental-hyderabad" style={{ color: '#bbb' }}>CXO &amp; Director Car Rental</Link>
+                  <span style={{ color: '#444' }}>•</span>
+                  <Link href="/hyderabad-airport-car-rental" style={{ color: '#bbb' }}>Corporate Airport Transfers RGIA</Link>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
 
@@ -191,7 +215,7 @@ export default function Footer() {
               </div>
               <div className="col-md-6 text-md-end text-center">
                 <div style={{ color: '#666', fontSize: '12px' }}>
-                  Hyderabad Self Drive Cars | Luxury Wedding Car Rental | Outstation Coaches
+                  Hyderabad Self Drive Cars | Corporate Car Rental | Luxury Wedding Car Hire | Outstation Coaches
                 </div>
               </div>
             </div>

@@ -24,6 +24,8 @@ export default async function sitemap() {
     { path: '/groom-entry-luxury-car-hyderabad', priority: 1.0, changeFrequency: 'daily' },
     { path: '/weekend-self-drive-cars-hyderabad', priority: 1.0, changeFrequency: 'daily' },
     { path: '/monthly-self-drive-cars-hyderabad', priority: 1.0, changeFrequency: 'daily' },
+    { path: '/corporate-car-rental-hyderabad', priority: 1.0, changeFrequency: 'daily' },
+    { path: '/monthly-corporate-car-rental-hyderabad', priority: 1.0, changeFrequency: 'daily' },
   ];
 
   // Tier 2: Key Tech Corridor Hubs & Primary Vehicle Categories (0.9 Priority)

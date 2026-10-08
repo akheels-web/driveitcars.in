@@ -262,6 +262,23 @@
   - **Turbopack Build Verification**:
     - Clean compilation via `npm run build` with 80/80 routes generated without error.
 
-
-
-
+## Corporate Clients Targeting Overhaul
+- **Keywords Deployed & Targeted for #1 Ranking**:
+  1. `corporate car rental Hyderabad`: Dedicated B2B master landing page at `/corporate-car-rental-hyderabad` targeting enterprises, tech MNCs, consulting firms, and startups in HITEC City, Gachibowli, Financial District, Mindspace, and Kokapet. Highlights 100% GST input tax credit invoices, dedicated corporate account managers, suited background-verified chauffeurs, spot tariffs (4h/40km, 8h/80km), and airport transfers.
+  2. `executive chauffeur Hyderabad`: Reinforced dedicated landing page at `/luxury-chauffeur-hyderabad` targeting suited executive chauffeurs, English/Hindi/Telugu fluency, corporate protocol, NDA ethics, and VIP transfers for visiting boards, CXOs, and foreign delegates.
+  3. `monthly corporate car rental Hyderabad`: Dedicated long-term fleet subscription landing page at `/monthly-corporate-car-rental-hyderabad` targeting IT enterprises, resident directors, and expatriate executives. Emphasizes zero capex, zero depreciation, 100% opex tax deductibility, up to 45% savings vs daily rentals, and guaranteed replacement cars during servicing.
+- **Architectural & Technical Enhancements**:
+  - **New High-Authority Dedicated Routes**:
+    - `src/app/corporate-car-rental-hyderabad/page.jsx`: Complete corporate pillar page with business tariffs, executive fleet showcase, enterprise advantages, interactive B2B FAQ with schema, and dual call/WhatsApp CTAs.
+    - `src/app/monthly-corporate-car-rental-hyderabad/page.jsx`: Dedicated long-term lease page with buy vs lease comparison matrix, monthly tiers (Executive Sedan, Executive MUV, CXO Luxury Sedan, Luxury Coach), replacement guarantees, and FAQ schema.
+  - **Structured Data (JSON-LD)**:
+    - Embedded `AutoRental`, `FAQPage`, and `BreadcrumbList` schemas across `/corporate-car-rental-hyderabad` and `/monthly-corporate-car-rental-hyderabad`.
+  - **Internal Linking & Sitewide Authority**:
+    - `src/components/Footer.jsx`: Added dedicated full-width "Corporate & Business Car Rentals Hyderabad" SEO strip with exact-match anchors for `corporate car rental Hyderabad`, `executive chauffeur Hyderabad`, `monthly corporate car rental Hyderabad`, `corporate fleet lease Hyderabad`, `CXO & director car rental`, and `corporate airport transfers RGIA`.
+    - `src/components/Header.jsx`: Added "Corporate" in desktop main navigation and "Corporate Car Rental" in mobile navigation slide-over drawer with briefcase icon.
+    - `src/components/LocationPageContent.jsx`: Added contextual specialized services cross-link bar to all 30+ location pages (HITEC City, Gachibowli, Madhapur, Kondapur, Banjara Hills, etc.) linking directly to corporate and monthly corporate hubs.
+    - `src/app/luxurycars/page.jsx` & `src/app/self-drive-car/page.jsx`: Added direct jump pills to corporate car rental.
+  - **Sitemap Priority**:
+    - `src/app/sitemap.js`: Registered `/corporate-car-rental-hyderabad` and `/monthly-corporate-car-rental-hyderabad` in Tier 1 Core Hubs with `1.0` priority and `daily` change frequency.
+  - **Turbopack Build Verification**:
+    - Clean compilation via `npm run build` with 82/82 routes generated without error.

@@ -7,16 +7,16 @@ import SeoSchema, {
 } from '@/components/SeoSchema';
 
 export const metadata = {
-  title: 'Luxury Chauffeur Hyderabad | Executive VIP Chauffeur Service | DRIVEIT',
+  title: 'Executive Chauffeur Hyderabad | Luxury Chauffeur Service | DRIVEIT',
   description:
-    'Book luxury chauffeur service in Hyderabad with DRIVEIT. Suited, background-verified executive chauffeurs with Mercedes, BMW, Audi, Innova Crysta & Fortuner. 24/7 airport & corporate travel.',
+    'Book verified executive chauffeur service in Hyderabad with DRIVEIT. Suited, background-verified executive chauffeurs with Mercedes, BMW, Audi, Innova Crysta & Fortuner. 24/7 corporate & airport travel.',
   alternates: {
     canonical: 'https://www.driveitcars.in/luxury-chauffeur-hyderabad',
   },
   openGraph: {
-    title: 'Luxury Chauffeur Hyderabad | Executive & VIP Drivers | DRIVEIT',
+    title: 'Executive Chauffeur Hyderabad | Luxury VIP Chauffeur Service | DRIVEIT',
     description:
-      'Hyderabad’s elite luxury chauffeur service. Suited chauffeurs, punctual meet-and-greet, English-fluent drivers for corporate executives, dignitaries, and RGIA airport transfers.',
+      'Hyderabad’s elite executive chauffeur service. Suited chauffeurs, punctual meet-and-greet, English-fluent drivers for corporate executives, dignitaries, and RGIA airport transfers.',
     url: 'https://www.driveitcars.in/luxury-chauffeur-hyderabad',
     siteName: 'DRIVEIT Cars Hyderabad',
     locale: 'en_IN',
@@ -26,15 +26,15 @@ export const metadata = {
         url: 'https://www.driveitcars.in/assets/img/benz2.png',
         width: 1200,
         height: 630,
-        alt: 'Luxury Chauffeur Service Hyderabad - DRIVEIT',
+        alt: 'Executive Chauffeur Service Hyderabad - DRIVEIT',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Luxury Chauffeur Hyderabad | DRIVEIT Cars',
+    title: 'Executive Chauffeur Hyderabad | DRIVEIT Cars',
     description:
-      'Book verified luxury chauffeur services in Hyderabad. Suited drivers, Mercedes, BMW, Audi & Innova Crysta for corporate and VIP travel.',
+      'Book verified executive chauffeur services in Hyderabad. Suited drivers, Mercedes, BMW, Audi & Innova Crysta for corporate and VIP travel.',
   },
 };
 
@@ -190,17 +190,23 @@ export default function LuxuryChauffeurHyderabadPage() {
                   ✦ EXECUTIVE PROTOCOL • SUITED DRIVERS • 24/7 AIRPORT TRANSFERS
                 </span>
                 <h1 style={{ color: '#0f172a', fontSize: '32px', fontWeight: 800, marginBottom: '20px', lineHeight: '1.3' }}>
-                  Luxury Chauffeur Hyderabad — Professional Executive &amp; VIP Driver Services
+                  Executive Chauffeur Hyderabad — Luxury Chauffeur &amp; Corporate Driver Services
                 </h1>
                 <p style={{ textAlign: 'justify', fontSize: '15px', lineHeight: '1.8', color: '#4b5563', marginBottom: '16px' }}>
-                  Elevate your journey with DRIVEIT's dedicated <strong>luxury chauffeur Hyderabad</strong> service. Designed for discerning corporate executives, visiting CEOs, foreign delegates, high-net-worth families, and celebrity VIPs, our chauffeur service guarantees an oasis of tranquility and punctuality amid Hyderabad's bustling traffic. Travel seamlessly between corporate hubs in <strong>HITEC City, Gachibowli Financial District, Mindspace, Banjara Hills</strong>, and <strong>Rajiv Gandhi International Airport (RGIA)</strong>.
+                  Elevate your business and VIP travel with DRIVEIT's dedicated <strong>executive chauffeur Hyderabad</strong> and <strong>luxury chauffeur service</strong>. Designed for discerning corporate executives, visiting CEOs, foreign delegates, high-net-worth families, and celebrity VIPs, our chauffeur service guarantees an oasis of tranquility and punctuality amid Hyderabad's bustling traffic. Travel seamlessly between corporate hubs in <strong>HITEC City, Gachibowli Financial District, Mindspace, Banjara Hills</strong>, and <strong>Rajiv Gandhi International Airport (RGIA)</strong>.
                 </p>
                 <p style={{ textAlign: 'justify', fontSize: '15px', lineHeight: '1.8', color: '#4b5563', marginBottom: '22px' }}>
-                  Every chauffeur is uniformed, polite, background-verified, and trained in executive etiquette and defensive driving. With zero surge pricing and flight-delay tracking, you are guaranteed on-time pickup and complete peace of mind.
+                  Every chauffeur is uniformed, polite, background-verified, and trained in executive etiquette and defensive driving. With zero surge pricing, flight-delay tracking, and corporate GST billing, you are guaranteed on-time pickup and complete peace of mind.
                 </p>
 
                 {/* Quick Link Navigation */}
                 <div style={{ display: 'flex', gap: '10px', flexWrap: 'wrap', marginBottom: '10px' }}>
+                  <Link href="/corporate-car-rental-hyderabad" style={{ background: '#0f172a', color: '#ffb907', padding: '7px 15px', borderRadius: '20px', fontSize: '13px', fontWeight: 700 }}>
+                    🏢 Corporate Car Rental
+                  </Link>
+                  <Link href="/monthly-corporate-car-rental-hyderabad" style={{ background: '#f8fafc', color: '#0f172a', padding: '7px 15px', borderRadius: '20px', fontSize: '13px', fontWeight: 600, border: '1px solid #cbd5e1' }}>
+                    📅 Monthly Corporate Leases
+                  </Link>
                   <Link href="/vip-car-rental-hyderabad" style={{ background: '#ffb907', color: '#0f172a', padding: '7px 15px', borderRadius: '20px', fontSize: '13px', fontWeight: 700 }}>
                     👑 VIP &amp; CEO Car Rental
                   </Link>
@@ -209,9 +215,6 @@ export default function LuxuryChauffeurHyderabadPage() {
                   </Link>
                   <Link href="/bmw-rental-hyderabad" style={{ background: '#f8fafc', color: '#0f172a', padding: '7px 15px', borderRadius: '20px', fontSize: '13px', fontWeight: 600, border: '1px solid #cbd5e1' }}>
                     🚘 BMW Rental
-                  </Link>
-                  <Link href="/audi-rental-hyderabad" style={{ background: '#f8fafc', color: '#0f172a', padding: '7px 15px', borderRadius: '20px', fontSize: '13px', fontWeight: 600, border: '1px solid #cbd5e1' }}>
-                    🏎️ Audi Rental
                   </Link>
                   <Link href="/hyderabad-airport-car-rental" style={{ background: '#f8fafc', color: '#0f172a', padding: '7px 15px', borderRadius: '20px', fontSize: '13px', fontWeight: 600, border: '1px solid #cbd5e1' }}>
                     ✈️ Airport Car Rental

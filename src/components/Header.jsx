@@ -160,6 +160,7 @@ export default function Header() {
                     <li><Link href="/hyderabad-airport-car-rental">Airport Rental</Link></li>
                     <li><Link href="/wedding-car-rental-hyderabad">Wedding Cars</Link></li>
                     <li><Link href="/luxurycars">Luxury Cars</Link></li>
+                    <li><Link href="/corporate-car-rental-hyderabad">Corporate</Link></li>
                     <li><Link href="/luxury-buses">Luxury Buses</Link></li>
                     <li><Link href="/cabs">Cabs</Link></li>
                     <li className="has-dropdown area-dropdown">
@@ -354,6 +355,16 @@ export default function Header() {
                 style={{ color: '#ffb907' }}
               >
                 <i className="fa fa-star" /> VIP &amp; CEO Car Rental
+              </Link>
+            </li>
+            <li className="mobile-nav-item">
+              <Link
+                href="/corporate-car-rental-hyderabad"
+                onClick={() => setMobileMenuOpen(false)}
+                className="mobile-nav-link"
+                style={{ color: '#ffb907' }}
+              >
+                <i className="fa fa-briefcase" /> Corporate Car Rental
               </Link>
             </li>
             <li className="mobile-nav-item">

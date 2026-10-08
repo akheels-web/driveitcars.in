@@ -167,6 +167,9 @@ export default function selfDriveCarPage() {
                            <Link href="/monthly-self-drive-cars-hyderabad" style={{ background: '#fff', color: '#0f172a', padding: '6px 14px', borderRadius: '20px', fontSize: '13px', fontWeight: 600, border: '1px solid #cbd5e1' }}>
                               📅 Monthly Self Drive Cars
                            </Link>
+                           <Link href="/corporate-car-rental-hyderabad" style={{ background: '#0f172a', color: '#ffb907', padding: '6px 14px', borderRadius: '20px', fontSize: '13px', fontWeight: 700 }}>
+                              🏢 Corporate Car Rental
+                           </Link>
                            <Link href="/hyderabad-airport-car-rental" style={{ background: '#fff', color: '#0f172a', padding: '6px 14px', borderRadius: '20px', fontSize: '13px', fontWeight: 600, border: '1px solid #cbd5e1' }}>
                               ✈️ Hyderabad Airport Car Rental
                            </Link>

@@ -119,6 +119,30 @@ export default async function LocationPageContent({ slug }) {
                     </div>
                   </div>
                 )}
+
+                {/* Related Specialized Hubs Cross-Links */}
+                <div style={{ marginTop: '20px', padding: '16px 20px', background: '#f8fafc', borderRadius: '12px', border: '1px solid #e2e8f0' }}>
+                  <span style={{ fontSize: '12px', fontWeight: 700, color: '#64748b', textTransform: 'uppercase', letterSpacing: '0.8px', display: 'block', marginBottom: '10px' }}>
+                    ✦ Specialized Car Rental Services Available in {loc.name}:
+                  </span>
+                  <div style={{ display: 'flex', gap: '8px', flexWrap: 'wrap' }}>
+                    <Link href="/corporate-car-rental-hyderabad" style={{ background: '#0f172a', color: '#ffb907', padding: '5px 12px', borderRadius: '20px', fontSize: '12px', fontWeight: 600 }}>
+                      🏢 Corporate Car Rental
+                    </Link>
+                    <Link href="/monthly-corporate-car-rental-hyderabad" style={{ background: '#ffffff', color: '#0f172a', padding: '5px 12px', borderRadius: '20px', fontSize: '12px', fontWeight: 600, border: '1px solid #cbd5e1' }}>
+                      📅 Monthly Corporate Fleet
+                    </Link>
+                    <Link href="/luxury-chauffeur-hyderabad" style={{ background: '#ffffff', color: '#0f172a', padding: '5px 12px', borderRadius: '20px', fontSize: '12px', fontWeight: 600, border: '1px solid #cbd5e1' }}>
+                      🤵 Executive Chauffeur
+                    </Link>
+                    <Link href="/hyderabad-airport-car-rental" style={{ background: '#ffffff', color: '#0f172a', padding: '5px 12px', borderRadius: '20px', fontSize: '12px', fontWeight: 600, border: '1px solid #cbd5e1' }}>
+                      ✈️ Airport Car Rental
+                    </Link>
+                    <Link href="/wedding-car-rental-hyderabad" style={{ background: '#ffffff', color: '#0f172a', padding: '5px 12px', borderRadius: '20px', fontSize: '12px', fontWeight: 600, border: '1px solid #cbd5e1' }}>
+                      💍 Wedding Cars
+                    </Link>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
