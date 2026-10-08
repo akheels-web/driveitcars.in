@@ -52,7 +52,7 @@ const RANGE_ROVER_FAQS = [
   {
     question: 'What is the cost of Range Rover rental in Hyderabad?',
     answer:
-      'Range Rover rental in Hyderabad starts at ₹14,999/day for the stylish Range Rover Evoque and ₹29,999/day for the flagship Range Rover Sport / Vogue. Transparent packages are available for wedding functions, pre-wedding shoots, and VIP airport pickups.',
+      'Range Rover rental tariffs in Hyderabad are provided on request based on your hire duration, self-drive or chauffeur requirement, wedding function, or VIP airport transfer. Contact our concierge for customized luxury quotes with all-inclusive pricing.',
   },
   {
     question: 'Is Range Rover suitable for Hyderabadi weddings and groom entries?',
@@ -75,8 +75,8 @@ const RANGE_ROVER_FLEET = [
     model: '2023 Edition',
     seats: '5 Seats',
     fuel: 'Ingenium Turbo / Automatic',
-    rateDay: '₹14,999/Day',
-    weddingRate: '₹22,999 / Package',
+    rateDay: 'Tariff on Request',
+    weddingRate: 'Custom Quote',
     features: ['Meridian Surround Audio', 'Panoramic Glass Roof', 'Terrain Response AWD', 'Flush Deployable Handles'],
     whatsappMsg: 'Hi DRIVEIT Cars, I want to enquire about booking the Range Rover Evoque in Hyderabad.',
   },
@@ -88,8 +88,8 @@ const RANGE_ROVER_FLEET = [
     model: '2023 Edition',
     seats: '5 Seats',
     fuel: 'Twin-Turbo V6 / 4x4',
-    rateDay: '₹29,999/Day',
-    weddingRate: '₹42,999 / Package',
+    rateDay: 'Tariff on Request',
+    weddingRate: 'Custom Quote',
     features: ['Command Driving Position', 'Electronic Air Suspension', 'Semi-Aniline Leather', 'Unbeatable Stature'],
     whatsappMsg: 'Hi DRIVEIT Cars, I want to enquire about booking the Range Rover Sport in Hyderabad.',
   },
@@ -102,7 +102,7 @@ export default function RangeRoverRentalHyderabadPage() {
       'Premier Range Rover luxury SUV rental in Hyderabad. Rent Range Rover Evoque & Sport for self drive, royal weddings, corporate VIPs & airport transfers.',
     url: 'https://www.driveitcars.in/range-rover-rental-hyderabad',
     areaServed: ['Hyderabad', 'Jubilee Hills', 'Banjara Hills', 'HITEC City', 'Gachibowli', 'RGIA Airport'],
-    priceRange: '₹14999 - ₹29999',
+    priceRange: 'Tariff on Request',
   });
 
   const breadcrumbSchema = buildBreadcrumbSchema([
@@ -281,9 +281,12 @@ export default function RangeRoverRentalHyderabadPage() {
                     <h3 style={{ fontSize: '22px', fontWeight: 700, color: '#0f172a', marginBottom: '8px' }}>
                       {car.name}
                     </h3>
-                    <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '14px', alignItems: 'baseline' }}>
-                      <span style={{ fontSize: '20px', fontWeight: 800, color: '#ffb907' }}>{car.rateDay}</span>
-                      <span style={{ fontSize: '13px', color: '#64748b' }}>Wedding: {car.weddingRate}</span>
+                    <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '14px', alignItems: 'center', background: '#f8fafc', padding: '10px 14px', borderRadius: '8px' }}>
+                      <span style={{ fontSize: '15px', fontWeight: 800, color: '#0f172a' }}>
+                        <i className="fa fa-tag" style={{ color: '#d97706', marginRight: '6px' }} />
+                        {car.rateDay}
+                      </span>
+                      <span style={{ fontSize: '12px', color: '#64748b', fontWeight: 600 }}>Wedding: {car.weddingRate}</span>
                     </div>
 
                     <ul style={{ listStyle: 'none', padding: 0, margin: '0 0 16px', fontSize: '13px', color: '#475569' }}>
@@ -380,17 +383,17 @@ export default function RangeRoverRentalHyderabadPage() {
                   <tbody>
                     <tr>
                       <td style={{ padding: '14px 16px', fontWeight: 700 }}>Range Rover Evoque</td>
-                      <td style={{ padding: '14px 16px' }}>₹14,999</td>
-                      <td style={{ padding: '14px 16px' }}>₹12,499</td>
-                      <td style={{ padding: '14px 16px' }}>₹5,999</td>
-                      <td style={{ padding: '14px 16px' }}>₹22,999</td>
+                      <td style={{ padding: '14px 16px', color: '#16a34a', fontWeight: 600 }}>Tariff on Request</td>
+                      <td style={{ padding: '14px 16px', color: '#16a34a', fontWeight: 600 }}>Tariff on Request</td>
+                      <td style={{ padding: '14px 16px', color: '#16a34a', fontWeight: 600 }}>Custom Quote</td>
+                      <td style={{ padding: '14px 16px', color: '#16a34a', fontWeight: 600 }}>Custom Quote</td>
                     </tr>
                     <tr style={{ background: '#f8fafc' }}>
                       <td style={{ padding: '14px 16px', fontWeight: 700 }}>Range Rover Sport / Vogue</td>
-                      <td style={{ padding: '14px 16px' }}>₹29,999</td>
-                      <td style={{ padding: '14px 16px' }}>₹24,999</td>
-                      <td style={{ padding: '14px 16px' }}>₹11,999</td>
-                      <td style={{ padding: '14px 16px' }}>₹42,999</td>
+                      <td style={{ padding: '14px 16px', color: '#16a34a', fontWeight: 600 }}>Tariff on Request</td>
+                      <td style={{ padding: '14px 16px', color: '#16a34a', fontWeight: 600 }}>Tariff on Request</td>
+                      <td style={{ padding: '14px 16px', color: '#16a34a', fontWeight: 600 }}>Custom Quote</td>
+                      <td style={{ padding: '14px 16px', color: '#16a34a', fontWeight: 600 }}>Custom Quote</td>
                     </tr>
                   </tbody>
                 </table>

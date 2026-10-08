@@ -77,11 +77,16 @@ export default function Header() {
                     src={settings.logoUrl || '/logo.png'}
                     alt="Driveit Cars - Self Drive Cars in Hyderabad"
                     className="main-header-logo"
+                    onError={(e) => {
+                      if (e.currentTarget.src !== '/logo.png') {
+                        e.currentTarget.src = '/logo.png';
+                      }
+                    }}
                     style={{
-                      height: '72px',
-                      maxHeight: '76px',
+                      height: '70px',
+                      maxHeight: '74px',
                       width: 'auto',
-                      maxWidth: '260px',
+                      maxWidth: '250px',
                       objectFit: 'contain',
                       display: 'block',
                     }}

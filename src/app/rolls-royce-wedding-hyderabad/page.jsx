@@ -47,7 +47,7 @@ const ROLLS_ROYCE_WEDDING_FAQS = [
   {
     question: 'What is the price of renting a Rolls Royce for a wedding in Hyderabad?',
     answer:
-      'Rolls Royce wedding packages in Hyderabad start from ₹34,999 for a 4-hour / 40 km baraat package and ₹64,999 for a full 12-hour wedding day experience. All packages include a suited white-gloved chauffeur, fuel, and commercial passenger insurance.',
+      'Rolls Royce wedding packages in Hyderabad are tailored for baraat processions and full-day wedding events. All packages include a suited white-gloved chauffeur, fuel, and commercial passenger insurance. Contact our luxury desk for custom quotes.',
   },
   {
     question: 'Can the groom stand through the sunroof or ride in the Rolls Royce during the baraat?',
@@ -72,8 +72,8 @@ const ROLLS_ROYCE_MODELS = [
     name: 'Rolls Royce Phantom VII / VIII',
     badge: 'The Emperor of Weddings',
     image: '/assets/img/rollsp.png',
-    rateBaraat: '₹39,999 (4 Hr / 40 Km)',
-    rateFullDay: '₹74,999 (12 Hr / 100 Km)',
+    rateBaraat: 'Tariff on Request',
+    rateFullDay: 'Custom Quote',
     features: ['Starlight Fiber-Optic Ceiling', 'Rear Privacy Curtains', 'Spirit of Ecstasy Mascot', 'Whisper V12 Engine'],
     whatsappMsg: 'Hi DRIVEIT Cars, I want to book the Rolls Royce Phantom for our wedding in Hyderabad.',
   },
@@ -82,8 +82,8 @@ const ROLLS_ROYCE_MODELS = [
     name: 'Rolls Royce Ghost',
     badge: 'Modern Royal Splendor',
     image: '/assets/img/rolls-roy.png',
-    rateBaraat: '₹34,999 (4 Hr / 40 Km)',
-    rateFullDay: '₹64,999 (12 Hr / 100 Km)',
+    rateBaraat: 'Tariff on Request',
+    rateFullDay: 'Custom Quote',
     features: ['Illuminated Grille Accent', 'Effortless Coach Doors', 'Plush Lambswool Carpets', 'Pristine White Interior'],
     whatsappMsg: 'Hi DRIVEIT Cars, I want to book the Rolls Royce Ghost for our wedding in Hyderabad.',
   },
@@ -92,8 +92,8 @@ const ROLLS_ROYCE_MODELS = [
     name: 'Rolls Royce Cullinan SUV',
     badge: 'The Sovereign Luxury SUV',
     image: '/assets/img/rollsc.png',
-    rateBaraat: '₹49,999 (4 Hr / 40 Km)',
-    rateFullDay: '₹89,999 (12 Hr / 100 Km)',
+    rateBaraat: 'Tariff on Request',
+    rateFullDay: 'Custom Quote',
     features: ['All-Terrain Royal Presence', 'Viewing Suite Tailgate', 'Unrivaled Stature', 'Executive Rear Lounge'],
     whatsappMsg: 'Hi DRIVEIT Cars, I want to book the Rolls Royce Cullinan for our wedding in Hyderabad.',
   },
@@ -106,7 +106,7 @@ export default function RollsRoyceWeddingHyderabadPage() {
       'Premier Rolls Royce wedding car rental in Hyderabad. Rent Rolls Royce Phantom, Ghost, and Cullinan for royal weddings, groom baraats & bridal entries.',
     url: 'https://www.driveitcars.in/rolls-royce-wedding-hyderabad',
     areaServed: ['Hyderabad', 'Banjara Hills', 'Jubilee Hills', 'Gachibowli', 'Shamshabad', 'Secunderabad'],
-    priceRange: '₹34999 - ₹89999',
+    priceRange: 'Tariff on Request',
   });
 
   const breadcrumbSchema = buildBreadcrumbSchema([

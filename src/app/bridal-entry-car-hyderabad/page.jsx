@@ -57,7 +57,7 @@ const BRIDAL_FAQS = [
   {
     question: 'What is the rental price for a bridal entry car in Hyderabad?',
     answer:
-      'Bridal entry car packages start from ₹14,999 for a dedicated 4-hour event slot. This includes the car, chauffeur, fuel, and wait time at the venue before the grand arrival.',
+      'Bridal entry car package tariffs are available on request based on car selection, rental hours, floral decorations, and venue location. Contact our team for customized wedding packages.',
   },
   {
     question: 'Can the bride’s brother or father drive the car for the entry?',
@@ -72,7 +72,7 @@ const BRIDAL_FLEET = [
     name: 'Mercedes-Benz Open-Top Cabriolet',
     badge: '#1 Most Popular Bride Entry',
     image: '/assets/img/benz2s.png',
-    rate: '₹14,999 (4 Hr Entry Package)',
+    rate: 'Tariff on Request',
     features: ['Drop-Top Open Air', 'Rose Petal Shower Ready', 'White Pearl Body', 'Pre-Wedding Shoot Ready'],
     whatsappMsg: 'Hi DRIVEIT Cars, I want to book the Mercedes Cabriolet for bridal entry in Hyderabad.',
   },
@@ -81,7 +81,7 @@ const BRIDAL_FLEET = [
     name: 'Audi 2-Seater Sports Roadster',
     badge: 'Chic Modern Bride Entry',
     image: '/assets/img/audi2s.png',
-    rate: '₹14,999 (4 Hr Entry Package)',
+    rate: 'Tariff on Request',
     features: ['Sleek Sports Profile', 'High RPM Soundtrack', 'Open-Top Visibility', 'Cinematic Photography Favorite'],
     whatsappMsg: 'Hi DRIVEIT Cars, I want to book the Audi Roadster for bridal entry in Hyderabad.',
   },
@@ -90,7 +90,7 @@ const BRIDAL_FLEET = [
     name: 'Classic Vintage Open Tourer',
     badge: 'Royal Nizami Bride Entry',
     image: '/assets/img/bentely.png',
-    rate: '₹21,999 (4 Hr Entry Package)',
+    rate: 'Tariff on Request',
     features: ['Regal Fairytale Stature', 'Slow Glide Pacing', 'Photogenic Masterpiece', 'White-Glove Chauffeur'],
     whatsappMsg: 'Hi DRIVEIT Cars, I want to book the Vintage Tourer for bridal entry in Hyderabad.',
   },
@@ -99,7 +99,7 @@ const BRIDAL_FLEET = [
     name: 'Range Rover Evoque Panoramic',
     badge: 'Opulent Queen Entry',
     image: '/assets/img/range-rover.png',
-    rate: '₹16,999 (4 Hr Entry Package)',
+    rate: 'Tariff on Request',
     features: ['Panoramic Glass Roof', 'Plush Red Leather', 'Meridian Sound System', 'Grand Palace Arrival'],
     whatsappMsg: 'Hi DRIVEIT Cars, I want to book the Range Rover for bridal entry in Hyderabad.',
   },
@@ -112,7 +112,7 @@ export default function BridalEntryCarHyderabadPage() {
       'Premier bridal entry car rental in Hyderabad. Rent open-top convertibles, classic vintage tourers, and luxury SUVs for unforgettable bride arrivals.',
     url: 'https://www.driveitcars.in/bridal-entry-car-hyderabad',
     areaServed: ['Hyderabad', 'Banjara Hills', 'Jubilee Hills', 'Gachibowli', 'Shamshabad', 'Secunderabad'],
-    priceRange: '₹14999 - ₹24999',
+    priceRange: 'Tariff on Request',
   });
 
   const breadcrumbSchema = buildBreadcrumbSchema([
@@ -288,8 +288,11 @@ export default function BridalEntryCarHyderabadPage() {
                     <h3 style={{ fontSize: '20px', fontWeight: 700, color: '#0f172a', marginBottom: '8px' }}>
                       {car.name}
                     </h3>
-                    <div style={{ marginBottom: '14px' }}>
-                      <span style={{ fontSize: '18px', fontWeight: 800, color: '#ffb907' }}>{car.rate}</span>
+                    <div style={{ marginBottom: '14px', background: '#f8fafc', padding: '8px 12px', borderRadius: '8px', display: 'inline-block' }}>
+                      <span style={{ fontSize: '15px', fontWeight: 800, color: '#0f172a' }}>
+                        <i className="fa fa-tag" style={{ color: '#d97706', marginRight: 6 }} />
+                        {car.rate}
+                      </span>
                     </div>
 
                     <div style={{ marginBottom: '18px', display: 'flex', flexWrap: 'wrap', gap: '6px' }}>

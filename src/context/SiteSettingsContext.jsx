@@ -19,7 +19,8 @@ const DEFAULT_SETTINGS = {
   email: 'driveitcars@gmail.com',
   address: '10-2-289/83, Mehar Mansion, Rd Number 2, Shantinagar Colony, Masab Tank, Hyderabad, Telangana 500028',
   workingHours: 'Mon - Sun: 7:00 AM – 10:00 PM',
-  logoUrl: '/logo2.png',
+  logoUrl: '/logo.png',
+  footerLogoUrl: '/logo2.png',
   footerAbout: 'DriveIt is Hyderabad’s leading car rental platform offering premium self-drive cars, luxury wedding cars, and group travel buses with transparent pricing and doorstep delivery.',
   footerTrustTags: ['100% Insured', '24/7 Road Support', 'Sanitized Cars'],
   copyrightText: 'Copyright © 2026. DRIVEIT CARS. All Rights Reserved.',
@@ -44,7 +45,7 @@ export function SiteSettingsProvider({ children }) {
               if (u) logoSrc = u;
             } catch (e) {}
           }
-          let footerLogoSrc = logoSrc;
+          let footerLogoSrc = DEFAULT_SETTINGS.footerLogoUrl;
           if (data.footerLogo) {
             try {
               const fu = urlFor(data.footerLogo)?.url();

@@ -57,7 +57,7 @@ const GROOM_FAQS = [
   {
     question: 'What is the cost of renting a groom entry luxury car in Hyderabad?',
     answer:
-      'Groom entry packages start from ₹14,999 for convertibles, ₹18,999 for Range Rover SUVs, ₹34,999 for the Rolls Royce, and ₹44,999 for the Mercedes G-Wagon. This covers a dedicated 4-hour baraat duration with chauffeur, fuel, and venue wait time.',
+      'Groom entry luxury car tariffs in Hyderabad are provided on request based on the selected vehicle (convertibles, Range Rover, Rolls Royce, or Mercedes G-Wagon), event duration, and venue location. Contact our team for custom wedding quotes.',
   },
   {
     question: 'Can you provide matching security escort cars for the groom’s convoy?',
@@ -72,7 +72,7 @@ const GROOM_FLEET = [
     name: 'Mercedes-AMG G-Wagon (G63)',
     badge: '#1 Celebrity Groom Arrival',
     image: '/assets/img/g-wagon.png',
-    rate: '₹44,999 (4 Hr Baraat Package)',
+    rate: 'Tariff on Request',
     features: ['Thunderous V8 Biturbo Roar', 'Side-Exit Exhaust Soundtrack', 'Unmatched Street Dominance', 'VIP Escort Stature'],
     whatsappMsg: 'Hi DRIVEIT Cars, I want to book the Mercedes G-Wagon for groom entry in Hyderabad.',
   },
@@ -81,7 +81,7 @@ const GROOM_FLEET = [
     name: 'Rolls Royce Phantom',
     badge: 'Royal Emperor Entry',
     image: '/assets/img/rollsp.png',
-    rate: '₹34,999 (4 Hr Baraat Package)',
+    rate: 'Tariff on Request',
     features: ['Starlight Headliner', 'Coach Suicide Doors', 'White-Glove Chauffeur', 'Nizami Grandeur'],
     whatsappMsg: 'Hi DRIVEIT Cars, I want to book the Rolls Royce for groom entry in Hyderabad.',
   },
@@ -90,7 +90,7 @@ const GROOM_FLEET = [
     name: 'Range Rover Sport / Vogue',
     badge: 'Panoramic Sunroof Standing',
     image: '/assets/img/range-rover1.png',
-    rate: '₹18,999 (4 Hr Baraat Package)',
+    rate: 'Tariff on Request',
     features: ['Commanding High Stature', 'Panoramic Glass Sunroof', 'Air Suspension Comfort', 'Groom Sunroof Standing'],
     whatsappMsg: 'Hi DRIVEIT Cars, I want to book the Range Rover for groom entry in Hyderabad.',
   },
@@ -99,7 +99,7 @@ const GROOM_FLEET = [
     name: 'Toyota Fortuner Legender',
     badge: 'Macho Groom & Escort Pilot',
     image: '/assets/img/fortuner2.jpg',
-    rate: '₹8,999 (4 Hr Baraat Package)',
+    rate: 'Tariff on Request',
     features: ['Aggressive Legender Styling', 'High Ground Clearance', 'VIP Convoy Favorite', 'Powerful Road Stature'],
     whatsappMsg: 'Hi DRIVEIT Cars, I want to book the Fortuner Legender for groom entry in Hyderabad.',
   },
@@ -112,7 +112,7 @@ export default function GroomEntryLuxuryCarHyderabadPage() {
       'Premier groom entry luxury car rental in Hyderabad. Rent Rolls Royce, Mercedes-AMG G-Wagon, Range Rover & Fortuner Legender for grand baraat arrivals.',
     url: 'https://www.driveitcars.in/groom-entry-luxury-car-hyderabad',
     areaServed: ['Hyderabad', 'Banjara Hills', 'Jubilee Hills', 'Gachibowli', 'Shamshabad', 'Secunderabad'],
-    priceRange: '₹8999 - ₹44999',
+    priceRange: 'Tariff on Request',
   });
 
   const breadcrumbSchema = buildBreadcrumbSchema([
@@ -288,8 +288,11 @@ export default function GroomEntryLuxuryCarHyderabadPage() {
                     <h3 style={{ fontSize: '20px', fontWeight: 700, color: '#0f172a', marginBottom: '8px' }}>
                       {car.name}
                     </h3>
-                    <div style={{ marginBottom: '14px' }}>
-                      <span style={{ fontSize: '18px', fontWeight: 800, color: '#ffb907' }}>{car.rate}</span>
+                    <div style={{ marginBottom: '14px', background: '#f8fafc', padding: '8px 12px', borderRadius: '8px', display: 'inline-block' }}>
+                      <span style={{ fontSize: '15px', fontWeight: 800, color: '#0f172a' }}>
+                        <i className="fa fa-tag" style={{ color: '#d97706', marginRight: 6 }} />
+                        {car.rate}
+                      </span>
                     </div>
 
                     <div style={{ marginBottom: '18px', display: 'flex', flexWrap: 'wrap', gap: '6px' }}>

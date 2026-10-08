@@ -72,7 +72,7 @@ const VIP_FLEET = [
     name: 'Mercedes-Maybach S-Class',
     role: 'CEO & Head of State Flagship',
     image: '/assets/img/benz3.png',
-    rate: '₹39,999 / 8 Hr Package',
+    rate: 'Tariff on Request',
     features: ['First-Class Rear Lounge', 'Acoustic Sound Isolation', 'Executive Chauffeur Included', 'Champagne Console'],
     whatsappMsg: 'Hi DRIVEIT Cars, I want to book the Mercedes-Maybach for CEO VIP car rental in Hyderabad.',
   },
@@ -81,7 +81,7 @@ const VIP_FLEET = [
     name: 'Mercedes-Benz S-Class 500',
     role: 'Executive Board Member Sedan',
     image: '/assets/img/benz.png',
-    rate: '₹19,999 / 8 Hr Package',
+    rate: 'Tariff on Request',
     features: ['Massaging Reclining Seats', 'Burmester High-End Audio', 'Air Suspension Comfort', 'Privacy Sunblinds'],
     whatsappMsg: 'Hi DRIVEIT Cars, I want to book the Mercedes-Benz S-Class for executive car rental in Hyderabad.',
   },
@@ -90,7 +90,7 @@ const VIP_FLEET = [
     name: 'BMW 7 Series Flagship',
     role: 'CXO & Venture Capital Dignitaries',
     image: '/assets/img/bmw11.png',
-    rate: '₹18,999 / 8 Hr Package',
+    rate: 'Tariff on Request',
     features: ['Executive Sky Lounge', 'Rear Touch Control Tablet', 'Dynamic Whisper Ride', 'High-Speed Wi-Fi Ready'],
     whatsappMsg: 'Hi DRIVEIT Cars, I want to book the BMW 7 Series for VIP car rental in Hyderabad.',
   },
@@ -99,7 +99,7 @@ const VIP_FLEET = [
     name: 'Toyota Fortuner Legender Convoy',
     role: 'VIP Security & Escort SUV',
     image: '/assets/img/fortuner2.jpg',
-    rate: '₹8,999 / 8 Hr Package',
+    rate: 'Tariff on Request',
     features: ['Commanding Pilot Stature', '4x4 Convoy Lead / Escort', 'Heavy Luggage Support', 'Executive Security Driver'],
     whatsappMsg: 'Hi DRIVEIT Cars, I want to book the Fortuner Legender for VIP escort convoy in Hyderabad.',
   },
@@ -121,7 +121,7 @@ export default function VipCarRentalHyderabadPage() {
       'Premier VIP car rental, CEO car rental & executive car hire in Hyderabad. Mercedes Maybach, S-Class, BMW 7 Series & convoy escorts for corporate boards and high-profile delegations.',
     url: 'https://www.driveitcars.in/vip-car-rental-hyderabad',
     areaServed: ['Hyderabad', 'HITEC City', 'Financial District Gachibowli', 'Jubilee Hills', 'Banjara Hills', 'RGIA Shamshabad Airport'],
-    priceRange: '₹8999 - ₹49999',
+    priceRange: 'Tariff on Request',
   });
 
   const breadcrumbSchema = buildBreadcrumbSchema([
@@ -301,7 +301,7 @@ export default function VipCarRentalHyderabadPage() {
                       {car.name}
                     </h3>
                     <div style={{ marginBottom: '14px' }}>
-                      <span style={{ fontSize: '18px', fontWeight: 800, color: '#ffb907' }}>{car.rate}</span>
+                      <span style={{ fontSize: '15px', fontWeight: 800, color: '#92400e', background: '#fef3c7', padding: '5px 10px', borderRadius: '6px' }}>{car.rate}</span>
                     </div>
 
                     <div style={{ marginBottom: '18px', display: 'flex', flexWrap: 'wrap', gap: '6px' }}>

@@ -561,30 +561,30 @@ export default function CarOffersSection({ initialCars = [] }) {
   });
 
   const getPriceData = (car) => {
+    // Pricing temporarily masked/commented as per client instruction until official rates are finalized.
+    // Displaying "Tariff on Request" / "Enquire for Best Rate" badges with direct Contact & Enquire actions.
     if (planType === 'weekly') {
-      const rawNum = parseInt(car.weeklyPrice.replace(/,/g, ''), 10);
       return {
-        price: `₹${car.weeklyPrice}`,
-        unit: '/week',
-        effectiveText: `Effective ~₹${Math.round(rawNum / 7).toLocaleString('en-IN')}/day`,
-        savingsTag: car.weeklySavings || 'Save 25%',
+        price: 'Tariff on Request',
+        unit: 'Weekly Package',
+        effectiveText: 'Special 7-Day Package • Zero Deposit',
+        savingsTag: 'Weekly Deal',
         savingsColor: '#2563eb',
       };
     }
     if (planType === 'monthly') {
-      const rawNum = parseInt(car.monthlyPrice.replace(/,/g, ''), 10);
       return {
-        price: `₹${car.monthlyPrice}`,
-        unit: '/month',
-        effectiveText: `Effective ~₹${Math.round(rawNum / 30).toLocaleString('en-IN')}/day`,
-        savingsTag: car.monthlySavings || 'Save 50%',
+        price: 'Tariff on Request',
+        unit: 'Monthly Subscription',
+        effectiveText: 'Long Term Savings • Free Doorstep Service',
+        savingsTag: 'Monthly Deal',
         savingsColor: '#10b981',
       };
     }
     return {
-      price: `₹${car.dailyPrice}`,
-      unit: '/day',
-      effectiveText: 'Unlimited Freedom • Zero Deposit',
+      price: 'Tariff on Request',
+      unit: 'Daily Rental',
+      effectiveText: 'Unlimited Freedom • Zero Deposit Options',
       savingsTag: null,
       savingsColor: null,
     };
@@ -623,7 +623,7 @@ export default function CarOffersSection({ initialCars = [] }) {
           </h2>
           <p style={{ color: '#64748b', fontSize: '15px', margin: 0, lineHeight: 1.6 }}>
             Explore Hyderabad's most popular, top-demanding self drive cars with <strong>Manual &amp; Automatic</strong> transmissions.
-            Choose between <strong>Daily Deals</strong>, <strong>Weekly Rentals (Save 25%)</strong>, or <strong>Monthly Subscriptions (Save 50%)</strong> with zero deposit and doorstep delivery.
+            Choose between <strong>Daily Deals</strong>, <strong>Weekly Rentals</strong>, or <strong>Monthly Subscriptions</strong> with zero deposit and doorstep delivery. Enquire now for custom rates and instant delivery.
           </p>
         </div>
 
@@ -710,7 +710,7 @@ export default function CarOffersSection({ initialCars = [] }) {
                   borderRadius: '10px',
                 }}
               >
-                Save 25%
+                7-Day Deal
               </span>
             </button>
 
@@ -747,7 +747,7 @@ export default function CarOffersSection({ initialCars = [] }) {
                   borderRadius: '10px',
                 }}
               >
-                Save 50%
+                Monthly Deal
               </span>
             </button>
           </div>
@@ -844,7 +844,7 @@ export default function CarOffersSection({ initialCars = [] }) {
           {filteredCars.map((car) => {
             const { price, unit, effectiveText, savingsTag, savingsColor } = getPriceData(car);
             const planLabel = planType.toUpperCase();
-            const whatsappMsg = `Hi DRIVEIT Cars, I am interested in booking the ${car.name} on ${planLabel} rental (${price}${unit}). Please share vehicle availability, terms and doorstep delivery options.`;
+            const whatsappMsg = `Hi DRIVEIT Cars, I am interested in booking the ${car.name} on ${planLabel} rental. Please share vehicle availability, best rate quotation, and doorstep delivery options.`;
 
             return (
               <div className="col-lg-4 col-md-6 mb-4" key={car.id}>
@@ -950,14 +950,30 @@ export default function CarOffersSection({ initialCars = [] }) {
                       </div>
                     </div>
 
-                    {/* Pricing Row */}
+                    {/* Pricing Row - Commented out numeric rates, displaying Tariff on Request & Enquire */}
                     <div style={{ marginTop: '10px', marginBottom: '14px' }}>
-                      <div style={{ display: 'flex', alignItems: 'baseline', gap: '6px' }}>
-                        <span style={{ fontSize: '26px', fontWeight: 900, color: '#0f172a' }}>{price}</span>
-                        <span style={{ fontSize: '13px', color: '#64748b', fontWeight: 700 }}>{unit}</span>
+                      <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+                        <span
+                          style={{
+                            fontSize: '17px',
+                            fontWeight: 800,
+                            color: '#92400e',
+                            background: '#fef3c7',
+                            padding: '6px 12px',
+                            borderRadius: '8px',
+                            display: 'inline-flex',
+                            alignItems: 'center',
+                            gap: '6px',
+                            border: '1px solid #fde68a',
+                          }}
+                        >
+                          <i className="fa fa-tag" style={{ color: '#d97706', fontSize: '13px' }} />
+                          {price}
+                        </span>
+                        <span style={{ fontSize: '12px', color: '#64748b', fontWeight: 700 }}>({unit})</span>
                       </div>
-                      <div style={{ fontSize: '12px', color: planType === 'daily' ? '#64748b' : '#10b981', fontWeight: 700, marginTop: '2px' }}>
-                        {effectiveText}
+                      <div style={{ fontSize: '12px', color: '#059669', fontWeight: 700, marginTop: '6px', display: 'flex', alignItems: 'center', gap: '5px' }}>
+                        <i className="fa fa-check-circle" /> {effectiveText}
                       </div>
                     </div>
 

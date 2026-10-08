@@ -43,7 +43,7 @@ const AIRPORT_FLEET_SELF_DRIVE = [
     name: 'Hyundai Creta Automatic',
     category: 'Airport SUV',
     image: '/assets/img/2023-6.png',
-    rate: '₹3,299/day',
+    rate: 'Tariff on Request',
     seats: '5 Seater',
     fuel: 'Petrol / Diesel',
     luggage: '3 Large Bags + 2 Small Bags',
@@ -53,7 +53,7 @@ const AIRPORT_FLEET_SELF_DRIVE = [
     name: 'Toyota Innova Crysta',
     category: 'Airport 7-Seater SUV',
     image: '/assets/img/crysta.png',
-    rate: '₹4,499/day',
+    rate: 'Tariff on Request',
     seats: '7 Seater',
     fuel: 'Diesel',
     luggage: '4-5 Large International Bags',
@@ -63,7 +63,7 @@ const AIRPORT_FLEET_SELF_DRIVE = [
     name: 'Mahindra Thar 4x4',
     category: 'Adventure SUV',
     image: '/assets/img/cars/5-Thar.png',
-    rate: '₹3,499/day',
+    rate: 'Tariff on Request',
     seats: '4-5 Seater',
     fuel: 'Diesel 4x4',
     luggage: '2 Large Bags',
@@ -73,7 +73,7 @@ const AIRPORT_FLEET_SELF_DRIVE = [
     name: 'Maruti Suzuki Dzire',
     category: 'Economy Sedan',
     image: '/assets/img/cars/Dzire.png',
-    rate: '₹2,199/day',
+    rate: 'Tariff on Request',
     seats: '5 Seater',
     fuel: 'Petrol',
     luggage: '2 Large Bags + 1 Cabin Bag',
@@ -340,8 +340,8 @@ export default function HyderabadAirportCarRentalPage() {
                       <h3 style={{ fontSize: '16px', fontWeight: 800, color: '#111827', margin: '0 0 4px' }}>
                         {car.name}
                       </h3>
-                      <div style={{ color: '#d97706', fontWeight: 800, fontSize: '15px', marginBottom: '8px' }}>
-                        {car.rate}
+                      <div style={{ background: '#f8fafc', padding: '6px 10px', borderRadius: '6px', color: '#0f172a', fontWeight: 700, fontSize: '13px', marginBottom: '8px', display: 'inline-block' }}>
+                        <i className="fa fa-tag" style={{ color: '#d97706', marginRight: 4 }} /> {car.rate}
                       </div>
                       <p style={{ fontSize: '12px', color: '#64748b', marginBottom: '8px', lineHeight: '1.4' }}>
                         <i className="fa fa-suitcase" style={{ color: '#ffb907', marginRight: 4 }} /> <strong>Luggage:</strong> {car.luggage}

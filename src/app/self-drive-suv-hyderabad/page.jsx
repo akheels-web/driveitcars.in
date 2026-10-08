@@ -45,7 +45,7 @@ const SUV_FLEET = [
     fuel: 'Diesel',
     trans: 'Manual / Automatic',
     kmPerDay: '300 Km/Day',
-    price: '₹3,499/day',
+    price: 'Tariff on Request',
     desc: 'Iconic 4x4 off-roader with removable hard top, high ground clearance, and rugged road presence.',
     ideal: 'Off-roading, Vikarabad, Ananthagiri Hills, Solo & Duo adventures',
   },
@@ -56,7 +56,7 @@ const SUV_FLEET = [
     fuel: 'Petrol / Diesel',
     trans: 'Automatic',
     kmPerDay: '300 Km/Day',
-    price: '₹3,299/day',
+    price: 'Tariff on Request',
     desc: 'Panoramic sunroof, ventilated seats, smooth automatic drive, and comfortable plush cabin.',
     ideal: 'City commutes, corporate travel, highway cruising',
   },
@@ -67,7 +67,7 @@ const SUV_FLEET = [
     fuel: 'Petrol',
     trans: 'Manual',
     kmPerDay: '300 Km/Day',
-    price: '₹2,699/day',
+    price: 'Tariff on Request',
     desc: 'High fuel efficiency, reliable compact SUV, chilled air conditioning, and generous headroom.',
     ideal: 'Budget weekend getaways, city drives, Nagarjuna Sagar',
   },
@@ -78,7 +78,7 @@ const SUV_FLEET = [
     fuel: 'Diesel',
     trans: 'Automatic',
     kmPerDay: '300 Km/Day',
-    price: '₹3,299/day',
+    price: 'Tariff on Request',
     desc: 'Sporty design, Bose audio, connected tech, and responsive highway performance.',
     ideal: 'Tech professionals, long distance touring',
   },
@@ -89,7 +89,7 @@ const SUV_FLEET = [
     fuel: 'Diesel',
     trans: 'Manual / Automatic',
     kmPerDay: '300 Km/Day',
-    price: '₹4,499/day',
+    price: 'Tariff on Request',
     desc: 'The undisputed King of Indian highways. Captain seats, huge luggage boot, and bulletproof reliability.',
     ideal: 'Family vacations, Tirupati, Srisailam, Shirdi outstation trips',
   },
@@ -100,7 +100,7 @@ const SUV_FLEET = [
     fuel: 'Diesel 4x4',
     trans: 'Automatic',
     kmPerDay: '300 Km/Day',
-    price: '₹8,999/day',
+    price: 'Tariff on Request',
     desc: 'Maximum VIP road presence, monstrous 4x4 torque, premium leather interiors, and unmatched prestige.',
     ideal: 'VIP events, weddings, executive travel, high-profile outstation tours',
   },
@@ -111,7 +111,7 @@ const SUV_FLEET = [
     fuel: 'Diesel',
     trans: 'Automatic',
     kmPerDay: '300 Km/Day',
-    price: '₹4,299/day',
+    price: 'Tariff on Request',
     desc: 'Advanced ADAS safety features, dual digital screens, panoramic Skyroof, and powerful turbo engine.',
     ideal: 'Modern tech-lovers, luxury group road trips',
   },
@@ -122,7 +122,7 @@ const SUV_FLEET = [
     fuel: 'Petrol / CNG',
     trans: 'Manual',
     kmPerDay: '300 Km/Day',
-    price: '₹2,999/day',
+    price: 'Tariff on Request',
     desc: 'Best value 7-seater car in Hyderabad with excellent fuel economy and flexible folding seats.',
     ideal: 'Budget family road trips, temple tours, airport group pickups',
   },
@@ -282,7 +282,7 @@ export default function SelfDriveSuvHyderabadPage() {
                         <h3 style={{ fontSize: '18px', fontWeight: 800, color: '#111827', margin: 0 }}>
                           {suv.name}
                         </h3>
-                        <span style={{ color: '#ffb907', fontWeight: 800, fontSize: '15px' }}>{suv.price}</span>
+                        <span style={{ color: '#92400e', background: '#fef3c7', padding: '3px 8px', borderRadius: '6px', fontWeight: 700, fontSize: '12px' }}>{suv.price}</span>
                       </div>
                       <span style={{ display: 'inline-block', fontSize: '12px', background: '#e0f2fe', color: '#0369a1', padding: '2px 8px', borderRadius: '4px', fontWeight: 600, marginBottom: '10px' }}>
                         {suv.type}

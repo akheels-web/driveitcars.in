@@ -57,7 +57,7 @@ const VINTAGE_FAQS = [
   {
     question: 'What is the price of renting a vintage wedding car in Hyderabad?',
     answer:
-      'Vintage wedding car rentals in Hyderabad start from ₹21,999 for a 4-hour baraat or bridal entry package, and ₹38,999 for full-day event coverage. Packages include the vehicle, uniformed vintage chauffeur, fuel, and floral styling.',
+      'Vintage wedding car rentals in Hyderabad are tailored based on event duration and requirements. Packages include the vehicle, uniformed vintage chauffeur, fuel, and optional floral styling. Contact our wedding desk for custom quotation.',
   },
   {
     question: 'Can the bride and groom stand or ride with the top open during flower petal showers?',
@@ -72,8 +72,8 @@ const VINTAGE_MODELS = [
     name: 'Classic British Royal Tourer',
     badge: 'Nizami Heritage Icon',
     image: '/assets/img/bentely.png',
-    rateBaraat: '₹21,999 (4 Hr / 40 Km)',
-    rateFullDay: '₹38,999 (12 Hr / 100 Km)',
+    rateBaraat: 'Tariff on Request',
+    rateFullDay: 'Custom Quote',
     features: ['Open-Air Convertible Top', 'Chrome Spoke Wheels', 'Dual Trumpet Horns', 'Slow Baraat Crawl Gearing'],
     whatsappMsg: 'Hi DRIVEIT Cars, I want to book the Classic Royal Tourer for our wedding in Hyderabad.',
   },
@@ -82,8 +82,8 @@ const VINTAGE_MODELS = [
     name: 'Mercedes Classic Open-Top Roadster',
     badge: 'Romantic Elegance',
     image: '/assets/img/benz2s.png',
-    rateBaraat: '₹16,999 (4 Hr / 40 Km)',
-    rateFullDay: '₹28,999 (12 Hr / 100 Km)',
+    rateBaraat: 'Tariff on Request',
+    rateFullDay: 'Custom Quote',
     features: ['Convertible Soft-Top', 'Pre-Wedding Shoot Ready', 'Spotless White Exterior', 'Red-Carpet Chauffeur'],
     whatsappMsg: 'Hi DRIVEIT Cars, I want to book the Mercedes Classic Roadster for our wedding in Hyderabad.',
   },
@@ -96,7 +96,7 @@ export default function VintageWeddingCarHyderabadPage() {
       'Premier vintage wedding car hire in Hyderabad. Rent classic open-top convertibles and retro roadsters for groom baraats, bridal entries & pre-wedding shoots.',
     url: 'https://www.driveitcars.in/vintage-wedding-car-hyderabad',
     areaServed: ['Hyderabad', 'Banjara Hills', 'Jubilee Hills', 'Old City Hyderabad', 'Secunderabad', 'Shamshabad'],
-    priceRange: '₹16999 - ₹38999',
+    priceRange: 'Tariff on Request',
   });
 
   const breadcrumbSchema = buildBreadcrumbSchema([

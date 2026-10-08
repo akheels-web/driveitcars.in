@@ -47,7 +47,7 @@ const BMW_FAQS = [
   {
     question: 'What is the daily rental rate for BMW rental in Hyderabad?',
     answer:
-      'BMW rental rates in Hyderabad start from ₹13,999/day for the BMW 5 Series and ₹22,999/day for the flagship BMW 7 Series. Multi-day corporate retainers and weekly road-trip packages receive preferential discounted rates.',
+      'BMW rental tariffs in Hyderabad are available on request based on hire requirements (self-drive, corporate chauffeur, wedding package, or RGIA airport transfer). Contact our concierge team for custom all-inclusive quotes.',
   },
   {
     question: 'Can I hire a BMW with an executive chauffeur in Hyderabad?',
@@ -75,8 +75,8 @@ const BMW_FLEET = [
     model: '2023 Edition',
     seats: '5 Seats',
     fuel: 'TwinPower Turbo Petrol',
-    rateDay: '₹13,999/Day',
-    weddingRate: '₹19,999 / Package',
+    rateDay: 'Tariff on Request',
+    weddingRate: 'Custom Quote',
     features: ['Harman Kardon Audio', 'M-Sport Styling', 'Gesture Control', 'Live Cockpit Professional'],
     whatsappMsg: 'Hi DRIVEIT Cars, I want to enquire about booking the BMW 5 Series rental in Hyderabad.',
   },
@@ -88,8 +88,8 @@ const BMW_FLEET = [
     model: '2023 Edition',
     seats: '5 Seats',
     fuel: 'Twin-Turbo V6 / Automatic',
-    rateDay: '₹22,999/Day',
-    weddingRate: '₹31,999 / Package',
+    rateDay: 'Tariff on Request',
+    weddingRate: 'Custom Quote',
     features: ['Executive Lounge Seating', 'Sky Lounge Panoramic Glass', 'Rear Touch Display', 'Whisper-Quiet Cabin'],
     whatsappMsg: 'Hi DRIVEIT Cars, I want to enquire about booking the BMW 7 Series in Hyderabad.',
   },
@@ -102,7 +102,7 @@ export default function BmwRentalHyderabadPage() {
       'Premier BMW rental in Hyderabad. Rent BMW 5 Series & 7 Series for self drive, executive corporate travel, weddings & airport transfers.',
     url: 'https://www.driveitcars.in/bmw-rental-hyderabad',
     areaServed: ['Hyderabad', 'HITEC City', 'Gachibowli', 'Banjara Hills', 'Jubilee Hills', 'RGIA Airport'],
-    priceRange: '₹13999 - ₹22999',
+    priceRange: 'Tariff on Request',
   });
 
   const breadcrumbSchema = buildBreadcrumbSchema([
@@ -281,9 +281,12 @@ export default function BmwRentalHyderabadPage() {
                     <h3 style={{ fontSize: '22px', fontWeight: 700, color: '#0f172a', marginBottom: '8px' }}>
                       {car.name}
                     </h3>
-                    <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '14px', alignItems: 'baseline' }}>
-                      <span style={{ fontSize: '20px', fontWeight: 800, color: '#ffb907' }}>{car.rateDay}</span>
-                      <span style={{ fontSize: '13px', color: '#64748b' }}>Wedding: {car.weddingRate}</span>
+                    <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '14px', alignItems: 'center', background: '#f8fafc', padding: '10px 14px', borderRadius: '8px' }}>
+                      <span style={{ fontSize: '15px', fontWeight: 800, color: '#0f172a' }}>
+                        <i className="fa fa-tag" style={{ color: '#d97706', marginRight: '6px' }} />
+                        {car.rateDay}
+                      </span>
+                      <span style={{ fontSize: '12px', color: '#64748b', fontWeight: 600 }}>Wedding: {car.weddingRate}</span>
                     </div>
 
                     <ul style={{ listStyle: 'none', padding: 0, margin: '0 0 16px', fontSize: '13px', color: '#475569' }}>
@@ -380,17 +383,17 @@ export default function BmwRentalHyderabadPage() {
                   <tbody>
                     <tr>
                       <td style={{ padding: '14px 16px', fontWeight: 700 }}>BMW 5 Series</td>
-                      <td style={{ padding: '14px 16px' }}>₹13,999</td>
-                      <td style={{ padding: '14px 16px' }}>₹10,999</td>
-                      <td style={{ padding: '14px 16px' }}>₹5,499</td>
-                      <td style={{ padding: '14px 16px' }}>₹19,999</td>
+                      <td style={{ padding: '14px 16px', color: '#16a34a', fontWeight: 600 }}>Tariff on Request</td>
+                      <td style={{ padding: '14px 16px', color: '#16a34a', fontWeight: 600 }}>Tariff on Request</td>
+                      <td style={{ padding: '14px 16px', color: '#16a34a', fontWeight: 600 }}>Custom Quote</td>
+                      <td style={{ padding: '14px 16px', color: '#16a34a', fontWeight: 600 }}>Custom Quote</td>
                     </tr>
                     <tr style={{ background: '#f8fafc' }}>
                       <td style={{ padding: '14px 16px', fontWeight: 700 }}>BMW 7 Series Flagship</td>
-                      <td style={{ padding: '14px 16px' }}>₹22,999</td>
-                      <td style={{ padding: '14px 16px' }}>₹18,999</td>
-                      <td style={{ padding: '14px 16px' }}>₹8,499</td>
-                      <td style={{ padding: '14px 16px' }}>₹31,999</td>
+                      <td style={{ padding: '14px 16px', color: '#16a34a', fontWeight: 600 }}>Tariff on Request</td>
+                      <td style={{ padding: '14px 16px', color: '#16a34a', fontWeight: 600 }}>Tariff on Request</td>
+                      <td style={{ padding: '14px 16px', color: '#16a34a', fontWeight: 600 }}>Custom Quote</td>
+                      <td style={{ padding: '14px 16px', color: '#16a34a', fontWeight: 600 }}>Custom Quote</td>
                     </tr>
                   </tbody>
                 </table>

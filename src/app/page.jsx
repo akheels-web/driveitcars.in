@@ -16,7 +16,7 @@ export const revalidate = 0;
 export const metadata = {
   title: 'Self Drive Cars Hyderabad | Daily, Weekly & Monthly Car Rentals | DRIVEIT',
   description:
-    '#1 Self drive cars in Hyderabad starting @ ₹1,499/day. Daily, weekly & monthly car rentals for Swift, Baleno, Creta, Thar, Thar Roxx, Innova Crysta, XUV700 & Fortuner. Manual & Automatic, zero deposit, fast doorstep delivery.',
+    '#1 Self drive cars in Hyderabad. Daily, weekly & monthly car rentals for Swift, Baleno, Creta, Thar, Thar Roxx, Innova Crysta, XUV700 & Fortuner. Manual & Automatic, zero deposit, fast doorstep delivery. Enquire now for best rates.',
   alternates: {
     canonical: 'https://www.driveitcars.in',
   },

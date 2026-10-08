@@ -9,7 +9,7 @@ import SeoSchema, {
 export const metadata = {
   title: 'Self Drive Cars in Hyderabad | Unlimited Kms, Zero Deposit | DRIVEIT',
   description:
-    'Book self drive cars in Hyderabad starting @ ₹1,499/day with DRIVEIT. Wide range of hatchbacks, sedans, SUVs & luxury cars. Doorstep delivery across HITEC City, Gachibowli & Airport.',
+    'Book self drive cars in Hyderabad with DRIVEIT. Wide range of hatchbacks, sedans, SUVs & luxury cars. Doorstep delivery across HITEC City, Gachibowli & Airport. Enquire for best rates.',
   alternates: {
     canonical: 'https://www.driveitcars.in/self-drive-car',
   },
@@ -69,7 +69,7 @@ export default function selfDriveCarPage() {
   const rentalSchema = buildCarRentalSchema({
     name: 'DRIVEIT Self Drive Cars Hyderabad',
     description:
-      'Book self drive cars in Hyderabad starting @ ₹1,499/day. Hatchbacks, sedans, SUVs & luxury cars with doorstep delivery and zero deposit.',
+      'Book self drive cars in Hyderabad with DRIVEIT. Hatchbacks, sedans, SUVs & luxury cars with doorstep delivery, zero deposit, and best customized rates.',
     url: 'https://www.driveitcars.in/self-drive-car',
     areaServed: [
       'Hyderabad',

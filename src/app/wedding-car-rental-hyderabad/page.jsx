@@ -77,8 +77,8 @@ const WEDDING_FLEET = [
     name: 'Rolls Royce Phantom / Ghost',
     badge: 'Royal Nizami Grandeur',
     image: '/assets/img/rollsp.png',
-    rateBaraat: '₹34,999 (4 Hr Baraat)',
-    rateFullDay: '₹64,999 (12 Hr Full Day)',
+    rateBaraat: 'Tariff on Request',
+    rateFullDay: 'Custom Quote',
     features: ['Starlight Headliner', 'Coach Doors for Photos', 'Suited Executive Chauffeur', 'Red-Carpet Protocol'],
     link: '/rolls-royce-wedding-hyderabad',
     whatsappMsg: 'Hi DRIVEIT Cars, I want to book the Rolls Royce for our wedding in Hyderabad.',
@@ -88,8 +88,8 @@ const WEDDING_FLEET = [
     name: 'Mercedes-Maybach / S-Class',
     badge: 'Presidential Elegance',
     image: '/assets/img/benz3.png',
-    rateBaraat: '₹19,999 (4 Hr Baraat)',
-    rateFullDay: '₹34,999 (12 Hr Full Day)',
+    rateBaraat: 'Tariff on Request',
+    rateFullDay: 'Custom Quote',
     features: ['First-Class Rear Lounge', 'Burmester 3D Sound', 'Floral Decoration Ready', 'Maximum VIP Prestige'],
     link: '/mercedes-rental-hyderabad',
     whatsappMsg: 'Hi DRIVEIT Cars, I want to book the Mercedes-Maybach / S-Class for our wedding in Hyderabad.',
@@ -99,8 +99,8 @@ const WEDDING_FLEET = [
     name: 'Mercedes 2-Seater Open-Top Convertible',
     badge: 'Cinematic Bridal Entry',
     image: '/assets/img/benz2s.png',
-    rateBaraat: '₹14,999 (4 Hr Baraat)',
-    rateFullDay: '₹24,999 (12 Hr Full Day)',
+    rateBaraat: 'Tariff on Request',
+    rateFullDay: 'Custom Quote',
     features: ['Drop-Top Open Air', 'Ideal for Flower Shower Entry', 'Exotic Sports Styling', 'Pre-Wedding Shoot Ready'],
     link: '/bridal-entry-car-hyderabad',
     whatsappMsg: 'Hi DRIVEIT Cars, I want to book the Mercedes Convertible for bridal entry in Hyderabad.',
@@ -110,8 +110,8 @@ const WEDDING_FLEET = [
     name: 'Range Rover Sport / Vogue',
     badge: 'Dominant Groom Baraat',
     image: '/assets/img/range-rover1.png',
-    rateBaraat: '₹18,999 (4 Hr Baraat)',
-    rateFullDay: '₹32,999 (12 Hr Full Day)',
+    rateBaraat: 'Tariff on Request',
+    rateFullDay: 'Custom Quote',
     features: ['Commanding High Stature', 'Panoramic Glass Sunroof', 'Air Suspension Comfort', 'Groom Sunroof Standing'],
     link: '/groom-entry-luxury-car-hyderabad',
     whatsappMsg: 'Hi DRIVEIT Cars, I want to book the Range Rover for groom entry in Hyderabad.',
@@ -121,8 +121,8 @@ const WEDDING_FLEET = [
     name: 'Classic Vintage Open Tourer',
     badge: 'Timeless Heritage Romance',
     image: '/assets/img/bentely.png',
-    rateBaraat: '₹21,999 (4 Hr Baraat)',
-    rateFullDay: '₹38,999 (12 Hr Full Day)',
+    rateBaraat: 'Tariff on Request',
+    rateFullDay: 'Custom Quote',
     features: ['Open-Top Nizami Aesthetic', 'Slow Baraat Crawl Gearing', 'Photogenic Masterpiece', 'White-Glove Driver'],
     link: '/vintage-wedding-car-hyderabad',
     whatsappMsg: 'Hi DRIVEIT Cars, I want to book the Vintage Wedding Car in Hyderabad.',
@@ -132,8 +132,8 @@ const WEDDING_FLEET = [
     name: 'Audi Q7 7-Seater Luxury SUV',
     badge: 'VIP Family & Baraat Escort',
     image: '/assets/img/audi.png',
-    rateBaraat: '₹14,999 (4 Hr Baraat)',
-    rateFullDay: '₹24,999 (12 Hr Full Day)',
+    rateBaraat: 'Tariff on Request',
+    rateFullDay: 'Custom Quote',
     features: ['7-Passenger Capacity', 'Dual Climate AC Control', 'Massive Luggage Room', 'VIP Convoy Ready'],
     link: '/audi-rental-hyderabad',
     whatsappMsg: 'Hi DRIVEIT Cars, I want to book the Audi Q7 for wedding transit in Hyderabad.',
@@ -147,7 +147,7 @@ export default function WeddingCarRentalHyderabadPage() {
       'Premier wedding car rental service in Hyderabad. Rent Rolls Royce, Mercedes-Benz, Range Rover, BMW, and vintage cars for weddings, groom baraats & bridal entries.',
     url: 'https://www.driveitcars.in/wedding-car-rental-hyderabad',
     areaServed: ['Hyderabad', 'Banjara Hills', 'Jubilee Hills', 'Gachibowli', 'Shamshabad', 'Secunderabad', 'Telangana'],
-    priceRange: '₹14999 - ₹64999',
+    priceRange: 'Tariff on Request',
   });
 
   const breadcrumbSchema = buildBreadcrumbSchema([
@@ -428,36 +428,36 @@ export default function WeddingCarRentalHyderabadPage() {
                   <tbody>
                     <tr>
                       <td style={{ padding: '14px 16px', fontWeight: 700 }}>Rolls Royce Phantom / Ghost</td>
-                      <td style={{ padding: '14px 16px' }}>₹34,999</td>
-                      <td style={{ padding: '14px 16px' }}>₹64,999</td>
+                      <td style={{ padding: '14px 16px', color: '#92400e', fontWeight: 700 }}>Tariff on Request</td>
+                      <td style={{ padding: '14px 16px', color: '#92400e', fontWeight: 700 }}>Custom Quote</td>
                       <td style={{ padding: '14px 16px' }}>Optional Premium</td>
                       <td style={{ padding: '14px 16px', color: '#16a34a', fontWeight: 600 }}>Included (White Glove)</td>
                     </tr>
                     <tr style={{ background: '#f8fafc' }}>
                       <td style={{ padding: '14px 16px', fontWeight: 700 }}>Mercedes-Maybach / S-Class</td>
-                      <td style={{ padding: '14px 16px' }}>₹19,999</td>
-                      <td style={{ padding: '14px 16px' }}>₹34,999</td>
+                      <td style={{ padding: '14px 16px', color: '#92400e', fontWeight: 700 }}>Tariff on Request</td>
+                      <td style={{ padding: '14px 16px', color: '#92400e', fontWeight: 700 }}>Custom Quote</td>
                       <td style={{ padding: '14px 16px' }}>Optional Premium</td>
                       <td style={{ padding: '14px 16px', color: '#16a34a', fontWeight: 600 }}>Included (Suited)</td>
                     </tr>
                     <tr>
                       <td style={{ padding: '14px 16px', fontWeight: 700 }}>Classic Vintage Open Tourer</td>
-                      <td style={{ padding: '14px 16px' }}>₹21,999</td>
-                      <td style={{ padding: '14px 16px' }}>₹38,999</td>
+                      <td style={{ padding: '14px 16px', color: '#92400e', fontWeight: 700 }}>Tariff on Request</td>
+                      <td style={{ padding: '14px 16px', color: '#92400e', fontWeight: 700 }}>Custom Quote</td>
                       <td style={{ padding: '14px 16px' }}>Included Floral Trim</td>
                       <td style={{ padding: '14px 16px', color: '#16a34a', fontWeight: 600 }}>Included (Uniformed)</td>
                     </tr>
                     <tr style={{ background: '#f8fafc' }}>
                       <td style={{ padding: '14px 16px', fontWeight: 700 }}>Mercedes / Audi Convertible (2-Seater)</td>
-                      <td style={{ padding: '14px 16px' }}>₹14,999</td>
-                      <td style={{ padding: '14px 16px' }}>₹24,999</td>
+                      <td style={{ padding: '14px 16px', color: '#92400e', fontWeight: 700 }}>Tariff on Request</td>
+                      <td style={{ padding: '14px 16px', color: '#92400e', fontWeight: 700 }}>Custom Quote</td>
                       <td style={{ padding: '14px 16px' }}>Optional Silk/Fresh</td>
                       <td style={{ padding: '14px 16px', color: '#16a34a', fontWeight: 600 }}>Included / Self Drive</td>
                     </tr>
                     <tr>
                       <td style={{ padding: '14px 16px', fontWeight: 700 }}>Range Rover Sport / Evoque</td>
-                      <td style={{ padding: '14px 16px' }}>₹16,999</td>
-                      <td style={{ padding: '14px 16px' }}>₹29,999</td>
+                      <td style={{ padding: '14px 16px', color: '#92400e', fontWeight: 700 }}>Tariff on Request</td>
+                      <td style={{ padding: '14px 16px', color: '#92400e', fontWeight: 700 }}>Custom Quote</td>
                       <td style={{ padding: '14px 16px' }}>Optional Premium</td>
                       <td style={{ padding: '14px 16px', color: '#16a34a', fontWeight: 600 }}>Included (Suited)</td>
                     </tr>

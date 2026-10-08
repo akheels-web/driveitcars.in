@@ -7,9 +7,9 @@ import SeoSchema, {
 } from '@/components/SeoSchema';
 
 export const metadata = {
-  title: 'Weekly Self Drive Cars Hyderabad | Save Up to 25% on 7-Day Rentals | DRIVEIT',
+  title: 'Weekly Self Drive Cars Hyderabad | 7-Day Car Rental Deals | DRIVEIT',
   description:
-    'Book weekly self drive cars in Hyderabad starting @ ₹8,999/week. Save up to 25% on 7-day rentals for Swift, Baleno, Creta, Thar, Innova Crysta & Fortuner. Manual & Automatic, zero deposit, free doorstep delivery.',
+    'Book weekly self drive cars in Hyderabad with DRIVEIT. Special 7-day rentals for Swift, Baleno, Creta, Thar, Innova Crysta & Fortuner. Manual & Automatic, zero deposit, free doorstep delivery. Enquire for best rates.',
   alternates: {
     canonical: 'https://www.driveitcars.in/weekly-self-drive-cars-hyderabad',
   },
@@ -52,7 +52,7 @@ const WEEKLY_FAQS = [
   {
     question: 'How much can I save by choosing a weekly car rental instead of daily rentals?',
     answer:
-      'You save between 20% and 25% on average. For example, a Maruti Swift that costs ₹1,499/day (₹10,493 for 7 days) costs only ₹8,999 on our weekly package. Similarly, an Innova Crysta or Creta offers substantial multi-day savings with 2,100 km included for the week.',
+      'You get substantial multi-day savings on our weekly packages compared to booking 7 individual daily rentals. All weekly packages include 2,100 km, zero security deposit options, and doorstep handover.',
   },
   {
     question: 'Can I extend my weekly rental to a monthly car rental subscription?',
@@ -70,9 +70,9 @@ const WEEKLY_FLEET_HIGHLIGHTS = [
   {
     name: 'Maruti Swift Manual & Automatic',
     category: '5-Seater Hatchback',
-    weeklyRate: '₹8,999/week',
-    dailyEquiv: '~₹1,285/day',
-    savings: 'Save 25%',
+    weeklyRate: 'Tariff on Request',
+    dailyEquiv: 'Special 7-Day Package',
+    savings: '7-Day Deal',
     image: '/assets/img/cars/Swift.png',
     fuel: 'Petrol',
     trans: 'Manual & Automatic',
@@ -81,9 +81,9 @@ const WEEKLY_FLEET_HIGHLIGHTS = [
   {
     name: 'Maruti Baleno Manual & Automatic',
     category: '5-Seater Hatchback',
-    weeklyRate: '₹10,499/week',
-    dailyEquiv: '~₹1,499/day',
-    savings: 'Save 25%',
+    weeklyRate: 'Tariff on Request',
+    dailyEquiv: 'Special 7-Day Package',
+    savings: '7-Day Deal',
     image: '/assets/img/cars/Baleno.png',
     fuel: 'Petrol',
     trans: 'Manual & Automatic',
@@ -92,9 +92,9 @@ const WEEKLY_FLEET_HIGHLIGHTS = [
   {
     name: 'Maruti Suzuki Fronx Mini SUV',
     category: '5-Seater Mini SUV',
-    weeklyRate: '₹12,999/week',
-    dailyEquiv: '~₹1,857/day',
-    savings: 'Save 25%',
+    weeklyRate: 'Tariff on Request',
+    dailyEquiv: 'Special 7-Day Package',
+    savings: '7-Day Deal',
     image: '/assets/img/cars/Fronx.png',
     fuel: 'Petrol Turbo',
     trans: 'Manual & Automatic',
@@ -103,9 +103,9 @@ const WEEKLY_FLEET_HIGHLIGHTS = [
   {
     name: 'Hyundai Creta Manual & Automatic',
     category: '5-Seater SUV',
-    weeklyRate: '₹16,999/week',
-    dailyEquiv: '~₹2,428/day',
-    savings: 'Save 25%',
+    weeklyRate: 'Tariff on Request',
+    dailyEquiv: 'Special 7-Day Package',
+    savings: '7-Day Deal',
     image: '/assets/img/2023-6.png',
     fuel: 'Diesel / Petrol',
     trans: 'Manual & Automatic',
@@ -114,9 +114,9 @@ const WEEKLY_FLEET_HIGHLIGHTS = [
   {
     name: 'Mahindra Thar 4x4 & Thar Roxx',
     category: 'Adventure 4x4 SUV',
-    weeklyRate: '₹19,999/week',
-    dailyEquiv: '~₹2,857/day',
-    savings: 'Save 25%',
+    weeklyRate: 'Tariff on Request',
+    dailyEquiv: 'Special 7-Day Package',
+    savings: '7-Day Deal',
     image: '/assets/img/cars/5-Thar.png',
     fuel: 'Diesel mHawk',
     trans: 'Manual & Automatic',
@@ -125,9 +125,9 @@ const WEEKLY_FLEET_HIGHLIGHTS = [
   {
     name: 'Toyota Innova Crysta 7-Seater',
     category: '7-Seater Premium MUV',
-    weeklyRate: '₹22,999/week',
-    dailyEquiv: '~₹3,285/day',
-    savings: 'Save 25%',
+    weeklyRate: 'Tariff on Request',
+    dailyEquiv: 'Special 7-Day Package',
+    savings: '7-Day Deal',
     image: '/assets/img/cars/7-Innova Crysta.png',
     fuel: '2.4L Diesel',
     trans: 'Manual & Automatic',
@@ -136,9 +136,9 @@ const WEEKLY_FLEET_HIGHLIGHTS = [
   {
     name: 'Mahindra XUV 700 7-Seater',
     category: '7-Seater Luxury SUV',
-    weeklyRate: '₹21,999/week',
-    dailyEquiv: '~₹3,142/day',
-    savings: 'Save 25%',
+    weeklyRate: 'Tariff on Request',
+    dailyEquiv: 'Special 7-Day Package',
+    savings: '7-Day Deal',
     image: '/assets/img/cars/7-XUV700.png',
     fuel: 'Diesel / Petrol',
     trans: 'Manual & Automatic',
@@ -147,9 +147,9 @@ const WEEKLY_FLEET_HIGHLIGHTS = [
   {
     name: 'Hyundai Verna & Swift Dzire',
     category: '5-Seater Executive Sedan',
-    weeklyRate: '₹11,999/week',
-    dailyEquiv: '~₹1,714/day',
-    savings: 'Save 25%',
+    weeklyRate: 'Tariff on Request',
+    dailyEquiv: 'Special 7-Day Package',
+    savings: '7-Day Deal',
     image: '/assets/img/cars/seden-dzire.png',
     fuel: 'Petrol / CNG',
     trans: 'Manual & Automatic',
@@ -158,9 +158,9 @@ const WEEKLY_FLEET_HIGHLIGHTS = [
   {
     name: 'Toyota Fortuner 4x4',
     category: 'VIP Highway SUV',
-    weeklyRate: '₹34,999/week',
-    dailyEquiv: '~₹4,999/day',
-    savings: 'Save 25%',
+    weeklyRate: 'Tariff on Request',
+    dailyEquiv: 'Special 7-Day Package',
+    savings: '7-Day Deal',
     image: '/assets/img/cars/7-Fortuner.png',
     fuel: '2.8L Diesel',
     trans: 'Manual & Automatic 4x4',
@@ -172,7 +172,7 @@ export default function WeeklySelfDriveCarsPage() {
   const rentalSchema = buildCarRentalSchema({
     name: 'DRIVEIT Weekly Self Drive Cars Hyderabad',
     description:
-      'Book 7-day weekly self drive car rentals in Hyderabad starting @ ₹8,999/week. Save 25% with zero deposit options, doorstep delivery across HITEC City, Gachibowli & Shamshabad Airport.',
+      'Book 7-day weekly self drive car rentals in Hyderabad with DRIVEIT. Special weekly packages with zero deposit options, doorstep delivery across HITEC City, Gachibowli & Shamshabad Airport.',
     url: 'https://www.driveitcars.in/weekly-self-drive-cars-hyderabad',
     areaServed: [
       'Hyderabad',
@@ -382,8 +382,13 @@ export default function WeeklySelfDriveCarsPage() {
                       {car.name}
                     </h3>
                     <div style={{ marginBottom: '14px' }}>
-                      <div style={{ fontSize: '24px', fontWeight: 900, color: '#0f172a' }}>{car.weeklyRate}</div>
-                      <div style={{ fontSize: '12px', color: '#10b981', fontWeight: 700 }}>Effective {car.dailyEquiv}</div>
+                      <div style={{ fontSize: '17px', fontWeight: 800, color: '#92400e', background: '#fef3c7', padding: '6px 12px', borderRadius: '8px', display: 'inline-flex', alignItems: 'center', gap: '6px', border: '1px solid #fde68a' }}>
+                        <i className="fa fa-tag" style={{ color: '#d97706', fontSize: '13px' }} />
+                        {car.weeklyRate}
+                      </div>
+                      <div style={{ fontSize: '12px', color: '#059669', fontWeight: 700, marginTop: '6px', display: 'flex', alignItems: 'center', gap: '5px' }}>
+                        <i className="fa fa-check-circle" /> {car.dailyEquiv}
+                      </div>
                     </div>
 
                     <div style={{ marginBottom: '18px', display: 'flex', flexWrap: 'wrap', gap: '6px' }}>
@@ -421,7 +426,7 @@ export default function WeeklySelfDriveCarsPage() {
                       </a>
                       <a
                         href={`https://api.whatsapp.com/send?phone=+916300041186&text=${encodeURIComponent(
-                          `Hi DRIVEIT Cars, I want to book the ${car.name} on the 7-day WEEKLY rental package (${car.weeklyRate}). Please share availability and delivery options.`
+                          `Hi DRIVEIT Cars, I want to book the ${car.name} on the 7-day WEEKLY rental package. Please share rate quotation, availability, and delivery options.`
                         )}`}
                         target="_blank"
                         rel="noopener noreferrer"

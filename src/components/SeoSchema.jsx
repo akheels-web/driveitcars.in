@@ -15,7 +15,7 @@ export function buildCarRentalSchema({
   description = 'Premier self drive car rentals in Hyderabad with doorstep delivery, zero deposit options, and well-maintained fleet.',
   url = 'https://www.driveitcars.in',
   areaServed = 'Hyderabad',
-  priceRange = '₹1499 - ₹15000',
+  priceRange = 'Tariff on Request',
 } = {}) {
   return {
     '@context': 'https://schema.org',
@@ -23,7 +23,7 @@ export function buildCarRentalSchema({
     name,
     description,
     url,
-    logo: 'https://www.driveitcars.in/logo2.png',
+    logo: 'https://www.driveitcars.in/logo.png',
     image: 'https://www.driveitcars.in/suv.jpg',
     telephone: '+916300041186',
     priceRange,

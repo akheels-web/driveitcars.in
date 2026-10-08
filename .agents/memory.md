@@ -330,3 +330,30 @@
   - Cross-linked in `Footer.jsx`, `LocationPageContent.jsx`, and `self-drive-car/page.jsx`.
 - **Turbopack Build Verification**:
   - Verified 100% clean compilation via `npm run build` with **83/83 routes** generated without error.
+
+## Header Logo, Single-Line Navigation & Tariff Masking Overhaul
+- **Header Logo Visibility Fix**:
+  - Root cause: Header background is white (`#ffffff`). When `data.logo` was unpopulated in Sanity, `SiteSettingsContext` defaulted to `/logo2.png` which is white text on transparent, rendering it invisible.
+  - Copied official high-resolution dark & gold brand logo from `public/assets/img/logo1.png` to `public/logo.png`.
+  - Updated `DEFAULT_SETTINGS.logoUrl` to `/logo.png` in `src/context/SiteSettingsContext.jsx`.
+  - Added robust fallback `onError={(e) => { if (e.currentTarget.src !== '/logo.png') e.currentTarget.src = '/logo.png'; }}` in `src/components/Header.jsx`.
+  - Dynamic Sanity override via `settings.logoUrl` remains 100% intact when uploaded from Sanity Studio.
+- **Single-Line Desktop Navigation (#gauto_navigation)**:
+  - Root cause: 11 menu links with fixed container widths wrapped `CONTACT US` onto a 2nd line, doubling navbar height.
+  - Applied flexbox nowrap: `display: flex !important; align-items: center !important; justify-content: space-between !important; flex-wrap: nowrap !important; width: 100% !important;`.
+  - Added fluid container clamp padding (`padding: 0 clamp(12px, 2.5vw, 40px)`) and responsive link font sizing (11.5px on 992px–1240px, 13px on 1240px+).
+  - Ensured all 11 links fit on a single crisp horizontal row on all desktop resolutions.
+- **Site-Wide Pricing Masking (Tariff on Request)**:
+  - Masked all numerical tariffs (`₹/day`, `₹/week`, `₹/month`) across all 28 fleet cars, luxury pages, wedding pages, and corporate pages until official tariffs are finalized.
+  - Replaced pricing tags with clean, premium badges: `Tariff on Request` / `Custom Quote`.
+  - Updated all CTA actions to `Enquire Now` (direct call) and `WhatsApp Enquiry` with customized pre-filled quote request messages.
+  - Updated JSON-LD structured schemas (`priceRange: 'Tariff on Request'`) across all SEO landing pages.
+- **Sanity CMS Editability**:
+  - Verified schemas for `siteSettings`, `car`, `categoryPage`, `landingPage`, and `locationPage`.
+  - Logo can be uploaded directly in Sanity Studio under `Site Settings & Global Footer -> Brand Header Logo`.
+  - Car details (name, transmission, fuel, images, features, badge, seats, display pages) can be managed under `Fleet Vehicles (Cars & Buses)`.
+  - Daily & Monthly price fields in Sanity (`pricePerDay`, `pricePerMonth`) are ready for activation whenever rates are decided.
+- **Mobile Responsiveness**:
+  - Desktop menu (`.gauto-mainmenu-area`) is hidden on mobile via `d-none d-lg-block`.
+  - Mobile experience is driven by the responsive top header bar (logo + hamburger) and slide-out navigation drawer with zero horizontal overflow.
+  - Verified 100% clean Turbopack build across all routes.

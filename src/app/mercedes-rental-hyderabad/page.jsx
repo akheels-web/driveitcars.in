@@ -75,8 +75,8 @@ const MERCEDES_FLEET = [
     model: '2023 Edition',
     seats: '5 Seats',
     fuel: 'Petrol / Automatic',
-    rateDay: '₹24,999/Day',
-    weddingRate: '₹34,999 / Package',
+    rateDay: 'Tariff on Request',
+    weddingRate: 'Custom Quote',
     features: ['Burmester 3D Sound', 'Rear Executive Recliner', 'Air Suspension', 'Ambient Lighting'],
     whatsappMsg: 'Hi DRIVEIT Cars, I want to enquire about booking the Mercedes-Benz S-Class 500 in Hyderabad.',
   },
@@ -88,8 +88,8 @@ const MERCEDES_FLEET = [
     model: '2023 Edition',
     seats: '5 Seats',
     fuel: 'Diesel / Automatic',
-    rateDay: '₹14,999/Day',
-    weddingRate: '₹21,999 / Package',
+    rateDay: 'Tariff on Request',
+    weddingRate: 'Custom Quote',
     features: ['Panamerica Grille', 'Dual Panoramic Sunroof', 'Chauffeur Package', 'Superior Legroom'],
     whatsappMsg: 'Hi DRIVEIT Cars, I want to enquire about booking the Mercedes-Benz E-Class in Hyderabad.',
   },
@@ -101,8 +101,8 @@ const MERCEDES_FLEET = [
     model: '2023 Edition',
     seats: '4-5 Seats',
     fuel: 'Twin-Turbo / Automatic',
-    rateDay: '₹44,999/Day',
-    weddingRate: '₹59,999 / Package',
+    rateDay: 'Tariff on Request',
+    weddingRate: 'Custom Quote',
     features: ['First-Class Lounge Seats', 'Silver Champagne Flutes', 'Chauffeur Included', 'Maximum Prestige'],
     whatsappMsg: 'Hi DRIVEIT Cars, I want to enquire about booking the Mercedes-Maybach in Hyderabad.',
   },
@@ -114,8 +114,8 @@ const MERCEDES_FLEET = [
     model: '2023 Edition',
     seats: '5 Seats',
     fuel: 'V8 Biturbo / 4MATIC',
-    rateDay: '₹49,999/Day',
-    weddingRate: '₹64,999 / Package',
+    rateDay: 'Tariff on Request',
+    weddingRate: 'Custom Quote',
     features: ['Side-Exit Exhaust Roar', 'Legendary 4x4 Dominance', 'Unmatched Road Presence', 'VIP Entrance'],
     whatsappMsg: 'Hi DRIVEIT Cars, I want to enquire about booking the Mercedes G-Wagon in Hyderabad.',
   },
@@ -127,8 +127,8 @@ const MERCEDES_FLEET = [
     model: '2023 Edition',
     seats: '2 Seats',
     fuel: 'Turbo Petrol / Automatic',
-    rateDay: '₹17,999/Day',
-    weddingRate: '₹24,999 / Package',
+    rateDay: 'Tariff on Request',
+    weddingRate: 'Custom Quote',
     features: ['Drop-Top Convertible', 'Pre-Wedding Shoot Ready', 'Exotic Sports Styling', 'Pure Driving Thrill'],
     whatsappMsg: 'Hi DRIVEIT Cars, I want to enquire about booking the Mercedes 2-Seater Convertible in Hyderabad.',
   },
@@ -141,7 +141,7 @@ export default function MercedesRentalHyderabadPage() {
       'Premier Mercedes rental in Hyderabad. Book Mercedes-Benz S-Class, E-Class, Maybach, and G-Wagon for self-drive, weddings, corporate VIPs & airport transfers.',
     url: 'https://www.driveitcars.in/mercedes-rental-hyderabad',
     areaServed: ['Hyderabad', 'Banjara Hills', 'Jubilee Hills', 'HITEC City', 'Gachibowli', 'RGIA Shamshabad Airport'],
-    priceRange: '₹14999 - ₹49999',
+    priceRange: 'Tariff on Request',
   });
 
   const breadcrumbSchema = buildBreadcrumbSchema([
@@ -320,9 +320,12 @@ export default function MercedesRentalHyderabadPage() {
                     <h3 style={{ fontSize: '20px', fontWeight: 700, color: '#0f172a', marginBottom: '8px' }}>
                       {car.name}
                     </h3>
-                    <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '14px', alignItems: 'baseline' }}>
-                      <span style={{ fontSize: '18px', fontWeight: 800, color: '#ffb907' }}>{car.rateDay}</span>
-                      <span style={{ fontSize: '12px', color: '#64748b' }}>Wedding: {car.weddingRate}</span>
+                    <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '14px', alignItems: 'center', background: '#f8fafc', padding: '10px 14px', borderRadius: '8px' }}>
+                      <span style={{ fontSize: '15px', fontWeight: 800, color: '#0f172a' }}>
+                        <i className="fa fa-tag" style={{ color: '#d97706', marginRight: '6px' }} />
+                        {car.rateDay}
+                      </span>
+                      <span style={{ fontSize: '12px', color: '#64748b', fontWeight: 600 }}>Wedding: {car.weddingRate}</span>
                     </div>
 
                     <ul style={{ listStyle: 'none', padding: 0, margin: '0 0 16px', fontSize: '13px', color: '#475569' }}>
@@ -419,38 +422,38 @@ export default function MercedesRentalHyderabadPage() {
                   <tbody>
                     <tr>
                       <td style={{ padding: '14px 16px', fontWeight: 700 }}>Mercedes-Benz E-Class</td>
-                      <td style={{ padding: '14px 16px' }}>₹14,999</td>
-                      <td style={{ padding: '14px 16px' }}>₹11,999</td>
-                      <td style={{ padding: '14px 16px' }}>₹5,999</td>
-                      <td style={{ padding: '14px 16px' }}>₹21,999</td>
+                      <td style={{ padding: '14px 16px', color: '#16a34a', fontWeight: 600 }}>Tariff on Request</td>
+                      <td style={{ padding: '14px 16px', color: '#16a34a', fontWeight: 600 }}>Tariff on Request</td>
+                      <td style={{ padding: '14px 16px', color: '#16a34a', fontWeight: 600 }}>Custom Quote</td>
+                      <td style={{ padding: '14px 16px', color: '#16a34a', fontWeight: 600 }}>Custom Quote</td>
                     </tr>
                     <tr style={{ background: '#f8fafc' }}>
                       <td style={{ padding: '14px 16px', fontWeight: 700 }}>Mercedes-Benz S-Class 500</td>
-                      <td style={{ padding: '14px 16px' }}>₹24,999</td>
-                      <td style={{ padding: '14px 16px' }}>₹19,999</td>
-                      <td style={{ padding: '14px 16px' }}>₹8,999</td>
-                      <td style={{ padding: '14px 16px' }}>₹34,999</td>
+                      <td style={{ padding: '14px 16px', color: '#16a34a', fontWeight: 600 }}>Tariff on Request</td>
+                      <td style={{ padding: '14px 16px', color: '#16a34a', fontWeight: 600 }}>Tariff on Request</td>
+                      <td style={{ padding: '14px 16px', color: '#16a34a', fontWeight: 600 }}>Custom Quote</td>
+                      <td style={{ padding: '14px 16px', color: '#16a34a', fontWeight: 600 }}>Custom Quote</td>
                     </tr>
                     <tr>
                       <td style={{ padding: '14px 16px', fontWeight: 700 }}>Mercedes-Maybach</td>
-                      <td style={{ padding: '14px 16px' }}>On Request</td>
-                      <td style={{ padding: '14px 16px' }}>₹39,999</td>
-                      <td style={{ padding: '14px 16px' }}>₹18,999</td>
-                      <td style={{ padding: '14px 16px' }}>₹59,999</td>
+                      <td style={{ padding: '14px 16px', color: '#16a34a', fontWeight: 600 }}>Tariff on Request</td>
+                      <td style={{ padding: '14px 16px', color: '#16a34a', fontWeight: 600 }}>Tariff on Request</td>
+                      <td style={{ padding: '14px 16px', color: '#16a34a', fontWeight: 600 }}>Custom Quote</td>
+                      <td style={{ padding: '14px 16px', color: '#16a34a', fontWeight: 600 }}>Custom Quote</td>
                     </tr>
                     <tr style={{ background: '#f8fafc' }}>
                       <td style={{ padding: '14px 16px', fontWeight: 700 }}>Mercedes G-Wagon (G63)</td>
-                      <td style={{ padding: '14px 16px' }}>₹49,999</td>
-                      <td style={{ padding: '14px 16px' }}>₹44,999</td>
-                      <td style={{ padding: '14px 16px' }}>₹19,999</td>
-                      <td style={{ padding: '14px 16px' }}>₹64,999</td>
+                      <td style={{ padding: '14px 16px', color: '#16a34a', fontWeight: 600 }}>Tariff on Request</td>
+                      <td style={{ padding: '14px 16px', color: '#16a34a', fontWeight: 600 }}>Tariff on Request</td>
+                      <td style={{ padding: '14px 16px', color: '#16a34a', fontWeight: 600 }}>Custom Quote</td>
+                      <td style={{ padding: '14px 16px', color: '#16a34a', fontWeight: 600 }}>Custom Quote</td>
                     </tr>
                     <tr>
                       <td style={{ padding: '14px 16px', fontWeight: 700 }}>Mercedes 2-Seater Convertible</td>
-                      <td style={{ padding: '14px 16px' }}>₹17,999</td>
-                      <td style={{ padding: '14px 16px' }}>₹15,999</td>
-                      <td style={{ padding: '14px 16px' }}>₹7,999</td>
-                      <td style={{ padding: '14px 16px' }}>₹24,999</td>
+                      <td style={{ padding: '14px 16px', color: '#16a34a', fontWeight: 600 }}>Tariff on Request</td>
+                      <td style={{ padding: '14px 16px', color: '#16a34a', fontWeight: 600 }}>Tariff on Request</td>
+                      <td style={{ padding: '14px 16px', color: '#16a34a', fontWeight: 600 }}>Custom Quote</td>
+                      <td style={{ padding: '14px 16px', color: '#16a34a', fontWeight: 600 }}>Custom Quote</td>
                     </tr>
                   </tbody>
                 </table>

@@ -52,7 +52,7 @@ const AUDI_FAQS = [
   {
     question: 'What is the price of Audi rental in Hyderabad?',
     answer:
-      'Audi car rentals in Hyderabad start from ₹12,999/day for the executive Audi A6 and ₹19,999/day for the flagship 7-seater Audi Q7 SUV. Wedding packages and airport transfer slots are available at transparent, fixed prices.',
+      'Audi car rental tariffs in Hyderabad are available on request tailored to your booking requirements (self-drive, corporate chauffeur, wedding package, or RGIA airport transfer). Contact our concierge team for custom all-inclusive quotes.',
   },
   {
     question: 'Is the Audi Q7 available for 7 passengers in Hyderabad?',
@@ -75,8 +75,8 @@ const AUDI_FLEET = [
     model: '2023 Edition',
     seats: '5 Seats',
     fuel: 'TFSI Turbo Petrol',
-    rateDay: '₹12,999/Day',
-    weddingRate: '₹18,999 / Package',
+    rateDay: 'Tariff on Request',
+    weddingRate: 'Custom Quote',
     features: ['Matrix LED Lights', 'Audi Virtual Cockpit', 'Bang & Olufsen Audio', 'Dual Touch MMI'],
     whatsappMsg: 'Hi DRIVEIT Cars, I want to enquire about booking the Audi A6 in Hyderabad.',
   },
@@ -88,8 +88,8 @@ const AUDI_FLEET = [
     model: '2023 Edition',
     seats: '7 Seats',
     fuel: 'Quattro AWD / Diesel',
-    rateDay: '₹19,999/Day',
-    weddingRate: '₹27,999 / Package',
+    rateDay: 'Tariff on Request',
+    weddingRate: 'Custom Quote',
     features: ['Quattro All-Wheel Drive', 'Panoramic Sunroof', 'Air Suspension', '7-Seater Spacious Cabin'],
     whatsappMsg: 'Hi DRIVEIT Cars, I want to enquire about booking the Audi Q7 in Hyderabad.',
   },
@@ -101,8 +101,8 @@ const AUDI_FLEET = [
     model: '2023 Edition',
     seats: '2 Seats',
     fuel: 'Turbocharged Sport',
-    rateDay: '₹16,999/Day',
-    weddingRate: '₹23,999 / Package',
+    rateDay: 'Tariff on Request',
+    weddingRate: 'Custom Quote',
     features: ['Exotic Sport Silhouette', 'Cinematic Shoot Favorite', 'High RPM Soundtrack', 'Drop-Top Fun'],
     whatsappMsg: 'Hi DRIVEIT Cars, I want to enquire about booking the Audi 2-Seater in Hyderabad.',
   },
@@ -115,7 +115,7 @@ export default function AudiRentalHyderabadPage() {
       'Premier Audi car rental in Hyderabad. Rent Audi A6, Audi Q7, and Audi sports cars for self drive, corporate events, weddings & airport pickups.',
     url: 'https://www.driveitcars.in/audi-rental-hyderabad',
     areaServed: ['Hyderabad', 'Banjara Hills', 'Jubilee Hills', 'HITEC City', 'Gachibowli', 'Madhapur', 'RGIA Airport'],
-    priceRange: '₹12999 - ₹19999',
+    priceRange: 'Tariff on Request',
   });
 
   const breadcrumbSchema = buildBreadcrumbSchema([
@@ -294,9 +294,12 @@ export default function AudiRentalHyderabadPage() {
                     <h3 style={{ fontSize: '20px', fontWeight: 700, color: '#0f172a', marginBottom: '8px' }}>
                       {car.name}
                     </h3>
-                    <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '14px', alignItems: 'baseline' }}>
-                      <span style={{ fontSize: '18px', fontWeight: 800, color: '#ffb907' }}>{car.rateDay}</span>
-                      <span style={{ fontSize: '12px', color: '#64748b' }}>Wedding: {car.weddingRate}</span>
+                    <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '14px', alignItems: 'center', background: '#f8fafc', padding: '10px 14px', borderRadius: '8px' }}>
+                      <span style={{ fontSize: '15px', fontWeight: 800, color: '#0f172a' }}>
+                        <i className="fa fa-tag" style={{ color: '#d97706', marginRight: '6px' }} />
+                        {car.rateDay}
+                      </span>
+                      <span style={{ fontSize: '12px', color: '#64748b', fontWeight: 600 }}>Wedding: {car.weddingRate}</span>
                     </div>
 
                     <ul style={{ listStyle: 'none', padding: 0, margin: '0 0 16px', fontSize: '13px', color: '#475569' }}>
@@ -393,24 +396,24 @@ export default function AudiRentalHyderabadPage() {
                   <tbody>
                     <tr>
                       <td style={{ padding: '14px 16px', fontWeight: 700 }}>Audi A6 Matrix Edition</td>
-                      <td style={{ padding: '14px 16px' }}>₹12,999</td>
-                      <td style={{ padding: '14px 16px' }}>₹10,499</td>
-                      <td style={{ padding: '14px 16px' }}>₹4,999</td>
-                      <td style={{ padding: '14px 16px' }}>₹18,999</td>
+                      <td style={{ padding: '14px 16px', color: '#16a34a', fontWeight: 600 }}>Tariff on Request</td>
+                      <td style={{ padding: '14px 16px', color: '#16a34a', fontWeight: 600 }}>Tariff on Request</td>
+                      <td style={{ padding: '14px 16px', color: '#16a34a', fontWeight: 600 }}>Custom Quote</td>
+                      <td style={{ padding: '14px 16px', color: '#16a34a', fontWeight: 600 }}>Custom Quote</td>
                     </tr>
                     <tr style={{ background: '#f8fafc' }}>
                       <td style={{ padding: '14px 16px', fontWeight: 700 }}>Audi Q7 Quattro SUV (7-Seater)</td>
-                      <td style={{ padding: '14px 16px' }}>₹19,999</td>
-                      <td style={{ padding: '14px 16px' }}>₹16,499</td>
-                      <td style={{ padding: '14px 16px' }}>₹7,999</td>
-                      <td style={{ padding: '14px 16px' }}>₹27,999</td>
+                      <td style={{ padding: '14px 16px', color: '#16a34a', fontWeight: 600 }}>Tariff on Request</td>
+                      <td style={{ padding: '14px 16px', color: '#16a34a', fontWeight: 600 }}>Tariff on Request</td>
+                      <td style={{ padding: '14px 16px', color: '#16a34a', fontWeight: 600 }}>Custom Quote</td>
+                      <td style={{ padding: '14px 16px', color: '#16a34a', fontWeight: 600 }}>Custom Quote</td>
                     </tr>
                     <tr>
                       <td style={{ padding: '14px 16px', fontWeight: 700 }}>Audi 2-Seater Roadster</td>
-                      <td style={{ padding: '14px 16px' }}>₹16,999</td>
-                      <td style={{ padding: '14px 16px' }}>₹14,999</td>
-                      <td style={{ padding: '14px 16px' }}>₹6,999</td>
-                      <td style={{ padding: '14px 16px' }}>₹23,999</td>
+                      <td style={{ padding: '14px 16px', color: '#16a34a', fontWeight: 600 }}>Tariff on Request</td>
+                      <td style={{ padding: '14px 16px', color: '#16a34a', fontWeight: 600 }}>Tariff on Request</td>
+                      <td style={{ padding: '14px 16px', color: '#16a34a', fontWeight: 600 }}>Custom Quote</td>
+                      <td style={{ padding: '14px 16px', color: '#16a34a', fontWeight: 600 }}>Custom Quote</td>
                     </tr>
                   </tbody>
                 </table>

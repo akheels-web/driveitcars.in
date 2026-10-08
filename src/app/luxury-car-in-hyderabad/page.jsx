@@ -59,7 +59,7 @@ export default function luxuryCarInHyderabadPage() {
       'Premier luxury car rental in Hyderabad for weddings, VIP events, corporate travel, and airport transfers.',
     url: 'https://www.driveitcars.in/luxury-car-in-hyderabad',
     areaServed: ['Hyderabad', 'Banjara Hills', 'Jubilee Hills', 'HITEC City', 'Gachibowli', 'RGIA Airport'],
-    priceRange: '₹12999 - ₹49999',
+    priceRange: 'Tariff on Request',
   });
 
   const breadcrumbSchema = buildBreadcrumbSchema([
@@ -204,19 +204,19 @@ export default function luxuryCarInHyderabadPage() {
               <div style={{ marginBottom: '18px' }}>
                 <img loading="lazy" src="/rangerover.webp" alt="Range Rover Luxury Car in Hyderabad" className="img-fluid rounded" style={{ width: '100%', height: '170px', objectFit: 'cover' }} />
                 <h4 style={{ fontSize: '16px', fontWeight: 700, marginTop: '10px', color: '#0f172a' }}>Range Rover Evoque &amp; Sport</h4>
-                <p style={{ fontSize: '13px', color: '#64748b', margin: 0 }}>Starting ₹14,999/day • Self Drive &amp; Wedding</p>
+                <p style={{ fontSize: '13px', color: '#64748b', margin: 0 }}>Tariff on Request • Self Drive &amp; Wedding</p>
                 <Link href="/range-rover-rental-hyderabad" style={{ color: '#ffb907', fontSize: '13px', fontWeight: 600, display: 'inline-block', marginTop: '4px' }}>View Range Rover Details →</Link>
               </div>
 
               <div style={{ paddingTop: '16px', borderTop: '1px solid #f1f5f9' }}>
                 <h4 style={{ fontSize: '16px', fontWeight: 700, color: '#0f172a' }}>Mercedes-Benz S-Class &amp; E-Class</h4>
-                <p style={{ fontSize: '13px', color: '#64748b', margin: 0 }}>Starting ₹14,999/day • Flagship German Luxury</p>
+                <p style={{ fontSize: '13px', color: '#64748b', margin: 0 }}>Tariff on Request • Flagship German Luxury</p>
                 <Link href="/mercedes-rental-hyderabad" style={{ color: '#ffb907', fontSize: '13px', fontWeight: 600, display: 'inline-block', marginTop: '4px' }}>View Mercedes Details →</Link>
               </div>
 
               <div style={{ paddingTop: '16px', borderTop: '1px solid #f1f5f9', marginTop: '16px' }}>
                 <h4 style={{ fontSize: '16px', fontWeight: 700, color: '#0f172a' }}>BMW 5 &amp; 7 Series</h4>
-                <p style={{ fontSize: '13px', color: '#64748b', margin: 0 }}>Starting ₹13,999/day • The Ultimate Driving Machine</p>
+                <p style={{ fontSize: '13px', color: '#64748b', margin: 0 }}>Tariff on Request • Sheer Driving Pleasure</p>
                 <Link href="/bmw-rental-hyderabad" style={{ color: '#ffb907', fontSize: '13px', fontWeight: 600, display: 'inline-block', marginTop: '4px' }}>View BMW Details →</Link>
               </div>
             </div>

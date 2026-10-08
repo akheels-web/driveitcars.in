@@ -72,9 +72,9 @@ const MONTHLY_PACKAGES = [
     name: 'Executive Sedan (Dzire / Ciaz)',
     target: 'Managers & City Commutes',
     image: '/assets/img/cars/Dzire.png',
-    rateSelfDrive: '₹34,999 / Month',
-    rateWithChauffeur: '₹54,999 / Month',
-    savings: 'Save 46% vs Daily',
+    rateSelfDrive: 'Tariff on Request',
+    rateWithChauffeur: 'Custom Retainer',
+    savings: 'Monthly Deal',
     features: ['Fuel Efficient 22+ km/l', 'Comprehensive Commercial Insurance', 'Free Doorstep Service', 'GST Input Credit'],
     whatsappMsg: 'Hi DRIVEIT Cars, I want to enquire about monthly corporate sedan rental in Hyderabad.',
   },
@@ -83,9 +83,9 @@ const MONTHLY_PACKAGES = [
     name: 'Toyota Innova Crysta',
     target: 'Senior Leadership & Project Teams',
     image: '/assets/img/crysta.png',
-    rateSelfDrive: '₹74,999 / Month',
-    rateWithChauffeur: '₹99,999 / Month',
-    savings: 'Save 45% vs Daily',
+    rateSelfDrive: 'Tariff on Request',
+    rateWithChauffeur: 'Custom Retainer',
+    savings: 'Monthly Deal',
     features: ['Plush Captain Chairs', 'Large Boot for Client Bags', 'High-Speed Highway Stability', 'Express Chauffeur Retainer'],
     whatsappMsg: 'Hi DRIVEIT Cars, I want to enquire about monthly corporate Innova Crysta rental in Hyderabad.',
   },
@@ -94,9 +94,9 @@ const MONTHLY_PACKAGES = [
     name: 'Mercedes-Benz E-Class / BMW 5',
     target: 'CXOs, MDs & Expat Directors',
     image: '/assets/img/benz2.png',
-    rateSelfDrive: '₹1,99,999 / Month',
-    rateWithChauffeur: '₹2,39,999 / Month',
-    savings: 'Save 40% vs Daily',
+    rateSelfDrive: 'Tariff on Request',
+    rateWithChauffeur: 'Custom Retainer',
+    savings: 'Monthly Deal',
     features: ['Flagship Boardroom Prestige', 'Suited Protocol Driver', 'Instant Replacement Guarantee', 'Dedicated Concierge Desk'],
     whatsappMsg: 'Hi DRIVEIT Cars, I want to enquire about monthly luxury corporate car lease in Hyderabad.',
   },
@@ -109,7 +109,7 @@ export default function MonthlyCorporateCarRentalHyderabadPage() {
       'Premier monthly corporate car rental and fleet subscription in Hyderabad. Save up to 45% on long-term corporate leases with zero maintenance & GST input tax credit.',
     url: 'https://www.driveitcars.in/monthly-corporate-car-rental-hyderabad',
     areaServed: ['Hyderabad', 'HITEC City', 'Gachibowli Financial District', 'Mindspace', 'Banjara Hills', 'Telangana'],
-    priceRange: '₹34999 - ₹239999',
+    priceRange: 'Tariff on Request',
   });
 
   const breadcrumbSchema = buildBreadcrumbSchema([
@@ -298,8 +298,13 @@ export default function MonthlyCorporateCarRentalHyderabadPage() {
                       {pkg.name}
                     </h3>
                     <div style={{ marginBottom: '14px' }}>
-                      <div style={{ fontSize: '18px', fontWeight: 800, color: '#ffb907' }}>Self Drive: {pkg.rateSelfDrive}</div>
-                      <div style={{ fontSize: '14px', color: '#64748b', marginTop: 4 }}>Chauffeur Retainer: {pkg.rateWithChauffeur}</div>
+                      <div style={{ fontSize: '15px', fontWeight: 800, color: '#92400e', background: '#fef3c7', padding: '5px 10px', borderRadius: '6px', display: 'inline-flex', alignItems: 'center', gap: '5px' }}>
+                        <i className="fa fa-tag" style={{ color: '#d97706', fontSize: '13px' }} />
+                        Monthly Lease: {pkg.rateSelfDrive}
+                      </div>
+                      <div style={{ fontSize: '12px', color: '#059669', fontWeight: 600, marginTop: '4px' }}>
+                        <i className="fa fa-check-circle" /> Chauffeur Retainers &amp; GST Invoicing Available
+                      </div>
                     </div>
 
                     <div style={{ marginBottom: '18px', display: 'flex', flexWrap: 'wrap', gap: '6px' }}>

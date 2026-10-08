@@ -7,9 +7,9 @@ import SeoSchema, {
 } from '@/components/SeoSchema';
 
 export const metadata = {
-  title: 'Monthly Self Drive Cars Hyderabad | Car Subscription @ Up to 45% Off | DRIVEIT',
+  title: 'Monthly Self Drive Cars Hyderabad | Car Subscription Deals | DRIVEIT',
   description:
-    'Flexible monthly self drive cars in Hyderabad starting @ ₹29,999/month. Zero maintenance, zero down payment, free doorstep service & tax benefits. IT pros & expats favorite.',
+    'Flexible monthly self drive cars in Hyderabad with DRIVEIT. Zero maintenance, zero down payment, free doorstep service & tax benefits. IT pros & expats favorite. Enquire for custom quotes.',
   alternates: {
     canonical: 'https://www.driveitcars.in/monthly-self-drive-cars-hyderabad',
   },
@@ -41,9 +41,9 @@ const MONTHLY_PLANS = [
   {
     name: 'Maruti Suzuki Swift',
     type: 'Economy Hatchback',
-    dailyRate: '₹1,999/day',
-    monthlyRate: '₹31,999/month',
-    savings: 'Save 47%',
+    dailyRate: 'Daily Tariff on Request',
+    monthlyRate: 'Tariff on Request',
+    savings: 'Monthly Deal',
     image: '/assets/img/cars/Swift.png',
     fuel: 'Petrol',
     kmPerMonth: '3,000 Km included',
@@ -52,9 +52,9 @@ const MONTHLY_PLANS = [
   {
     name: 'Maruti Suzuki Dzire',
     type: 'Comfort Sedan',
-    dailyRate: '₹2,199/day',
-    monthlyRate: '₹34,999/month',
-    savings: 'Save 47%',
+    dailyRate: 'Daily Tariff on Request',
+    monthlyRate: 'Tariff on Request',
+    savings: 'Monthly Deal',
     image: '/assets/img/cars/Dzire.png',
     fuel: 'Petrol / CNG',
     kmPerMonth: '3,000 Km included',
@@ -63,9 +63,9 @@ const MONTHLY_PLANS = [
   {
     name: 'Hyundai Creta Automatic',
     type: 'Premium 5-Seater SUV',
-    dailyRate: '₹3,299/day',
-    monthlyRate: '₹54,999/month',
-    savings: 'Save 45%',
+    dailyRate: 'Daily Tariff on Request',
+    monthlyRate: 'Tariff on Request',
+    savings: 'Monthly Deal',
     image: '/assets/img/2023-6.png',
     fuel: 'Diesel',
     kmPerMonth: '3,000 Km included',
@@ -74,9 +74,9 @@ const MONTHLY_PLANS = [
   {
     name: 'Toyota Innova Crysta',
     type: '7-Seater Executive MPV',
-    dailyRate: '₹4,499/day',
-    monthlyRate: '₹74,999/month',
-    savings: 'Save 45%',
+    dailyRate: 'Daily Tariff on Request',
+    monthlyRate: 'Tariff on Request',
+    savings: 'Monthly Deal',
     image: '/assets/img/crysta.png',
     fuel: 'Diesel',
     kmPerMonth: '3,000 Km included',
@@ -225,7 +225,7 @@ export default function MonthlySelfDriveHyderabadPage() {
           <div className="row">
             {MONTHLY_PLANS.map((plan, idx) => {
               const whatsappText = encodeURIComponent(
-                `Hi DRIVEIT Cars, I want to book the monthly subscription for [${plan.name}] at ${plan.monthlyRate}. Please share booking details.`
+                `Hi DRIVEIT Cars, I want to book the monthly subscription for [${plan.name}]. Please share rate quotation, terms and booking details.`
               );
 
               return (
@@ -251,14 +251,15 @@ export default function MonthlySelfDriveHyderabadPage() {
                       <h3 style={{ fontSize: '16px', fontWeight: 800, color: '#111827', margin: '0 0 10px' }}>
                         {plan.name}
                       </h3>
-                      <div style={{ background: '#f8fafc', border: '1px solid #e2e8f0', borderRadius: '8px', padding: '10px', marginBottom: '12px' }}>
-                        <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '4px' }}>
-                          <span style={{ fontSize: '12px', color: '#64748b' }}>Daily Rate:</span>
-                          <span style={{ fontSize: '12px', textDecoration: 'line-through', color: '#94a3b8' }}>{plan.dailyRate}</span>
+                      <div style={{ background: '#fef3c7', border: '1px solid #fde68a', borderRadius: '8px', padding: '10px 12px', marginBottom: '12px' }}>
+                        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+                          <span style={{ fontSize: '13px', fontWeight: 700, color: '#92400e', display: 'flex', alignItems: 'center', gap: '5px' }}>
+                            <i className="fa fa-tag" style={{ color: '#d97706' }} /> Monthly Plan:
+                          </span>
+                          <span style={{ fontSize: '14px', fontWeight: 800, color: '#92400e' }}>{plan.monthlyRate}</span>
                         </div>
-                        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'baseline' }}>
-                          <span style={{ fontSize: '13px', fontWeight: 700, color: '#0f172a' }}>Monthly:</span>
-                          <span style={{ fontSize: '16px', fontWeight: 800, color: '#d97706' }}>{plan.monthlyRate}</span>
+                        <div style={{ fontSize: '11px', color: '#059669', fontWeight: 700, marginTop: '4px' }}>
+                          <i className="fa fa-check-circle" /> Contact for Best Custom Quote
                         </div>
                       </div>
                       <ul style={{ listStyle: 'none', padding: 0, margin: '0 0 14px', fontSize: '12px', color: '#64748b', lineHeight: '1.8' }}>

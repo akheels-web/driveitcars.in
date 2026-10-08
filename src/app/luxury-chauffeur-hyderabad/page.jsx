@@ -72,8 +72,8 @@ const CHAUFFEUR_PACKAGES = [
     name: 'Mercedes-Benz Executive Chauffeur',
     tag: 'Corporate & Board Meetings',
     image: '/assets/img/benz2.png',
-    rate8hr: '₹11,999 (8 Hr / 80 Km)',
-    airportRate: '₹5,999 (RGIA Transfer)',
+    rate8hr: 'Tariff on Request',
+    airportRate: 'Custom Quote',
     features: ['Suited Executive Chauffeur', 'Flight Delay Monitoring', 'Mineral Water & Mints', 'High-Speed Wi-Fi on Request'],
     whatsappMsg: 'Hi DRIVEIT Cars, I want to book the Mercedes-Benz luxury chauffeur service in Hyderabad.',
   },
@@ -82,8 +82,8 @@ const CHAUFFEUR_PACKAGES = [
     name: 'BMW 5 & 7 Series VIP Chauffeur',
     tag: 'VIP Dignitaries & CEOS',
     image: '/assets/img/bmw.png',
-    rate8hr: '₹10,999 (8 Hr / 80 Km)',
-    airportRate: '₹5,499 (RGIA Transfer)',
+    rate8hr: 'Tariff on Request',
+    airportRate: 'Custom Quote',
     features: ['Protocol-Trained Driver', 'Red-Carpet Door Opening', 'Smooth Highway Navigation', 'Discreet Non-Disclosure Service'],
     whatsappMsg: 'Hi DRIVEIT Cars, I want to book the BMW luxury chauffeur service in Hyderabad.',
   },
@@ -92,8 +92,8 @@ const CHAUFFEUR_PACKAGES = [
     name: 'Innova Crysta Captain Seats Chauffeur',
     tag: 'Executive Team & Luggage',
     image: '/assets/img/crysta.png',
-    rate8hr: '₹4,499 (8 Hr / 80 Km)',
-    airportRate: '₹2,799 (RGIA Transfer)',
+    rate8hr: 'Tariff on Request',
+    airportRate: 'Custom Quote',
     features: ['Reclining Captain Chairs', 'Large Check-in Boot Space', 'Expert Highway Chauffeur', 'Dual Climate AC Control'],
     whatsappMsg: 'Hi DRIVEIT Cars, I want to book the Innova Crysta luxury chauffeur in Hyderabad.',
   },
@@ -102,8 +102,8 @@ const CHAUFFEUR_PACKAGES = [
     name: 'Fortuner Legender VIP Chauffeur',
     tag: 'Security & Escort Convoys',
     image: '/assets/img/fortuner.png',
-    rate8hr: '₹8,999 (8 Hr / 80 Km)',
-    airportRate: '₹4,999 (RGIA Transfer)',
+    rate8hr: 'Tariff on Request',
+    airportRate: 'Custom Quote',
     features: ['Commanding VIP Stature', 'Executive Security Ready', 'All-Terrain Capability', 'Punctual 24/7 Handover'],
     whatsappMsg: 'Hi DRIVEIT Cars, I want to book the Fortuner Legender chauffeur in Hyderabad.',
   },
@@ -116,7 +116,7 @@ export default function LuxuryChauffeurHyderabadPage() {
       'Premier luxury chauffeur service in Hyderabad. Suited, background-verified executive drivers with Mercedes, BMW, Audi & Innova Crysta for corporate, VIP & airport travel.',
     url: 'https://www.driveitcars.in/luxury-chauffeur-hyderabad',
     areaServed: ['Hyderabad', 'HITEC City', 'Gachibowli', 'Banjara Hills', 'Jubilee Hills', 'RGIA Shamshabad Airport'],
-    priceRange: '₹2799 - ₹19999',
+    priceRange: 'Tariff on Request',
   });
 
   const breadcrumbSchema = buildBreadcrumbSchema([
@@ -267,9 +267,12 @@ export default function LuxuryChauffeurHyderabadPage() {
                         {pkg.tag}
                       </span>
                       <h3 style={{ fontSize: '18px', fontWeight: 700, color: '#0f172a', marginBottom: '10px' }}>{pkg.name}</h3>
-                      <div style={{ marginBottom: '8px' }}>
-                        <div style={{ fontSize: '15px', fontWeight: 700, color: '#ffb907' }}>8 Hr / 80 Km: {pkg.rate8hr}</div>
-                        <div style={{ fontSize: '13px', color: '#64748b' }}>Airport Run: {pkg.airportRate}</div>
+                      <div style={{ marginBottom: '8px', background: '#f8fafc', padding: '8px 12px', borderRadius: '8px' }}>
+                        <div style={{ fontSize: '14px', fontWeight: 700, color: '#0f172a', marginBottom: '3px' }}>
+                          <i className="fa fa-tag" style={{ color: '#d97706', marginRight: 6 }} />
+                          8 Hr / 80 Km: {pkg.rate8hr}
+                        </div>
+                        <div style={{ fontSize: '12px', color: '#64748b', fontWeight: 600 }}>Airport Run: {pkg.airportRate}</div>
                       </div>
                     </div>
                   </div>

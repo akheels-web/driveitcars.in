@@ -72,8 +72,8 @@ const CORPORATE_FLEET = [
     name: 'Executive Sedan (Dzire / Ciaz / City)',
     category: 'Corporate Daily Meetings & Commutes',
     image: '/assets/img/cars/Dzire.png',
-    rate8hr: '₹2,499 (8 Hr / 80 Km)',
-    rateMonthly: '₹34,999 / Month',
+    rate8hr: 'Tariff on Request',
+    rateMonthly: 'Custom Retainer',
     features: ['Plush Ergonomic Seats', 'Dual Climate AC', 'Smooth City Commute', 'Professional Chauffeur Included'],
     whatsappMsg: 'Hi DRIVEIT Cars, I want to enquire about Executive Sedan corporate rental in Hyderabad.',
   },
@@ -82,8 +82,8 @@ const CORPORATE_FLEET = [
     name: 'Toyota Innova Crysta (Captain Chairs)',
     category: 'Client Delegations & Airport Runs',
     image: '/assets/img/crysta.png',
-    rate8hr: '₹4,499 (8 Hr / 80 Km)',
-    rateMonthly: '₹74,999 / Month',
+    rate8hr: 'Tariff on Request',
+    rateMonthly: 'Custom Retainer',
     features: ['Reclining Captain Chairs', 'Large Check-In Luggage Boot', 'Express Highway Stability', 'WiFi on Request'],
     whatsappMsg: 'Hi DRIVEIT Cars, I want to enquire about Innova Crysta corporate car hire in Hyderabad.',
   },
@@ -92,8 +92,8 @@ const CORPORATE_FLEET = [
     name: 'Mercedes-Benz E-Class Executive',
     category: 'CXO & Board Member Travel',
     image: '/assets/img/benz2.png',
-    rate8hr: '₹11,999 (8 Hr / 80 Km)',
-    rateMonthly: '₹1,99,999 / Month',
+    rate8hr: 'Tariff on Request',
+    rateMonthly: 'Custom Retainer',
     features: ['Panoramic Sunroof', 'Burmester Sound System', 'Suited Protocol Chauffeur', 'Red-Carpet Corporate Presence'],
     whatsappMsg: 'Hi DRIVEIT Cars, I want to enquire about Mercedes-Benz corporate rental in Hyderabad.',
   },
@@ -102,8 +102,8 @@ const CORPORATE_FLEET = [
     name: 'BMW 5 Series M-Sport',
     category: 'Visiting Investors & Directors',
     image: '/assets/img/bmw.png',
-    rate8hr: '₹10,999 (8 Hr / 80 Km)',
-    rateMonthly: '₹1,89,999 / Month',
+    rate8hr: 'Tariff on Request',
+    rateMonthly: 'Custom Retainer',
     features: ['Dynamic Luxury Cockpit', 'Harman Kardon Audio', 'Punctual VIP Airport Meet', 'Strict NDA Compliance'],
     whatsappMsg: 'Hi DRIVEIT Cars, I want to enquire about BMW 5 Series corporate car hire in Hyderabad.',
   },
@@ -112,8 +112,8 @@ const CORPORATE_FLEET = [
     name: 'Toyota Fortuner Legender',
     category: 'Senior Executives & Site Visits',
     image: '/assets/img/fortuner.png',
-    rate8hr: '₹8,999 (8 Hr / 80 Km)',
-    rateMonthly: '₹1,49,999 / Month',
+    rate8hr: 'Tariff on Request',
+    rateMonthly: 'Custom Retainer',
     features: ['Commanding Pilot Stature', 'All-Terrain Site Inspection', 'High Ground Clearance', 'VIP Security Presence'],
     whatsappMsg: 'Hi DRIVEIT Cars, I want to enquire about Fortuner Legender corporate hire in Hyderabad.',
   },
@@ -122,7 +122,7 @@ const CORPORATE_FLEET = [
     name: '35-Seater Corporate Luxury Coach',
     category: 'Employee Offsites & Delegations',
     image: '/assets/img/bus2.jpg',
-    rate8hr: '₹16,999 (8 Hr / 80 Km)',
+    rate8hr: 'Tariff on Request',
     rateMonthly: 'Custom Contract',
     features: ['Push-Back Luxury Seats', 'Dual Climate AC Vents', 'PA Sound System', 'Experienced Highway Captain'],
     whatsappMsg: 'Hi DRIVEIT Cars, I want to enquire about 35-Seater corporate coach rental in Hyderabad.',
@@ -136,7 +136,7 @@ export default function CorporateCarRentalHyderabadPage() {
       'Premier corporate car rental and executive chauffeur service in Hyderabad. Tailored B2B fleet solutions for enterprises in HITEC City, Gachibowli & Financial District with GST billing.',
     url: 'https://www.driveitcars.in/corporate-car-rental-hyderabad',
     areaServed: ['Hyderabad', 'HITEC City', 'Gachibowli Financial District', 'Mindspace', 'Banjara Hills', 'RGIA Shamshabad Airport'],
-    priceRange: '₹2499 - ₹199999',
+    priceRange: 'Tariff on Request',
   });
 
   const breadcrumbSchema = buildBreadcrumbSchema([
@@ -313,8 +313,13 @@ export default function CorporateCarRentalHyderabadPage() {
                       {car.name}
                     </h3>
                     <div style={{ marginBottom: '14px' }}>
-                      <div style={{ fontSize: '16px', fontWeight: 800, color: '#ffb907' }}>8h/80km: {car.rate8hr}</div>
-                      <div style={{ fontSize: '13px', color: '#64748b' }}>Monthly: {car.rateMonthly}</div>
+                      <div style={{ fontSize: '15px', fontWeight: 800, color: '#92400e', background: '#fef3c7', padding: '5px 10px', borderRadius: '6px', display: 'inline-flex', alignItems: 'center', gap: '5px' }}>
+                        <i className="fa fa-tag" style={{ color: '#d97706', fontSize: '13px' }} />
+                        Spot &amp; Monthly: {car.rate8hr}
+                      </div>
+                      <div style={{ fontSize: '12px', color: '#059669', fontWeight: 600, marginTop: '4px' }}>
+                        <i className="fa fa-check-circle" /> GST Invoicing &amp; Retainer Plans
+                      </div>
                     </div>
 
                     <div style={{ marginBottom: '18px', display: 'flex', flexWrap: 'wrap', gap: '6px' }}>
