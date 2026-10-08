@@ -147,9 +147,20 @@ export default function cabsPage() {
                 <h2 style={{ fontSize: '34px', fontWeight: 800, color: '#111827', lineHeight: '1.3', marginBottom: '18px' }}>
                   Reliable City Cabs, 24/7 Airport Transfers &amp; Outstation Travel
                 </h2>
-                <p style={{ color: '#4b5563', fontSize: '15px', lineHeight: '1.75', marginBottom: '32px' }}>
+                <p style={{ color: '#4b5563', fontSize: '15px', lineHeight: '1.75', marginBottom: '20px' }}>
                   For a hassle-free, comfortable, and affordable travel experience, book verified cab rentals in Hyderabad with <strong>DriveIt</strong>. Whether you need a fuel-efficient hatchback for local errands, an executive sedan for business appointments, or a spacious 7/8-seater MUV like the Innova Crysta for outstation vacations and weddings, our professional chauffeurs ensure a punctual, safe, and pleasant journey across Telangana and beyond.
                 </p>
+                <div style={{ marginBottom: '28px', display: 'flex', gap: '10px', flexWrap: 'wrap' }}>
+                  <Link href="/luxury-chauffeur-hyderabad" style={{ background: '#0f172a', color: '#ffb907', padding: '6px 14px', borderRadius: '20px', fontSize: '13px', fontWeight: 700 }}>
+                    🤵 Luxury Chauffeur Hyderabad
+                  </Link>
+                  <Link href="/vip-car-rental-hyderabad" style={{ background: '#f8fafc', color: '#0f172a', padding: '6px 14px', borderRadius: '20px', fontSize: '13px', fontWeight: 600, border: '1px solid #cbd5e1' }}>
+                    👑 VIP &amp; CEO Car Rental
+                  </Link>
+                  <Link href="/hyderabad-airport-car-rental" style={{ background: '#f8fafc', color: '#0f172a', padding: '6px 14px', borderRadius: '20px', fontSize: '13px', fontWeight: 600, border: '1px solid #cbd5e1' }}>
+                    ✈️ Airport Car Rental
+                  </Link>
+                </div>
 
                 {/* 4 Feature Highlights */}
                 <div className="row g-3 text-start">

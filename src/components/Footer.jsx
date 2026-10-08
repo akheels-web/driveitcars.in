@@ -123,6 +123,34 @@ export default function Footer() {
                 </div>
               </div>
             </div>
+
+            {/* Luxury & VIP Car Rentals SEO Strip */}
+            <div className="row mt-4 pt-4" style={{ borderTop: '1px solid rgba(255,255,255,0.08)' }}>
+              <div className="col-12">
+                <div style={{ marginBottom: '10px' }}>
+                  <span style={{ color: '#ffb907', fontSize: '13px', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.8px' }}>
+                    ✦ Luxury &amp; VIP Car Rentals Hyderabad:
+                  </span>
+                </div>
+                <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px 16px', fontSize: '13px', alignItems: 'center' }}>
+                  <Link href="/mercedes-rental-hyderabad" style={{ color: '#ffb907', fontWeight: 600 }}>Mercedes Rental Hyderabad</Link>
+                  <span style={{ color: '#444' }}>•</span>
+                  <Link href="/bmw-rental-hyderabad" style={{ color: '#ffb907', fontWeight: 600 }}>BMW Rental Hyderabad</Link>
+                  <span style={{ color: '#444' }}>•</span>
+                  <Link href="/audi-rental-hyderabad" style={{ color: '#ffb907', fontWeight: 600 }}>Audi Rental Hyderabad</Link>
+                  <span style={{ color: '#444' }}>•</span>
+                  <Link href="/range-rover-rental-hyderabad" style={{ color: '#ffb907', fontWeight: 600 }}>Range Rover Rental Hyderabad</Link>
+                  <span style={{ color: '#444' }}>•</span>
+                  <Link href="/luxury-chauffeur-hyderabad" style={{ color: '#ffb907', fontWeight: 600 }}>Luxury Chauffeur Hyderabad</Link>
+                  <span style={{ color: '#444' }}>•</span>
+                  <Link href="/vip-car-rental-hyderabad" style={{ color: '#ffb907', fontWeight: 600 }}>VIP Car Rental Hyderabad</Link>
+                  <span style={{ color: '#444' }}>•</span>
+                  <Link href="/vip-car-rental-hyderabad" style={{ color: '#bbb' }}>Executive Car Rental Hyderabad</Link>
+                  <span style={{ color: '#444' }}>•</span>
+                  <Link href="/vip-car-rental-hyderabad" style={{ color: '#bbb' }}>CEO Car Rental Hyderabad</Link>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
 

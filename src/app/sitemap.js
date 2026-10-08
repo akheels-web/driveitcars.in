@@ -4,13 +4,19 @@ export default async function sitemap() {
   const baseUrl = 'https://www.driveitcars.in';
   const now = new Date();
 
-  // Tier 1: Core High-Priority Self Drive Hubs (1.0 Priority)
+  // Tier 1: Core High-Priority Self Drive & Luxury Hubs (1.0 Priority)
   const coreHubs = [
     { path: '', priority: 1.0, changeFrequency: 'daily' },
     { path: '/self-drive-car', priority: 1.0, changeFrequency: 'daily' },
     { path: '/hyderabad-airport-car-rental', priority: 1.0, changeFrequency: 'daily' },
     { path: '/self-drive-suv-hyderabad', priority: 1.0, changeFrequency: 'daily' },
     { path: '/luxurycars', priority: 1.0, changeFrequency: 'daily' },
+    { path: '/mercedes-rental-hyderabad', priority: 1.0, changeFrequency: 'daily' },
+    { path: '/bmw-rental-hyderabad', priority: 1.0, changeFrequency: 'daily' },
+    { path: '/audi-rental-hyderabad', priority: 1.0, changeFrequency: 'daily' },
+    { path: '/range-rover-rental-hyderabad', priority: 1.0, changeFrequency: 'daily' },
+    { path: '/luxury-chauffeur-hyderabad', priority: 1.0, changeFrequency: 'daily' },
+    { path: '/vip-car-rental-hyderabad', priority: 1.0, changeFrequency: 'daily' },
     { path: '/weekend-self-drive-cars-hyderabad', priority: 1.0, changeFrequency: 'daily' },
     { path: '/monthly-self-drive-cars-hyderabad', priority: 1.0, changeFrequency: 'daily' },
   ];

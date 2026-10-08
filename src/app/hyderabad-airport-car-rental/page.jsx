@@ -277,9 +277,11 @@ export default function HyderabadAirportCarRentalPage() {
                 <div style={{ width: '46px', height: '46px', borderRadius: '10px', background: 'rgba(255, 185, 7, 0.15)', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#d49500', fontSize: '20px', marginBottom: '14px' }}>
                   <i className="fa fa-gem" />
                 </div>
-                <h4 style={{ fontSize: '17px', fontWeight: 700, color: '#0f172a', marginBottom: '8px' }}>Airport Luxury Car Rental</h4>
+                <h4 style={{ fontSize: '17px', fontWeight: 700, color: '#0f172a', marginBottom: '8px' }}>
+                  <Link href="/luxurycars" style={{ color: '#0f172a' }}>Airport Luxury Car Rental</Link>
+                </h4>
                 <p style={{ fontSize: '13px', color: '#64748b', lineHeight: '1.6', margin: 0 }}>
-                  First-class travel in Mercedes-Benz, BMW, Audi, and Range Rover Evoque. Tailored for VIP dignitaries, royal weddings, and corporate heads.
+                  First-class travel in <Link href="/mercedes-rental-hyderabad" style={{ color: '#ffb907', fontWeight: 600 }}>Mercedes-Benz</Link>, <Link href="/bmw-rental-hyderabad" style={{ color: '#ffb907', fontWeight: 600 }}>BMW</Link>, <Link href="/audi-rental-hyderabad" style={{ color: '#ffb907', fontWeight: 600 }}>Audi</Link>, and <Link href="/range-rover-rental-hyderabad" style={{ color: '#ffb907', fontWeight: 600 }}>Range Rover</Link>. Tailored for <Link href="/vip-car-rental-hyderabad" style={{ color: '#0f172a', fontWeight: 600 }}>VIP dignitaries &amp; CEOs</Link>.
                 </p>
               </div>
             </div>

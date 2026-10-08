@@ -337,6 +337,16 @@ export default function Header() {
             </li>
             <li className="mobile-nav-item">
               <Link
+                href="/vip-car-rental-hyderabad"
+                onClick={() => setMobileMenuOpen(false)}
+                className="mobile-nav-link"
+                style={{ color: '#ffb907' }}
+              >
+                <i className="fa fa-star" /> VIP &amp; CEO Car Rental
+              </Link>
+            </li>
+            <li className="mobile-nav-item">
+              <Link
                 href="/luxury-buses"
                 onClick={() => setMobileMenuOpen(false)}
                 className="mobile-nav-link"
