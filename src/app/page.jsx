@@ -14,16 +14,16 @@ export const dynamic = 'force-dynamic';
 export const revalidate = 0;
 
 export const metadata = {
-  title: 'Self Drive Cars Hyderabad | Luxury & Monthly Car Rental | DRIVEIT',
+  title: 'Self Drive Cars Hyderabad | Daily, Weekly & Monthly Car Rentals | DRIVEIT',
   description:
-    '#1 Self drive cars in Hyderabad starting @ ₹1,499/day. Rent hatchbacks, sedans, 5 & 7-seater SUVs, and luxury cars. Fast doorstep delivery in HITEC City, Gachibowli, Airport & 26+ hubs.',
+    '#1 Self drive cars in Hyderabad starting @ ₹1,499/day. Daily, weekly & monthly car rentals for Swift, Baleno, Creta, Thar, Thar Roxx, Innova Crysta, XUV700 & Fortuner. Manual & Automatic, zero deposit, fast doorstep delivery.',
   alternates: {
     canonical: 'https://www.driveitcars.in',
   },
   openGraph: {
-    title: 'Self Drive Cars in Hyderabad | DRIVEIT Car Rentals',
+    title: 'Self Drive Cars in Hyderabad | Daily, Weekly & Monthly Car Rental | DRIVEIT',
     description:
-      'Book self drive cars, monthly subscriptions and luxury car rentals in Hyderabad with DRIVEIT. Zero deposit options, unlimited kms, 24/7 delivery.',
+      'Book self drive cars on daily, weekly, and monthly rentals in Hyderabad with DRIVEIT. Manual & automatic hatchbacks, mini SUVs, 5 & 7-seater SUVs, sedans. Zero deposit, 24/7 delivery.',
     url: 'https://www.driveitcars.in',
     siteName: 'DRIVEIT Cars Hyderabad',
     locale: 'en_IN',
@@ -33,14 +33,14 @@ export const metadata = {
         url: 'https://www.driveitcars.in/suv.jpg',
         width: 1200,
         height: 630,
-        alt: 'Self Drive Cars Hyderabad DRIVEIT',
+        alt: 'Daily Weekly Monthly Self Drive Cars Hyderabad DRIVEIT',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Self Drive Cars Hyderabad | Luxury & SUV Rentals',
-    description: 'Premier self drive car rental in Hyderabad with doorstep delivery across HITEC City, Gachibowli & Airport.',
+    title: 'Self Drive Cars Hyderabad | Daily, Weekly & Monthly Rentals',
+    description: 'Premier self drive car rental in Hyderabad with daily, weekly & monthly packages across HITEC City, Gachibowli & Airport.',
   },
 };
 
@@ -129,7 +129,7 @@ export default async function Page() {
         schema={buildCarRentalSchema({
           name: 'DRIVEIT Self Drive Cars & Luxury Car Rentals Hyderabad',
           description:
-            'Book self drive cars, monthly subscriptions and luxury car rentals in Hyderabad with DRIVEIT. Zero deposit options, unlimited kms, 24/7 delivery.',
+            'Book daily, weekly, and monthly self drive cars in Hyderabad with DRIVEIT. Manual & automatic hatchbacks, mini SUVs, 5 & 7-seater SUVs, and sedans with zero deposit options, unlimited kms, 24/7 delivery.',
           url: 'https://www.driveitcars.in',
           areaServed: [
             'Hyderabad',

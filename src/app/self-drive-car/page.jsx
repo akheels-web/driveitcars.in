@@ -164,6 +164,9 @@ export default function selfDriveCarPage() {
                            <Link href="/weekend-self-drive-cars-hyderabad" style={{ background: '#fff', color: '#0f172a', padding: '6px 14px', borderRadius: '20px', fontSize: '13px', fontWeight: 600, border: '1px solid #cbd5e1' }}>
                               🌄 Weekend Self Drive Cars
                            </Link>
+                           <Link href="/weekly-self-drive-cars-hyderabad" style={{ background: '#fff', color: '#0f172a', padding: '6px 14px', borderRadius: '20px', fontSize: '13px', fontWeight: 600, border: '1px solid #cbd5e1' }}>
+                              ⚡ Weekly Self Drive Cars
+                           </Link>
                            <Link href="/monthly-self-drive-cars-hyderabad" style={{ background: '#fff', color: '#0f172a', padding: '6px 14px', borderRadius: '20px', fontSize: '13px', fontWeight: 600, border: '1px solid #cbd5e1' }}>
                               📅 Monthly Self Drive Cars
                            </Link>

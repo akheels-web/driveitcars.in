@@ -138,6 +138,9 @@ export default async function LocationPageContent({ slug }) {
                     <Link href="/hyderabad-airport-car-rental" style={{ background: '#ffffff', color: '#0f172a', padding: '5px 12px', borderRadius: '20px', fontSize: '12px', fontWeight: 600, border: '1px solid #cbd5e1' }}>
                       ✈️ Airport Car Rental
                     </Link>
+                    <Link href="/weekly-self-drive-cars-hyderabad" style={{ background: '#ffffff', color: '#0f172a', padding: '5px 12px', borderRadius: '20px', fontSize: '12px', fontWeight: 600, border: '1px solid #cbd5e1' }}>
+                      ⚡ Weekly Car Rental (Save 25%)
+                    </Link>
                     <Link href="/wedding-car-rental-hyderabad" style={{ background: '#ffffff', color: '#0f172a', padding: '5px 12px', borderRadius: '20px', fontSize: '12px', fontWeight: 600, border: '1px solid #cbd5e1' }}>
                       💍 Wedding Cars
                     </Link>

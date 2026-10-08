@@ -282,3 +282,51 @@
     - `src/app/sitemap.js`: Registered `/corporate-car-rental-hyderabad` and `/monthly-corporate-car-rental-hyderabad` in Tier 1 Core Hubs with `1.0` priority and `daily` change frequency.
   - **Turbopack Build Verification**:
     - Clean compilation via `npm run build` with 82/82 routes generated without error.
+
+## Regular Top Demanding Cars Targeting Overhaul (Daily, Weekly & Monthly)
+- **Top Demanding Fleet Catalog Implemented on Homepage & Site-wide (All 28 Vehicles)**:
+  1. **5-Seater Hatchback Cars**:
+     - `Maruti Swift Manual Transmission` (`Swift.png`): High mileage (22+ km/l), ₹1,499/day, ₹8,999/week, ₹24,999/month.
+     - `Maruti Swift Automatic` (`Swift.png`): Clutch-free city commute, ₹1,699/day, ₹9,999/week, ₹26,999/month.
+     - `Maruti Baleno Manual & Automatic` (`Baleno.png`): Premium Nexa hatchback, 360 camera, ₹1,799/day, ₹10,499/week, ₹28,999/month.
+     - `Hyundai i20 Manual & Automatic` (`i20.png`): Bose sound, electric sunroof, ₹1,899/day, ₹10,999/week, ₹29,999/month.
+  2. **5-Seater Mini SUV Cars**:
+     - `Maruti Suzuki Fronx Manual & Automatic` (`Fronx.png`): 190mm ground clearance, turbo crossover, ₹2,199/day, ₹12,999/week, ₹34,999/month.
+     - `Hyundai Venue Manual & Automatic` (`5-Venue.png`): Bluelink tech, power driver seat, ₹2,299/day, ₹13,499/week, ₹36,999/month.
+     - `Tata Punch Manual & Automatic` (`Tata-Punch.png`): 5-star safety, tough stance, ₹1,999/day, ₹11,999/week, ₹31,999/month.
+  3. **5-Seater SUV Cars**:
+     - `Maruti Suzuki Brezza Manual & Automatic` (`5-Brezza.png`): Electric sunroof, high mileage, ₹2,499/day, ₹14,499/week, ₹39,999/month.
+     - `Tata Nexon Manual & Automatic` (`5-NEXON.png`): 5-star safety champion, ventilated seats, ₹2,499/day, ₹14,499/week, ₹39,999/month.
+     - `Tata Harrier Manual & Automatic` (`5-Harrier.png`): 2.0L Kryotec diesel, Land Rover D8 platform, ₹3,499/day, ₹19,999/week, ₹54,999/month.
+     - `Kia Seltos Manual & Automatic` (`5-Seltos.png`): Dual screens, Bose audio, ₹2,899/day, ₹16,999/week, ₹46,999/month.
+     - `Hyundai Creta Manual & Automatic` (`2023-6.png`): #1 most demanded SUV, voice sunroof, ADAS, ₹2,899/day, ₹16,999/week, ₹46,999/month.
+     - `Mahindra Thar 4x4 Manual & Automatic` (`5-Thar.png`): 4WD convertible hard top, ₹3,499/day, ₹19,999/week, ₹52,999/month.
+     - `Mahindra Thar Roxx 5-Door Manual & Automatic` (`5-Thar.png`): All-new 5-door Thar Roxx, panoramic skyroof, ₹3,999/day, ₹22,999/week, ₹59,999/month.
+  4. **7-Seater SUV & MUV Cars**:
+     - `Mahindra XUV 700 Manual & Automatic` (`7-XUV700.png`): Flagship luxury, Sony 3D sound, ₹3,799/day, ₹21,999/week, ₹58,999/month.
+     - `Kia Carens Manual & Automatic` (`7-Kia Carens.png`): 3-row roof AC, electric tumble, ₹2,799/day, ₹16,499/week, ₹44,999/month.
+     - `Maruti Suzuki Ertiga Manual & Automatic` (`7-Ertiga.png`): Best mileage 7-seater, ₹2,499/day, ₹14,499/week, ₹38,999/month.
+     - `Toyota Innova Crysta Manual & Automatic` (`7-Innova Crysta.png`): Undisputed highway king, ₹3,899/day, ₹22,999/week, ₹59,999/month.
+     - `Toyota Innova Hycross Automatic` (`7-Innova Crysta.png`): Ottoman captain loungers, hybrid EV mode, ₹4,499/day, ₹26,499/week, ₹69,999/month.
+     - `Toyota Fortuner 4x4 Manual & Automatic` (`7-Fortuner.png`): VIP 4x4 road presence, JBL audio, ₹5,999/day, ₹34,999/week, ₹89,999/month.
+     - `Kia Carnival Automatic Limousine` (`7-KiaCarnival.png`): Dual sunroof, power sliding doors, ₹5,499/day, ₹31,999/week, ₹84,999/month.
+  5. **5-Seater Sedan Cars (and Multi-Category SUVs)**:
+     - `Hyundai Verna Manual & Automatic` (`seden-Verna.png`): 1.5L Turbo petrol, ADAS safety, ₹2,499/day, ₹14,499/week, ₹39,999/month.
+     - `Maruti Swift Dzire Manual & Automatic` (`seden-dzire.png`): Top budget sedan, 378L boot, ₹1,999/day, ₹11,999/week, ₹29,999/month.
+     - `Maruti Suzuki Ciaz Manual & Automatic` (`seden-Ciaz.png`): Longest rear legroom, hybrid, ₹2,299/day, ₹13,499/week, ₹34,999/month.
+     - `Volkswagen Virtus Manual & Automatic` (`seden-City.png`): 5-star NCAP German sedan, 521L boot, ₹2,799/day, ₹16,499/week, ₹42,999/month.
+     - `Skoda Slavia Automatic Only` (`seden-City.png`): European luxury, ventilated seats, ₹2,799/day, ₹16,499/week, ₹42,999/month.
+     - `Mahindra Scorpio-N Automatic Only` (`7-Compass.png`): Big Daddy SUV, Sony 3D audio, ₹3,499/day, ₹20,499/week, ₹52,999/month (accessible in both Sedans & 7-Seater SUVs).
+     - `Maruti Suzuki XL6 Manual & Automatic` (`7-Ertiga.png`): Premium 6-seater captain chairs, ₹2,699/day, ₹15,999/week, ₹41,999/month (accessible in both Sedans & 7-Seater SUVs).
+- **Homepage Interactive Features (`CarOffersSection.jsx`)**:
+  - **3-Way Pricing Plan Toggle**: Swapping seamlessly between **Daily Deals**, **Weekly (7 Days - Save 25%)**, and **Monthly (30 Days - Save 50%)**.
+  - **Effective Daily Rate Calculator**: Calculates and displays effective per-day cost for weekly (~₹1,285/day) and monthly (~₹833/day) plans.
+  - **Dynamic WhatsApp CTAs**: Generates pre-filled, car-specific enquiry messages reflecting the currently active plan (DAILY, WEEKLY, or MONTHLY) and tariff.
+  - **Live Search & Category Filters**: Interactive real-time search input + category filter tabs for 5-Seater Hatchbacks, Mini SUVs, 5-Seater SUVs, 7-Seater SUVs & MUVs, and Sedans.
+  - **SEO Keyword Strip**: Embedded bottom keyword strip covering all 28 vehicles.
+- **Dedicated Landing Page Added**:
+  - `src/app/weekly-self-drive-cars-hyderabad/page.jsx`: Full 7-day rental landing page with `AutoRental`, `FAQPage`, `BreadcrumbList` schemas, tariffs, and FAQ accordion.
+  - Registered in `src/app/sitemap.js` (Tier 1 Core Hub, 1.0 priority, daily frequency).
+  - Cross-linked in `Footer.jsx`, `LocationPageContent.jsx`, and `self-drive-car/page.jsx`.
+- **Turbopack Build Verification**:
+  - Verified 100% clean compilation via `npm run build` with **83/83 routes** generated without error.

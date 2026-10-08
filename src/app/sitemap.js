@@ -23,6 +23,7 @@ export default async function sitemap() {
     { path: '/bridal-entry-car-hyderabad', priority: 1.0, changeFrequency: 'daily' },
     { path: '/groom-entry-luxury-car-hyderabad', priority: 1.0, changeFrequency: 'daily' },
     { path: '/weekend-self-drive-cars-hyderabad', priority: 1.0, changeFrequency: 'daily' },
+    { path: '/weekly-self-drive-cars-hyderabad', priority: 1.0, changeFrequency: 'daily' },
     { path: '/monthly-self-drive-cars-hyderabad', priority: 1.0, changeFrequency: 'daily' },
     { path: '/corporate-car-rental-hyderabad', priority: 1.0, changeFrequency: 'daily' },
     { path: '/monthly-corporate-car-rental-hyderabad', priority: 1.0, changeFrequency: 'daily' },

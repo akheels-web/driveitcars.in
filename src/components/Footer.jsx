@@ -59,6 +59,7 @@ export default function Footer() {
                     <li style={{ marginBottom: 10 }}><Link href="/self-drive-suv-hyderabad" style={{ color: '#bbb', fontSize: '14px', transition: '0.2s' }}>Self Drive SUV Hyderabad</Link></li>
                     <li style={{ marginBottom: 10 }}><Link href="/luxurycars" style={{ color: '#bbb', fontSize: '14px', transition: '0.2s' }}>Airport Luxury Car Rental</Link></li>
                     <li style={{ marginBottom: 10 }}><Link href="/weekend-self-drive-cars-hyderabad" style={{ color: '#bbb', fontSize: '14px', transition: '0.2s' }}>Weekend Self Drive Cars</Link></li>
+                    <li style={{ marginBottom: 10 }}><Link href="/weekly-self-drive-cars-hyderabad" style={{ color: '#ffb907', fontWeight: 600, fontSize: '14px', transition: '0.2s' }}>Weekly Self Drive Cars Hyderabad</Link></li>
                     <li style={{ marginBottom: 10 }}><Link href="/monthly-self-drive-cars-hyderabad" style={{ color: '#bbb', fontSize: '14px', transition: '0.2s' }}>Monthly Self Drive Cars</Link></li>
                   </ul>
                 </div>
