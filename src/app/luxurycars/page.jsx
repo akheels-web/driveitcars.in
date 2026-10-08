@@ -133,29 +133,32 @@ export default function luxurycarsPage() {
                         Whether hosting high-profile corporate delegates in <strong>HITEC City</strong>, making an unforgettable grand entrance at a royal <strong>Banjara Hills or Jubilee Hills</strong> wedding, or experiencing the thrill of open-throttle driving along Hyderabad Outer Ring Road, DRIVEIT provides immaculate, fully insured <strong>premium self drive cars in Hyderabad</strong> with discreet white-glove doorstep delivery.
                      </p>
                      <div style={{ display: 'flex', gap: '8px', flexWrap: 'wrap' }}>
-                        <Link href="/mercedes-rental-hyderabad" style={{ background: '#0f172a', color: '#ffb907', padding: '6px 14px', borderRadius: '20px', fontSize: '13px', fontWeight: 700 }}>
-                           ⭐ Mercedes Rental Hyderabad
+                        <Link href="/wedding-car-rental-hyderabad" style={{ background: '#0f172a', color: '#ffb907', padding: '6px 14px', borderRadius: '20px', fontSize: '13px', fontWeight: 700 }}>
+                           💐 Wedding Car Rental Hyderabad
+                        </Link>
+                        <Link href="/rolls-royce-wedding-hyderabad" style={{ background: '#f8fafc', color: '#0f172a', padding: '6px 14px', borderRadius: '20px', fontSize: '13px', fontWeight: 600, border: '1px solid #cbd5e1' }}>
+                           👑 Rolls Royce Wedding
+                        </Link>
+                        <Link href="/vintage-wedding-car-hyderabad" style={{ background: '#f8fafc', color: '#0f172a', padding: '6px 14px', borderRadius: '20px', fontSize: '13px', fontWeight: 600, border: '1px solid #cbd5e1' }}>
+                           🎩 Vintage Wedding Car
+                        </Link>
+                        <Link href="/mercedes-rental-hyderabad" style={{ background: '#f8fafc', color: '#0f172a', padding: '6px 14px', borderRadius: '20px', fontSize: '13px', fontWeight: 600, border: '1px solid #cbd5e1' }}>
+                           ⭐ Mercedes Rental
                         </Link>
                         <Link href="/bmw-rental-hyderabad" style={{ background: '#f8fafc', color: '#0f172a', padding: '6px 14px', borderRadius: '20px', fontSize: '13px', fontWeight: 600, border: '1px solid #cbd5e1' }}>
-                           🚘 BMW Rental Hyderabad
+                           🚘 BMW Rental
                         </Link>
                         <Link href="/audi-rental-hyderabad" style={{ background: '#f8fafc', color: '#0f172a', padding: '6px 14px', borderRadius: '20px', fontSize: '13px', fontWeight: 600, border: '1px solid #cbd5e1' }}>
-                           🏎️ Audi Rental Hyderabad
+                           🏎️ Audi Rental
                         </Link>
                         <Link href="/range-rover-rental-hyderabad" style={{ background: '#f8fafc', color: '#0f172a', padding: '6px 14px', borderRadius: '20px', fontSize: '13px', fontWeight: 600, border: '1px solid #cbd5e1' }}>
                            🚙 Range Rover Rental
                         </Link>
                         <Link href="/luxury-chauffeur-hyderabad" style={{ background: '#f8fafc', color: '#0f172a', padding: '6px 14px', borderRadius: '20px', fontSize: '13px', fontWeight: 600, border: '1px solid #cbd5e1' }}>
-                           🤵 Luxury Chauffeur Hyderabad
+                           🤵 Luxury Chauffeur
                         </Link>
                         <Link href="/vip-car-rental-hyderabad" style={{ background: '#ffb907', color: '#0f172a', padding: '6px 14px', borderRadius: '20px', fontSize: '13px', fontWeight: 700 }}>
                            👑 VIP &amp; CEO Car Rental
-                        </Link>
-                        <Link href="/self-drive-suv-hyderabad" style={{ background: '#f8fafc', color: '#0f172a', padding: '6px 14px', borderRadius: '20px', fontSize: '13px', fontWeight: 600, border: '1px solid #cbd5e1' }}>
-                           🚙 Self Drive SUVs
-                        </Link>
-                        <Link href="/monthly-self-drive-cars-hyderabad" style={{ background: '#f8fafc', color: '#0f172a', padding: '6px 14px', borderRadius: '20px', fontSize: '13px', fontWeight: 600, border: '1px solid #cbd5e1' }}>
-                           📅 Monthly Subscription
                         </Link>
                      </div>
                   </div>

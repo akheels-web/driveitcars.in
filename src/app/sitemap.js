@@ -17,6 +17,11 @@ export default async function sitemap() {
     { path: '/range-rover-rental-hyderabad', priority: 1.0, changeFrequency: 'daily' },
     { path: '/luxury-chauffeur-hyderabad', priority: 1.0, changeFrequency: 'daily' },
     { path: '/vip-car-rental-hyderabad', priority: 1.0, changeFrequency: 'daily' },
+    { path: '/wedding-car-rental-hyderabad', priority: 1.0, changeFrequency: 'daily' },
+    { path: '/rolls-royce-wedding-hyderabad', priority: 1.0, changeFrequency: 'daily' },
+    { path: '/vintage-wedding-car-hyderabad', priority: 1.0, changeFrequency: 'daily' },
+    { path: '/bridal-entry-car-hyderabad', priority: 1.0, changeFrequency: 'daily' },
+    { path: '/groom-entry-luxury-car-hyderabad', priority: 1.0, changeFrequency: 'daily' },
     { path: '/weekend-self-drive-cars-hyderabad', priority: 1.0, changeFrequency: 'daily' },
     { path: '/monthly-self-drive-cars-hyderabad', priority: 1.0, changeFrequency: 'daily' },
   ];

@@ -235,5 +235,33 @@
   - **Turbopack Build Verification**:
     - Clean compilation via `npm run build` with 75/75 routes generated without error.
 
+## Wedding Car Rentals Targeting Overhaul
+- **Keywords Deployed & Targeted for #1 Ranking**:
+  1. `wedding car rental Hyderabad`: Dedicated master pillar page at `/wedding-car-rental-hyderabad` featuring full wedding fleet, curated baraat and full-day packages, suited chauffeurs, and fresh floral styling.
+  2. `luxury wedding cars Hyderabad`: Master category anchor at `/wedding-car-rental-hyderabad` showcasing Rolls Royce, Mercedes-Maybach, Range Rover, Audi, and BMW.
+  3. `bridal entry car Hyderabad`: Dedicated landing page at `/bridal-entry-car-hyderabad` targeting open-top convertibles (Mercedes Cabriolet, Audi 2-Seater Roadster) and classic open-air tourers for rose petal showers and cinematic aisle arrivals.
+  4. `groom entry luxury car Hyderabad`: Dedicated landing page at `/groom-entry-luxury-car-hyderabad` targeting commanding baraat vehicles (Mercedes-AMG G-Wagon G63, Rolls Royce Phantom, Range Rover Sport, Fortuner Legender convoy).
+  5. `Rolls Royce wedding Hyderabad`: Dedicated royal flagship landing page at `/rolls-royce-wedding-hyderabad` featuring Rolls Royce Phantom, Ghost, and Cullinan for Nizami grandeur and wedding receptions.
+  6. `Mercedes wedding car Hyderabad`: Anchored at `/mercedes-rental-hyderabad` and featured across `/wedding-car-rental-hyderabad` covering Maybach, S-Class 500, E-Class, and convertibles.
+  7. `vintage wedding car Hyderabad`: Dedicated heritage landing page at `/vintage-wedding-car-hyderabad` targeting classic open-top vintage tourers and retro roadsters with uniformed chauffeurs.
+- **Architectural & Technical Enhancements**:
+  - **New High-Authority Dedicated Routes**:
+    - `src/app/wedding-car-rental-hyderabad/page.jsx`
+    - `src/app/rolls-royce-wedding-hyderabad/page.jsx`
+    - `src/app/vintage-wedding-car-hyderabad/page.jsx`
+    - `src/app/bridal-entry-car-hyderabad/page.jsx`
+    - `src/app/groom-entry-luxury-car-hyderabad/page.jsx`
+  - **Structured Data (JSON-LD)**:
+    - Embedded `AutoRental`, `FAQPage`, and `BreadcrumbList` schemas across all 5 wedding pages.
+  - **Internal Linking & Sitewide Authority**:
+    - `src/components/Footer.jsx`: Added dedicated full-width "Wedding Car Rentals Hyderabad" SEO keyword strip featuring exact-match anchors for all 7 target keywords.
+    - `src/components/Header.jsx`: Added "Wedding Cars" in both desktop main navigation and mobile navigation slide-over drawer.
+    - `src/app/luxurycars/page.jsx`: Added interactive jump pills linking directly to wedding car rental, Rolls Royce wedding, and vintage wedding car pages.
+  - **Sitemap Priority**:
+    - `src/app/sitemap.js`: Registered all 5 new wedding landing pages in Tier 1 Core Hubs with `1.0` priority and `daily` change frequency.
+  - **Turbopack Build Verification**:
+    - Clean compilation via `npm run build` with 80/80 routes generated without error.
+
+
 
 

@@ -151,6 +151,32 @@ export default function Footer() {
                 </div>
               </div>
             </div>
+
+            {/* Wedding Car Rentals SEO Strip */}
+            <div className="row mt-3 pt-3" style={{ borderTop: '1px solid rgba(255,255,255,0.05)' }}>
+              <div className="col-12">
+                <div style={{ marginBottom: '10px' }}>
+                  <span style={{ color: '#ffb907', fontSize: '13px', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.8px' }}>
+                    ✦ Wedding Car Rentals Hyderabad:
+                  </span>
+                </div>
+                <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px 16px', fontSize: '13px', alignItems: 'center' }}>
+                  <Link href="/wedding-car-rental-hyderabad" style={{ color: '#ffb907', fontWeight: 600 }}>Wedding Car Rental Hyderabad</Link>
+                  <span style={{ color: '#444' }}>•</span>
+                  <Link href="/wedding-car-rental-hyderabad" style={{ color: '#ffb907', fontWeight: 600 }}>Luxury Wedding Cars Hyderabad</Link>
+                  <span style={{ color: '#444' }}>•</span>
+                  <Link href="/bridal-entry-car-hyderabad" style={{ color: '#ffb907', fontWeight: 600 }}>Bridal Entry Car Hyderabad</Link>
+                  <span style={{ color: '#444' }}>•</span>
+                  <Link href="/groom-entry-luxury-car-hyderabad" style={{ color: '#ffb907', fontWeight: 600 }}>Groom Entry Luxury Car Hyderabad</Link>
+                  <span style={{ color: '#444' }}>•</span>
+                  <Link href="/rolls-royce-wedding-hyderabad" style={{ color: '#ffb907', fontWeight: 600 }}>Rolls Royce Wedding Hyderabad</Link>
+                  <span style={{ color: '#444' }}>•</span>
+                  <Link href="/mercedes-rental-hyderabad" style={{ color: '#ffb907', fontWeight: 600 }}>Mercedes Wedding Car Hyderabad</Link>
+                  <span style={{ color: '#444' }}>•</span>
+                  <Link href="/vintage-wedding-car-hyderabad" style={{ color: '#ffb907', fontWeight: 600 }}>Vintage Wedding Car Hyderabad</Link>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
 
