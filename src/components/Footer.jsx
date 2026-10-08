@@ -49,17 +49,17 @@ export default function Footer() {
               <div className="col-lg-3 col-md-6 mb-4">
                 <div className="single-footer">
                   <h3 style={{ fontSize: '17px', color: '#fff', borderBottom: '2px solid #ffb907', paddingBottom: '10px', marginBottom: '18px', display: 'inline-block' }}>
-                    Our Fleet &amp; Services
+                    Self Drive &amp; Fleet
                   </h3>
                   <ul className="footer-links-list" style={{ listStyle: 'none', padding: 0, margin: 0 }}>
-                    <li style={{ marginBottom: 10 }}><Link href="/self-drive-car" style={{ color: '#bbb', fontSize: '14px', transition: '0.2s' }}>Self Drive Cars in Hyderabad</Link></li>
-                    <li style={{ marginBottom: 10 }}><Link href="/luxurycars" style={{ color: '#bbb', fontSize: '14px', transition: '0.2s' }}>Luxury Car Rentals</Link></li>
-                    <li style={{ marginBottom: 10 }}><Link href="/luxury-buses" style={{ color: '#bbb', fontSize: '14px', transition: '0.2s' }}>Luxury Buses &amp; Mini Coaches</Link></li>
-                    <li style={{ marginBottom: 10 }}><Link href="/cabs" style={{ color: '#bbb', fontSize: '14px', transition: '0.2s' }}>Outstation Cabs &amp; Tours</Link></li>
-                    <li style={{ marginBottom: 10 }}><Link href="/hatchback" style={{ color: '#bbb', fontSize: '14px', transition: '0.2s' }}>Hatchback Rental (Swift, Baleno)</Link></li>
-                    <li style={{ marginBottom: 10 }}><Link href="/sedan" style={{ color: '#bbb', fontSize: '14px', transition: '0.2s' }}>Sedan Rentals (Dzire, Verna)</Link></li>
-                    <li style={{ marginBottom: 10 }}><Link href="/suv5" style={{ color: '#bbb', fontSize: '14px', transition: '0.2s' }}>5-Seater SUVs (Creta, Seltos)</Link></li>
+                    <li style={{ marginBottom: 10 }}><Link href="/self-drive-car" style={{ color: '#bbb', fontSize: '14px', transition: '0.2s' }}>Self Drive Cars Hyderabad</Link></li>
+                    <li style={{ marginBottom: 10 }}><Link href="/self-drive-suv-hyderabad" style={{ color: '#ffb907', fontWeight: 600, fontSize: '14px', transition: '0.2s' }}>Self Drive SUV Hyderabad</Link></li>
+                    <li style={{ marginBottom: 10 }}><Link href="/luxurycars" style={{ color: '#bbb', fontSize: '14px', transition: '0.2s' }}>Luxury Self Drive Cars</Link></li>
+                    <li style={{ marginBottom: 10 }}><Link href="/weekend-self-drive-cars-hyderabad" style={{ color: '#bbb', fontSize: '14px', transition: '0.2s' }}>Weekend Self Drive Cars</Link></li>
+                    <li style={{ marginBottom: 10 }}><Link href="/monthly-self-drive-cars-hyderabad" style={{ color: '#bbb', fontSize: '14px', transition: '0.2s' }}>Monthly Self Drive Cars</Link></li>
+                    <li style={{ marginBottom: 10 }}><Link href="/suv5" style={{ color: '#bbb', fontSize: '14px', transition: '0.2s' }}>5-Seater SUVs (Creta, Thar)</Link></li>
                     <li style={{ marginBottom: 10 }}><Link href="/suv7" style={{ color: '#bbb', fontSize: '14px', transition: '0.2s' }}>7-Seater SUVs (Innova Crysta)</Link></li>
+                    <li style={{ marginBottom: 10 }}><Link href="/luxury-buses" style={{ color: '#bbb', fontSize: '14px', transition: '0.2s' }}>Luxury Buses &amp; Coaches</Link></li>
                   </ul>
                 </div>
               </div>
@@ -68,17 +68,17 @@ export default function Footer() {
               <div className="col-lg-3 col-md-6 mb-4">
                 <div className="single-footer">
                   <h3 style={{ fontSize: '17px', color: '#fff', borderBottom: '2px solid #ffb907', paddingBottom: '10px', marginBottom: '18px', display: 'inline-block' }}>
-                    Popular Locations
+                    Top IT Hubs &amp; Areas
                   </h3>
                   <ul className="footer-links-list" style={{ listStyle: 'none', padding: 0, margin: 0 }}>
-                    <li style={{ marginBottom: 10 }}><Link href="/hitech-city" style={{ color: '#bbb', fontSize: '14px', transition: '0.2s' }}>Car Rental in Hitech City</Link></li>
-                    <li style={{ marginBottom: 10 }}><Link href="/gachibowli" style={{ color: '#bbb', fontSize: '14px', transition: '0.2s' }}>Self Drive in Gachibowli</Link></li>
+                    <li style={{ marginBottom: 10 }}><Link href="/hitech-city" style={{ color: '#ffb907', fontWeight: 600, fontSize: '14px', transition: '0.2s' }}>Self Drive Cars HITEC City</Link></li>
+                    <li style={{ marginBottom: 10 }}><Link href="/gachibowli" style={{ color: '#ffb907', fontWeight: 600, fontSize: '14px', transition: '0.2s' }}>Self Drive Cars Gachibowli</Link></li>
+                    <li style={{ marginBottom: 10 }}><Link href="/madhapur" style={{ color: '#ffb907', fontWeight: 600, fontSize: '14px', transition: '0.2s' }}>Self Drive Cars Madhapur</Link></li>
+                    <li style={{ marginBottom: 10 }}><Link href="/kondapur" style={{ color: '#ffb907', fontWeight: 600, fontSize: '14px', transition: '0.2s' }}>Self Drive Cars Kondapur</Link></li>
                     <li style={{ marginBottom: 10 }}><Link href="/banjara-hills" style={{ color: '#bbb', fontSize: '14px', transition: '0.2s' }}>Banjara Hills Luxury Cars</Link></li>
                     <li style={{ marginBottom: 10 }}><Link href="/jubilee-hills" style={{ color: '#bbb', fontSize: '14px', transition: '0.2s' }}>Jubilee Hills Car Hire</Link></li>
                     <li style={{ marginBottom: 10 }}><Link href="/secunderabad" style={{ color: '#bbb', fontSize: '14px', transition: '0.2s' }}>Secunderabad Car Rentals</Link></li>
-                    <li style={{ marginBottom: 10 }}><Link href="/ameerpet" style={{ color: '#bbb', fontSize: '14px', transition: '0.2s' }}>Ameerpet &amp; SR Nagar Rentals</Link></li>
-                    <li style={{ marginBottom: 10 }}><Link href="/begumpet" style={{ color: '#bbb', fontSize: '14px', transition: '0.2s' }}>Begumpet Car Hire</Link></li>
-                    <li style={{ marginBottom: 10 }}><Link href="/lb-nagar" style={{ color: '#bbb', fontSize: '14px', transition: '0.2s' }}>LB Nagar &amp; East Hyderabad</Link></li>
+                    <li style={{ marginBottom: 10 }}><Link href="/kukatpally" style={{ color: '#bbb', fontSize: '14px', transition: '0.2s' }}>Kukatpally Car Rental</Link></li>
                   </ul>
                 </div>
               </div>

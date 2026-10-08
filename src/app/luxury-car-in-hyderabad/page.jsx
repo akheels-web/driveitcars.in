@@ -1,3 +1,12 @@
+export const metadata = {
+  title: 'Premium & Luxury Car Rental in Hyderabad | Weddings & VIP Travel | DRIVEIT',
+  description:
+    'Experience red-carpet luxury car rentals in Hyderabad for weddings, VIP arrivals, pre-wedding shoots, and executive corporate travel with DRIVEIT.',
+  alternates: {
+    canonical: 'https://www.driveitcars.in/luxury-car-in-hyderabad',
+  },
+};
+
 export default function luxuryCarInHyderabadPage() {
   return (
     <>

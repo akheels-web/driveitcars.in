@@ -170,3 +170,23 @@
   - **Landing Page (`landingPage.js`)**: Expanded with all missing sections — Hero Slider, About Section (eyebrow, heading, descriptions, visual image upload, counters, 4 feature highlights grid, CTA links), 4-Step Booking Process, The DRIVEIT Advantage Strip, Why Choose Us (6 feature cards), Partner / Promo CTA Banner, and Google Maps iframe embed URL.
   - **Site Settings & Global Footer (`siteSettings.js` & `SiteSettingsContext.jsx`)**: Connected Header, Footer, and floating buttons to dynamic Sanity data with transparent PNG logo upload, phone numbers, WhatsApp, email, office address, working hours, footer bio, trust badges checklist, and copyright notice.
   - **Location Specific Pages (`locationPage.js`, `locations.js`, `LocationPageContent.jsx`)**: Created document collection in Sanity Studio for all 26 Hyderabad localities + 10 alias routes. Replaced 23,788 lines of legacy duplicated static HTML with clean dynamic components connected to Sanity. Seeded all 26 localities into `production` dataset with full localized copy, landmark tags, and SEO tags.
+
+## High-Intent SEO Architecture & Top 10 Keywords Domination
+- **Target Keywords Deployed**:
+  1. `self drive cars Hyderabad`: Primary city hub at `/self-drive-car` and homepage `/`.
+  2. `self drive cars HITEC City`: Dedicated corridor hub at `/hitech-city` with Cyber Towers, Mindspace, DLF, Inorbit landmarks.
+  3. `self drive cars Gachibowli`: Dedicated corridor hub at `/gachibowli` with Financial District, Wipro Circle, Waverock, ORR Exit 19.
+  4. `self drive cars Madhapur`: Brand new landing page at `/madhapur` covering 100 Feet Road, Durgam Cheruvu, Kavuri Hills, Inorbit.
+  5. `self drive cars Kondapur`: Brand new landing page at `/kondapur` covering Botanical Garden, Kothaguda, Sarath City Capital Mall.
+  6. `self drive SUV Hyderabad`: Powerhouse landing page at `/self-drive-suv-hyderabad` targeting 5-seater and 7-seater SUVs (Thar 4x4, Creta, Fortuner, Innova Crysta, XUV700, Brezza). Cross-linked from `/suv5` and `/suv7`.
+  7. `luxury self drive cars Hyderabad`: Dedicated luxury hub at `/luxurycars` targeting BMW, Mercedes, Audi, Range Rover Evoque, Fortuner Legender.
+  8. `premium self drive cars Hyderabad`: Weaved into `/luxurycars` and `/luxury-car-in-hyderabad`.
+  9. `weekend self drive cars Hyderabad`: Specialized landing page at `/weekend-self-drive-cars-hyderabad` featuring Friday–Monday getaway bundles, unlimited km road trips (Srisailam, Nagarjuna Sagar, Ananthagiri, Warangal, Bidar).
+  10. `monthly self drive cars Hyderabad`: Dedicated subscription landing page at `/monthly-self-drive-cars-hyderabad` with up to 45% discount, comparison matrix (buying vs subscription), zero maintenance, and corporate tax deduction benefits.
+- **Technical SEO Upgrades**:
+  - **Sitemap.js Overhaul**: Completely rewritten to generate all 68 dynamic and static URLs across core hubs (1.0), corridors and categories (0.9), localities (0.8), and blog posts with correct change frequencies.
+  - **Robots.js**: Configured to disallow internal `/studio/` and `/api/` paths while declaring XML sitemap.
+  - **Structured Data (`SeoSchema.jsx`)**: Built and embedded Google-compliant JSON-LD schemas (`AutoRental`, `CarRental`, `LocalBusiness`, `FAQPage`, and `BreadcrumbList`) across all landing pages for rich snippet visibility.
+  - **Navigation & Internal Linking**: Added `Kondapur` and `Madhapur` to desktop & mobile Area Service dropdowns (`Header.jsx`) and integrated exact-match keyword anchors in `Footer.jsx`.
+  - **Zero Compile Errors**: Verified clean build via `npm run build` with 68 static and dynamic Next.js App Router routes compiling without error.
+

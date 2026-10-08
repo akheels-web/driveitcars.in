@@ -1,4 +1,22 @@
+import Link from 'next/link';
 import FaqSection from '@/components/FaqSection';
+
+export const metadata = {
+  title: '5-Seater Self Drive SUV Hyderabad | Creta, Brezza, Thar, Seltos | DRIVEIT',
+  description:
+    'Rent 5-seater self drive SUVs in Hyderabad. Drive Hyundai Creta, Mahindra Thar 4x4, Brezza & Seltos with unlimited kms, zero deposit & 24/7 delivery.',
+  alternates: {
+    canonical: 'https://www.driveitcars.in/suv5',
+  },
+  openGraph: {
+    title: '5-Seater Self Drive SUV Hyderabad | Creta, Thar, Brezza | DRIVEIT',
+    description:
+      'Book 5-seater self drive SUVs in Hyderabad. Sanitized automatic & manual SUVs for city and highway road trips.',
+    url: 'https://www.driveitcars.in/suv5',
+    siteName: 'DRIVEIT Cars Hyderabad',
+  },
+};
+
 export default function suvPage() {
   return (
     <>

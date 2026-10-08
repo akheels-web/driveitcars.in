@@ -1,7 +1,86 @@
+import Link from 'next/link';
 import FaqSection from '@/components/FaqSection';
+import SeoSchema, {
+  buildCarRentalSchema,
+  buildFaqSchema,
+  buildBreadcrumbSchema,
+} from '@/components/SeoSchema';
+
+export const metadata = {
+  title: 'Luxury & Premium Self Drive Cars Hyderabad | BMW, Audi, Mercedes, Evoque',
+  description:
+    'Rent luxury self drive cars & premium cars in Hyderabad with DRIVEIT. Showroom-condition BMW, Mercedes-Benz, Audi, Range Rover Evoque, Fortuner Legender & Thar.',
+  alternates: {
+    canonical: 'https://www.driveitcars.in/luxurycars',
+  },
+  openGraph: {
+    title: 'Luxury & Premium Self Drive Cars Hyderabad | DRIVEIT',
+    description:
+      'Book luxury self drive cars in Hyderabad. Drive BMW, Mercedes, Audi, Range Rover Evoque & Fortuner Legender. VIP, wedding & executive travel.',
+    url: 'https://www.driveitcars.in/luxurycars',
+    siteName: 'DRIVEIT Cars Hyderabad',
+    locale: 'en_IN',
+    type: 'website',
+    images: [
+      {
+        url: 'https://www.driveitcars.in/rangerover.webp',
+        width: 1200,
+        height: 630,
+        alt: 'Luxury Self Drive Cars Hyderabad',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Luxury & Premium Self Drive Cars Hyderabad | DRIVEIT',
+    description: 'Rent exotic & luxury self drive cars in Hyderabad. BMW, Audi, Mercedes, Evoque with DRIVEIT.',
+  },
+};
+
+const LUXURY_FAQS = [
+  {
+    question: 'Can I rent luxury self drive cars in Hyderabad without a driver?',
+    answer:
+      'Yes, absolutely! DRIVEIT offers luxury self drive cars in Hyderabad including BMW, Audi, Mercedes-Benz, Range Rover Evoque, and Toyota Fortuner Legender for self-driving. Enjoy complete privacy and prestige behind the wheel.',
+  },
+  {
+    question: 'What are the security deposit terms for premium self drive cars in Hyderabad?',
+    answer:
+      'For premium and luxury self drive vehicles, we require a refundable security deposit depending on the car model, refunded within 24 to 48 hours of vehicle return following post-trip inspection.',
+  },
+  {
+    question: 'Can I hire luxury self drive cars for weddings and pre-wedding shoots?',
+    answer:
+      'Yes! Our luxury fleet is in high demand for Hyderabadi weddings, groom baraat entries, bridal send-offs, and pre-wedding film shoots. We deliver spotless, showroom-polished vehicles with optional floral decorations.',
+  },
+  {
+    question: 'Do you offer doorstep delivery of luxury cars to 5-star hotels and Hyderabad Airport?',
+    answer:
+      'Yes, we provide VIP white-glove doorstep delivery to Taj Falaknuma, ITC Kohenur, Park Hyatt, Novotel, and Rajiv Gandhi International Airport (RGIA Shamshabad).',
+  },
+];
+
 export default function luxurycarsPage() {
+  const rentalSchema = buildCarRentalSchema({
+    name: 'DRIVEIT Luxury & Premium Self Drive Cars Hyderabad',
+    description:
+      'Rent luxury self drive cars and premium cars in Hyderabad. BMW, Mercedes, Audi, Range Rover Evoque, and Fortuner Legender with white-glove delivery.',
+    url: 'https://www.driveitcars.in/luxurycars',
+    areaServed: ['Hyderabad', 'Banjara Hills', 'Jubilee Hills', 'HITEC City', 'Gachibowli', 'Telangana'],
+  });
+
+  const breadcrumbSchema = buildBreadcrumbSchema([
+    { name: 'Home', url: '/' },
+    { name: 'Luxury Self Drive Cars Hyderabad', url: '/luxurycars' },
+  ]);
+
+  const faqSchema = buildFaqSchema(LUXURY_FAQS);
+
   return (
     <>
+      <SeoSchema schema={rentalSchema} />
+      <SeoSchema schema={breadcrumbSchema} />
+      <SeoSchema schema={faqSchema} />
       <section className="gauto-breadcromb-area section_70">
          <div className="container">
             <div className="row">
@@ -10,7 +89,7 @@ export default function luxurycarsPage() {
                      <h3>Luxury Cars</h3>
                      <ul>
                         <li><i className="fa fa-home"></i></li>
-                        <li><a href="/">Home</a></li>
+                        <li><Link href="/">Home</Link></li>
                         <li><i className="fa fa-angle-right"></i></li>
                         <li>Luxury Cars</li>
                      </ul>
@@ -23,19 +102,51 @@ export default function luxurycarsPage() {
        
        
       {/* About Page Area Start */}
-      <section className="about-page-area section_70">
+      <section className="about-page-area section_70" style={{ paddingBottom: '30px' }}>
          <div className="container">
             <div className="row">
-               <div className="col-lg-61">
+               <div className="col-lg-12">
                   <div className="about-page-left">
-                     <h1 style={{"color":"#ffb907"}}>Luxury Cars in Hyderabad</h1><br />
-                      
-                     <p style={{"textAlign":"justify"}}>Are you looking for <strong style={{"msoBidiFontWeight":"normal"}}>luxury car rentals in Hyderabad</strong>? You have come to the right place as Drive It Cars provides premium luxury cars and luxury SUVs for weddings, corporate events, business travel, airport transfers, movie shooting, and more. The luxury fleet that we offer is meant to provide you with unparalleled levels of luxury and performance every time you travel. We provide luxurious <strong style={{"msoBidiFontWeight":"normal"}}>wedding car rentals in Hyderabad</strong>, luxury SUVs for business meetings, and many other options to meet all your needs for rental cars and SUVs at very affordable prices. Our luxury fleet is not only well-maintained but also comes with all the latest technology, which ensures that your travel experience with us is nothing but luxury. Contact us now for your luxury car rentals in Hyderabad.</p>
-                        </div>
-                        
+                     <span
+                        style={{
+                           background: 'rgba(255, 185, 7, 0.15)',
+                           color: '#d49500',
+                           fontWeight: 700,
+                           fontSize: '12px',
+                           letterSpacing: '1px',
+                           textTransform: 'uppercase',
+                           padding: '6px 14px',
+                           borderRadius: '20px',
+                           display: 'inline-block',
+                           marginBottom: '12px',
+                        }}
+                     >
+                        ✦ ELITE FLEET • BMW • MERCEDES • AUDI • RANGE ROVER
+                     </span>
+                     <h1 style={{ color: '#ffb907', fontSize: '32px', fontWeight: 800, marginBottom: '20px' }}>
+                        Luxury Self Drive Cars Hyderabad — Premium &amp; Exotic Car Rentals
+                     </h1>
+                     <p style={{ textAlign: 'justify', fontSize: '15px', lineHeight: '1.8', color: '#4b5563', marginBottom: '16px' }}>
+                        Step into a realm of supreme prestige with DRIVEIT's <strong>luxury self drive cars Hyderabad</strong> collection. Designed for leaders, discerning executives, celebrities, and grand wedding celebrations, our fleet delivers uncompromising luxury and exhilarating horsepower. Drive showroom-conditioned <strong>BMW sedans, Mercedes-Benz, Audi, Range Rover Evoque, Jaguar XF, and Toyota Fortuner Legender</strong> on your own terms.
+                     </p>
+                     <p style={{ textAlign: 'justify', fontSize: '15px', lineHeight: '1.8', color: '#4b5563', marginBottom: '20px' }}>
+                        Whether hosting high-profile corporate delegates in <strong>HITEC City</strong>, making an unforgettable grand entrance at a royal <strong>Banjara Hills or Jubilee Hills</strong> wedding, or experiencing the thrill of open-throttle driving along Hyderabad Outer Ring Road, DRIVEIT provides immaculate, fully insured <strong>premium self drive cars in Hyderabad</strong> with discreet white-glove doorstep delivery.
+                     </p>
+                     <div style={{ display: 'flex', gap: '8px', flexWrap: 'wrap' }}>
+                        <Link href="/self-drive-suv-hyderabad" style={{ background: '#f8fafc', color: '#0f172a', padding: '6px 14px', borderRadius: '20px', fontSize: '13px', fontWeight: 600, border: '1px solid #cbd5e1' }}>
+                           🚙 Explore Self Drive SUVs
+                        </Link>
+                        <Link href="/self-drive-car" style={{ background: '#f8fafc', color: '#0f172a', padding: '6px 14px', borderRadius: '20px', fontSize: '13px', fontWeight: 600, border: '1px solid #cbd5e1' }}>
+                           🚗 All Self Drive Cars
+                        </Link>
+                        <Link href="/monthly-self-drive-cars-hyderabad" style={{ background: '#f8fafc', color: '#0f172a', padding: '6px 14px', borderRadius: '20px', fontSize: '13px', fontWeight: 600, border: '1px solid #cbd5e1' }}>
+                           📅 Monthly Luxury Subscription
+                        </Link>
                      </div>
                   </div>
                </div>
+            </div>
+         </div>
       </section>
       {/* About Page Area End */}
       {/* lux car Start */}
@@ -566,60 +677,13 @@ export default function luxurycarsPage() {
             {/* lux car End */}</div>
 
       {/* lux Area End */}
-       {/* Floating "Contact Us" button */}
-    <div className="floating-button-container">
-        <a href="#" id="bookNowBtn" className="book-now-button">
-            Contact Us
-        </a>
-    </div>
-
-    {/* Booking Modal */}
-    <div id="contactModal" className="modal-overlay">
-        <div className="modal-content">
-            <button id="closeModalBtn" className="close-button">&times;</button>
-            <h2 className="text-2xl font-bold mb-4">Book Your Ride</h2>
-            <p className="text-gray-600 mb-6">Fill out the form below to book a luxury wedding car.</p>
-            
-            <form id="bookingForm" action="your-backend-script.php" method="POST">
-            <div className="input-grid">
-                <div className="input-group">
-                    <input type="text" id="name" name="name" placeholder="Name" required />
-                </div>
-                <div className="input-group">
-                    <input type="tel" id="phone" name="phone_no" placeholder="Phone No" required />
-                </div>
-                <div className="input-group">
-                    <input type="date" id="pickup_date" name="pickup_date" placeholder="Pickup date" required />
-                </div>
-                <div className="input-group">
-                    <input type="date" id="drop_date" name="drop_date" placeholder="Drop Date" required />
-                </div>
-                <div className="input-group">
-                    <input type="time" id="pickup_time" name="pickup_time" placeholder="Pickup time" required />
-                </div>
-                <div className="input-group">
-                    <input type="time" id="drop_time" name="drop_time" placeholder="Drop Time" required />
-                </div>
-                <div className="input-group full-width">
-                    <select id="seats" name="seats" required>
-                        <option value="">Choose Seats</option>
-                        <option value="5">5 Seats</option>
-                        <option value="7">7 Seats</option>
-                    </select>
-                </div>
-                <div className="captcha-box full-width">
-                    <input type="checkbox" id="captcha" name="_gotcha" required />
-                    <label htmlFor="captcha">I'm not a robot</label>
-                    <img loading="lazy" src="https://placehold.co/60x30/404040/ffffff?text=CAPTCHA" alt="Captcha Image" />
-                </div>
-            </div>
-            <button type="submit" className="submit-btn">BOOK MY CAR</button>
-        </form>
-
-        </div>
-    </div>
        
-     <FaqSection />
+       
+     <FaqSection
+        items={LUXURY_FAQS}
+        title="Frequently Asked Questions — Luxury Self Drive Cars Hyderabad"
+        subtitle="Key details about renting premium and exotic self drive cars in Hyderabad"
+      />
       {/* Service Details Page End */} 
        
       {/* Footer Area Start */}

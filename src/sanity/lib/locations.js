@@ -1,13 +1,66 @@
 import { client } from './client';
 
 export const LOCATION_DEFAULTS = {
+  'hitech-city': {
+    name: 'Hitech City',
+    h1Title: 'Self Drive Cars in HITEC City Hyderabad',
+    introParagraph1: "Searching for the best self drive cars in HITEC City Hyderabad? DRIVEIT Cars offers an unmatched fleet of sanitized, modern self-drive cars tailored for IT executives, tech professionals, and travelers. Whether you need a fuel-efficient hatchback for your daily commute to Cyber Towers, an automatic sedan for client meetings, or a spacious 7-seater SUV for a weekend highway getaway, we deliver right to your doorstep.",
+    introParagraph2: "Skip surge pricing and intrusive drivers. Our self drive cars HITEC City fleet includes Maruti Swift, Baleno, Hyundai Creta, Mahindra Thar 4x4, Toyota Innova Crysta, and luxury BMW & Fortuner Legender. All vehicles come with 100% privacy, comprehensive insurance, transparent pricing, and 24/7 on-road breakdown assistance.",
+    introParagraph3: "We offer guaranteed 15-minute express doorstep handover across Cyber Towers, Raheja Mindspace, Knowledge City, Inorbit Mall, Bio-Diversity Park, and Durgam Cheruvu Cable Bridge corridor.",
+    serviceAreas: ['Cyber Towers', 'Mindspace IT Park', 'Knowledge City', 'Inorbit Mall Zone', 'Durgam Cheruvu Hub', 'Kavuri Hills', 'T-Hub 2.0'],
+    seoTitle: 'Self Drive Cars HITEC City Hyderabad | Fast Doorstep Drop | DRIVEIT',
+    seoDescription: 'Rent self drive cars in HITEC City Hyderabad. Sanitized automatic & manual hatchbacks, sedans, SUVs at Cyber Towers, Mindspace & DLF. Zero deposit, 24/7 delivery.',
+    customFaqs: [
+      { question: 'How do I book self drive cars in HITEC City Hyderabad?', answer: 'Booking self drive cars in HITEC City is quick and 100% digital with DRIVEIT. Simply select your car on our website or contact us via WhatsApp/call at +91 6300041186. Upload your valid driving licence and Aadhaar card for 10-minute digital verification, and we will deliver the vehicle to your doorstep in HITEC City.' },
+      { question: 'Can I get a self drive SUV in HITEC City for weekend getaways?', answer: 'Yes! We have an extensive lineup of self drive SUVs in HITEC City including Hyundai Creta, Mahindra Thar 4x4, Toyota Fortuner, and Toyota Innova Crysta. All SUVs are highway-ready with high ground clearance, perfect for trips to Srisailam, Ananthagiri Hills, or Goa.' },
+      { question: 'Is security deposit required for renting self drive cars in HITEC City?', answer: 'We offer zero deposit options on select fleet models for verified IT corporate professionals. For other vehicles, we charge a nominal, 100% refundable security deposit refunded within 24 hours of vehicle return.' },
+      { question: 'Do you offer monthly self drive car subscriptions in HITEC City?', answer: 'Yes, we provide flexible monthly self drive car subscriptions in HITEC City with discounts up to 45% off daily rates. Free regular servicing, zero maintenance hassle, and doorstep delivery are included.' },
+    ],
+  },
   'gachibowli': {
     name: 'Gachibowli',
-    h1Title: 'Luxury Car Rental & Self Drive Car Rental in Gachibowli',
-    introParagraph1: "Looking for the best car rental service in Gachibowli? DriveIt Cars provides premium luxury car rental and self-drive car rental services to corporate professionals, IT employees, families, and travelers. Situated near Hyderabad's major Financial District and IT parks, Gachibowli is an ideal hub for reliable on-demand transportation.",
-    introParagraph2: "Be it an executive luxury sedan for business meetings, an automatic SUV for weekend getaways, or a monthly self-drive subscription, we provide flexible rental options tailored to your schedule with zero deposit on select vehicles.",
-    introParagraph3: "Enjoy prompt doorstep delivery across DLF Cybercity, Financial District, ORR Exit 19, and surrounding tech zones with 24/7 road assistance.",
-    serviceAreas: ['Financial District', 'DLF Cybercity', 'ORR Exit 19', 'Wipro Circle', 'Gowlidoddy'],
+    h1Title: 'Self Drive Cars in Gachibowli Hyderabad',
+    introParagraph1: "Looking for reliable self drive cars in Gachibowli Hyderabad? DRIVEIT Cars delivers premium self-drive hatchbacks, sedans, SUVs, and luxury vehicles directly to your residence, office, or hotel. Stationed next to Hyderabad's booming Financial District, Gachibowli is our primary delivery corridor with rapid vehicle dispatch.",
+    introParagraph2: "Whether you are an IT professional working at Microsoft, Google, or Wipro, or a family heading out on the Nehru Outer Ring Road (ORR) for a weekend getaway, our self drive cars in Gachibowli offer total independence. Choose from manual and automatic models with zero hidden charges.",
+    introParagraph3: "Fast 15-minute doorstep delivery across DLF Cybercity, Financial District, Waverock, Wipro Circle, Gowlidoddy, ISB Road, and ORR Exit 19.",
+    serviceAreas: ['Financial District', 'DLF Cybercity', 'Waverock Campus', 'Wipro Circle', 'ORR Exit 19', 'Gowlidoddy', 'ISB Road'],
+    seoTitle: 'Self Drive Cars Gachibowli Hyderabad | Best Rates | DRIVEIT',
+    seoDescription: 'Hire self drive cars in Gachibowli Hyderabad. Affordable daily & monthly car rentals near Financial District, DLF Cybercity, ORR Exit 19. Unlimited kms, 24/7 support.',
+    customFaqs: [
+      { question: 'Where in Gachibowli can I receive my self drive car?', answer: 'We deliver self drive cars across all parts of Gachibowli including Financial District, DLF Cybercity, Waverock, Wipro Circle, ISB Road, and ORR Exit 19. Doorstep delivery takes only 15–20 minutes upon booking confirmation.' },
+      { question: 'Can I drive the car outstation from Gachibowli via ORR?', answer: 'Absolutely. With direct access to Outer Ring Road (ORR) from Gachibowli, you can seamlessly drive to Bengaluru highway, Vijayawada highway, or Rajiv Gandhi International Airport (RGIA Shamshabad) in under 25 minutes. All vehicles carry all-India permits.' },
+      { question: 'What documents are needed for self drive car rental in Gachibowli?', answer: 'You only need an original valid Driving Licence (minimum 1 year old) and an Aadhaar Card or Passport. KYC verification is done digitally in under 10 minutes.' },
+    ],
+  },
+  'madhapur': {
+    name: 'Madhapur',
+    h1Title: 'Self Drive Cars in Madhapur Hyderabad',
+    introParagraph1: "Searching for self drive cars in Madhapur Hyderabad? DRIVEIT Cars is Cyberabad's most trusted self-drive car rental provider. Situated in the beating heart of Hyderabad's tech and dining scene, Madhapur demands swift, flexible mobility. Rent sanitized cars with zero driver interference and transparent fuel policies.",
+    introParagraph2: "From compact hatchbacks like Maruti Swift and Baleno for navigating vibrant Madhapur lanes to rugged SUVs like Thar and Creta for outstation escapades, we cater to all driving needs. Available for daily, weekend, and monthly subscription rentals.",
+    introParagraph3: "Prompt delivery available along 100 Feet Road, Durgam Cheruvu Cable Bridge, Avasa Hotel junction, Kavuri Hills, Madhapur Metro Station, and Inorbit Mall.",
+    serviceAreas: ['100 Feet Road', 'Durgam Cheruvu Cable Bridge', 'Kavuri Hills', 'Madhapur Metro Station', 'Avasa Hotel Junction', 'Image Hospitals Area'],
+    seoTitle: 'Self Drive Cars Madhapur Hyderabad | Rent A Car | DRIVEIT',
+    seoDescription: 'Rent self drive cars in Madhapur Hyderabad. Hatchbacks, sedans & SUVs near Durgam Cheruvu, Metro, Inorbit & Avasa. Instant KYC verification, zero deposit options.',
+    customFaqs: [
+      { question: 'How fast can I get a self drive car in Madhapur?', answer: 'We provide rapid 15 to 30 minute doorstep delivery across Madhapur, including 100 Feet Road, Kavuri Hills, and near Durgam Cheruvu Cable Bridge.' },
+      { question: 'Can I rent self drive cars in Madhapur for monthly office commute?', answer: 'Yes! Our monthly self drive car subscriptions in Madhapur are popular among tech professionals, offering up to 45% savings compared to daily rental rates, with free doorstep servicing and 0 maintenance costs.' },
+      { question: 'Are both manual and automatic cars available in Madhapur?', answer: 'Yes, our Madhapur fleet features both manual and smooth automatic transmission options across hatchbacks (Baleno, Swift), sedans (Dzire, Verna), and SUVs (Creta, Thar, Innova Crysta).' },
+    ],
+  },
+  'kondapur': {
+    name: 'Kondapur',
+    h1Title: 'Self Drive Cars in Kondapur Hyderabad',
+    introParagraph1: "Hire the finest self drive cars in Kondapur Hyderabad with DRIVEIT Cars. Connecting HITEC City, Gachibowli, and Miyapur, Kondapur is one of Hyderabad's fastest-growing residential and commercial epicenters. Experience ultimate privacy and convenience with our fully insured, sanitized fleet.",
+    introParagraph2: "Whether you are planning a family outing around Sarath City Capital Mall, heading to Botanical Garden, or taking a weekend highway trip towards Srisailam or Bidar, our self drive cars in Kondapur offer the ideal solution at honest, pocket-friendly rates.",
+    introParagraph3: "Enjoy quick doorstep drops near Botanical Garden Road, Kothaguda Junction, Sarath City Capital Mall, Hafeezpet Road, and Raghava Ratna Towers.",
+    serviceAreas: ['Botanical Garden Rd', 'Sarath City Capital Mall', 'Kothaguda Junction', 'Hafeezpet Road', 'Raghava Ratna Towers', 'Chirec Public School Zone'],
+    seoTitle: 'Self Drive Cars Kondapur Hyderabad | Affordable Rentals | DRIVEIT',
+    seoDescription: 'Looking for self drive cars in Kondapur Hyderabad? Hire well-maintained cars near Botanical Garden, Kothaguda & Sarath City Mall. Fast doorstep delivery, 24/7 support.',
+    customFaqs: [
+      { question: 'Can I get doorstep delivery of self drive cars in Kondapur?', answer: 'Yes, we deliver self drive cars directly to your home, apartment complex, or hotel in Kondapur, including near Botanical Garden, Kothaguda, and Sarath City Mall within 20 minutes.' },
+      { question: 'What self drive car models are available in Kondapur?', answer: 'We provide a diverse fleet in Kondapur: hatchbacks (Maruti Swift, Baleno), sedans (Maruti Dzire, Hyundai Verna), 5-seater SUVs (Hyundai Creta, Mahindra Thar, Brezza), and 7-seater family cars (Innova Crysta, Ertiga).' },
+      { question: 'Can I take the self drive car from Kondapur for an outstation road trip?', answer: 'Yes! All DRIVEIT self drive cars have valid All-India tourist permits, fastag, comprehensive insurance, and 24/7 roadside assistance for smooth interstate and highway journeys.' },
+    ],
   },
   'banjara-hills': {
     name: 'Banjara Hills',
@@ -16,14 +69,6 @@ export const LOCATION_DEFAULTS = {
     introParagraph2: "Choose from world-class luxury vehicles including BMW, Mercedes-Benz, Audi, and Jaguar, alongside popular self-drive SUVs like Toyota Fortuner, Mahindra Thar, and Hyundai Creta with unlimited freedom.",
     introParagraph3: "Fast doorstep delivery across Road No. 1, 2, 10, 12, Care Hospital, and Taj Krishna area with instant digital verification.",
     serviceAreas: ['Road No. 1 & 2', 'Road No. 10 & 12', 'Taj Krishna Hub', 'Star Hospitals Circle', 'MLA Colony'],
-  },
-  'hitech-city': {
-    name: 'Hitech City',
-    h1Title: 'Self Drive Cars & Luxury Car Rental in Hitech City',
-    introParagraph1: "Experience seamless mobility in Cyberabad with DriveIt's self-drive car rentals in Hitech City. Tailored for tech professionals, business executives, and visiting travelers seeking independent travel without driver interference.",
-    introParagraph2: "Rent well-maintained automatic hatchbacks, executive sedans, and high-clearance SUVs for daily office commutes, client meetings, or weekend road trips. Transparent pricing with no hidden charges.",
-    introParagraph3: "Fast 15-minute doorstep drop across Cyber Towers, Mindspace IT Park, Inorbit Mall zone, and Madhapur.",
-    serviceAreas: ['Cyber Towers', 'Mindspace Madhapur', 'Inorbit Mall Area', 'Raheja Mindspace', 'Kavuri Hills'],
   },
   'jubilee-hills': {
     name: 'Jubilee Hills',
@@ -103,11 +148,13 @@ export function getDefaultLocationData(slug) {
 
   return {
     name: formattedName,
-    h1Title: `Self Drive Cars & Luxury Car Rental in ${formattedName}`,
-    introParagraph1: `Looking for the most reliable self-drive car rental service in ${formattedName}? DriveIt Cars makes it effortless to drive around Hyderabad with complete freedom and comfort. Choose from our wide fleet of sanitized hatchbacks, sedans, SUVs, and luxury wedding cars.`,
+    h1Title: `Self Drive Cars & Car Rental in ${formattedName} Hyderabad`,
+    introParagraph1: `Looking for the most reliable self-drive car rental service in ${formattedName} Hyderabad? DRIVEIT Cars makes it effortless to drive around Hyderabad with complete freedom and comfort. Choose from our wide fleet of sanitized hatchbacks, sedans, SUVs, and luxury wedding cars.`,
     introParagraph2: `Whether planning a corporate commute, a family holiday, or a monthly subscription, our flexible plans suit your requirements with transparent pricing and zero driver interference.`,
     introParagraph3: `We provide guaranteed on-time doorstep delivery across ${formattedName} and surrounding landmarks with 24/7 on-road customer assistance.`,
     serviceAreas: [`${formattedName} Main Road`, `${formattedName} Hub`, 'Hyderabad Metro Access'],
+    seoTitle: `Self Drive Cars ${formattedName} Hyderabad | Best Rates | DRIVEIT`,
+    seoDescription: `Rent self drive cars in ${formattedName}, Hyderabad with DRIVEIT. Wide range of hatchbacks, sedans & SUVs with fast doorstep delivery and zero deposit options.`,
   };
 }
 
@@ -126,9 +173,9 @@ export async function getLocationData(slug) {
         introParagraph2: data.introParagraph2 || getDefaultLocationData(cleanSlug).introParagraph2,
         introParagraph3: data.introParagraph3 || getDefaultLocationData(cleanSlug).introParagraph3,
         serviceAreas: data.serviceAreas && data.serviceAreas.length > 0 ? data.serviceAreas : getDefaultLocationData(cleanSlug).serviceAreas,
-        seoTitle: data.seoTitle,
-        seoDescription: data.seoDescription,
-        customFaqs: data.customFaqs || null,
+        seoTitle: data.seoTitle || getDefaultLocationData(cleanSlug).seoTitle,
+        seoDescription: data.seoDescription || getDefaultLocationData(cleanSlug).seoDescription,
+        customFaqs: data.customFaqs && data.customFaqs.length > 0 ? data.customFaqs : (getDefaultLocationData(cleanSlug).customFaqs || null),
         locationImage: data.locationImage || null,
       };
     }
@@ -136,4 +183,41 @@ export async function getLocationData(slug) {
     console.warn(`Sanity getLocationData fallback for [${slug}]:`, err.message);
   }
   return getDefaultLocationData(cleanSlug);
+}
+
+export async function getLocationMetadata(slug) {
+  const loc = await getLocationData(slug);
+  const cleanSlug = slug.replace(/-luxury-car-rental$/, '');
+  const title = loc.seoTitle || `Self Drive Cars ${loc.name} Hyderabad | Best Rates | DRIVEIT`;
+  const description = loc.seoDescription || `Rent self drive cars in ${loc.name}, Hyderabad with DRIVEIT. Wide range of hatchbacks, sedans, SUVs & luxury cars with doorstep delivery and zero deposit options.`;
+  const canonicalUrl = `https://www.driveitcars.in/${cleanSlug}`;
+
+  return {
+    title,
+    description,
+    alternates: {
+      canonical: canonicalUrl,
+    },
+    openGraph: {
+      title,
+      description,
+      url: canonicalUrl,
+      siteName: 'DRIVEIT Cars Hyderabad',
+      locale: 'en_IN',
+      type: 'website',
+      images: [
+        {
+          url: 'https://www.driveitcars.in/assets/img/cars/Swift.png',
+          width: 1200,
+          height: 630,
+          alt: `Self Drive Cars in ${loc.name} Hyderabad`,
+        },
+      ],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title,
+      description,
+    },
+  };
 }

@@ -5,9 +5,9 @@ export const dynamic = 'force-dynamic';
 export const revalidate = 0;
 
 export async function generateMetadata() {
-  return getLocationMetadata('gachibowli');
+  return getLocationMetadata('kondapur');
 }
 
-export default function GachibowliPage() {
-  return <LocationPageContent slug="gachibowli" />;
+export default function KondapurPage() {
+  return <LocationPageContent slug="kondapur" />;
 }

@@ -1,7 +1,102 @@
+import Link from 'next/link';
 import FaqSection from '@/components/FaqSection';
+import SeoSchema, {
+  buildCarRentalSchema,
+  buildFaqSchema,
+  buildBreadcrumbSchema,
+} from '@/components/SeoSchema';
+
+export const metadata = {
+  title: 'Self Drive Cars in Hyderabad | Unlimited Kms, Zero Deposit | DRIVEIT',
+  description:
+    'Book self drive cars in Hyderabad starting @ ₹1,499/day with DRIVEIT. Wide range of hatchbacks, sedans, SUVs & luxury cars. Doorstep delivery across HITEC City, Gachibowli & Airport.',
+  alternates: {
+    canonical: 'https://www.driveitcars.in/self-drive-car',
+  },
+  openGraph: {
+    title: 'Self Drive Cars in Hyderabad | DRIVEIT Car Rentals',
+    description:
+      'Rent sanitized self drive cars in Hyderabad with zero deposit & doorstep delivery. Hatchbacks, sedans, 5 & 7 seater SUVs, and luxury cars.',
+    url: 'https://www.driveitcars.in/self-drive-car',
+    siteName: 'DRIVEIT Cars Hyderabad',
+    locale: 'en_IN',
+    type: 'website',
+    images: [
+      {
+        url: 'https://www.driveitcars.in/suv.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Self Drive Cars Hyderabad',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Self Drive Cars in Hyderabad | Unlimited Kms | DRIVEIT',
+    description: 'Best self drive car rental in Hyderabad with unlimited kms, zero deposit, and 24/7 delivery.',
+  },
+};
+
+const SELF_DRIVE_FAQS = [
+  {
+    question: 'How do I book self drive cars in Hyderabad with DRIVEIT?',
+    answer:
+      'Booking a self drive car in Hyderabad is 100% digital and takes under 5 minutes. Select your preferred hatchback, sedan, or SUV on our website, or contact us directly on WhatsApp (+91 6300041186). Submit your driving licence and Aadhaar card for instant digital verification, and we deliver the sanitized car to your doorstep anywhere in Hyderabad.',
+  },
+  {
+    question: 'Where can I get doorstep delivery of self drive cars in Hyderabad?',
+    answer:
+      'We provide 15 to 30-minute doorstep delivery across all major Hyderabad zones including HITEC City, Gachibowli, Madhapur, Kondapur, Banjara Hills, Jubilee Hills, Begumpet, Secunderabad, Kukatpally, and Rajiv Gandhi International Airport (RGIA Shamshabad).',
+  },
+  {
+    question: 'What is the security deposit for renting self drive cars in Hyderabad?',
+    answer:
+      'DRIVEIT offers zero security deposit options on select fleet vehicles for verified corporate and IT professionals. For other bookings, we hold a nominal refundable security deposit that is returned within 24 hours of vehicle drop-off.',
+  },
+  {
+    question: 'Are self drive SUVs available for outstation and highway road trips?',
+    answer:
+      'Yes! All DRIVEIT self drive cars come with All-India Tourist Permits and FASTag. Our popular self drive SUVs including Mahindra Thar 4x4, Hyundai Creta, Toyota Innova Crysta, and Toyota Fortuner Legender are equipped for highway journeys to Srisailam, Araku, Goa, and Tirupati.',
+  },
+  {
+    question: 'Do you offer monthly and weekend self drive car rental plans?',
+    answer:
+      'Yes, we offer specialized Weekend Self Drive packages (Friday evening to Monday morning) and flexible Monthly Self Drive Subscriptions with discounts up to 45% off daily rental rates.',
+  },
+];
+
 export default function selfDriveCarPage() {
+  const rentalSchema = buildCarRentalSchema({
+    name: 'DRIVEIT Self Drive Cars Hyderabad',
+    description:
+      'Book self drive cars in Hyderabad starting @ ₹1,499/day. Hatchbacks, sedans, SUVs & luxury cars with doorstep delivery and zero deposit.',
+    url: 'https://www.driveitcars.in/self-drive-car',
+    areaServed: [
+      'Hyderabad',
+      'HITEC City',
+      'Gachibowli',
+      'Madhapur',
+      'Kondapur',
+      'Banjara Hills',
+      'Jubilee Hills',
+      'Secunderabad',
+      'Kukatpally',
+      'Telangana',
+    ],
+  });
+
+  const breadcrumbSchema = buildBreadcrumbSchema([
+    { name: 'Home', url: '/' },
+    { name: 'Self Drive Cars in Hyderabad', url: '/self-drive-car' },
+  ]);
+
+  const faqSchema = buildFaqSchema(SELF_DRIVE_FAQS);
+
   return (
     <>
+      <SeoSchema schema={rentalSchema} />
+      <SeoSchema schema={breadcrumbSchema} />
+      <SeoSchema schema={faqSchema} />
       <section className="gauto-breadcromb-area section_70">
          <div className="container">
             <div className="row">
@@ -26,12 +121,68 @@ export default function selfDriveCarPage() {
       <section className="about-page-area section_70">
          <div className="container">
             <div className="row">
-               <div className="col-lg-61">
+               <div className="col-lg-12">
+                  <div className="about-page-left">
+                     <span
+                        style={{
+                           background: 'rgba(255, 185, 7, 0.15)',
+                           color: '#d49500',
+                           fontWeight: 700,
+                           fontSize: '12px',
+                           letterSpacing: '1px',
+                           textTransform: 'uppercase',
+                           padding: '6px 14px',
+                           borderRadius: '20px',
+                           display: 'inline-block',
+                           marginBottom: '12px',
+                        }}
+                     >
+                        ✦ #1 RATED SELF DRIVE CAR RENTAL IN HYDERABAD
+                     </span>
+                     <h1 style={{ color: '#ffb907', fontSize: '32px', fontWeight: 800, marginBottom: '20px' }}>
+                        Self Drive Cars in Hyderabad — Unlimited Freedom &amp; Zero Deposit
+                     </h1>
+                     <p style={{ textAlign: 'justify', fontSize: '15px', lineHeight: '1.8', color: '#4b5563', marginBottom: '16px' }}>
+                        Looking for the most reliable <strong>self drive cars in Hyderabad</strong>? DRIVEIT Cars delivers total driving pleasure without the intrusion of drivers or public transit delays. Choose from our comprehensive, sanitized fleet of fuel-efficient hatchbacks (Swift, Baleno), executive sedans (Dzire, Verna), powerful 5 &amp; 7-seater <strong>self drive SUVs</strong> (Creta, Thar 4x4, Innova Crysta, Fortuner), and <strong>luxury self drive cars</strong> (BMW, Audi, Range Rover Evoque).
+                     </p>
+                     <p style={{ textAlign: 'justify', fontSize: '15px', lineHeight: '1.8', color: '#4b5563', marginBottom: '20px' }}>
+                        Whether you need a car for an office commute in <strong>HITEC City</strong> or <strong>Gachibowli</strong>, a <strong>weekend self drive car</strong> for road trips to Srisailam or Ananthagiri Hills, or a cost-effective <strong>monthly self drive car</strong> subscription, DRIVEIT guarantees instant digital verification, transparent fuel terms, FASTag equipped vehicles, and 24/7 on-road breakdown support.
+                     </p>
 
-                     <br /><h1 style={{"color":"#ffb907"}}>Self Drive Cars in Hyderabad</h1><br />
-                      
-                     <p style={{"textAlign":"justify"}}>Looking for a reputable <strong style={{"msoBidiFontWeight":"normal"}}>self-drive car rental service in Hyderabad</strong>? Drive It Cars makes it possible for you to drive around Hyderabad and even outside of the city with complete freedom and comfort. You will have a choice of an extensive range of well-maintained hatchback cars, sedans, SUVs, and even luxury cars that come at budget-friendly rates. No matter what type of journey you have planned &ndash; be it a work trip, a vacation with your family or a weekend get-away &ndash; our <strong>self-drive car rental services</strong> will suit your needs. Our self-drive rental service ensures easy booking process, clear pricing policy, convenient documentation and round-the-clock customer support. All the cars are properly serviced, sanitized and fitted with necessary safety equipment to provide you with a smooth ride. Travel independently with our self-drive cars and do not have to rely on drivers or public transport anymore.</p>
+                     {/* Popular Search Category & Locality Clusters */}
+                     <div style={{ background: '#f8fafc', border: '1px solid #e2e8f0', borderRadius: '12px', padding: '18px', marginTop: '15px' }}>
+                        <strong style={{ fontSize: '13px', color: '#111827', textTransform: 'uppercase', letterSpacing: '0.8px', display: 'block', marginBottom: '10px' }}>
+                           ⚡ Explore Specialized Self Drive Categories &amp; Key Hubs:
+                        </strong>
+                        <div style={{ display: 'flex', gap: '8px', flexWrap: 'wrap' }}>
+                           <Link href="/self-drive-suv-hyderabad" style={{ background: '#fff', color: '#0f172a', padding: '6px 14px', borderRadius: '20px', fontSize: '13px', fontWeight: 600, border: '1px solid #cbd5e1' }}>
+                              🚙 Self Drive SUV Hyderabad
+                           </Link>
+                           <Link href="/luxurycars" style={{ background: '#fff', color: '#0f172a', padding: '6px 14px', borderRadius: '20px', fontSize: '13px', fontWeight: 600, border: '1px solid #cbd5e1' }}>
+                              ✨ Luxury Self Drive Cars
+                           </Link>
+                           <Link href="/weekend-self-drive-cars-hyderabad" style={{ background: '#fff', color: '#0f172a', padding: '6px 14px', borderRadius: '20px', fontSize: '13px', fontWeight: 600, border: '1px solid #cbd5e1' }}>
+                              🌄 Weekend Self Drive Cars
+                           </Link>
+                           <Link href="/monthly-self-drive-cars-hyderabad" style={{ background: '#fff', color: '#0f172a', padding: '6px 14px', borderRadius: '20px', fontSize: '13px', fontWeight: 600, border: '1px solid #cbd5e1' }}>
+                              📅 Monthly Self Drive Cars
+                           </Link>
+                           <Link href="/hitech-city" style={{ background: '#f1f5f9', color: '#334155', padding: '6px 14px', borderRadius: '20px', fontSize: '13px', fontWeight: 600, border: '1px solid #e2e8f0' }}>
+                              📍 HITEC City
+                           </Link>
+                           <Link href="/gachibowli" style={{ background: '#f1f5f9', color: '#334155', padding: '6px 14px', borderRadius: '20px', fontSize: '13px', fontWeight: 600, border: '1px solid #e2e8f0' }}>
+                              📍 Gachibowli
+                           </Link>
+                           <Link href="/madhapur" style={{ background: '#f1f5f9', color: '#334155', padding: '6px 14px', borderRadius: '20px', fontSize: '13px', fontWeight: 600, border: '1px solid #e2e8f0' }}>
+                              📍 Madhapur
+                           </Link>
+                           <Link href="/kondapur" style={{ background: '#f1f5f9', color: '#334155', padding: '6px 14px', borderRadius: '20px', fontSize: '13px', fontWeight: 600, border: '1px solid #e2e8f0' }}>
+                              📍 Kondapur
+                           </Link>
+                        </div>
                      </div>
+                  </div>
+               </div>
                   </div>
                </div>
       </section>
@@ -919,58 +1070,7 @@ export default function selfDriveCarPage() {
       </section>
       {/* Offers Area End */}
       {/* Offers Area Start */}
-       {/* Floating "Contact Us" button */}
-    <div className="floating-button-container">
-        <a href="#" id="bookNowBtn" className="book-now-button">
-            Contact Us
-        </a>
-    </div>
-
-    {/* Booking Modal */}
-    <div id="contactModal" className="modal-overlay">
-        <div className="modal-content">
-            <button id="closeModalBtn" className="close-button">&times;</button>
-            <h2 className="text-2xl font-bold mb-4">Book Your Ride</h2>
-            <p className="text-gray-600 mb-6">Fill out the form below to book a luxury wedding car.</p>
-            
-            <form id="bookingForm" action="your-backend-script.php" method="POST">
-            <div className="input-grid">
-                <div className="input-group">
-                    <input type="text" id="name" name="name" placeholder="Name" required />
-                </div>
-                <div className="input-group">
-                    <input type="tel" id="phone" name="phone_no" placeholder="Phone No" required />
-                </div>
-                <div className="input-group">
-                    <input type="date" id="pickup_date" name="pickup_date" placeholder="Pickup date" required />
-                </div>
-                <div className="input-group">
-                    <input type="date" id="drop_date" name="drop_date" placeholder="Drop Date" required />
-                </div>
-                <div className="input-group">
-                    <input type="time" id="pickup_time" name="pickup_time" placeholder="Pickup time" required />
-                </div>
-                <div className="input-group">
-                    <input type="time" id="drop_time" name="drop_time" placeholder="Drop Time" required />
-                </div>
-                <div className="input-group full-width">
-                    <select id="seats" name="seats" required>
-                        <option value="">Choose Seats</option>
-                        <option value="5">5 Seats</option>
-                        <option value="7">7 Seats</option>
-                    </select>
-                </div>
-                <div className="captcha-box full-width">
-                    <input type="checkbox" id="captcha" name="_gotcha" required />
-                    <label htmlFor="captcha">I'm not a robot</label>
-                    <img loading="lazy" src="https://placehold.co/60x30/404040/ffffff?text=CAPTCHA" alt="Captcha Image" />
-                </div>
-            </div>
-            <button type="submit" className="submit-btn">BOOK MY CAR</button>
-        </form>
-
-        </div>
-    </div>
+       
     <FaqSection />
       {/* Service Details Page End */}
         

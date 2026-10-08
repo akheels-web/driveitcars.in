@@ -5,8 +5,44 @@ import Link from 'next/link';
 import HeroSlider from '../components/HeroSlider';
 import CarOffersSection from '../components/CarOffersSection';
 import FaqSection from '../components/FaqSection';
+import SeoSchema, {
+  buildCarRentalSchema,
+  buildBreadcrumbSchema,
+} from '../components/SeoSchema';
+
 export const dynamic = 'force-dynamic';
 export const revalidate = 0;
+
+export const metadata = {
+  title: 'Self Drive Cars Hyderabad | Luxury & Monthly Car Rental | DRIVEIT',
+  description:
+    '#1 Self drive cars in Hyderabad starting @ ₹1,499/day. Rent hatchbacks, sedans, 5 & 7-seater SUVs, and luxury cars. Fast doorstep delivery in HITEC City, Gachibowli, Airport & 26+ hubs.',
+  alternates: {
+    canonical: 'https://www.driveitcars.in',
+  },
+  openGraph: {
+    title: 'Self Drive Cars in Hyderabad | DRIVEIT Car Rentals',
+    description:
+      'Book self drive cars, monthly subscriptions and luxury car rentals in Hyderabad with DRIVEIT. Zero deposit options, unlimited kms, 24/7 delivery.',
+    url: 'https://www.driveitcars.in',
+    siteName: 'DRIVEIT Cars Hyderabad',
+    locale: 'en_IN',
+    type: 'website',
+    images: [
+      {
+        url: 'https://www.driveitcars.in/suv.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Self Drive Cars Hyderabad DRIVEIT',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Self Drive Cars Hyderabad | Luxury & SUV Rentals',
+    description: 'Premier self drive car rental in Hyderabad with doorstep delivery across HITEC City, Gachibowli & Airport.',
+  },
+};
 
 const builder = imageUrlBuilder(client);
 function urlFor(source) {
@@ -89,6 +125,40 @@ export default async function Page() {
 
   return (
     <>
+      <SeoSchema
+        schema={buildCarRentalSchema({
+          name: 'DRIVEIT Self Drive Cars & Luxury Car Rentals Hyderabad',
+          description:
+            'Book self drive cars, monthly subscriptions and luxury car rentals in Hyderabad with DRIVEIT. Zero deposit options, unlimited kms, 24/7 delivery.',
+          url: 'https://www.driveitcars.in',
+          areaServed: [
+            'Hyderabad',
+            'HITEC City',
+            'Gachibowli',
+            'Madhapur',
+            'Kondapur',
+            'Banjara Hills',
+            'Jubilee Hills',
+            'Secunderabad',
+            'Kukatpally',
+            'Telangana',
+          ],
+        })}
+      />
+      <SeoSchema
+        schema={{
+          '@context': 'https://schema.org',
+          '@type': 'WebSite',
+          name: 'DRIVEIT Cars Hyderabad',
+          url: 'https://www.driveitcars.in',
+          potentialAction: {
+            '@type': 'SearchAction',
+            target: 'https://www.driveitcars.in/self-drive-car?q={search_term_string}',
+            'query-input': 'required name=search_term_string',
+          },
+        }}
+      />
+      <SeoSchema schema={buildBreadcrumbSchema([{ name: 'Home', url: '/' }])} />
       {/* ========== HERO SLIDING BANNER ========== */}
       <HeroSlider
         customBanners={

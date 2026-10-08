@@ -2,13 +2,39 @@ import Link from 'next/link';
 import FaqSection from '@/components/FaqSection';
 import { getLocationData } from '@/sanity/lib/locations';
 import { getCarsForPage } from '@/sanity/lib/cars';
+import SeoSchema, {
+  buildCarRentalSchema,
+  buildFaqSchema,
+  buildBreadcrumbSchema,
+} from '@/components/SeoSchema';
 
 export default async function LocationPageContent({ slug }) {
   const loc = await getLocationData(slug);
   const cars = await getCarsForPage(slug);
+  const cleanSlug = slug.replace(/-luxury-car-rental$/, '');
+  const pageUrl = `https://www.driveitcars.in/${cleanSlug}`;
+
+  const rentalSchema = buildCarRentalSchema({
+    name: `DRIVEIT Self Drive Cars ${loc.name} Hyderabad`,
+    description: loc.seoDescription || `Rent self drive cars in ${loc.name}, Hyderabad. Sanitized hatchbacks, sedans & SUVs with fast doorstep delivery.`,
+    url: pageUrl,
+    areaServed: [loc.name, ...(loc.serviceAreas || []), 'Hyderabad', 'Telangana'],
+  });
+
+  const breadcrumbSchema = buildBreadcrumbSchema([
+    { name: 'Home', url: '/' },
+    { name: 'Self Drive Cars', url: '/self-drive-car' },
+    { name: `${loc.name}`, url: `/${cleanSlug}` },
+  ]);
+
+  const faqSchema = buildFaqSchema(loc.customFaqs);
 
   return (
     <>
+      <SeoSchema schema={rentalSchema} />
+      <SeoSchema schema={breadcrumbSchema} />
+      {faqSchema && <SeoSchema schema={faqSchema} />}
+
       {/* ========== BREADCRUMB ========== */}
       <section className="gauto-breadcromb-area section_70">
         <div className="container">

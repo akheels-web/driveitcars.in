@@ -183,6 +183,7 @@ export default function Header() {
                             <Link href="/hitech-city">Hitech City</Link>
                             <Link href="/jubilee-hills">Jubilee Hills</Link>
                             <Link href="/khairatabad">Khairatabad</Link>
+                            <Link href="/kondapur">Kondapur</Link>
                             <Link href="/kukatpally">Kukatpally</Link>
                           </div>
                         </div>
@@ -194,6 +195,7 @@ export default function Header() {
                           <div className="area-links-box">
                             <Link href="/langer-house">Langer House</Link>
                             <Link href="/lb-nagar">LB Nagar</Link>
+                            <Link href="/madhapur">Madhapur</Link>
                             <Link href="/masab-tank">Masab Tank</Link>
                             <Link href="/mehdipatnam">Mehdipatnam</Link>
                             <Link href="/nampally">Nampally</Link>
@@ -398,6 +400,7 @@ export default function Header() {
                         { name: 'Hitech City', href: '/hitech-city' },
                         { name: 'Jubilee Hills', href: '/jubilee-hills' },
                         { name: 'Khairatabad', href: '/khairatabad' },
+                        { name: 'Kondapur', href: '/kondapur' },
                         { name: 'Kukatpally', href: '/kukatpally' },
                       ].map((item) => (
                         <Link
@@ -429,6 +432,7 @@ export default function Header() {
                       {[
                         { name: 'Langer House', href: '/langer-house' },
                         { name: 'LB Nagar', href: '/lb-nagar' },
+                        { name: 'Madhapur', href: '/madhapur' },
                         { name: 'Masab Tank', href: '/masab-tank' },
                         { name: 'Mehdipatnam', href: '/mehdipatnam' },
                         { name: 'Nampally', href: '/nampally' },
