@@ -6,7 +6,7 @@ import Link from 'next/link';
 const SHOWCASE_VEHICLES = [
   {
     id: 'suv',
-    tabLabel: '🔥 4x4 & SUVs',
+    tabLabel: '🔥 SUVs & 4x4',
     name: 'Mahindra Thar 4x4 & Roxx',
     badge: 'Off-Road Champion • VIP Road Presence',
     image: '/assets/img/cars/5-Thar.png',
@@ -18,7 +18,7 @@ const SHOWCASE_VEHICLES = [
   },
   {
     id: 'suv7',
-    tabLabel: '👑 7-Seater Kings',
+    tabLabel: '👑 7-Seater',
     name: 'Toyota Innova Crysta & Fortuner',
     badge: 'Undisputed Highway & Family Legend',
     image: '/assets/img/cars/7-Innova Crysta.png',
@@ -30,7 +30,7 @@ const SHOWCASE_VEHICLES = [
   },
   {
     id: 'luxury',
-    tabLabel: '💎 Luxury & VIP',
+    tabLabel: '💎 Luxury',
     name: 'Mercedes-Benz & BMW Flagship',
     badge: 'Executive CXO & Wedding Splendor',
     image: '/assets/img/benz2.png',
@@ -42,7 +42,7 @@ const SHOWCASE_VEHICLES = [
   },
   {
     id: 'hatchback',
-    tabLabel: '🚗 City Economy',
+    tabLabel: '🚗 Hatchback',
     name: 'Maruti Swift & Nexa Baleno',
     badge: 'Smart City Drive • 22+ km/l Mileage',
     image: '/assets/img/cars/Swift.png',
@@ -207,21 +207,21 @@ Please share vehicle availability, best tariffs, and booking confirmation.`;
                     className={`service-tab-btn ${serviceType === 'chauffeur' ? 'active' : ''}`}
                     onClick={() => setServiceType('chauffeur')}
                   >
-                    <i className="fa fa-user-circle-o" /> With Chauffeur
+                    <i className="fa fa-user-circle-o" /> Chauffeur
                   </button>
                   <button
                     type="button"
                     className={`service-tab-btn ${serviceType === 'airport' ? 'active' : ''}`}
                     onClick={() => setServiceType('airport')}
                   >
-                    <i className="fa fa-plane" /> Airport Transfer
+                    <i className="fa fa-plane" /> Airport
                   </button>
                   <button
                     type="button"
                     className={`service-tab-btn ${serviceType === 'wedding' ? 'active' : ''}`}
                     onClick={() => setServiceType('wedding')}
                   >
-                    <i className="fa fa-diamond" /> Wedding &amp; VIP
+                    <i className="fa fa-diamond" /> Wedding
                   </button>
                 </div>
 

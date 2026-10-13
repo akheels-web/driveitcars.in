@@ -394,4 +394,16 @@
   - Added tooltips ("Chat on WhatsApp" and "Call Us") with hover elevation and responsive layout (stacked cleanly on mobile without viewport overflow).
   - Clean build verified via `npm run build` with zero errors.
 
+## Hero Section Tab Overflow Fix (4-Column Symmetrical Grid)
+- **Problem Resolved**:
+  - The 4th tab in both the Booking Card (`Wedding & VIP` cutting off at `💎 W`) and Showroom Card (`City Economy` cutting off at `🚗 City Eco...`) spilled past the right edge because the containers used `display: flex` with fixed padding and long strings.
+- **Architectural Implementation**:
+  - Converted both `.booking-service-tabs` and `.showroom-category-switcher` to an exact 4-column CSS Grid (`grid-template-columns: repeat(4, 1fr)`).
+  - Balanced tab labels to fit 100% symmetrically within the 25% column widths:
+    - Service tabs: `Self Drive`, `Chauffeur`, `Airport`, `Wedding`.
+    - Showroom pills: `🔥 SUVs & 4x4`, `👑 7-Seater`, `💎 Luxury`, `🚗 Hatchback`.
+  - Added mobile media query (`@media (max-width: 576px)`) switching both containers to a 2x2 grid (`repeat(2, 1fr)`), ensuring all 4 tabs are 100% visible with zero clipping or horizontal scrolling on any screen size.
+  - Verified clean Turbopack build with 0 errors.
+
+
 
