@@ -2,9 +2,9 @@
 
 import React, { createContext, useContext, useState, useEffect } from 'react';
 import { client } from '../sanity/lib/client';
-import imageUrlBuilder from '@sanity/image-url';
+import { createImageUrlBuilder } from '@sanity/image-url';
 
-const builder = imageUrlBuilder(client);
+const builder = createImageUrlBuilder(client);
 function urlFor(source) {
   try {
     return builder.image(source);

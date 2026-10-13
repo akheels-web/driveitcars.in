@@ -1,12 +1,12 @@
 import { client } from '../../../sanity/lib/client';
-import imageUrlBuilder from '@sanity/image-url';
+import { createImageUrlBuilder } from '@sanity/image-url';
 import { PortableText } from '@portabletext/react';
 import Link from 'next/link';
 
 export const dynamic = 'force-dynamic';
 export const revalidate = 0;
 
-const builder = imageUrlBuilder(client);
+const builder = createImageUrlBuilder(client);
 function urlFor(source) { return builder.image(source); }
 
 export default async function BlogPost({ params }) {

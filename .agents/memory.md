@@ -489,7 +489,7 @@
 - **Grid Overflow & Card Boundary Fix**:
   - Root cause: CSS Grid `grid-template-columns: 1fr 1fr` defaulted to `minmax(auto, 1fr)`. Combined with `min-width: auto` on buttons with non-wrapping text, Column 1 pushed Column 2 and Field 3 out past the card's right boundary.
   - Fix: Enforced `grid-template-columns: repeat(2, minmax(0, 1fr))` with `width: 100%; max-width: 100%; box-sizing: border-box;` and explicit `min-width: 0;` across `.booking-form-group`, `.custom-dropdown-container`, `.custom-dropdown-trigger`, and `.dropdown-trigger-content`. All fields now stay strictly within `.hero-booking-card`.
-- **Verification**: Verified clean Turbopack build via `npm run build` with 100% route success.
-
-
-
+- **Build Warnings & Sanity Image Builder Cleanup**:
+  - Replaced deprecated default `import imageUrlBuilder from '@sanity/image-url'` with `import { createImageUrlBuilder } from '@sanity/image-url'` across `SiteSettingsContext.jsx`, `src/app/page.jsx`, `src/app/blog/page.jsx`, and `src/app/blog/[slug]/page.jsx`.
+  - Compile time improved to 9.5s with zero deprecation warnings.
+- **Verification**: Verified clean Turbopack build via `npm run build` with 100% route success across all 83 static & dynamic routes.

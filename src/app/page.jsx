@@ -1,5 +1,5 @@
 import { client } from '../../src/sanity/lib/client';
-import imageUrlBuilder from '@sanity/image-url';
+import { createImageUrlBuilder } from '@sanity/image-url';
 import Link from 'next/link';
 
 import HeroSlider from '../components/HeroSlider';
@@ -45,7 +45,7 @@ export const metadata = {
   },
 };
 
-const builder = imageUrlBuilder(client);
+const builder = createImageUrlBuilder(client);
 function urlFor(source) {
   try {
     return builder.image(source);
