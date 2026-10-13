@@ -486,6 +486,10 @@
   - Trigger buttons (`.custom-dropdown-trigger`) feature text ellipsis, smooth 180° rotating chevron SVG, gold focus glow (`rgba(255, 185, 7, 0.2)`), and active state elevation (`z-index: 50`).
   - Added deal badges (e.g. `Save 25%`, `Save 50%` in emerald pill tags) and muted category vehicle examples (e.g. `Creta, Thar, Brezza`).
   - Added outside-click and Escape key detection via React hooks for seamless closing.
+- **Grid Overflow & Card Boundary Fix**:
+  - Root cause: CSS Grid `grid-template-columns: 1fr 1fr` defaulted to `minmax(auto, 1fr)`. Combined with `min-width: auto` on buttons with non-wrapping text, Column 1 pushed Column 2 and Field 3 out past the card's right boundary.
+  - Fix: Enforced `grid-template-columns: repeat(2, minmax(0, 1fr))` with `width: 100%; max-width: 100%; box-sizing: border-box;` and explicit `min-width: 0;` across `.booking-form-group`, `.custom-dropdown-container`, `.custom-dropdown-trigger`, and `.dropdown-trigger-content`. All fields now stay strictly within `.hero-booking-card`.
 - **Verification**: Verified clean Turbopack build via `npm run build` with 100% route success.
+
 
 
