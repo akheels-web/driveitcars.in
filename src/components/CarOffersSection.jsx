@@ -641,89 +641,31 @@ export default function CarOffersSection({ initialCars = [] }) {
         </div>
 
         {/* 3-Way Pricing Plan Toggle: Daily | Weekly | Monthly */}
-        <div
-          style={{
-            display: 'flex',
-            justifyContent: 'center',
-            alignItems: 'center',
-            marginBottom: '28px',
-            padding: '0 10px',
-            width: '100%',
-          }}
-        >
-          <div
-            className="pricing-plan-toggle"
-            style={{
-              background: '#ffffff',
-              padding: '5px',
-              borderRadius: '40px',
-              boxShadow: '0 4px 18px rgba(0,0,0,0.06)',
-              display: 'flex',
-              border: '1px solid #e2e8f0',
-              maxWidth: '560px',
-              width: '100%',
-              gap: '4px',
-            }}
-          >
+        <div className="pricing-plan-toggle-wrapper">
+          <div className="pricing-plan-toggle">
             {/* Daily Button */}
             <button
               type="button"
               onClick={() => setPlanType('daily')}
-              style={{
-                flex: 1,
-                border: 'none',
-                background: planType === 'daily' ? '#ffb907' : 'transparent',
-                color: planType === 'daily' ? '#000000' : '#475569',
-                fontWeight: 700,
-                fontSize: '13px',
-                padding: '10px 12px',
-                borderRadius: '30px',
-                cursor: 'pointer',
-                transition: 'all 0.2s',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                gap: '6px',
-                whiteSpace: 'nowrap',
-              }}
+              className={`plan-toggle-btn ${planType === 'daily' ? 'active' : ''}`}
             >
-              <i className="fa fa-calendar-check-o" /> <span>Daily Deals</span>
+              <i className="fa fa-calendar-check-o" />
+              <span className="plan-label-desktop">Daily Deals</span>
+              <span className="plan-label-mobile">Daily</span>
             </button>
 
             {/* Weekly Button */}
             <button
               type="button"
               onClick={() => setPlanType('weekly')}
-              style={{
-                flex: 1,
-                border: 'none',
-                background: planType === 'weekly' ? '#ffb907' : 'transparent',
-                color: planType === 'weekly' ? '#000000' : '#475569',
-                fontWeight: 700,
-                fontSize: '13px',
-                padding: '10px 12px',
-                borderRadius: '30px',
-                cursor: 'pointer',
-                transition: 'all 0.2s',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                gap: '6px',
-                whiteSpace: 'nowrap',
-              }}
+              className={`plan-toggle-btn ${planType === 'weekly' ? 'active' : ''}`}
             >
-              <i className="fa fa-calendar" /> <span>Weekly (7 Days)</span>{' '}
-              <span
-                style={{
-                  background: '#2563eb',
-                  color: '#fff',
-                  fontSize: '10px',
-                  fontWeight: 800,
-                  padding: '2px 6px',
-                  borderRadius: '10px',
-                }}
-              >
-                7-Day Deal
+              <i className="fa fa-calendar" />
+              <span className="plan-label-desktop">Weekly (7 Days)</span>
+              <span className="plan-label-mobile">Weekly</span>
+              <span className="plan-badge-weekly">
+                <span className="badge-text-desktop">7-Day Deal</span>
+                <span className="badge-text-mobile">7-Day</span>
               </span>
             </button>
 
@@ -731,36 +673,14 @@ export default function CarOffersSection({ initialCars = [] }) {
             <button
               type="button"
               onClick={() => setPlanType('monthly')}
-              style={{
-                flex: 1,
-                border: 'none',
-                background: planType === 'monthly' ? '#ffb907' : 'transparent',
-                color: planType === 'monthly' ? '#000000' : '#475569',
-                fontWeight: 700,
-                fontSize: '13px',
-                padding: '10px 12px',
-                borderRadius: '30px',
-                cursor: 'pointer',
-                transition: 'all 0.2s',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                gap: '6px',
-                whiteSpace: 'nowrap',
-              }}
+              className={`plan-toggle-btn ${planType === 'monthly' ? 'active' : ''}`}
             >
-              <i className="fa fa-refresh" /> <span>Monthly (30 Days)</span>{' '}
-              <span
-                style={{
-                  background: '#10b981',
-                  color: '#fff',
-                  fontSize: '10px',
-                  fontWeight: 800,
-                  padding: '2px 6px',
-                  borderRadius: '10px',
-                }}
-              >
-                Monthly Deal
+              <i className="fa fa-refresh" />
+              <span className="plan-label-desktop">Monthly (30 Days)</span>
+              <span className="plan-label-mobile">Monthly</span>
+              <span className="plan-badge-monthly">
+                <span className="badge-text-desktop">Monthly Deal</span>
+                <span className="badge-text-mobile">Deal</span>
               </span>
             </button>
           </div>
@@ -1070,13 +990,13 @@ export default function CarOffersSection({ initialCars = [] }) {
         </div>
 
         {/* SEO Keyword Pills Strip for All 28 Cars */}
-        <div style={{ marginTop: '45px', padding: '24px', background: '#ffffff', borderRadius: '16px', border: '1px solid #e2e8f0' }}>
+        <div className="seo-keyword-strip-card">
           <div style={{ marginBottom: '12px' }}>
             <span style={{ fontSize: '13px', fontWeight: 800, color: '#0f172a', textTransform: 'uppercase', letterSpacing: '0.8px' }}>
               ✦ Top Demanding Self Drive Car Rentals in Hyderabad (Daily • Weekly • Monthly):
             </span>
           </div>
-          <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px 12px', fontSize: '12px', color: '#475569' }}>
+          <div className="seo-keyword-list">
             <Link href="/self-drive-car" style={{ color: '#0f172a', fontWeight: 600 }}>Swift Manual Rental</Link>
             <span>•</span>
             <Link href="/self-drive-car" style={{ color: '#0f172a', fontWeight: 600 }}>Swift Automatic Rental</Link>

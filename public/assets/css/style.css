@@ -5055,16 +5055,16 @@ html, body {
 
 /* 7. Floating WhatsApp & Call Buttons Mobile Optimization */
 @media (max-width: 768px) {
-    .whatsapp-float, .whatsapp-btn-float {
-        bottom: 80px !important;
+    .whatsapp-float, .whatsapp-btn-float, .whatsapp-float-btn {
+        bottom: 82px !important;
         right: 16px !important;
         width: 48px !important;
         height: 48px !important;
         font-size: 24px !important;
         line-height: 48px !important;
     }
-    .call-float, .phone-float {
-        bottom: 20px !important;
+    .call-float, .phone-float, .phone-float-btn {
+        bottom: 22px !important;
         right: 16px !important;
         width: 48px !important;
         height: 48px !important;

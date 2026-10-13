@@ -405,5 +405,57 @@
   - Added mobile media query (`@media (max-width: 576px)`) switching both containers to a 2x2 grid (`repeat(2, 1fr)`), ensuring all 4 tabs are 100% visible with zero clipping or horizontal scrolling on any screen size.
   - Verified clean Turbopack build with 0 errors.
 
+## Multi-Device Responsiveness Overhaul (Phones, Tablets & Laptops)
+- **Scope & Device Breakpoints Tested**:
+  - **Laptops / Small Desktops (992px – 1200px)**: Compacted tab padding (`7px 2px`) and font size (`11px`) so all 4 tabs fit in one row without line breaks; adjusted floating badges padding to prevent collision.
+  - **Portrait Tablets (768px – 991px)**: Center-aligned typography and constrained card widths (`max-width: 620px; margin: 0 auto;`) to prevent cards from looking stretched on iPad / tablet viewports; arranged `.showroom-badges-cluster` into a neat centered pill row below the vehicle.
+  - **Large Mobiles / Phablets (577px – 767px)**: Centered layout with max card width (`540px`); 2x2 grid for both tab sets; full-width stacked action buttons.
+  - **Standard Mobile (375px – 576px)**: Card padding reduced to `14px 12px` with 16px border-radius; single-column form grid; vehicle image capped at 145px with bounded radial halo aura (`max-width: 80vw`) and ground shadow; 2-column compact trust strip items with 34px icons.
+  - **Ultra-Small Mobile (320px – 360px)**: Fluid typography (`clamp(24px, 6.8vw, 29px)`), full touch targets, zero horizontal viewport overflow.
+- **Verification**: Clean compilation via `npm run build` with all 83 static & dynamic routes passing.
+
+## Mobile Screenshot Fixes & Horizontal Viewport Containment
+- **Problems Identified From Mobile Screenshots**:
+  1. **Screenshot 1 (Trust Strip Cramping)**:
+     - The 2 right-column trust cards (`RGIA Airport Drop` and `30-Min Delivery`) in `PremiumHeroSection.jsx` touched and pushed against the right screen border with no internal card framing.
+  2. **Screenshot 2 (Pricing Toggle Clipping)**:
+     - In `CarOffersSection.jsx`, the 3-Way Pricing Plan Toggle used inline `whiteSpace: 'nowrap'` with verbose desktop labels (`Daily Deals`, `Weekly (7 Days) 7-Day Deal`, `Monthly (30 Days) Monthly Deal`). Combined minimum width was >540px, causing the right button (`Monthly (30 Days)`) to clip at `Monthl` on mobile viewports (<430px).
+  3. **Screenshot 3 (Floating Button Slicing & Horizontal Blowout)**:
+     - The >540px element width blew out the entire document width on mobile browsers, making the document wider than 100vw.
+     - Mobile browser layout panning caused right-anchored fixed elements to get sliced in half (e.g. green WhatsApp floating button was cut down the middle on the right edge).
+     - The SEO keywords list container had raw 24px desktop padding on mobile.
+- **Architectural Solutions Implemented**:
+  1. **Trust Strip Symmetrical Micro-Cards (`PremiumHeroSection.jsx` & `globals.css`)**:
+     - Switched row from `row g-3 g-md-4 align-items-center justify-content-between` to `row g-2 g-md-4 align-items-stretch`.
+     - Wrapped each item in a clean micro-card with soft pearl slate background (`#f8fafc`), subtle border (`#e2e8f0`), rounded corners (`12px`), and concise mobile descriptions (`.trust-desc-mobile`).
+     - Added gutter-safe padding (`padding: 10px 8px`) ensuring zero collision with screen edges.
+  2. **Responsive 3-Way Pricing Plan Toggle (`CarOffersSection.jsx` & `globals.css`)**:
+     - Converted inline styles to responsive class `.pricing-plan-toggle` and `.plan-toggle-btn`.
+     - Implemented dual-span desktop and mobile labels:
+       - Desktop (>600px): `Daily Deals`, `Weekly (7 Days) [7-Day Deal]`, `Monthly (30 Days) [Monthly Deal]`
+       - Mobile (<=600px): `Daily`, `Weekly [7-Day]`, `Monthly [Deal]`
+       - Small Mobile (<=380px): Badges cleanly hide, leaving concise touch pills `Daily | Weekly | Monthly` that fit 100% within 320px–375px screens.
+  3. **Viewport & Floating Action Buttons Alignment (`globals.css` & `layout.jsx`)**:
+     - Added Next.js App Router viewport metadata export in `src/app/layout.jsx` (`width: 'device-width', initialScale: 1, maximumScale: 5`).
+     - Enforced layout containment: `html, body, #__next, main, section { max-width: 100vw !important; overflow-x: hidden !important; box-sizing: border-box; }`.
+     - Standardized `.whatsapp-float-btn` and `.phone-float-btn` on mobile to exact matching coordinates (`right: 16px !important`, `width: 48px !important`, `height: 48px !important`).
+     - Added responsive `.seo-keyword-strip-card` with `overflow-wrap: break-word` and compact mobile padding.
+- **Verification**:
+  - `npm run build` executed successfully with code 0 across all 83 static and dynamic routes.
+
+## Desktop Pricing Toggle Overlap Hotfix
+- **Issue**:
+  - On desktop, the 3-Way Pricing Plan Toggle had overlapping text: `[7-Day Deal]` collided directly with `Monthly (30 Days)`.
+- **Root Cause**:
+  - `.pricing-plan-toggle` had `max-width: 560px` combined with `.plan-toggle-btn` having `flex: 1 1 0%` and `min-width: 0`.
+  - This forced each button on desktop into equal 180px boxes, which was narrower than the intrinsic width of Button 2 (`Weekly (7 Days) 7-Day Deal` = 230px), causing its contents to overflow and overlap into Button 3.
+- **Solution**:
+  - Desktop styles: Converted `.pricing-plan-toggle` to `display: inline-flex; align-items: center; gap: 8px;` and `.plan-toggle-btn` to `flex: 0 0 auto; padding: 10px 18px;`.
+  - Added `margin-left: 4px; display: inline-flex; align-items: center;` to the deal badges.
+  - Buttons now fit their text and deal badges naturally with generous spacing and zero overlap.
+  - Mobile styles (`<= 640px`): Switch smoothly to `display: flex; width: 100%;` and `flex: 1 1 0%` with compact mobile labels (`Daily`, `Weekly`, `Monthly`).
+- **Verification**: Verified clean build via `npm run build` with 83/83 routes passing.
+
+
 
 

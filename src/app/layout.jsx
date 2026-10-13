@@ -6,6 +6,12 @@ export const metadata = {
   description: 'Planning your next drive? Explore self drive cars, monthly rentals and luxury cars in Hyderabad with DriveIt.',
 }
 
+export const viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  maximumScale: 5,
+}
+
 export default function RootLayout({ children }) {
   return (
     <html lang="en">

@@ -336,21 +336,6 @@ Please share vehicle availability, best tariffs, and booking confirmation.`;
 
               {/* Showroom Vehicle Visual Stage */}
               <div className="showroom-stage-viewport">
-                {/* Floating Micro-Trust Capsules */}
-                <div className="floating-badge badge-top-left">
-                  <span className="badge-icon">🛡️</span>
-                  <span className="badge-text">
-                    <strong>Zero Deposit</strong> on select cars
-                  </span>
-                </div>
-
-                <div className="floating-badge badge-top-right">
-                  <span className="badge-icon">⚡</span>
-                  <span className="badge-text">
-                    <strong>10-Min KYC</strong> instant approval
-                  </span>
-                </div>
-
                 {/* Center Showroom Car */}
                 <div className="showroom-car-container">
                   <div className="showroom-halo-aura" />
@@ -364,12 +349,28 @@ Please share vehicle availability, best tariffs, and booking confirmation.`;
                   <div className="showroom-ground-shadow" />
                 </div>
 
-                {/* Floating Bottom Badge */}
-                <div className="floating-badge badge-bottom-right">
-                  <span className="badge-icon">📍</span>
-                  <span className="badge-text">
-                    <strong>Doorstep Drop</strong> across 26 Hubs
-                  </span>
+                {/* Micro-Trust Capsules Cluster (Floating on Desktop, Clean Centered Row on Mobile/Tablet) */}
+                <div className="showroom-badges-cluster">
+                  <div className="floating-badge badge-top-left">
+                    <span className="badge-icon">🛡️</span>
+                    <span className="badge-text">
+                      <strong>Zero Deposit</strong> on select cars
+                    </span>
+                  </div>
+
+                  <div className="floating-badge badge-top-right">
+                    <span className="badge-icon">⚡</span>
+                    <span className="badge-text">
+                      <strong>10-Min KYC</strong> instant approval
+                    </span>
+                  </div>
+
+                  <div className="floating-badge badge-bottom-right">
+                    <span className="badge-icon">📍</span>
+                    <span className="badge-text">
+                      <strong>Doorstep Drop</strong> across 26 Hubs
+                    </span>
+                  </div>
                 </div>
               </div>
 
@@ -415,7 +416,7 @@ Please share vehicle availability, best tariffs, and booking confirmation.`;
       {/* ================= FULL-WIDTH TRUST STRIP (DIRECTLY BELOW HERO) ================= */}
       <div className="hero-bottom-trust-strip">
         <div className="container">
-          <div className="row g-3 g-md-4 align-items-center justify-content-between">
+          <div className="row g-2 g-md-4 align-items-stretch">
             <div className="col-6 col-md-3">
               <div className="trust-strip-item">
                 <div className="trust-strip-icon">
@@ -423,7 +424,8 @@ Please share vehicle availability, best tariffs, and booking confirmation.`;
                 </div>
                 <div className="trust-strip-info">
                   <h4>Zero Deposit</h4>
-                  <p>Flexible deposit options on verified fleet</p>
+                  <p className="trust-desc-desktop">Flexible deposit options on verified fleet</p>
+                  <p className="trust-desc-mobile">Zero deposit on verified fleet</p>
                 </div>
               </div>
             </div>
@@ -435,7 +437,8 @@ Please share vehicle availability, best tariffs, and booking confirmation.`;
                 </div>
                 <div className="trust-strip-info">
                   <h4>RGIA Airport Drop</h4>
-                  <p>24/7 terminal handover at Shamshabad</p>
+                  <p className="trust-desc-desktop">24/7 terminal handover at Shamshabad</p>
+                  <p className="trust-desc-mobile">24/7 Shamshabad handover</p>
                 </div>
               </div>
             </div>
@@ -447,7 +450,8 @@ Please share vehicle availability, best tariffs, and booking confirmation.`;
                 </div>
                 <div className="trust-strip-info">
                   <h4>Sanitized Fleet</h4>
-                  <p>28+ inspected models with FASTag</p>
+                  <p className="trust-desc-desktop">28+ inspected models with FASTag</p>
+                  <p className="trust-desc-mobile">28+ inspected models with FASTag</p>
                 </div>
               </div>
             </div>
@@ -459,7 +463,8 @@ Please share vehicle availability, best tariffs, and booking confirmation.`;
                 </div>
                 <div className="trust-strip-info">
                   <h4>30-Min Delivery</h4>
-                  <p>Fast doorstep delivery across 26 hubs</p>
+                  <p className="trust-desc-desktop">Fast doorstep delivery across 26 hubs</p>
+                  <p className="trust-desc-mobile">Fast drop across 26 hubs</p>
                 </div>
               </div>
             </div>
