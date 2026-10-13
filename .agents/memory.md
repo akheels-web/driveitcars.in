@@ -382,3 +382,16 @@
   - **Turbopack Build Verification**:
     - 100% clean compilation via `npm run build` with all 83 dynamic and static routes generated without error.
 
+## Floating Action Buttons & Chat Overhaul (Official WhatsApp Logo & Custom Message)
+- **Problem Resolved**:
+  - The legacy floating button (`chatFloatBtn`) had `href="#"` with a generic speech bubble icon (`fa-comment`) and was completely broken / unresponsive.
+  - Eliminated duplicate unstyled floating anchors in `Footer.jsx`.
+- **Architectural Implementation**:
+  - Replaced the broken Chat button with a dedicated, officially branded WhatsApp button (`.whatsapp-float-btn`) using the **official vector SVG WhatsApp brand mark**.
+  - Configured custom pre-filled message content:
+    `Hi DRIVEIT Cars, I would like to enquire about renting a car in Hyderabad. Please share available models, tariffs, and booking process.`
+  - Paired with an executive call floating button (`.phone-float-btn`) dialing `+91 6300041186`.
+  - Added tooltips ("Chat on WhatsApp" and "Call Us") with hover elevation and responsive layout (stacked cleanly on mobile without viewport overflow).
+  - Clean build verified via `npm run build` with zero errors.
+
+
