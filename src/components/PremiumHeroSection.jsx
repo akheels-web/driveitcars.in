@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import Link from 'next/link';
 
 const SHOWCASE_VEHICLES = [
@@ -71,17 +71,17 @@ const LOCATIONS = [
 const PLANS = [
   { label: 'Daily Rental (24 Hours)', value: 'Daily Rental (24 Hours)' },
   { label: 'Weekend Getaway (Fri – Mon)', value: 'Weekend Getaway' },
-  { label: 'Weekly Package (Save 25%)', value: 'Weekly Package (7 Days)' },
-  { label: 'Monthly Subscription (Save 50%)', value: 'Monthly Subscription (30 Days)' },
+  { label: 'Weekly Package', badge: 'Save 25%', value: 'Weekly Package (7 Days)' },
+  { label: 'Monthly Subscription', badge: 'Save 50%', value: 'Monthly Subscription (30 Days)' },
 ];
 
 const CATEGORIES = [
   { label: 'All Categories (28+ Fleet Models)', key: 'all' },
-  { label: 'Commanding 5-Seater SUVs (Creta, Thar, Brezza)', key: 'suv5' },
-  { label: 'Spacious 7-Seater MUVs (Innova, Fortuner, XUV700)', key: 'suv7' },
-  { label: '5-Seater Hatchbacks (Swift, Baleno, i20)', key: 'hatchback' },
-  { label: 'Compact & Mini SUVs (Fronx, Venue, Punch)', key: 'minisuv' },
-  { label: 'Executive Sedans (Verna, Dzire, Virtus, Ciaz)', key: 'sedan' },
+  { label: 'Commanding 5-Seater SUVs', subtitle: 'Creta, Thar, Brezza', key: 'suv5' },
+  { label: 'Spacious 7-Seater MUVs', subtitle: 'Innova, Fortuner, XUV700', key: 'suv7' },
+  { label: '5-Seater Hatchbacks', subtitle: 'Swift, Baleno, i20', key: 'hatchback' },
+  { label: 'Compact & Mini SUVs', subtitle: 'Fronx, Venue, Punch', key: 'minisuv' },
+  { label: 'Executive Sedans', subtitle: 'Verna, Dzire, Virtus, Ciaz', key: 'sedan' },
 ];
 
 export default function PremiumHeroSection() {
@@ -90,6 +90,30 @@ export default function PremiumHeroSection() {
   const [selectedPlan, setSelectedPlan] = useState(PLANS[0].value);
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [activeShowcaseIdx, setActiveShowcaseIdx] = useState(0);
+  const [openDropdown, setOpenDropdown] = useState(null); // 'location' | 'plan' | 'category' | null
+  const bookingFormRef = useRef(null);
+
+  useEffect(() => {
+    function handleClickOutside(event) {
+      if (bookingFormRef.current && !bookingFormRef.current.contains(event.target)) {
+        setOpenDropdown(null);
+      }
+    }
+    function handleKeyDown(event) {
+      if (event.key === 'Escape') {
+        setOpenDropdown(null);
+      }
+    }
+    document.addEventListener('mousedown', handleClickOutside);
+    document.addEventListener('touchstart', handleClickOutside, { passive: true });
+    document.addEventListener('keydown', handleKeyDown);
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+      document.removeEventListener('touchstart', handleClickOutside);
+      document.removeEventListener('keydown', handleKeyDown);
+    };
+  }, []);
+
 
   const activeCar = SHOWCASE_VEHICLES[activeShowcaseIdx];
 
@@ -226,59 +250,201 @@ Please share vehicle availability, best tariffs, and booking confirmation.`;
                 </div>
 
                 {/* Form Controls */}
-                <div className="booking-form-grid">
+                <div className="booking-form-grid" ref={bookingFormRef}>
                   {/* Field 1: Pickup Location */}
-                  <div className="booking-form-group">
+                  <div className={`booking-form-group ${openDropdown === 'location' ? 'dropdown-active' : ''}`}>
                     <label className="form-field-label">
                       <i className="fa fa-map-marker text-gold" /> PICKUP HUB / LOCATION
                     </label>
-                    <select
-                      className="form-select modern-hero-select"
-                      value={selectedLocation}
-                      onChange={(e) => setSelectedLocation(e.target.value)}
-                    >
-                      {LOCATIONS.map((loc, idx) => (
-                        <option key={idx} value={loc}>
-                          {loc}
-                        </option>
-                      ))}
-                    </select>
+                    <div className="custom-dropdown-container">
+                      <button
+                        type="button"
+                        className={`custom-dropdown-trigger ${openDropdown === 'location' ? 'is-open' : ''}`}
+                        onClick={() => setOpenDropdown(openDropdown === 'location' ? null : 'location')}
+                        aria-haspopup="listbox"
+                        aria-expanded={openDropdown === 'location'}
+                      >
+                        <span className="dropdown-trigger-content">
+                          <span className="dropdown-trigger-text">{selectedLocation}</span>
+                        </span>
+                        <span className={`dropdown-chevron ${openDropdown === 'location' ? 'rotated' : ''}`}>
+                          <svg width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1.5 1.75L6 6.25L10.5 1.75" stroke="#475569" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                          </svg>
+                        </span>
+                      </button>
+
+                      {openDropdown === 'location' && (
+                        <div className="custom-dropdown-menu" role="listbox">
+                          {LOCATIONS.map((loc, idx) => {
+                            const isSelected = loc === selectedLocation;
+                            return (
+                              <div
+                                key={idx}
+                                className={`custom-dropdown-option ${isSelected ? 'selected' : ''}`}
+                                onClick={() => {
+                                  setSelectedLocation(loc);
+                                  setOpenDropdown(null);
+                                }}
+                                role="option"
+                                aria-selected={isSelected}
+                              >
+                                <div className="option-text-group">
+                                  <span className="option-main-text">
+                                    <i className="fa fa-map-marker option-icon" /> {loc}
+                                  </span>
+                                </div>
+                                {isSelected && (
+                                  <span className="option-checkmark">
+                                    <i className="fa fa-check" />
+                                  </span>
+                                )}
+                              </div>
+                            );
+                          })}
+                        </div>
+                      )}
+                    </div>
                   </div>
 
                   {/* Field 2: Rental Plan */}
-                  <div className="booking-form-group">
+                  <div className={`booking-form-group ${openDropdown === 'plan' ? 'dropdown-active' : ''}`}>
                     <label className="form-field-label">
                       <i className="fa fa-calendar-check-o text-gold" /> RENTAL PLAN
                     </label>
-                    <select
-                      className="form-select modern-hero-select"
-                      value={selectedPlan}
-                      onChange={(e) => setSelectedPlan(e.target.value)}
-                    >
-                      {PLANS.map((p, idx) => (
-                        <option key={idx} value={p.value}>
-                          {p.label}
-                        </option>
-                      ))}
-                    </select>
+                    <div className="custom-dropdown-container">
+                      {(() => {
+                        const currentPlanObj = PLANS.find((p) => p.value === selectedPlan) || PLANS[0];
+                        return (
+                          <>
+                            <button
+                              type="button"
+                              className={`custom-dropdown-trigger ${openDropdown === 'plan' ? 'is-open' : ''}`}
+                              onClick={() => setOpenDropdown(openDropdown === 'plan' ? null : 'plan')}
+                              aria-haspopup="listbox"
+                              aria-expanded={openDropdown === 'plan'}
+                            >
+                              <span className="dropdown-trigger-content">
+                                <span className="dropdown-trigger-text">{currentPlanObj.label}</span>
+                                {currentPlanObj.badge && (
+                                  <span className="dropdown-trigger-badge">{currentPlanObj.badge}</span>
+                                )}
+                              </span>
+                              <span className={`dropdown-chevron ${openDropdown === 'plan' ? 'rotated' : ''}`}>
+                                <svg width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <path d="M1.5 1.75L6 6.25L10.5 1.75" stroke="#475569" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                                </svg>
+                              </span>
+                            </button>
+
+                            {openDropdown === 'plan' && (
+                              <div className="custom-dropdown-menu" role="listbox">
+                                {PLANS.map((p, idx) => {
+                                  const isSelected = p.value === selectedPlan;
+                                  return (
+                                    <div
+                                      key={idx}
+                                      className={`custom-dropdown-option ${isSelected ? 'selected' : ''}`}
+                                      onClick={() => {
+                                        setSelectedPlan(p.value);
+                                        setOpenDropdown(null);
+                                      }}
+                                      role="option"
+                                      aria-selected={isSelected}
+                                    >
+                                      <div className="option-text-group">
+                                        <span className="option-main-text">
+                                          <i className="fa fa-calendar-check-o option-icon" /> {p.label}
+                                        </span>
+                                      </div>
+                                      <div className="option-meta-group">
+                                        {p.badge && (
+                                          <span className="option-deal-badge">{p.badge}</span>
+                                        )}
+                                        {isSelected && (
+                                          <span className="option-checkmark">
+                                            <i className="fa fa-check" />
+                                          </span>
+                                        )}
+                                      </div>
+                                    </div>
+                                  );
+                                })}
+                              </div>
+                            )}
+                          </>
+                        );
+                      })()}
+                    </div>
                   </div>
 
                   {/* Field 3: Car Category */}
-                  <div className="booking-form-group full-width-field">
+                  <div className={`booking-form-group full-width-field ${openDropdown === 'category' ? 'dropdown-active' : ''}`}>
                     <label className="form-field-label">
                       <i className="fa fa-sliders text-gold" /> FLEET CATEGORY
                     </label>
-                    <select
-                      className="form-select modern-hero-select"
-                      value={selectedCategory}
-                      onChange={(e) => setSelectedCategory(e.target.value)}
-                    >
-                      {CATEGORIES.map((cat, idx) => (
-                        <option key={idx} value={cat.key}>
-                          {cat.label}
-                        </option>
-                      ))}
-                    </select>
+                    <div className="custom-dropdown-container">
+                      {(() => {
+                        const currentCatObj = CATEGORIES.find((c) => c.key === selectedCategory) || CATEGORIES[0];
+                        return (
+                          <>
+                            <button
+                              type="button"
+                              className={`custom-dropdown-trigger ${openDropdown === 'category' ? 'is-open' : ''}`}
+                              onClick={() => setOpenDropdown(openDropdown === 'category' ? null : 'category')}
+                              aria-haspopup="listbox"
+                              aria-expanded={openDropdown === 'category'}
+                            >
+                              <span className="dropdown-trigger-content">
+                                <span className="dropdown-trigger-text">{currentCatObj.label}</span>
+                                {currentCatObj.subtitle && (
+                                  <span className="dropdown-trigger-sub">({currentCatObj.subtitle})</span>
+                                )}
+                              </span>
+                              <span className={`dropdown-chevron ${openDropdown === 'category' ? 'rotated' : ''}`}>
+                                <svg width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <path d="M1.5 1.75L6 6.25L10.5 1.75" stroke="#475569" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                                </svg>
+                              </span>
+                            </button>
+
+                            {openDropdown === 'category' && (
+                              <div className="custom-dropdown-menu" role="listbox">
+                                {CATEGORIES.map((cat, idx) => {
+                                  const isSelected = cat.key === selectedCategory;
+                                  return (
+                                    <div
+                                      key={idx}
+                                      className={`custom-dropdown-option ${isSelected ? 'selected' : ''}`}
+                                      onClick={() => {
+                                        setSelectedCategory(cat.key);
+                                        setOpenDropdown(null);
+                                      }}
+                                      role="option"
+                                      aria-selected={isSelected}
+                                    >
+                                      <div className="option-text-group">
+                                        <span className="option-main-text">
+                                          <i className="fa fa-car option-icon" /> {cat.label}
+                                        </span>
+                                        {cat.subtitle && (
+                                          <span className="option-sub-text">{cat.subtitle}</span>
+                                        )}
+                                      </div>
+                                      {isSelected && (
+                                        <span className="option-checkmark">
+                                          <i className="fa fa-check" />
+                                        </span>
+                                      )}
+                                    </div>
+                                  );
+                                })}
+                              </div>
+                            )}
+                          </>
+                        );
+                      })()}
+                    </div>
                   </div>
                 </div>
 

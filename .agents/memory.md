@@ -454,8 +454,38 @@
   - Added `margin-left: 4px; display: inline-flex; align-items: center;` to the deal badges.
   - Buttons now fit their text and deal badges naturally with generous spacing and zero overlap.
   - Mobile styles (`<= 640px`): Switch smoothly to `display: flex; width: 100%;` and `flex: 1 1 0%` with compact mobile labels (`Daily`, `Weekly`, `Monthly`).
-- **Verification**: Verified clean build via `npm run build` with 83/83 routes passing.
 
+## Brand Logo Sizing Specifications
+- **Header Logo (Website Navbar & Sanity CMS)**:
+  - **Sanity CMS Recommended Dimension**: `260 x 76 px` (1x) or **`520 x 152 px`** (2x for Retina / High-DPI screens).
+  - **Rendered CSS**: Desktop `height: 72px; max-height: 76px; max-width: 260px; object-fit: contain;` | Mobile (<=768px) `height: 52px; max-width: 180px;`.
+  - **Aspect Ratio**: ~`3.4 : 1` (horizontal / landscape layout).
+- **Footer Brand Logo**:
+  - **Sanity CMS Recommended Dimension**: `230 x 66 px` (1x) or **`460 x 132 px`** (2x Retina).
+  - **Rendered CSS**: Desktop `height: 60px; max-height: 66px; max-width: 230px;` | Mobile `height: 50px; max-width: 180px;`.
+- **Mobile Drawer Nav Logo**: `height: 42px; width: auto;`.
+- **Favicon & App Icons**:
+  - `favicon.ico`: 32x32 px and 48x48 px.
+  - Apple Touch Icon: 180x180 px.
+- **File Format Best Practices**:
+  - Format: Transparent PNG or SVG (Vector).
+  - File Size: Keep under 150 KB.
+  - Margin: Crop transparent padding tight to the artwork edges to prevent shrinkage.
+- **Active Deployment**:
+  - Updated Sanity CMS `siteSettings.logo` to the new 1024x355 transparent black key-accent header logo (`image-8b6a7c3eedb9d3c5268a169348cfafd5972f6772-1024x355-png`).
+  - Synced local fallback image [public/logo.png](file:///e:/Github/driveitcars/public_html/public/logo.png).
+  - Updated Sanity CMS `siteSettings.footerLogo` to the new 460x132 transparent white key-accent logo (`image-5342d9286b4fd82bbba75fbbab82bd5c64019e8d-460x132-png`).
+  - Synced local fallback image [public/logo2.png](file:///e:/Github/driveitcars/public_html/public/logo2.png).
 
+## Hero Booking Widget Dropdown Modernization
+- **Replaced Awkward Native OS Selects**:
+  - Upgraded raw `<select>` elements in [PremiumHeroSection.jsx](file:///e:/Github/driveitcars/public_html/src/components/PremiumHeroSection.jsx) to sleek interactive custom dropdown selectors.
+  - Eliminated native Windows blue-highlight box, harsh 90° edges, and awkward text clipping ("Doorstep Handover (Anywhere i").
+- **Luxury Floating Menu UI**:
+  - Added floating popover menu (`.custom-dropdown-menu`) with rounded corners (`14px`), deep soft drop shadow, custom scrollbar, and smooth enter animation.
+  - Trigger buttons (`.custom-dropdown-trigger`) feature text ellipsis, smooth 180° rotating chevron SVG, gold focus glow (`rgba(255, 185, 7, 0.2)`), and active state elevation (`z-index: 50`).
+  - Added deal badges (e.g. `Save 25%`, `Save 50%` in emerald pill tags) and muted category vehicle examples (e.g. `Creta, Thar, Brezza`).
+  - Added outside-click and Escape key detection via React hooks for seamless closing.
+- **Verification**: Verified clean Turbopack build via `npm run build` with 100% route success.
 
 
