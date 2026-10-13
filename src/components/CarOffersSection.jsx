@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Link from 'next/link';
 
 // All 28 Regular Top Demanding Cars with Daily, Weekly & Monthly Pricing
@@ -501,6 +501,19 @@ export default function CarOffersSection({ initialCars = [] }) {
   const [planType, setPlanType] = useState('daily'); // 'daily' | 'weekly' | 'monthly'
   const [searchQuery, setSearchQuery] = useState('');
 
+  // Listen for category selection events dispatched from the hero booking engine
+  useEffect(() => {
+    const handleFilterCategory = (e) => {
+      if (e?.detail?.category) {
+        setActiveTab(e.detail.category);
+      }
+    };
+    window.addEventListener('driveit-filter-category', handleFilterCategory);
+    return () => {
+      window.removeEventListener('driveit-filter-category', handleFilterCategory);
+    };
+  }, []);
+
   // Use the comprehensive 28 top demanding cars catalog as the primary fleet,
   // gracefully appending any custom CMS cars passed from Sanity
   const cmsCarsMapped = (initialCars && initialCars.length > 0)
@@ -591,7 +604,7 @@ export default function CarOffersSection({ initialCars = [] }) {
   };
 
   return (
-    <section className="car-offers-section section_70" style={{ background: '#f8fafc', padding: '80px 0' }}>
+    <section id="fleet-offers" className="car-offers-section section_70" style={{ background: '#f8fafc', padding: '80px 0' }}>
       <div className="container">
         {/* Section Heading with Target Keywords */}
         <div className="site-heading text-center" style={{ width: '100%', maxWidth: '840px', margin: '0 auto 30px' }}>

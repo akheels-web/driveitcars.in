@@ -357,3 +357,28 @@
   - Desktop menu (`.gauto-mainmenu-area`) is hidden on mobile via `d-none d-lg-block`.
   - Mobile experience is driven by the responsive top header bar (logo + hamburger) and slide-out navigation drawer with zero horizontal overflow.
   - Verified 100% clean Turbopack build across all routes.
+
+## Light-Themed Premium Hero Section Overhaul (Sixt & Hertz-Level UX)
+- **Problem Resolved**:
+  - Replaced the basic static banner image slider (`HeroSlider.jsx` with `/banner5.avif`, etc. on dark background) with a world-class, light-themed booking and showroom engine on the homepage.
+- **Architectural & Design Implementation (`PremiumHeroSection.jsx`)**:
+  - **Color Palette & Light Aesthetics**: Crisp porcelain white (`#ffffff`) to subtle pearl slate (`#f8fafc`), with warm ambient amber/gold glows (`rgba(255, 185, 7, 0.14)`), gold accents (`#ffb907`), and deep slate typography (`#0f172a`). Completely non-dark.
+  - **Trust Eyebrow**: `★ 4.9 / 5.0 (1,200+ Google Reviews)` + `✦ HYDERABAD'S PREMIER CAR RENTAL FLEET`.
+  - **Interactive Reservation Engine (Sixt Benchmark)**:
+    - 4 Service Tabs: `Self Drive` (default), `With Chauffeur`, `Airport Transfer`, and `Wedding & VIP`.
+    - Smart Field Controls: Pickup Hub dropdown (covering Masab Tank, RGIA Airport, HITEC City, Gachibowli, Banjara Hills, Doorstep Handover), Rental Plan (Daily, Weekend, Weekly -25%, Monthly -50%), and Fleet Category (All, SUVs, 7-Seaters, Hatchbacks, Mini SUVs, Sedans).
+    - Dual CTAs: Primary `Check Available Cars` (smoothly scrolls to `#fleet-offers` and dispatches `driveit-filter-category` custom event) + Emerald WhatsApp `WhatsApp Quote` (pre-fills selected service, pickup hub, plan, and car type).
+    - Direct 24/7 call helpline link to `+91 6300041186`.
+  - **Interactive Live Showroom Showcase (Virtuo Benchmark)**:
+    - 4 Interactive Category Switcher Pills: `🔥 4x4 & SUVs` (Mahindra Thar 4x4 & Roxx), `👑 7-Seater Kings` (Toyota Innova Crysta & Fortuner), `💎 Luxury & VIP` (Mercedes-Benz), and `🚗 City Economy` (Maruti Swift & Baleno).
+    - Seamless vehicle preview transitions with realistic studio ground shadow pedestal.
+    - 3 Floating Micro-Trust Capsules: `🛡️ Zero Deposit Option`, `⚡ 10-Min Fast KYC`, and `📍 Doorstep Drop across 26 Hubs`.
+    - Live specs summary: Seats, Transmission, Fuel, and Feature highlights.
+  - **Full-Width Trust Authority Strip**:
+    - 4 Pillars directly beneath hero: `Zero Security Deposit`, `24/7 RGIA Airport Drop`, `100% Sanitized Fleet`, and `30-Min Doorstep Handover`.
+  - **Fleet Catalog Synchronization (`CarOffersSection.jsx`)**:
+    - Added `id="fleet-offers"` to `<section>` container.
+    - Added `useEffect` listening for `driveit-filter-category` custom events, automatically setting `activeTab` to match user selections from the hero.
+  - **Turbopack Build Verification**:
+    - 100% clean compilation via `npm run build` with all 83 dynamic and static routes generated without error.
+

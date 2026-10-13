@@ -3,6 +3,7 @@ import imageUrlBuilder from '@sanity/image-url';
 import Link from 'next/link';
 
 import HeroSlider from '../components/HeroSlider';
+import PremiumHeroSection from '../components/PremiumHeroSection';
 import CarOffersSection from '../components/CarOffersSection';
 import FaqSection from '../components/FaqSection';
 import SeoSchema, {
@@ -159,25 +160,8 @@ export default async function Page() {
         }}
       />
       <SeoSchema schema={buildBreadcrumbSchema([{ name: 'Home', url: '/' }])} />
-      {/* ========== HERO SLIDING BANNER ========== */}
-      <HeroSlider
-        customBanners={
-          banners && banners.length > 0
-            ? banners
-                .map((b) => {
-                  const img = urlFor(b.image);
-                  return img
-                    ? {
-                        src: img.url(),
-                        alt: b.heading || 'DriveIt Cars Hyderabad',
-                        link: b.buttonLink || '/self-drive-car',
-                      }
-                    : null;
-                })
-                .filter(Boolean)
-            : null
-        }
-      />
+      {/* ========== PREMIUM LIGHT-THEMED HERO RESERVATION & SHOWROOM SECTION ========== */}
+      <PremiumHeroSection />
 
       {/* ========== Daily & Monthly Car Rental Offers (Interactive Explore Section) ========== */}
       <CarOffersSection initialCars={formattedCars} />
