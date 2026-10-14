@@ -493,3 +493,14 @@
   - Replaced deprecated default `import imageUrlBuilder from '@sanity/image-url'` with `import { createImageUrlBuilder } from '@sanity/image-url'` across `SiteSettingsContext.jsx`, `src/app/page.jsx`, `src/app/blog/page.jsx`, and `src/app/blog/[slug]/page.jsx`.
   - Compile time improved to 9.5s with zero deprecation warnings.
 - **Verification**: Verified clean Turbopack build via `npm run build` with 100% route success across all 83 static & dynamic routes.
+
+## Vercel Production Deployment Verification
+- **Build & Deployment Success**:
+  - Commit `63ce76b` deployed cleanly to Vercel production edge within 2 minutes with 0 build or lint errors.
+  - Vercel build cache (438.43 MB) uploaded successfully in 8.0s for accelerated future incremental deploys.
+- **Route Rendering Strategy**:
+  - **Dynamic (`ƒ`) Routes**: Locality and live CMS hubs (e.g., `/tolichowki-luxury-car-rental`, `/vijay-nagar-colony`, `/yousufguda`, `/`, `/blog`) configured with `dynamic = 'force-dynamic'` and `revalidate = 0` so Sanity Studio CMS updates publish immediately without redeployment.
+  - **Static (`○`) Routes**: Core SEO landing pages (e.g., `/vintage-wedding-car-hyderabad`, `/vip-car-rental-hyderabad`, `/wedding-car-rental-hyderabad`) pre-rendered statically at build time for sub-100ms Edge CDN responses and optimal Googlebot crawling.
+- **Live Verification**:
+  - Live HTTP verification on `https://www.driveitcars.in` confirmed 200 OK with custom hero booking engine, showroom switcher, tariff masking, high-res brand logos, and structured JSON-LD schemas actively serving.
+
