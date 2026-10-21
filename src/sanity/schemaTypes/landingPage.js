@@ -259,7 +259,7 @@ export const landingPageType = defineType({
       title: 'SEO Meta Description',
       type: 'text',
       rows: 3,
-      initialValue: 'Rent self drive cars in Hyderabad with DriveIt. Security Deposti on select cars, unlimited freedom, doorstep delivery across 20+ locations. Hatchbacks, Sedans, SUVs & Luxury Cars.',
+      initialValue: 'Rent self drive cars in Hyderabad with DriveIt. Security Deposit on select cars, unlimited freedom, doorstep delivery across 20+ locations. Hatchbacks, Sedans, SUVs & Luxury Cars.',
     }),
   ],
 })

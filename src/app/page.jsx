@@ -17,14 +17,14 @@ export const revalidate = 0;
 export const metadata = {
   title: 'Self Drive Cars Hyderabad | Daily, Weekly & Monthly Car Rentals | DRIVEIT',
   description:
-    '#1 Self drive cars in Hyderabad. Daily, weekly & monthly car rentals for Swift, Baleno, Creta, Thar, Thar Roxx, Innova Crysta, XUV700 & Fortuner. Manual & Automatic, Security Deposti, fast doorstep delivery. Enquire now for best rates.',
+    '#1 Self drive cars in Hyderabad. Daily, weekly & monthly car rentals for Swift, Baleno, Creta, Thar, Thar Roxx, Innova Crysta, XUV700 & Fortuner. Manual & Automatic, Security Deposit, fast doorstep delivery. Enquire now for best rates.',
   alternates: {
     canonical: 'https://www.driveitcars.in',
   },
   openGraph: {
     title: 'Self Drive Cars in Hyderabad | Daily, Weekly & Monthly Car Rental | DRIVEIT',
     description:
-      'Book self drive cars on daily, weekly, and monthly rentals in Hyderabad with DRIVEIT. Manual & automatic hatchbacks, mini SUVs, 5 & 7-seater SUVs, sedans. Security Deposti, 24/7 delivery.',
+      'Book self drive cars on daily, weekly, and monthly rentals in Hyderabad with DRIVEIT. Manual & automatic hatchbacks, mini SUVs, 5 & 7-seater SUVs, sedans. Security Deposit, 24/7 delivery.',
     url: 'https://www.driveitcars.in',
     siteName: 'DRIVEIT Cars Hyderabad',
     locale: 'en_IN',
@@ -130,7 +130,7 @@ export default async function Page() {
         schema={buildCarRentalSchema({
           name: 'DRIVEIT Self Drive Cars & Luxury Car Rentals Hyderabad',
           description:
-            'Book daily, weekly, and monthly self drive cars in Hyderabad with DRIVEIT. Manual & automatic hatchbacks, mini SUVs, 5 & 7-seater SUVs, and sedans with Security Deposti options, Limited KMs, 24/7 delivery.',
+            'Book daily, weekly, and monthly self drive cars in Hyderabad with DRIVEIT. Manual & automatic hatchbacks, mini SUVs, 5 & 7-seater SUVs, and sedans with Security Deposit options, Limited KMs, 24/7 delivery.',
           url: 'https://www.driveitcars.in',
           areaServed: [
             'Hyderabad',
@@ -406,7 +406,7 @@ export default async function Page() {
               >
                 {(landingPage?.advantageItems && landingPage.advantageItems.length > 0 ? landingPage.advantageItems : [
                   { icon: 'fa-key', title: '100% Privacy', subtitle: 'No driver interference' },
-                  { icon: 'fa-shield', title: 'Security Deposti', subtitle: 'Quick verification' },
+                  { icon: 'fa-shield', title: 'Security Deposit', subtitle: 'Quick verification' },
                   { icon: 'fa-tag', title: 'Best Rates', subtitle: 'No hidden charges' },
                   { icon: 'fa-map-marker', title: 'Doorstep Drop', subtitle: 'Across all Hyderabad' },
                 ]).map((adv, idx) => (

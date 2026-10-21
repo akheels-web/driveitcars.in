@@ -16,7 +16,7 @@ export const metadata = {
   openGraph: {
     title: 'BMW Rental Hyderabad | 5 & 7 Series Car Hire | DRIVEIT',
     description:
-      'Premier BMW rental in Hyderabad. Drive BMW 5 Series & 7 Series with showroom condition, Security Deposti options, and doorstep delivery across HITEC City, Gachibowli & Banjara Hills.',
+      'Premier BMW rental in Hyderabad. Drive BMW 5 Series & 7 Series with showroom condition, Security Deposit options, and doorstep delivery across HITEC City, Gachibowli & Banjara Hills.',
     url: 'https://www.driveitcars.in/bmw-rental-hyderabad',
     siteName: 'DRIVEIT Cars Hyderabad',
     locale: 'en_IN',

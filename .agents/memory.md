@@ -31,7 +31,7 @@
 ## Homepage & Component Enhancements
 - **Hero Sliding Banner**: Built native `'use client'` `HeroSlider.jsx` with touch swiping, auto-advance (4.5s), dot indicators, and pause-on-hover, replacing uninitialized jQuery `owl-carousel` on `/` and `/cabs`.
 - **Daily & Monthly Offers Explore Section**: Created `CarOffersSection.jsx` with interactive Daily vs Monthly subscription switch (showing up to 50% monthly discount), category filter tabs (Sedans, SUVs, Luxury), detailed vehicle specifications, and dual CTA buttons (`Enquire Now` phone call + car-specific custom WhatsApp message).
-- **The DRIVEIT Advantage (Single-Line Redesign)**: Replaced bulky 6-box grid with a sleek, compact single-line horizontal strip featuring gold icon pills (`100% Privacy`, `Security Deposti`, `Best Rates`, `Doorstep Drop`).
+- **The DRIVEIT Advantage (Single-Line Redesign)**: Replaced bulky 6-box grid with a sleek, compact single-line horizontal strip featuring gold icon pills (`100% Privacy`, `Security Deposit`, `Best Rates`, `Doorstep Drop`).
 - **Heading Overlap Resolution**: Fixed `.site-heading` overlap between "Why Travelers Trust Us" and "Why Choose DriveIt Cars?" by applying `display: block !important; clear: both !important;` to subtitle and heading elements.
 - **Uniform Interactive FAQ System**: 
   - Standardized FAQ across all pages using `FaqSection.jsx`.
@@ -133,7 +133,7 @@
     - **Refined Inquiry Buttons**: Single-line 50/50 grid layout (`grid-template-columns: 1fr 1fr; gap: 14px;`) with `white-space: nowrap`, centered icons, and balanced 50px heights:
       - Primary WhatsApp button: `Inquire via WhatsApp` (emerald `#25D366` with pre-filled enquiry text).
       - Online Submission button: `Submit Online` (dark slate `#0f172a` with gold hover).
-    - **Central Operations Hub Details**: Official address at `Mehar Mansion, Rd No 2, Shantinagar Colony, Masab Tank`, operating hours (`7:00 AM – 10:00 PM`), click-to-call, email, KYC trust badges (10-min digital verification, Security Deposti on select cars, sanitized fleet), and social links.
+    - **Central Operations Hub Details**: Official address at `Mehar Mansion, Rd No 2, Shantinagar Colony, Masab Tank`, operating hours (`7:00 AM – 10:00 PM`), click-to-call, email, KYC trust badges (10-min digital verification, Security Deposit on select cars, sanitized fleet), and social links.
   - **Interactive Google Map Card**: Embedded iframe for Masab Tank hub with "Open in Google Maps" action button.
   - **Booking FAQ Section**: Powered by `<FaqSection />` covering turnaround time, office walk-ins, airport delivery, and deposits.
 - **Site-Wide Breadcrumbs Overhaul (47 Pages Fixed)**:
@@ -372,7 +372,7 @@
   - **Interactive Live Showroom Showcase (Virtuo Benchmark)**:
     - 4 Interactive Category Switcher Pills: `🔥 4x4 & SUVs` (Mahindra Thar 4x4 & Roxx), `👑 7-Seater Kings` (Toyota Innova Crysta & Fortuner), `💎 Luxury & VIP` (Mercedes-Benz), and `🚗 City Economy` (Maruti Swift & Baleno).
     - Seamless vehicle preview transitions with realistic studio ground shadow pedestal.
-    - 3 Floating Micro-Trust Capsules: `🛡️ Security Deposti Option`, `⚡ 10-Min Fast KYC`, and `📍 Doorstep Drop across 26 Hubs`.
+    - 3 Floating Micro-Trust Capsules: `🛡️ Security Deposit Option`, `⚡ 10-Min Fast KYC`, and `📍 Doorstep Drop across 26 Hubs`.
     - Live specs summary: Seats, Transmission, Fuel, and Feature highlights.
   - **Full-Width Trust Authority Strip**:
     - 4 Pillars directly beneath hero: `Security deposit`, `24/7 RGIA Airport Drop`, `100% Sanitized Fleet`, and `30-Min Doorstep Handover`.

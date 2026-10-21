@@ -11,7 +11,7 @@ export const metadata = {
    openGraph: {
       title: '7-Seater Self Drive SUV Hyderabad | Innova Crysta, Fortuner | DRIVEIT',
       description:
-         'Spacious 7-seater self drive SUVs in Hyderabad for family vacations & group road trips. Security Deposti options, 24/7 delivery.',
+         'Spacious 7-seater self drive SUVs in Hyderabad for family vacations & group road trips. Security Deposit options, 24/7 delivery.',
       url: 'https://www.driveitcars.in/suv7',
       siteName: 'DRIVEIT Cars Hyderabad',
    },

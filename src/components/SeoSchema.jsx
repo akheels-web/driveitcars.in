@@ -12,7 +12,7 @@ export default function SeoSchema({ schema }) {
 
 export function buildCarRentalSchema({
   name = 'DRIVEIT Self Drive Cars Hyderabad',
-  description = 'Premier self drive car rentals in Hyderabad with doorstep delivery, Security Deposti options, and well-maintained fleet.',
+  description = 'Premier self drive car rentals in Hyderabad with doorstep delivery, Security Deposit options, and well-maintained fleet.',
   url = 'https://www.driveitcars.in',
   areaServed = 'Hyderabad',
   priceRange = 'Tariff on Request',
