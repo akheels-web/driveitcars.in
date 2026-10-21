@@ -9,7 +9,7 @@ import SeoSchema, {
 export const metadata = {
   title: 'Self Drive SUV Hyderabad | 5 & 7 Seater SUVs (Thar, Creta, Fortuner, Innova)',
   description:
-    'Rent self drive SUV in Hyderabad with DRIVEIT. Book Mahindra Thar 4x4, Creta, Brezza, Innova Crysta, XUV700 & Fortuner Legender. Unlimited kms, zero deposit & 24/7 delivery.',
+    'Rent self drive SUV in Hyderabad with DRIVEIT. Book Mahindra Thar 4x4, Creta, Brezza, Innova Crysta, XUV700 & Fortuner Legender. Limited KMs, zero deposit & 24/7 delivery.',
   alternates: {
     canonical: 'https://www.driveitcars.in/self-drive-suv-hyderabad',
   },
@@ -160,7 +160,7 @@ export default function SelfDriveSuvHyderabadPage() {
   const rentalSchema = buildCarRentalSchema({
     name: 'DRIVEIT Self Drive SUV Hyderabad',
     description:
-      'Rent 5-seater and 7-seater self drive SUVs in Hyderabad. Thar 4x4, Creta, Brezza, Innova Crysta, XUV700 & Fortuner Legender with unlimited kms and doorstep delivery.',
+      'Rent 5-seater and 7-seater self drive SUVs in Hyderabad. Thar 4x4, Creta, Brezza, Innova Crysta, XUV700 & Fortuner Legender with Limited KMs and doorstep delivery.',
     url: 'https://www.driveitcars.in/self-drive-suv-hyderabad',
     areaServed: ['Hyderabad', 'HITEC City', 'Gachibowli', 'Madhapur', 'Kondapur', 'Telangana'],
   });

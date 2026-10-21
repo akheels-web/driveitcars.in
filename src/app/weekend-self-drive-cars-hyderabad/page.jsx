@@ -9,7 +9,7 @@ import SeoSchema, {
 export const metadata = {
   title: 'Weekend Self Drive Cars Hyderabad | Outstation Getaway Offers | DRIVEIT',
   description:
-    'Special weekend self drive cars in Hyderabad starting Friday evening to Monday. Unlimited kms packages for Srisailam, Nagarjuna Sagar, Ananthagiri & Hampi with DRIVEIT.',
+    'Special weekend self drive cars in Hyderabad starting Friday evening to Monday. Limited KMs packages for Srisailam, Nagarjuna Sagar, Ananthagiri & Hampi with DRIVEIT.',
   alternates: {
     canonical: 'https://www.driveitcars.in/weekend-self-drive-cars-hyderabad',
   },

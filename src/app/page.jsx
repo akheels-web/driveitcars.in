@@ -111,17 +111,17 @@ export default async function Page() {
   const banners = landingPage?.heroBanners || [];
   const formattedCars = (cars && cars.length > 0)
     ? cars.map((c) => {
-        let imgUrl = null;
-        if (c.image) {
-          try {
-            imgUrl = urlFor(c.image)?.url();
-          } catch (err) {}
-        }
-        return {
-          ...c,
-          imageUrl: imgUrl || '/assets/img/cars/Swift.png',
-        };
-      })
+      let imgUrl = null;
+      if (c.image) {
+        try {
+          imgUrl = urlFor(c.image)?.url();
+        } catch (err) { }
+      }
+      return {
+        ...c,
+        imageUrl: imgUrl || '/assets/img/cars/Swift.png',
+      };
+    })
     : [];
 
   return (
@@ -130,7 +130,7 @@ export default async function Page() {
         schema={buildCarRentalSchema({
           name: 'DRIVEIT Self Drive Cars & Luxury Car Rentals Hyderabad',
           description:
-            'Book daily, weekly, and monthly self drive cars in Hyderabad with DRIVEIT. Manual & automatic hatchbacks, mini SUVs, 5 & 7-seater SUVs, and sedans with zero deposit options, unlimited kms, 24/7 delivery.',
+            'Book daily, weekly, and monthly self drive cars in Hyderabad with DRIVEIT. Manual & automatic hatchbacks, mini SUVs, 5 & 7-seater SUVs, and sedans with zero deposit options, Limited KMs, 24/7 delivery.',
           url: 'https://www.driveitcars.in',
           areaServed: [
             'Hyderabad',

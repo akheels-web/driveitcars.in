@@ -21,7 +21,7 @@ export const DEFAULT_FLEET = [
     weeklySavings: 'Save 25%',
     pricePerMonth: 24999,
     monthlySavings: 'Save 50%',
-    features: ['Zero Security Deposit', 'Spacious Boot', 'Fuel Efficient (22+ km/l)', 'Clean Interiors'],
+    features: ['Security deposit', 'Spacious Boot', 'Fuel Efficient (22+ km/l)', 'Clean Interiors'],
     displayPages: ['home', 'self-drive-car', 'hatchback'],
   },
   {

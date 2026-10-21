@@ -375,7 +375,7 @@
     - 3 Floating Micro-Trust Capsules: `🛡️ Zero Deposit Option`, `⚡ 10-Min Fast KYC`, and `📍 Doorstep Drop across 26 Hubs`.
     - Live specs summary: Seats, Transmission, Fuel, and Feature highlights.
   - **Full-Width Trust Authority Strip**:
-    - 4 Pillars directly beneath hero: `Zero Security Deposit`, `24/7 RGIA Airport Drop`, `100% Sanitized Fleet`, and `30-Min Doorstep Handover`.
+    - 4 Pillars directly beneath hero: `Security deposit`, `24/7 RGIA Airport Drop`, `100% Sanitized Fleet`, and `30-Min Doorstep Handover`.
   - **Fleet Catalog Synchronization (`CarOffersSection.jsx`)**:
     - Added `id="fleet-offers"` to `<section>` container.
     - Added `useEffect` listening for `driveit-filter-category` custom events, automatically setting `activeTab` to match user selections from the hero.

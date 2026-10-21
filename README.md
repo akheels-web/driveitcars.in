@@ -7,7 +7,7 @@
 [![Status](https://img.shields.io/badge/Production-Ready-success?style=for-the-badge)](https://driveitcars.in)
 [![Deployment](https://img.shields.io/badge/Deploy-Vercel-black?style=for-the-badge&logo=vercel)](https://vercel.com)
 
-> Hyderabad’s premier self-drive car rental and luxury vehicle platform. Offering self-drive hatchbacks, sedans, SUVs, luxury wedding cars, and group travel coaches with transparent pricing, zero security deposits, and doorstep delivery across Hyderabad.
+> Hyderabad’s premier self-drive car rental and luxury vehicle platform. Offering self-drive hatchbacks, sedans, SUVs, luxury wedding cars, and group travel coaches with transparent pricing, Security deposits, and doorstep delivery across Hyderabad.
 
 ---
 

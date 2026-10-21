@@ -211,7 +211,7 @@ Please share vehicle availability, best tariffs, and booking confirmation.`;
                 </span>
               </h1>
               <p className="hero-lead-text">
-                Zero security deposit on select fleet • Unlimited KMs available • 30-minute
+                Security deposit on select fleet • Limited KMs available • 30-minute
                 doorstep delivery across 26+ Hyderabad hubs &amp; RGIA Shamshabad Airport.
               </p>
 
@@ -269,7 +269,7 @@ Please share vehicle availability, best tariffs, and booking confirmation.`;
                         </span>
                         <span className={`dropdown-chevron ${openDropdown === 'location' ? 'rotated' : ''}`}>
                           <svg width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M1.5 1.75L6 6.25L10.5 1.75" stroke="#475569" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                            <path d="M1.5 1.75L6 6.25L10.5 1.75" stroke="#475569" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                           </svg>
                         </span>
                       </button>
@@ -332,7 +332,7 @@ Please share vehicle availability, best tariffs, and booking confirmation.`;
                               </span>
                               <span className={`dropdown-chevron ${openDropdown === 'plan' ? 'rotated' : ''}`}>
                                 <svg width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                  <path d="M1.5 1.75L6 6.25L10.5 1.75" stroke="#475569" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                                  <path d="M1.5 1.75L6 6.25L10.5 1.75" stroke="#475569" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                                 </svg>
                               </span>
                             </button>
@@ -403,7 +403,7 @@ Please share vehicle availability, best tariffs, and booking confirmation.`;
                               </span>
                               <span className={`dropdown-chevron ${openDropdown === 'category' ? 'rotated' : ''}`}>
                                 <svg width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                  <path d="M1.5 1.75L6 6.25L10.5 1.75" stroke="#475569" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                                  <path d="M1.5 1.75L6 6.25L10.5 1.75" stroke="#475569" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                                 </svg>
                               </span>
                             </button>

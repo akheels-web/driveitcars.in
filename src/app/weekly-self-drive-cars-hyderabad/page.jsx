@@ -42,7 +42,7 @@ const WEEKLY_FAQS = [
   {
     question: 'How do weekly self drive car rentals in Hyderabad work with DRIVEIT?',
     answer:
-      'Our weekly car rental package provides you with a fully sanitized, GPS-equipped vehicle for 7 consecutive days (168 hours) at a flat discounted rate that saves up to 25% compared to booking 7 separate daily rentals. You enjoy unlimited freedom, flexible fuel terms, zero security deposit options, and doorstep delivery across Hyderabad.',
+      'Our weekly car rental package provides you with a fully sanitized, GPS-equipped vehicle for 7 consecutive days (168 hours) at a flat discounted rate that saves up to 25% compared to booking 7 separate daily rentals. You enjoy unlimited freedom, flexible fuel terms, Security deposit options, and doorstep delivery across Hyderabad.',
   },
   {
     question: 'Which top demanding cars are available for weekly rental in Hyderabad?',
@@ -52,7 +52,7 @@ const WEEKLY_FAQS = [
   {
     question: 'How much can I save by choosing a weekly car rental instead of daily rentals?',
     answer:
-      'You get substantial multi-day savings on our weekly packages compared to booking 7 individual daily rentals. All weekly packages include 2,100 km, zero security deposit options, and doorstep handover.',
+      'You get substantial multi-day savings on our weekly packages compared to booking 7 individual daily rentals. All weekly packages include 2,100 km, Security deposit options, and doorstep handover.',
   },
   {
     question: 'Can I extend my weekly rental to a monthly car rental subscription?',
@@ -264,7 +264,7 @@ export default function WeeklySelfDriveCarsPage() {
                   Weekly Self Drive Cars in Hyderabad — Top Demanding Fleet with Manual &amp; Automatic Transmission
                 </h1>
                 <p style={{ textAlign: 'justify', fontSize: '15px', lineHeight: '1.8', color: '#4b5563', marginBottom: '16px' }}>
-                  Planning a 7-day business trip to Hyderabad's IT corridors, visiting family for a week-long celebration, or testing a car before purchasing? DRIVEIT’s dedicated <strong>weekly self drive cars Hyderabad</strong> packages give you the ideal sweet spot between daily spot rentals and long-term commitments. Enjoy a flat <strong>25% discount</strong> over individual daily tariffs with 2,100 km included, zero security deposit options, and doorstep delivery across <strong>HITEC City, Gachibowli, Madhapur, Kondapur, Banjara Hills, Jubilee Hills</strong>, and <strong>RGIA Shamshabad Airport</strong>.
+                  Planning a 7-day business trip to Hyderabad's IT corridors, visiting family for a week-long celebration, or testing a car before purchasing? DRIVEIT’s dedicated <strong>weekly self drive cars Hyderabad</strong> packages give you the ideal sweet spot between daily spot rentals and long-term commitments. Enjoy a flat <strong>25% discount</strong> over individual daily tariffs with 2,100 km included, Security deposit options, and doorstep delivery across <strong>HITEC City, Gachibowli, Madhapur, Kondapur, Banjara Hills, Jubilee Hills</strong>, and <strong>RGIA Shamshabad Airport</strong>.
                 </p>
                 <p style={{ textAlign: 'justify', fontSize: '15px', lineHeight: '1.8', color: '#4b5563', marginBottom: '22px' }}>
                   Choose from all 28 top demanding car models: fuel-efficient <strong>5-Seater Hatchbacks</strong> (Swift, Baleno, i20), modern <strong>Mini SUVs</strong> (Fronx, Venue, Punch), commanding <strong>5-Seater SUVs</strong> (Brezza, Nexon, Harrier, Seltos, Creta, Thar 4x4, Thar Roxx), family <strong>7-Seater SUVs &amp; MUVs</strong> (XUV 700, Carens, Ertiga, Innova Crysta, Hycross, Fortuner, Carnival), and elegant <strong>5-Seater Sedans</strong> (Verna, Dzire, Ciaz, Virtus, Slavia). Both <strong>Manual and Automatic</strong> transmissions are available with instant digital KYC.

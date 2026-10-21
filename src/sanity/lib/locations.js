@@ -25,7 +25,7 @@ export const LOCATION_DEFAULTS = {
     introParagraph3: "Fast 15-minute doorstep delivery across DLF Cybercity, Financial District, Waverock, Wipro Circle, Gowlidoddy, ISB Road, and ORR Exit 19.",
     serviceAreas: ['Financial District', 'DLF Cybercity', 'Waverock Campus', 'Wipro Circle', 'ORR Exit 19', 'Gowlidoddy', 'ISB Road'],
     seoTitle: 'Self Drive Cars Gachibowli Hyderabad | Best Rates | DRIVEIT',
-    seoDescription: 'Hire self drive cars in Gachibowli Hyderabad. Affordable daily & monthly car rentals near Financial District, DLF Cybercity, ORR Exit 19. Unlimited kms, 24/7 support.',
+    seoDescription: 'Hire self drive cars in Gachibowli Hyderabad. Affordable daily & monthly car rentals near Financial District, DLF Cybercity, ORR Exit 19. Limited KMs, 24/7 support.',
     customFaqs: [
       { question: 'Where in Gachibowli can I receive my self drive car?', answer: 'We deliver self drive cars across all parts of Gachibowli including Financial District, DLF Cybercity, Waverock, Wipro Circle, ISB Road, and ORR Exit 19. Doorstep delivery takes only 15–20 minutes upon booking confirmation.' },
       { question: 'Can I drive the car outstation from Gachibowli via ORR?', answer: 'Absolutely. With direct access to Outer Ring Road (ORR) from Gachibowli, you can seamlessly drive to Bengaluru highway, Vijayawada highway, or Rajiv Gandhi International Airport (RGIA Shamshabad) in under 25 minutes. All vehicles carry all-India permits.' },

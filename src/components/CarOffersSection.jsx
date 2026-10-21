@@ -21,7 +21,7 @@ export const TOP_DEMANDING_CARS = [
     transmission: 'Manual Transmission',
     fuel: 'Petrol',
     image: '/assets/img/cars/Swift.png',
-    features: ['Zero Security Deposit', 'Free Doorstep Delivery', 'High Fuel Mileage (22+ km/l)'],
+    features: ['Security deposit', 'Free Doorstep Delivery', 'High Fuel Mileage (22+ km/l)'],
   },
   {
     id: 2,
@@ -518,36 +518,36 @@ export default function CarOffersSection({ initialCars = [] }) {
   // gracefully appending any custom CMS cars passed from Sanity
   const cmsCarsMapped = (initialCars && initialCars.length > 0)
     ? initialCars
-        .filter((c) => !TOP_DEMANDING_CARS.some((tc) => tc.name.toLowerCase() === c.name?.toLowerCase()))
-        .map((car, idx) => {
-          let cat = 'sedan';
-          if (['suv5', 'suv'].includes(car.category)) cat = 'suv5';
-          else if (['suv7'].includes(car.category)) cat = 'suv7';
-          else if (['hatchback'].includes(car.category)) cat = 'hatchback';
-          else if (['minisuv'].includes(car.category)) cat = 'minisuv';
+      .filter((c) => !TOP_DEMANDING_CARS.some((tc) => tc.name.toLowerCase() === c.name?.toLowerCase()))
+      .map((car, idx) => {
+        let cat = 'sedan';
+        if (['suv5', 'suv'].includes(car.category)) cat = 'suv5';
+        else if (['suv7'].includes(car.category)) cat = 'suv7';
+        else if (['hatchback'].includes(car.category)) cat = 'hatchback';
+        else if (['minisuv'].includes(car.category)) cat = 'minisuv';
 
-          const dailyPriceNum = typeof car.pricePerDay === 'number' ? car.pricePerDay : 2499;
-          const weeklyPriceNum = Math.round(dailyPriceNum * 7 * 0.75);
-          const monthlyPriceNum = Math.round(dailyPriceNum * 30 * 0.50);
+        const dailyPriceNum = typeof car.pricePerDay === 'number' ? car.pricePerDay : 2499;
+        const weeklyPriceNum = Math.round(dailyPriceNum * 7 * 0.75);
+        const monthlyPriceNum = Math.round(dailyPriceNum * 30 * 0.50);
 
-          return {
-            id: `cms-${car._id || idx}`,
-            name: car.name,
-            category: cat,
-            badge: car.badge || 'Popular Deal',
-            badgeColor: '#ffb907',
-            dailyPrice: dailyPriceNum.toLocaleString('en-IN'),
-            weeklyPrice: weeklyPriceNum.toLocaleString('en-IN'),
-            weeklySavings: 'Save 25%',
-            monthlyPrice: monthlyPriceNum.toLocaleString('en-IN'),
-            monthlySavings: 'Save 50%',
-            seats: car.seats || 5,
-            transmission: car.transmission || 'Manual & Automatic',
-            fuel: car.fuelType || car.fuel || 'Petrol',
-            image: car.imageUrl || car.image || '/assets/img/cars/Swift.png',
-            features: car.features && car.features.length > 0 ? car.features : ['Zero Deposit', 'Sanitized'],
-          };
-        })
+        return {
+          id: `cms-${car._id || idx}`,
+          name: car.name,
+          category: cat,
+          badge: car.badge || 'Popular Deal',
+          badgeColor: '#ffb907',
+          dailyPrice: dailyPriceNum.toLocaleString('en-IN'),
+          weeklyPrice: weeklyPriceNum.toLocaleString('en-IN'),
+          weeklySavings: 'Save 25%',
+          monthlyPrice: monthlyPriceNum.toLocaleString('en-IN'),
+          monthlySavings: 'Save 50%',
+          seats: car.seats || 5,
+          transmission: car.transmission || 'Manual & Automatic',
+          fuel: car.fuelType || car.fuel || 'Petrol',
+          image: car.imageUrl || car.image || '/assets/img/cars/Swift.png',
+          features: car.features && car.features.length > 0 ? car.features : ['Zero Deposit', 'Sanitized'],
+        };
+      })
     : [];
 
   const activeFleet = [...TOP_DEMANDING_CARS, ...cmsCarsMapped];
@@ -919,7 +919,7 @@ export default function CarOffersSection({ initialCars = [] }) {
                         <i className="fa fa-tint" style={{ marginRight: 4, color: '#ffb907' }} /> {car.fuel}
                       </span>
                       <span style={{ background: '#f1f5f9', color: '#334155', fontSize: '12px', fontWeight: 600, padding: '4px 8px', borderRadius: '6px' }}>
-                        <i className="fa fa-road" style={{ marginRight: 4, color: '#ffb907' }} /> 300 KMs/Day
+                        <i className="fa fa-road" style={{ marginRight: 4, color: '#ffb907' }} /> 200 KMs/Day
                       </span>
                     </div>
 
