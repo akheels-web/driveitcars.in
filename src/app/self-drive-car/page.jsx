@@ -7,7 +7,7 @@ import SeoSchema, {
 } from '@/components/SeoSchema';
 
 export const metadata = {
-   title: 'Self Drive Cars in Hyderabad | Limited KMs, Zero Deposit | DRIVEIT',
+   title: 'Self Drive Cars in Hyderabad | Limited KMs, Security Deposti | DRIVEIT',
    description:
       'Book self drive cars in Hyderabad with DRIVEIT. Wide range of hatchbacks, sedans, SUVs & luxury cars. Doorstep delivery across HITEC City, Gachibowli & Airport. Enquire for best rates.',
    alternates: {
@@ -16,7 +16,7 @@ export const metadata = {
    openGraph: {
       title: 'Self Drive Cars in Hyderabad | DRIVEIT Car Rentals',
       description:
-         'Rent sanitized self drive cars in Hyderabad with zero deposit & doorstep delivery. Hatchbacks, sedans, 5 & 7 seater SUVs, and luxury cars.',
+         'Rent sanitized self drive cars in Hyderabad with Security Deposti & doorstep delivery. Hatchbacks, sedans, 5 & 7 seater SUVs, and luxury cars.',
       url: 'https://www.driveitcars.in/self-drive-car',
       siteName: 'DRIVEIT Cars Hyderabad',
       locale: 'en_IN',
@@ -33,7 +33,7 @@ export const metadata = {
    twitter: {
       card: 'summary_large_image',
       title: 'Self Drive Cars in Hyderabad | Limited KMs | DRIVEIT',
-      description: 'Best self drive car rental in Hyderabad with Limited KMs, zero deposit, and 24/7 delivery.',
+      description: 'Best self drive car rental in Hyderabad with Limited KMs, Security Deposti, and 24/7 delivery.',
    },
 };
 
@@ -69,7 +69,7 @@ export default function selfDriveCarPage() {
    const rentalSchema = buildCarRentalSchema({
       name: 'DRIVEIT Self Drive Cars Hyderabad',
       description:
-         'Book self drive cars in Hyderabad with DRIVEIT. Hatchbacks, sedans, SUVs & luxury cars with doorstep delivery, zero deposit, and best customized rates.',
+         'Book self drive cars in Hyderabad with DRIVEIT. Hatchbacks, sedans, SUVs & luxury cars with doorstep delivery, Security Deposti, and best customized rates.',
       url: 'https://www.driveitcars.in/self-drive-car',
       areaServed: [
          'Hyderabad',
@@ -140,7 +140,7 @@ export default function selfDriveCarPage() {
                            ✦ #1 RATED SELF DRIVE CAR RENTAL IN HYDERABAD
                         </span>
                         <h1 style={{ color: '#ffb907', fontSize: '32px', fontWeight: 800, marginBottom: '20px' }}>
-                           Self Drive Cars in Hyderabad — Unlimited Freedom &amp; Zero Deposit
+                           Self Drive Cars in Hyderabad — Unlimited Freedom &amp; Security Deposti
                         </h1>
                         <p style={{ textAlign: 'justify', fontSize: '15px', lineHeight: '1.8', color: '#4b5563', marginBottom: '16px' }}>
                            Looking for the most reliable <strong>self drive cars in Hyderabad</strong>? DRIVEIT Cars delivers total driving pleasure without the intrusion of drivers or public transit delays. Choose from our comprehensive, sanitized fleet of fuel-efficient hatchbacks (Swift, Baleno), executive sedans (Dzire, Verna), powerful 5 &amp; 7-seater <strong>self drive SUVs</strong> (Creta, Thar 4x4, Innova Crysta, Fortuner), and <strong>luxury self drive cars</strong> (BMW, Audi, Range Rover Evoque).

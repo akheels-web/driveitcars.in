@@ -482,7 +482,7 @@ Please share vehicle availability, photos, and best rates.`;
                     </div>
                     <div className="trust-mini-item">
                       <i className="fa fa-money" />
-                      <span>Zero Deposit on Select Cars</span>
+                      <span>Security Deposti on Select Cars</span>
                     </div>
                     <div className="trust-mini-item">
                       <i className="fa fa-check" />

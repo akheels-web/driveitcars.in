@@ -143,7 +143,7 @@ export const DEFAULT_FLEET = [
     weeklySavings: 'Save 25%',
     pricePerMonth: 31999,
     monthlySavings: 'Save 50%',
-    features: ['5-Star Global NCAP Safety', 'Tough SUV Stance', 'Traction Pro Mode', 'Zero Deposit'],
+    features: ['5-Star Global NCAP Safety', 'Tough SUV Stance', 'Traction Pro Mode', 'Security Deposti'],
     displayPages: ['home', 'self-drive-car', 'suv5', 'minisuv'],
   },
 

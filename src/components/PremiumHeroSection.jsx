@@ -13,7 +13,7 @@ const SHOWCASE_VEHICLES = [
     seats: '4-5 Seats',
     transmission: 'Auto & Manual 4WD',
     fuel: 'Diesel / Petrol',
-    feature: 'Convertible Hard Top • Zero Deposit',
+    feature: 'Convertible Hard Top • Security Deposti',
     categoryKey: 'suv5',
   },
   {
@@ -49,7 +49,7 @@ const SHOWCASE_VEHICLES = [
     seats: '5 Seats',
     transmission: 'AMT Auto & Manual',
     fuel: 'Petrol / High Mileage',
-    feature: 'Clutch-Free Commute • Zero Deposit',
+    feature: 'Clutch-Free Commute • Security Deposti',
     categoryKey: 'hatchback',
   },
 ];
@@ -520,7 +520,7 @@ Please share vehicle availability, best tariffs, and booking confirmation.`;
                   <div className="floating-badge badge-top-left">
                     <span className="badge-icon">🛡️</span>
                     <span className="badge-text">
-                      <strong>Zero Deposit</strong> on select cars
+                      <strong>Security Deposti</strong> on select cars
                     </span>
                   </div>
 
@@ -589,9 +589,9 @@ Please share vehicle availability, best tariffs, and booking confirmation.`;
                   <i className="fa fa-shield" />
                 </div>
                 <div className="trust-strip-info">
-                  <h4>Zero Deposit</h4>
+                  <h4>Security Deposti</h4>
                   <p className="trust-desc-desktop">Flexible deposit options on verified fleet</p>
-                  <p className="trust-desc-mobile">Zero deposit on verified fleet</p>
+                  <p className="trust-desc-mobile">Security Deposti on verified fleet</p>
                 </div>
               </div>
             </div>

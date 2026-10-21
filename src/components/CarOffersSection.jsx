@@ -545,7 +545,7 @@ export default function CarOffersSection({ initialCars = [] }) {
           transmission: car.transmission || 'Manual & Automatic',
           fuel: car.fuelType || car.fuel || 'Petrol',
           image: car.imageUrl || car.image || '/assets/img/cars/Swift.png',
-          features: car.features && car.features.length > 0 ? car.features : ['Zero Deposit', 'Sanitized'],
+          features: car.features && car.features.length > 0 ? car.features : ['Security Deposti', 'Sanitized'],
         };
       })
     : [];
@@ -580,7 +580,7 @@ export default function CarOffersSection({ initialCars = [] }) {
       return {
         price: 'Tariff on Request',
         unit: 'Weekly Package',
-        effectiveText: 'Special 7-Day Package • Zero Deposit',
+        effectiveText: 'Special 7-Day Package • Security Deposti',
         savingsTag: 'Weekly Deal',
         savingsColor: '#2563eb',
       };
@@ -597,7 +597,7 @@ export default function CarOffersSection({ initialCars = [] }) {
     return {
       price: 'Tariff on Request',
       unit: 'Daily Rental',
-      effectiveText: 'Unlimited Freedom • Zero Deposit Options',
+      effectiveText: 'Unlimited Freedom • Security Deposti Options',
       savingsTag: null,
       savingsColor: null,
     };
@@ -636,7 +636,7 @@ export default function CarOffersSection({ initialCars = [] }) {
           </h2>
           <p style={{ color: '#64748b', fontSize: '15px', margin: 0, lineHeight: 1.6 }}>
             Explore Hyderabad's most popular, top-demanding self drive cars with <strong>Manual &amp; Automatic</strong> transmissions.
-            Choose between <strong>Daily Deals</strong>, <strong>Weekly Rentals</strong>, or <strong>Monthly Subscriptions</strong> with zero deposit and doorstep delivery. Enquire now for custom rates and instant delivery.
+            Choose between <strong>Daily Deals</strong>, <strong>Weekly Rentals</strong>, or <strong>Monthly Subscriptions</strong> with Security Deposti and doorstep delivery. Enquire now for custom rates and instant delivery.
           </p>
         </div>
 

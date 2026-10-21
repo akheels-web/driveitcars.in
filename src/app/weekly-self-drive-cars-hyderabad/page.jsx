@@ -9,7 +9,7 @@ import SeoSchema, {
 export const metadata = {
   title: 'Weekly Self Drive Cars Hyderabad | 7-Day Car Rental Deals | DRIVEIT',
   description:
-    'Book weekly self drive cars in Hyderabad with DRIVEIT. Special 7-day rentals for Swift, Baleno, Creta, Thar, Innova Crysta & Fortuner. Manual & Automatic, zero deposit, free doorstep delivery. Enquire for best rates.',
+    'Book weekly self drive cars in Hyderabad with DRIVEIT. Special 7-day rentals for Swift, Baleno, Creta, Thar, Innova Crysta & Fortuner. Manual & Automatic, Security Deposti, free doorstep delivery. Enquire for best rates.',
   alternates: {
     canonical: 'https://www.driveitcars.in/weekly-self-drive-cars-hyderabad',
   },
@@ -34,7 +34,7 @@ export const metadata = {
     card: 'summary_large_image',
     title: 'Weekly Self Drive Cars Hyderabad | DRIVEIT Cars',
     description:
-      'Book 7-day weekly self drive car rentals in Hyderabad. Save up to 25% with zero deposit and doorstep delivery.',
+      'Book 7-day weekly self drive car rentals in Hyderabad. Save up to 25% with Security Deposti and doorstep delivery.',
   },
 };
 
@@ -172,7 +172,7 @@ export default function WeeklySelfDriveCarsPage() {
   const rentalSchema = buildCarRentalSchema({
     name: 'DRIVEIT Weekly Self Drive Cars Hyderabad',
     description:
-      'Book 7-day weekly self drive car rentals in Hyderabad with DRIVEIT. Special weekly packages with zero deposit options, doorstep delivery across HITEC City, Gachibowli & Shamshabad Airport.',
+      'Book 7-day weekly self drive car rentals in Hyderabad with DRIVEIT. Special weekly packages with Security Deposti options, doorstep delivery across HITEC City, Gachibowli & Shamshabad Airport.',
     url: 'https://www.driveitcars.in/weekly-self-drive-cars-hyderabad',
     areaServed: [
       'Hyderabad',
@@ -221,7 +221,7 @@ export default function WeeklySelfDriveCarsPage() {
                     marginBottom: 8,
                   }}
                 >
-                  ✦ 7-DAY PACKAGES • SAVE 25% • ZERO DEPOSIT
+                  ✦ 7-DAY PACKAGES • SAVE 25% • Security Deposti
                 </span>
                 <h3>Weekly Self Drive Cars Hyderabad</h3>
                 <ul>
