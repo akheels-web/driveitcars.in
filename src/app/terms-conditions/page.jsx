@@ -1,8 +1,8 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Terms and Conditions | DriveIt Self Drive Cars Hyderabad',
-  description: 'Review the official terms and conditions, KYC criteria, security deposit guidelines, speed limits, and rental policies for DriveIt Cars Hyderabad.',
+  title: 'Terms and Conditions | DriveItCars Self Drive Cars Hyderabad',
+  description: 'Review the official terms and conditions, KYC criteria, security deposit guidelines, speed limits, and rental policies for DriveItCars Hyderabad.',
 };
 
 export default function TermsConditionsPage() {

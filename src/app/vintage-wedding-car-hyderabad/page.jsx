@@ -7,18 +7,18 @@ import SeoSchema, {
 } from '@/components/SeoSchema';
 
 export const metadata = {
-  title: 'Vintage Wedding Car Hyderabad | Classic & Open-Top Car Hire | DRIVEIT',
+  title: 'Vintage Wedding Car Hyderabad | Classic & Open-Top Car Hire | DriveItCars',
   description:
-    'Rent vintage wedding cars in Hyderabad with DRIVEIT. Classic open-top vintage tourers & retro convertibles for majestic groom baraats, romantic bridal entries & pre-wedding shoots.',
+    'Rent vintage wedding cars in Hyderabad with DriveItCars. Classic open-top vintage tourers & retro convertibles for majestic groom baraats, romantic bridal entries & pre-wedding shoots.',
   alternates: {
     canonical: 'https://www.driveitcars.in/vintage-wedding-car-hyderabad',
   },
   openGraph: {
-    title: 'Vintage Wedding Car Hyderabad | Classic Open-Top Hire | DRIVEIT',
+    title: 'Vintage Wedding Car Hyderabad | Classic Open-Top Hire | DriveItCars',
     description:
       'Turn your Hyderabadi wedding into a heritage fairytale. Rent classic open-top vintage wedding cars with uniform chauffeurs, flower decorations, and cinematic photoshoot ready.',
     url: 'https://www.driveitcars.in/vintage-wedding-car-hyderabad',
-    siteName: 'DRIVEIT Cars Hyderabad',
+    siteName: 'DriveItCars Hyderabad',
     locale: 'en_IN',
     type: 'website',
     images: [
@@ -32,7 +32,7 @@ export const metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Vintage Wedding Car Hyderabad | DRIVEIT Cars',
+    title: 'Vintage Wedding Car Hyderabad | DriveItCars',
     description:
       'Book vintage and classic open-top wedding cars in Hyderabad for unforgettable groom entries and bridal arrivals.',
   },

@@ -2,8 +2,9 @@ import './globals.css'
 import SiteLayoutWrapper from '@/components/SiteLayoutWrapper'
 
 export const metadata = {
-  title: 'Book Self Drive Cars & Luxury Car Rentals in Hyderabad | DriveIt',
-  description: 'Planning your next drive? Explore self drive cars, monthly rentals and luxury cars in Hyderabad with DriveIt.',
+  metadataBase: new URL('https://www.driveitcars.in'),
+  title: 'Self Drive Car Rentals in Hyderabad | DriveItCars',
+  description: 'Explore self drive cars, daily, weekly and monthly rentals in Hyderabad with DriveItCars. Enquire about hatchbacks, sedans, SUVs and luxury cars.',
 }
 
 export const viewport = {

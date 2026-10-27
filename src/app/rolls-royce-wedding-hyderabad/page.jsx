@@ -7,18 +7,18 @@ import SeoSchema, {
 } from '@/components/SeoSchema';
 
 export const metadata = {
-  title: 'Rolls Royce Wedding Hyderabad | Phantom & Ghost Wedding Car Hire | DRIVEIT',
+  title: 'Rolls Royce Wedding Hyderabad | Phantom & Ghost Wedding Car Hire | DriveItCars',
   description:
-    'Rent Rolls Royce for wedding in Hyderabad with DRIVEIT. Majestic Rolls Royce Phantom, Ghost & Cullinan for royal groom baraat entries, bride send-offs & VIP reception arrivals.',
+    'Rent Rolls Royce for wedding in Hyderabad with DriveItCars. Majestic Rolls Royce Phantom, Ghost & Cullinan for royal groom baraat entries, bride send-offs & VIP reception arrivals.',
   alternates: {
     canonical: 'https://www.driveitcars.in/rolls-royce-wedding-hyderabad',
   },
   openGraph: {
-    title: 'Rolls Royce Wedding Hyderabad | Royal Wedding Car Hire | DRIVEIT',
+    title: 'Rolls Royce Wedding Hyderabad | Royal Wedding Car Hire | DriveItCars',
     description:
       'Experience royal Nizami grandeur with a Rolls Royce wedding car in Hyderabad. Phantom & Ghost with starlight headliner, suicide coach doors and white-gloved chauffeur.',
     url: 'https://www.driveitcars.in/rolls-royce-wedding-hyderabad',
-    siteName: 'DRIVEIT Cars Hyderabad',
+    siteName: 'DriveItCars Hyderabad',
     locale: 'en_IN',
     type: 'website',
     images: [
@@ -32,7 +32,7 @@ export const metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Rolls Royce Wedding Hyderabad | DRIVEIT Cars',
+    title: 'Rolls Royce Wedding Hyderabad | DriveItCars',
     description:
       'Book Rolls Royce wedding cars in Hyderabad. The ultimate pinnacle of royal wedding luxury for groom baraat and bride vidai.',
   },

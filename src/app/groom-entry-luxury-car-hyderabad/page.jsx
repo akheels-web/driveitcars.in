@@ -7,18 +7,18 @@ import SeoSchema, {
 } from '@/components/SeoSchema';
 
 export const metadata = {
-  title: 'Groom Entry Luxury Car Hyderabad | Baraat Luxury Car Rental | DRIVEIT',
+  title: 'Groom Entry Luxury Car Hyderabad | Baraat Luxury Car Rental | DriveItCars',
   description:
-    'Book the ultimate groom entry luxury car in Hyderabad with DRIVEIT. Rolls Royce, Mercedes-AMG G-Wagon, Range Rover & Fortuner Legender for high-energy, commanding baraat arrivals.',
+    'Book the ultimate groom entry luxury car in Hyderabad with DriveItCars. Rolls Royce, Mercedes-AMG G-Wagon, Range Rover & Fortuner Legender for high-energy, commanding baraat arrivals.',
   alternates: {
     canonical: 'https://www.driveitcars.in/groom-entry-luxury-car-hyderabad',
   },
   openGraph: {
-    title: 'Groom Entry Luxury Car Hyderabad | Baraat Car Hire | DRIVEIT',
+    title: 'Groom Entry Luxury Car Hyderabad | Baraat Car Hire | DriveItCars',
     description:
       'Lead your wedding baraat like a king. Rent Rolls Royce Phantom, Mercedes G-Wagon, Range Rover Sport & open-top convertibles for groom entry in Hyderabad with suited chauffeurs.',
     url: 'https://www.driveitcars.in/groom-entry-luxury-car-hyderabad',
-    siteName: 'DRIVEIT Cars Hyderabad',
+    siteName: 'DriveItCars Hyderabad',
     locale: 'en_IN',
     type: 'website',
     images: [
@@ -32,7 +32,7 @@ export const metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Groom Entry Luxury Car Hyderabad | DRIVEIT Cars',
+    title: 'Groom Entry Luxury Car Hyderabad | DriveItCars',
     description:
       'Book luxury cars for groom entry and baraat processions in Hyderabad. Rolls Royce, G-Wagon, Range Rover with suited chauffeurs.',
   },

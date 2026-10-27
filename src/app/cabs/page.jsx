@@ -8,18 +8,18 @@ import SeoSchema, {
 } from '@/components/SeoSchema';
 
 export const metadata = {
-  title: 'Airport Pickup & Drop Hyderabad | Chauffeur Cab Services | DRIVEIT',
+  title: 'Airport Pickup & Drop Hyderabad | Chauffeur Cab Services | DriveItCars',
   description:
     'Book 24/7 airport pickup & drop in Hyderabad. Chauffeur driven sedans, Innova Crysta & luxury cabs at RGIA Shamshabad. Zero surge pricing, flight tracking.',
   alternates: {
     canonical: 'https://www.driveitcars.in/cabs',
   },
   openGraph: {
-    title: 'Airport Pickup & Drop Hyderabad | Chauffeur Cabs | DRIVEIT',
+    title: 'Airport Pickup & Drop Hyderabad | Chauffeur Cabs | DriveItCars',
     description:
       'Reliable airport transfers in Hyderabad. Verified chauffeurs, clean AC cars, zero surge pricing at Rajiv Gandhi International Airport.',
     url: 'https://www.driveitcars.in/cabs',
-    siteName: 'DRIVEIT Cars Hyderabad',
+    siteName: 'DriveItCars Hyderabad',
   },
 };
 

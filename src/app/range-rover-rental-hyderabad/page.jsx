@@ -7,18 +7,18 @@ import SeoSchema, {
 } from '@/components/SeoSchema';
 
 export const metadata = {
-  title: 'Range Rover Rental Hyderabad | Evoque & Sport Luxury Car Hire | DRIVEIT',
+  title: 'Range Rover Rental Hyderabad | Evoque & Sport Luxury Car Hire | DriveItCars',
   description:
-    'Rent Range Rover in Hyderabad with DRIVEIT. Command the road with Range Rover Evoque & Range Rover Sport for self drive, grand weddings, VIP convoys & airport arrivals.',
+    'Rent Range Rover in Hyderabad with DriveItCars. Command the road with Range Rover Evoque & Range Rover Sport for self drive, grand weddings, VIP convoys & airport arrivals.',
   alternates: {
     canonical: 'https://www.driveitcars.in/range-rover-rental-hyderabad',
   },
   openGraph: {
-    title: 'Range Rover Rental Hyderabad | Evoque & Sport Car Hire | DRIVEIT',
+    title: 'Range Rover Rental Hyderabad | Evoque & Sport Car Hire | DriveItCars',
     description:
       'Premier Range Rover rental in Hyderabad. Drive Range Rover Evoque & Sport with British luxury, panoramic sunroof, and white-glove delivery across Jubilee Hills, Banjara Hills & HITEC City.',
     url: 'https://www.driveitcars.in/range-rover-rental-hyderabad',
-    siteName: 'DRIVEIT Cars Hyderabad',
+    siteName: 'DriveItCars Hyderabad',
     locale: 'en_IN',
     type: 'website',
     images: [
@@ -32,9 +32,9 @@ export const metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Range Rover Rental Hyderabad | DRIVEIT Cars',
+    title: 'Range Rover Rental Hyderabad | DriveItCars',
     description:
-      'Rent Range Rover luxury SUVs in Hyderabad. British royal styling, terrain response, self-drive and VIP chauffeur options with DRIVEIT.',
+      'Rent Range Rover luxury SUVs in Hyderabad. British royal styling, terrain response, self-drive and VIP chauffeur options with DriveItCars.',
   },
 };
 

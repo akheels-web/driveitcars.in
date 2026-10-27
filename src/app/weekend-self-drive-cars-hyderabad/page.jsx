@@ -7,18 +7,18 @@ import SeoSchema, {
 } from '@/components/SeoSchema';
 
 export const metadata = {
-  title: 'Weekend Self Drive Cars Hyderabad | Outstation Getaway Offers | DRIVEIT',
+  title: 'Weekend Self Drive Cars Hyderabad | Outstation Getaway Offers | DriveItCars',
   description:
-    'Special weekend self drive cars in Hyderabad starting Friday evening to Monday. Limited KMs packages for Srisailam, Nagarjuna Sagar, Ananthagiri & Hampi with DRIVEIT.',
+    'Special weekend self drive cars in Hyderabad starting Friday evening to Monday. Limited KMs packages for Srisailam, Nagarjuna Sagar, Ananthagiri & Hampi with DriveItCars.',
   alternates: {
     canonical: 'https://www.driveitcars.in/weekend-self-drive-cars-hyderabad',
   },
   openGraph: {
-    title: 'Weekend Self Drive Cars Hyderabad | Outstation Road Trips | DRIVEIT',
+    title: 'Weekend Self Drive Cars Hyderabad | Outstation Road Trips | DriveItCars',
     description:
       'Rent weekend self drive cars in Hyderabad. Hatchbacks, sedans & SUVs for Friday to Monday getaways with doorstep drop & 24/7 on-road support.',
     url: 'https://www.driveitcars.in/weekend-self-drive-cars-hyderabad',
-    siteName: 'DRIVEIT Cars Hyderabad',
+    siteName: 'DriveItCars Hyderabad',
     locale: 'en_IN',
     type: 'website',
     images: [

@@ -1,0 +1,191 @@
+.page {
+  --journal-gold: #ffb907;
+  --journal-ink: #191c20;
+  --journal-muted: #60656d;
+  --journal-soft: #f5f6f7;
+  --journal-line: #e3e5e8;
+  --journal-paper: #ffffff;
+  --journal-width: 1184px;
+  --journal-display: 'Poppins', sans-serif;
+  --journal-body: 'Rubik', sans-serif;
+  background: var(--journal-paper);
+  color: var(--journal-ink);
+  font-family: var(--journal-body);
+  padding-bottom: 80px;
+  text-align: left;
+}
+
+.page *, .page *::before, .page *::after { box-sizing: border-box; }
+.page h1, .page h2, .page h3 { font-family: var(--journal-display); text-transform: none; }
+.page p { margin: 0; }
+.page a { text-decoration: none; }
+.page a:focus-visible, .page button:focus-visible { outline: 2px solid var(--journal-ink); outline-offset: 5px; }
+.container { width: calc(100% - 80px); max-width: var(--journal-width); margin: 0 auto; }
+.skipLink { position: fixed; left: 20px; top: 16px; z-index: 10000; padding: 12px 20px; background: var(--journal-ink); color: var(--journal-paper); transform: translateY(-160%); }
+.skipLink:focus { transform: translateY(0); color: var(--journal-paper); }
+.breadcrumb { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; padding: 28px 0; color: var(--journal-muted); font-size: 12px; line-height: 1.5; }
+.breadcrumb a { color: var(--journal-muted); }
+.breadcrumb a:hover { color: var(--journal-ink); text-decoration: underline; text-underline-offset: 4px; }
+.breadcrumb [aria-current] { color: var(--journal-ink); }
+.eyebrow { display: block; color: var(--journal-muted); font-size: 11px; line-height: 1.6; letter-spacing: 1.8px; font-weight: 500; }
+.masthead { display: grid; grid-template-columns: 1.5fr 1fr; gap: 64px; align-items: end; padding: 24px 0 48px; }
+.masthead h1 { color: var(--journal-ink); max-width: 760px; font-size: clamp(36px, 4.4vw, 58px); font-weight: 700; line-height: 1.16; letter-spacing: -2px; margin: 16px 0 0; }
+.headlineAccent { display: block; }
+.mastheadIntro { color: var(--journal-muted); font-size: 16px; line-height: 1.85; padding-bottom: 4px; max-width: 360px; justify-self: end; }
+.featured { display: grid; grid-template-columns: 1.15fr 1fr; background: var(--journal-ink); color: var(--journal-paper); border-radius: 20px; overflow: hidden; }
+.featuredImage { display: flex; min-height: 400px; background: var(--journal-soft); overflow: hidden; }
+.featuredImage img { display: block; width: 100%; height: 100%; min-height: 400px; object-fit: cover; transition: transform 350ms ease; }
+.featuredImage:hover img { transform: scale(1.025); }
+.featuredCopy { padding: 40px; align-self: center; }
+.featuredCopy .eyebrow { color: var(--journal-gold); margin-bottom: 28px; }
+.featuredCopy h2 { color: var(--journal-paper); font-size: clamp(24px, 2.5vw, 32px); line-height: 1.35; font-weight: 600; letter-spacing: -.7px; margin: 16px 0; }
+.featuredCopy h2 a { color: inherit; }
+.featuredCopy h2 a:hover { text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 5px; }
+.featuredCopy .meta { color: #c5c9ce; }
+.featuredCopy .featuredExcerpt { color: #d3d6db; font-size: 15px; line-height: 1.85; }
+.featuredCopy .textLink { color: var(--journal-gold); margin-top: 28px; }
+.featured a:focus-visible { outline-color: var(--journal-gold); outline-offset: -6px; }
+.featuredCopy a:focus-visible { outline-offset: 5px; }
+.meta { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; color: var(--journal-muted); font-size: 12px; font-weight: 400; line-height: 1.6; }
+.metaDot { width: 3px; height: 3px; border-radius: 50%; background: currentColor; flex: 0 0 3px; }
+.textLink { display: inline-flex; gap: 12px; align-items: center; color: var(--journal-ink); font-size: 14px; line-height: 1.6; font-weight: 500; min-height: 44px; }
+.textLink:hover { color: var(--journal-ink); text-decoration: underline; text-underline-offset: 5px; }
+.guides { padding-top: 72px; scroll-margin-top: 24px; }
+.sectionHeading { display: flex; gap: 24px; align-items: center; justify-content: space-between; padding-bottom: 24px; border-bottom: 1px solid var(--journal-line); margin-bottom: 32px; }
+.sectionHeading h2 { font-size: 28px; line-height: 1.35; font-weight: 600; color: var(--journal-ink); letter-spacing: -.7px; margin: 0; }
+.sectionHeading > span { color: var(--journal-muted); font-size: 13px; }
+.grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); column-gap: 32px; row-gap: 48px; }
+.card { min-width: 0; }
+.cardLink { display: block; color: var(--journal-ink); height: 100%; }
+.cardLink:hover { color: var(--journal-ink); }
+.cardImage { position: relative; aspect-ratio: 12 / 7; border-radius: 16px; background: var(--journal-soft); overflow: hidden; }
+.cardImage img { display: block; width: 100%; height: 100%; object-fit: cover; transition: transform 350ms ease; }
+.imageArrow { position: absolute; bottom: 16px; right: 16px; display: grid; place-items: center; width: 36px; height: 36px; border-radius: 50%; background: var(--journal-paper); color: var(--journal-ink); transition: background 180ms ease; }
+.cardLink:hover .cardImage img { transform: scale(1.035); }
+.cardLink:hover .imageArrow { background: var(--journal-gold); }
+.cardBody { padding-top: 20px; }
+.cardBody h3 { color: var(--journal-ink); font-size: 21px; line-height: 1.45; font-weight: 600; letter-spacing: -.4px; margin: 12px 0; }
+.cardLink:hover h3 { text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 4px; }
+.cardBody p { color: var(--journal-muted); font-size: 14px; line-height: 1.8; }
+.cardAction { display: inline-flex; align-items: center; gap: 12px; margin-top: 16px; min-height: 32px; font-size: 13px; line-height: 1.6; font-weight: 500; }
+.imageFallback { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 8px; width: 100%; height: 100%; min-height: 180px; color: var(--journal-ink); font-family: var(--journal-display); font-size: 24px; font-weight: 600; }
+.imageFallback span { color: var(--journal-muted); font-family: var(--journal-body); font-size: 13px; font-weight: 400; }
+.callout { display: flex; align-items: center; justify-content: space-between; gap: 40px; margin-top: 80px; padding: 40px; border-radius: 16px; background: var(--journal-soft); border-left: 4px solid var(--journal-gold); }
+.callout h2, .sideCallout h2 { color: var(--journal-ink); font-size: 28px; font-weight: 600; letter-spacing: -.7px; line-height: 1.35; margin: 12px 0; }
+.callout p, .sideCallout p { color: var(--journal-muted); font-size: 15px; line-height: 1.85; max-width: 580px; }
+.button { display: inline-flex; align-items: center; justify-content: center; flex: 0 0 auto; gap: 16px; min-height: 48px; padding: 12px 24px; background: var(--journal-gold); color: var(--journal-ink); font-weight: 500; font-size: 14px; line-height: 1.6; border-radius: 8px; border: 0; cursor: pointer; }
+.button:hover { background: #e9a900; color: var(--journal-ink); }
+.empty { padding: 64px 32px; text-align: center; background: var(--journal-soft); border-radius: 16px; }
+.empty h2 { font-size: 28px; line-height: 1.4; color: var(--journal-ink); margin-bottom: 16px; }
+.empty p { color: var(--journal-muted); font-size: 16px; line-height: 1.8; max-width: 520px; margin: 0 auto 24px; }
+.backLink { display: inline-flex; gap: 8px; align-items: center; min-height: 44px; color: var(--journal-muted); font-size: 13px; margin-bottom: 28px; }
+.backLink svg { transform: rotate(180deg); width: 16px; }
+.backLink:hover { color: var(--journal-ink); }
+.articleHeader { max-width: 1000px; margin: 0 auto; padding: 0 0 40px; }
+.articleTitle { color: var(--journal-ink); font-size: clamp(32px, 4.3vw, 56px); line-height: 1.2; letter-spacing: -1.8px; font-weight: 700; margin: 16px 0 20px; overflow-wrap: break-word; }
+.articleDeck { color: var(--journal-muted); font-size: 19px; line-height: 1.8; max-width: 840px; }
+.articleByline { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; margin-top: 28px; }
+.authorMark { display: grid; place-items: center; width: 36px; height: 36px; color: var(--journal-ink); background: var(--journal-gold); border-radius: 50%; font-family: var(--journal-display); font-weight: 700; font-size: 16px; }
+.authorName { font-size: 13px; font-weight: 500; margin-right: 12px; color: var(--journal-ink); }
+.articleCover { margin: 0 0 56px; }
+.articleCover img { display: block; width: 100%; height: auto; aspect-ratio: 1200 / 630; object-fit: cover; border-radius: 20px; background: var(--journal-soft); }
+.caption { color: var(--journal-muted); font-size: 11px; line-height: 1.8; margin-top: 12px; padding: 0 4px; }
+.readingLayout { display: grid; grid-template-columns: 224px minmax(0, 720px); gap: 72px; justify-content: center; align-items: start; }
+.sidebar { position: sticky; top: 32px; min-width: 0; }
+.contentsTitle { font-size: 10px; letter-spacing: 1.7px; line-height: 1.6; color: var(--journal-muted); font-weight: 500; margin-bottom: 20px !important; }
+.contents ul { list-style: none; margin: 0; padding: 0 0 0 16px; border-left: 2px solid var(--journal-line); }
+.contents li { margin: 0; padding: 0; }
+.contents li + li { margin-top: 12px; }
+.contents a { display: block; color: var(--journal-muted); font-size: 13px; line-height: 1.7; padding: 4px 0; }
+.contents a:hover { color: var(--journal-ink); text-decoration: underline; text-underline-offset: 4px; }
+.sideNote { margin-top: 32px; padding-top: 24px; border-top: 1px solid var(--journal-line); }
+.sideNote p { font-size: 14px; line-height: 1.8; color: var(--journal-muted); margin-bottom: 12px; }
+.sideNote .button { width: 100%; margin-top: 12px; font-size: 13px; padding: 12px 16px; }
+.sideNote .textLink { font-size: 13px; }
+.sideCallout { margin-top: 32px; padding: 24px; background: var(--journal-soft); border-radius: 12px; }
+.sideCallout h2 { font-size: 22px; }
+.sideCallout .button { margin-top: 20px; width: 100%; }
+.prose { min-width: 0; font-size: 18px; line-height: 1.85; color: #353a40; overflow-wrap: break-word; scroll-margin-top: 24px; }
+.prose > :first-child { margin-top: 0; }
+.prose p { margin-bottom: 24px; font-size: inherit; line-height: inherit; }
+.prose h2 { color: var(--journal-ink); font-size: 28px; font-weight: 600; line-height: 1.4; letter-spacing: -.6px; margin: 44px 0 20px; scroll-margin-top: 32px; }
+.prose h3 { color: var(--journal-ink); font-size: 22px; font-weight: 600; line-height: 1.45; margin: 32px 0 16px; scroll-margin-top: 32px; }
+.prose a { color: var(--journal-ink); text-decoration: underline; text-decoration-color: #b78200; text-decoration-thickness: 1px; text-underline-offset: 4px; }
+.prose a:hover { text-decoration-thickness: 2px; }
+.prose strong { color: var(--journal-ink); font-weight: 500; }
+.prose ul, .prose ol { padding-left: 24px; margin: 0 0 24px; }
+.prose ul > li { list-style-type: disc; }
+.prose ol > li { list-style-type: decimal; }
+.prose li + li { margin-top: 8px; }
+.prose blockquote { margin: 32px 0; padding: 8px 0 8px 24px; border-left: 3px solid var(--journal-gold); color: var(--journal-ink); }
+.related { padding-top: 56px; margin-top: 64px; border-top: 1px solid var(--journal-line); }
+
+@media (max-width: 1024px) {
+  .featuredCopy { padding: 32px; }
+  .featuredImage, .featuredImage img { min-height: 380px; }
+  .masthead { gap: 32px; }
+  .grid { column-gap: 24px; }
+  .readingLayout { grid-template-columns: 200px minmax(0, 1fr); gap: 40px; }
+}
+
+@media (max-width: 800px) {
+  .masthead { grid-template-columns: 1fr; gap: 20px; padding-top: 16px; }
+  .mastheadIntro { max-width: 560px; justify-self: start; }
+  .featured { grid-template-columns: 1fr; }
+  .featuredImage { aspect-ratio: 12 / 7; min-height: 0; }
+  .featuredImage img { min-height: 0; height: 100%; }
+  .featuredCopy { padding: 32px; }
+  .featuredCopy .eyebrow { margin-bottom: 20px; }
+  .grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .readingLayout { grid-template-columns: minmax(0, 1fr); gap: 32px; }
+  .sidebar { position: static; }
+  .contents { padding: 24px; background: var(--journal-soft); border-radius: 12px; }
+  .contents ul { border-left-color: var(--journal-gold); }
+  .sideNote, .sideCallout { display: none; }
+  .prose { max-width: 720px; }
+  .callout { align-items: flex-start; flex-direction: column; gap: 24px; }
+}
+
+@media (max-width: 560px) {
+  .page { padding-bottom: 48px; }
+  .container { width: calc(100% - 40px); }
+  .breadcrumb { padding: 24px 0; font-size: 11px; gap: 10px; }
+  .masthead { padding: 8px 0 32px; }
+  .masthead h1 { font-size: 38px; line-height: 1.16; letter-spacing: -1.4px; }
+  .mastheadIntro { font-size: 15px; line-height: 1.8; }
+  .featured { border-radius: 16px; }
+  .featuredCopy { padding: 28px 24px; }
+  .featuredCopy h2 { font-size: 25px; }
+  .featuredCopy .featuredExcerpt { font-size: 14px; }
+  .guides { padding-top: 48px; }
+  .sectionHeading { gap: 12px; margin-bottom: 24px; padding-bottom: 20px; }
+  .sectionHeading h2 { font-size: 24px; }
+  .sectionHeading > span { font-size: 12px; }
+  .grid { grid-template-columns: minmax(0, 1fr); row-gap: 36px; }
+  .cardBody h3 { font-size: 22px; }
+  .cardBody p { font-size: 15px; }
+  .callout { margin-top: 48px; padding: 28px 24px; }
+  .callout h2 { font-size: 25px; }
+  .callout .button { width: 100%; }
+  .articleHeader { padding-bottom: 28px; }
+  .backLink { margin-bottom: 20px; }
+  .articleTitle { font-size: 34px; line-height: 1.22; letter-spacing: -1px; }
+  .articleDeck { font-size: 17px; line-height: 1.75; }
+  .articleByline { gap: 10px; margin-top: 24px; }
+  .articleByline .meta { gap: 8px; }
+  .articleCover { margin-bottom: 28px; }
+  .articleCover img { border-radius: 12px; }
+  .caption { font-size: 10px; }
+  .contents { padding: 20px; }
+  .prose { font-size: 18px; line-height: 1.85; }
+  .prose h2 { font-size: 25px; margin-top: 36px; }
+  .prose h3 { font-size: 21px; }
+  .related { margin-top: 40px; padding-top: 40px; }
+  .related .sectionHeading { align-items: baseline; }
+  .related .textLink { font-size: 12px; gap: 6px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .page *, .page *::before, .page *::after { transition: none !important; animation: none !important; scroll-behavior: auto !important; }
+  .cardLink:hover .cardImage img, .featuredImage:hover img { transform: none; }
+}

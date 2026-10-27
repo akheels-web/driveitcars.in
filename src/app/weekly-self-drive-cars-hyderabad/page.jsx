@@ -7,18 +7,18 @@ import SeoSchema, {
 } from '@/components/SeoSchema';
 
 export const metadata = {
-  title: 'Weekly Self Drive Cars Hyderabad | 7-Day Car Rental Deals | DRIVEIT',
+  title: 'Weekly Self Drive Cars Hyderabad | 7-Day Car Rental Deals | DriveItCars',
   description:
-    'Book weekly self drive cars in Hyderabad with DRIVEIT. Special 7-day rentals for Swift, Baleno, Creta, Thar, Innova Crysta & Fortuner. Manual & Automatic, Security Deposit, free doorstep delivery. Enquire for best rates.',
+    'Book weekly self drive cars in Hyderabad with DriveItCars. Special 7-day rentals for Swift, Baleno, Creta, Thar, Innova Crysta & Fortuner. Manual & Automatic, Security Deposit, free doorstep delivery. Enquire for best rates.',
   alternates: {
     canonical: 'https://www.driveitcars.in/weekly-self-drive-cars-hyderabad',
   },
   openGraph: {
-    title: 'Weekly Self Drive Cars Hyderabad | 7-Day Car Rental Deals | DRIVEIT',
+    title: 'Weekly Self Drive Cars Hyderabad | 7-Day Car Rental Deals | DriveItCars',
     description:
       'Save 25% with 7-day weekly car rentals in Hyderabad. Manual & automatic hatchbacks, mini SUVs, 5 & 7-seater SUVs, sedans. Doorstep delivery across HITEC City, Gachibowli, & Airport.',
     url: 'https://www.driveitcars.in/weekly-self-drive-cars-hyderabad',
-    siteName: 'DRIVEIT Cars Hyderabad',
+    siteName: 'DriveItCars Hyderabad',
     locale: 'en_IN',
     type: 'website',
     images: [
@@ -32,7 +32,7 @@ export const metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Weekly Self Drive Cars Hyderabad | DRIVEIT Cars',
+    title: 'Weekly Self Drive Cars Hyderabad | DriveItCars',
     description:
       'Book 7-day weekly self drive car rentals in Hyderabad. Save up to 25% with Security Deposit and doorstep delivery.',
   },

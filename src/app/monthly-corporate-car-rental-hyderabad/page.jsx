@@ -7,18 +7,18 @@ import SeoSchema, {
 } from '@/components/SeoSchema';
 
 export const metadata = {
-  title: 'Monthly Corporate Car Rental Hyderabad | Long-Term Fleet Lease | DRIVEIT',
+  title: 'Monthly Corporate Car Rental Hyderabad | Long-Term Fleet Lease | DriveItCars',
   description:
     'Save up to 45% with monthly corporate car rental in Hyderabad. Long-term fleet subscriptions for IT enterprises, CXOs & expat directors with zero maintenance & 100% GST input tax credit.',
   alternates: {
     canonical: 'https://www.driveitcars.in/monthly-corporate-car-rental-hyderabad',
   },
   openGraph: {
-    title: 'Monthly Corporate Car Rental Hyderabad | Fleet Subscription | DRIVEIT',
+    title: 'Monthly Corporate Car Rental Hyderabad | Fleet Subscription | DriveItCars',
     description:
       'Long-term corporate car rental & executive leases in Hyderabad. Dedicated cars & chauffeurs for enterprises in HITEC City, Gachibowli & Financial District with GST billing.',
     url: 'https://www.driveitcars.in/monthly-corporate-car-rental-hyderabad',
-    siteName: 'DRIVEIT Cars Hyderabad',
+    siteName: 'DriveItCars Hyderabad',
     locale: 'en_IN',
     type: 'website',
     images: [
@@ -32,7 +32,7 @@ export const metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Monthly Corporate Car Rental Hyderabad | DRIVEIT Cars',
+    title: 'Monthly Corporate Car Rental Hyderabad | DriveItCars',
     description:
       'Affordable monthly corporate car subscription in Hyderabad. Sedans, Innova Crysta & luxury cars with replacement guarantee & corporate billing.',
   },

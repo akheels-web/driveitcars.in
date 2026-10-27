@@ -7,18 +7,18 @@ import SeoSchema, {
 } from '@/components/SeoSchema';
 
 export const metadata = {
-  title: 'Wedding Car Rental Hyderabad | Luxury Wedding Cars & Chauffeurs | DRIVEIT',
+  title: 'Wedding Car Rental Hyderabad | Luxury Wedding Cars & Chauffeurs | DriveItCars',
   description:
     'Premier wedding car rental in Hyderabad. Book luxury wedding cars: Rolls Royce, Mercedes-Benz, Range Rover, Audi, BMW & vintage open-top cars for groom baraats, bridal entries & vidai.',
   alternates: {
     canonical: 'https://www.driveitcars.in/wedding-car-rental-hyderabad',
   },
   openGraph: {
-    title: 'Wedding Car Rental Hyderabad | Luxury Wedding Cars | DRIVEIT',
+    title: 'Wedding Car Rental Hyderabad | Luxury Wedding Cars | DriveItCars',
     description:
       'Make your grand wedding entrance unforgettable. Rent Rolls Royce, Mercedes S-Class, Range Rover, BMW & vintage wedding cars in Hyderabad with floral styling and suited chauffeurs.',
     url: 'https://www.driveitcars.in/wedding-car-rental-hyderabad',
-    siteName: 'DRIVEIT Cars Hyderabad',
+    siteName: 'DriveItCars Hyderabad',
     locale: 'en_IN',
     type: 'website',
     images: [
@@ -32,7 +32,7 @@ export const metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Wedding Car Rental Hyderabad | DRIVEIT Cars',
+    title: 'Wedding Car Rental Hyderabad | DriveItCars',
     description:
       'Luxury wedding car hire in Hyderabad. Rolls Royce, Mercedes, Range Rover & vintage convertibles for groom baraat and bridal entry.',
   },

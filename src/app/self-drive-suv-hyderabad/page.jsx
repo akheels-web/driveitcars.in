@@ -9,16 +9,16 @@ import SeoSchema, {
 export const metadata = {
   title: 'Self Drive SUV Hyderabad | 5 & 7 Seater SUVs (Thar, Creta, Fortuner, Innova)',
   description:
-    'Rent self drive SUV in Hyderabad with DRIVEIT. Book Mahindra Thar 4x4, Creta, Brezza, Innova Crysta, XUV700 & Fortuner Legender. Limited KMs, Security Deposit & 24/7 delivery.',
+    'Rent self drive SUV in Hyderabad with DriveItCars. Book Mahindra Thar 4x4, Creta, Brezza, Innova Crysta, XUV700 & Fortuner Legender. Limited KMs, Security Deposit & 24/7 delivery.',
   alternates: {
     canonical: 'https://www.driveitcars.in/self-drive-suv-hyderabad',
   },
   openGraph: {
-    title: 'Self Drive SUV Hyderabad | 5 & 7 Seater SUVs | DRIVEIT',
+    title: 'Self Drive SUV Hyderabad | 5 & 7 Seater SUVs | DriveItCars',
     description:
       'Book self drive SUVs in Hyderabad. Drive Thar 4x4, Creta, Innova Crysta, XUV700 & Fortuner. Best rates, sanitized cars, doorstep delivery.',
     url: 'https://www.driveitcars.in/self-drive-suv-hyderabad',
-    siteName: 'DRIVEIT Cars Hyderabad',
+    siteName: 'DriveItCars Hyderabad',
     locale: 'en_IN',
     type: 'website',
     images: [
@@ -33,7 +33,7 @@ export const metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Self Drive SUV Hyderabad | 5 & 7 Seater SUVs',
-    description: 'Rent self drive SUVs in Hyderabad. Thar 4x4, Creta, Fortuner, Innova Crysta with DRIVEIT.',
+    description: 'Rent self drive SUVs in Hyderabad. Thar 4x4, Creta, Fortuner, Innova Crysta with DriveItCars.',
   },
 };
 

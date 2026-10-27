@@ -1,5 +1,8 @@
 import { client } from '@/sanity/lib/client';
 
+// Blog publishing happens in Sanity without a code deployment.
+export const dynamic = 'force-dynamic';
+
 export default async function sitemap() {
   const baseUrl = 'https://www.driveitcars.in';
   const now = new Date();
@@ -97,10 +100,10 @@ export default async function sitemap() {
   // Dynamic Sanity Blog Posts
   let dynamicBlogEntries = [];
   try {
-    const posts = await client.fetch(`*[_type == "post" && defined(slug.current)]{
+    const posts = await client.fetch(`*[_type == "post" && defined(slug.current) && !(_id in path("drafts.**"))]{
       "slug": slug.current,
       _updatedAt
-    }`);
+    }`, {}, { perspective: 'published' });
     if (posts && posts.length > 0) {
       dynamicBlogEntries = posts.map((post) => ({
         url: `${baseUrl}/blog/${post.slug}`,

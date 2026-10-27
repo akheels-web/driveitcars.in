@@ -7,18 +7,18 @@ import SeoSchema, {
 } from '@/components/SeoSchema';
 
 export const metadata = {
-  title: 'Executive Chauffeur Hyderabad | Luxury Chauffeur Service | DRIVEIT',
+  title: 'Executive Chauffeur Hyderabad | Luxury Chauffeur Service | DriveItCars',
   description:
-    'Book verified executive chauffeur service in Hyderabad with DRIVEIT. Suited, background-verified executive chauffeurs with Mercedes, BMW, Audi, Innova Crysta & Fortuner. 24/7 corporate & airport travel.',
+    'Book verified executive chauffeur service in Hyderabad with DriveItCars. Suited, background-verified executive chauffeurs with Mercedes, BMW, Audi, Innova Crysta & Fortuner. 24/7 corporate & airport travel.',
   alternates: {
     canonical: 'https://www.driveitcars.in/luxury-chauffeur-hyderabad',
   },
   openGraph: {
-    title: 'Executive Chauffeur Hyderabad | Luxury VIP Chauffeur Service | DRIVEIT',
+    title: 'Executive Chauffeur Hyderabad | Luxury VIP Chauffeur Service | DriveItCars',
     description:
       'Hyderabad’s elite executive chauffeur service. Suited chauffeurs, punctual meet-and-greet, English-fluent drivers for corporate executives, dignitaries, and RGIA airport transfers.',
     url: 'https://www.driveitcars.in/luxury-chauffeur-hyderabad',
-    siteName: 'DRIVEIT Cars Hyderabad',
+    siteName: 'DriveItCars Hyderabad',
     locale: 'en_IN',
     type: 'website',
     images: [
@@ -26,13 +26,13 @@ export const metadata = {
         url: 'https://www.driveitcars.in/assets/img/benz2.png',
         width: 1200,
         height: 630,
-        alt: 'Executive Chauffeur Service Hyderabad - DRIVEIT',
+        alt: 'Executive Chauffeur Service Hyderabad - DriveItCars',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Executive Chauffeur Hyderabad | DRIVEIT Cars',
+    title: 'Executive Chauffeur Hyderabad | DriveItCars',
     description:
       'Book verified executive chauffeur services in Hyderabad. Suited drivers, Mercedes, BMW, Audi & Innova Crysta for corporate and VIP travel.',
   },

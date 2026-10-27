@@ -7,18 +7,18 @@ import SeoSchema, {
 } from '@/components/SeoSchema';
 
 export const metadata = {
-  title: 'BMW Rental Hyderabad | 5 Series & 7 Series Self Drive & Chauffeur | DRIVEIT',
+  title: 'BMW Rental Hyderabad | 5 Series & 7 Series Self Drive & Chauffeur | DriveItCars',
   description:
-    'Rent BMW in Hyderabad with DRIVEIT. Drive the ultimate machine — BMW 5 Series & BMW 7 Series for self drive, corporate meetings, weddings & airport transfers.',
+    'Rent BMW in Hyderabad with DriveItCars. Drive the ultimate machine — BMW 5 Series & BMW 7 Series for self drive, corporate meetings, weddings & airport transfers.',
   alternates: {
     canonical: 'https://www.driveitcars.in/bmw-rental-hyderabad',
   },
   openGraph: {
-    title: 'BMW Rental Hyderabad | 5 & 7 Series Car Hire | DRIVEIT',
+    title: 'BMW Rental Hyderabad | 5 & 7 Series Car Hire | DriveItCars',
     description:
       'Premier BMW rental in Hyderabad. Drive BMW 5 Series & 7 Series with showroom condition, Security Deposit options, and doorstep delivery across HITEC City, Gachibowli & Banjara Hills.',
     url: 'https://www.driveitcars.in/bmw-rental-hyderabad',
-    siteName: 'DRIVEIT Cars Hyderabad',
+    siteName: 'DriveItCars Hyderabad',
     locale: 'en_IN',
     type: 'website',
     images: [
@@ -32,7 +32,7 @@ export const metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'BMW Rental Hyderabad | DRIVEIT Cars',
+    title: 'BMW Rental Hyderabad | DriveItCars',
     description:
       'Rent BMW luxury cars in Hyderabad. BMW 5 Series & 7 Series for self drive, wedding events, and executive corporate travel.',
   },

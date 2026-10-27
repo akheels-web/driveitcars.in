@@ -7,18 +7,18 @@ import SeoSchema, {
 } from '@/components/SeoSchema';
 
 export const metadata = {
-  title: 'Mercedes Rental Hyderabad | S-Class, E-Class, G-Wagon & Maybach | DRIVEIT',
+  title: 'Mercedes Rental Hyderabad | S-Class, E-Class, G-Wagon & Maybach | DriveItCars',
   description:
-    'Rent Mercedes in Hyderabad with DRIVEIT. Showroom-condition Mercedes-Benz S-Class, E-Class, G-Wagon, Maybach & C-Class for self-drive, weddings, VIP arrivals & chauffeur hire.',
+    'Rent Mercedes in Hyderabad with DriveItCars. Showroom-condition Mercedes-Benz S-Class, E-Class, G-Wagon, Maybach & C-Class for self-drive, weddings, VIP arrivals & chauffeur hire.',
   alternates: {
     canonical: 'https://www.driveitcars.in/mercedes-rental-hyderabad',
   },
   openGraph: {
-    title: 'Mercedes Rental Hyderabad | S-Class, E-Class & Maybach | DRIVEIT',
+    title: 'Mercedes Rental Hyderabad | S-Class, E-Class & Maybach | DriveItCars',
     description:
       'Premier Mercedes rental in Hyderabad. Drive Mercedes-Benz S-Class, E-Class, G-Wagon & Maybach with doorstep delivery in Banjara Hills, Jubilee Hills, HITEC City & RGIA Airport.',
     url: 'https://www.driveitcars.in/mercedes-rental-hyderabad',
-    siteName: 'DRIVEIT Cars Hyderabad',
+    siteName: 'DriveItCars Hyderabad',
     locale: 'en_IN',
     type: 'website',
     images: [
@@ -32,7 +32,7 @@ export const metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Mercedes Rental Hyderabad | DRIVEIT Cars',
+    title: 'Mercedes Rental Hyderabad | DriveItCars',
     description:
       'Book Mercedes-Benz luxury car rentals in Hyderabad. Self-drive and chauffeur-driven Mercedes S-Class, E-Class, G-Wagon & Maybach.',
   },

@@ -7,18 +7,18 @@ import SeoSchema, {
 } from '@/components/SeoSchema';
 
 export const metadata = {
-  title: 'Corporate Car Rental Hyderabad | Executive Chauffeur & Monthly Retainers | DRIVEIT',
+  title: 'Corporate Car Rental Hyderabad | Executive Chauffeur & Monthly Retainers | DriveItCars',
   description:
-    'Premier corporate car rental in Hyderabad with DRIVEIT. Executive sedans, luxury cars, Innova Crysta & employee shuttles for IT enterprises in HITEC City, Gachibowli & Financial District. 100% GST invoices.',
+    'Premier corporate car rental in Hyderabad with DriveItCars. Executive sedans, luxury cars, Innova Crysta & employee shuttles for IT enterprises in HITEC City, Gachibowli & Financial District. 100% GST invoices.',
   alternates: {
     canonical: 'https://www.driveitcars.in/corporate-car-rental-hyderabad',
   },
   openGraph: {
-    title: 'Corporate Car Rental Hyderabad | Executive Business Travel | DRIVEIT',
+    title: 'Corporate Car Rental Hyderabad | Executive Business Travel | DriveItCars',
     description:
       'Hyderabad’s trusted corporate car rental partner. Dedicated account managers, suited executive chauffeurs, monthly corporate subscriptions & airport transfers with corporate billing.',
     url: 'https://www.driveitcars.in/corporate-car-rental-hyderabad',
-    siteName: 'DRIVEIT Cars Hyderabad',
+    siteName: 'DriveItCars Hyderabad',
     locale: 'en_IN',
     type: 'website',
     images: [
@@ -32,7 +32,7 @@ export const metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Corporate Car Rental Hyderabad | DRIVEIT Cars',
+    title: 'Corporate Car Rental Hyderabad | DriveItCars',
     description:
       'Reliable B2B corporate car rental and executive chauffeur services in Hyderabad. GST billing, zero surge, 24/7 dedicated fleet support.',
   },

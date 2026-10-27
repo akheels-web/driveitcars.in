@@ -15,18 +15,18 @@ export const dynamic = 'force-dynamic';
 export const revalidate = 0;
 
 export const metadata = {
-  title: 'Self Drive Cars Hyderabad | Daily, Weekly & Monthly Car Rentals | DRIVEIT',
+  title: 'Self Drive Cars Hyderabad: Daily, Weekly & Monthly | DriveItCars',
   description:
-    '#1 Self drive cars in Hyderabad. Daily, weekly & monthly car rentals for Swift, Baleno, Creta, Thar, Thar Roxx, Innova Crysta, XUV700 & Fortuner. Manual & Automatic, Security Deposit, fast doorstep delivery. Enquire now for best rates.',
+    'Find self drive cars in Hyderabad with DriveItCars. Enquire about daily, weekly and monthly hatchback, sedan and SUV rentals, availability and complete quotes.',
   alternates: {
     canonical: 'https://www.driveitcars.in',
   },
   openGraph: {
-    title: 'Self Drive Cars in Hyderabad | Daily, Weekly & Monthly Car Rental | DRIVEIT',
+    title: 'Self Drive Cars Hyderabad: Daily, Weekly & Monthly | DriveItCars',
     description:
-      'Book self drive cars on daily, weekly, and monthly rentals in Hyderabad with DRIVEIT. Manual & automatic hatchbacks, mini SUVs, 5 & 7-seater SUVs, sedans. Security Deposit, 24/7 delivery.',
+      'Explore daily, weekly and monthly self drive car rentals in Hyderabad with DriveItCars. Confirm the vehicle, transmission and pickup arrangements for your dates.',
     url: 'https://www.driveitcars.in',
-    siteName: 'DRIVEIT Cars Hyderabad',
+    siteName: 'DriveItCars',
     locale: 'en_IN',
     type: 'website',
     images: [
@@ -34,13 +34,13 @@ export const metadata = {
         url: 'https://www.driveitcars.in/suv.jpg',
         width: 1200,
         height: 630,
-        alt: 'Daily Weekly Monthly Self Drive Cars Hyderabad DRIVEIT',
+        alt: 'SUV rental options from DriveItCars in Hyderabad',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Self Drive Cars Hyderabad | Daily, Weekly & Monthly Rentals',
+    title: 'Self Drive Cars Hyderabad | DriveItCars',
     description: 'Premier self drive car rental in Hyderabad with daily, weekly & monthly packages across HITEC City, Gachibowli & Airport.',
   },
 };

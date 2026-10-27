@@ -7,18 +7,18 @@ import SeoSchema, {
 } from '@/components/SeoSchema';
 
 export const metadata = {
-  title: 'Hyderabad Airport Car Rental | Self Drive, Cabs & Luxury Transfers | DRIVEIT',
+  title: 'Hyderabad Airport Car Rental | Self Drive, Cabs & Luxury Transfers | DriveItCars',
   description:
     '24/7 Hyderabad Airport car rental at RGIA Shamshabad. HYD airport self drive cars, airport pickup & drop, luxury cars & airport SUV rental. Zero surge, flight tracking.',
   alternates: {
     canonical: 'https://www.driveitcars.in/hyderabad-airport-car-rental',
   },
   openGraph: {
-    title: 'Hyderabad Airport Car Rental | Self Drive & Chauffeur Services | DRIVEIT',
+    title: 'Hyderabad Airport Car Rental | Self Drive & Chauffeur Services | DriveItCars',
     description:
       'Book Hyderabad Airport car rental at Rajiv Gandhi International Airport (RGIA). Self drive cars, airport pickup & drop, luxury cars & SUVs with 24/7 terminal handover.',
     url: 'https://www.driveitcars.in/hyderabad-airport-car-rental',
-    siteName: 'DRIVEIT Cars Hyderabad',
+    siteName: 'DriveItCars Hyderabad',
     locale: 'en_IN',
     type: 'website',
     images: [
@@ -26,13 +26,13 @@ export const metadata = {
         url: 'https://www.driveitcars.in/assets/img/cars/5-Thar.png',
         width: 1200,
         height: 630,
-        alt: 'Hyderabad Airport Car Rental DRIVEIT',
+        alt: 'Hyderabad Airport Car Rental DriveItCars',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Hyderabad Airport Car Rental | RGIA Shamshabad | DRIVEIT',
+    title: 'Hyderabad Airport Car Rental | RGIA Shamshabad | DriveItCars',
     description:
       '24/7 HYD airport self drive, airport pickup/drop, luxury cars and SUV rentals with zero surge pricing.',
   },

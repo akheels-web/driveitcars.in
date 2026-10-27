@@ -7,18 +7,18 @@ import SeoSchema, {
 } from '@/components/SeoSchema';
 
 export const metadata = {
-  title: 'Monthly Self Drive Cars Hyderabad | Car Subscription Deals | DRIVEIT',
+  title: 'Monthly Self Drive Cars Hyderabad | Car Subscription Deals | DriveItCars',
   description:
-    'Flexible monthly self drive cars in Hyderabad with DRIVEIT. Zero maintenance, zero down payment, free doorstep service & tax benefits. IT pros & expats favorite. Enquire for custom quotes.',
+    'Flexible monthly self drive cars in Hyderabad with DriveItCars. Zero maintenance, zero down payment, free doorstep service & tax benefits. IT pros & expats favorite. Enquire for custom quotes.',
   alternates: {
     canonical: 'https://www.driveitcars.in/monthly-self-drive-cars-hyderabad',
   },
   openGraph: {
-    title: 'Monthly Self Drive Cars Hyderabad | Car Subscription | DRIVEIT',
+    title: 'Monthly Self Drive Cars Hyderabad | Car Subscription | DriveItCars',
     description:
       'Save up to 45% with monthly self drive cars in Hyderabad. Zero maintenance, zero down payment, free routine servicing & vehicle swap. Hatchbacks, sedans, SUVs.',
     url: 'https://www.driveitcars.in/monthly-self-drive-cars-hyderabad',
-    siteName: 'DRIVEIT Cars Hyderabad',
+    siteName: 'DriveItCars Hyderabad',
     locale: 'en_IN',
     type: 'website',
     images: [
@@ -33,7 +33,7 @@ export const metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Monthly Self Drive Cars Hyderabad | Long Term Rental',
-    description: 'Save up to 45% on monthly self drive car subscriptions in Hyderabad with DRIVEIT.',
+    description: 'Save up to 45% on monthly self drive car subscriptions in Hyderabad with DriveItCars.',
   },
 };
 

@@ -9,7 +9,7 @@ export const siteSettingsType = defineType({
       name: 'title',
       title: 'Site Brand Title',
       type: 'string',
-      initialValue: 'DRIVEIT Cars Hyderabad',
+      initialValue: 'DriveItCars',
     }),
     defineField({
       name: 'description',
@@ -70,7 +70,7 @@ export const siteSettingsType = defineType({
       title: 'Footer About / Bio Description',
       type: 'text',
       rows: 3,
-      initialValue: 'DriveIt is Hyderabad’s leading car rental platform offering premium self-drive cars, luxury wedding cars, and group travel buses with transparent pricing and doorstep delivery.',
+      initialValue: 'DriveItCars offers self-drive cars, luxury wedding cars and group travel buses in Hyderabad. Contact the team for availability, rental terms and pickup arrangements.',
     }),
     defineField({
       name: 'footerTrustTags',
@@ -83,7 +83,7 @@ export const siteSettingsType = defineType({
       name: 'copyrightText',
       title: 'Footer Copyright Notice',
       type: 'string',
-      initialValue: '© 2026 DriveIt Cars. All Rights Reserved. Crafted with care for travelers in Hyderabad.',
+      initialValue: '© 2026 DriveItCars. All Rights Reserved. Crafted with care for travelers in Hyderabad.',
     }),
     defineField({
       name: 'socialLinks',

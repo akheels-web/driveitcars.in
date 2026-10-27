@@ -2,18 +2,18 @@ import Link from 'next/link';
 import FaqSection from '@/components/FaqSection';
 
 export const metadata = {
-   title: '7-Seater Self Drive SUV Hyderabad | Innova Crysta, XUV700, Fortuner, Ertiga | DRIVEIT',
+   title: '7-Seater Self Drive SUV Hyderabad | Innova Crysta, XUV700, Fortuner, Ertiga | DriveItCars',
    description:
       'Rent 7-seater self drive SUVs & cars in Hyderabad. Book Toyota Innova Crysta, Fortuner Legender, Mahindra XUV700 & Ertiga. Perfect for family & outstation trips.',
    alternates: {
       canonical: 'https://www.driveitcars.in/suv7',
    },
    openGraph: {
-      title: '7-Seater Self Drive SUV Hyderabad | Innova Crysta, Fortuner | DRIVEIT',
+      title: '7-Seater Self Drive SUV Hyderabad | Innova Crysta, Fortuner | DriveItCars',
       description:
          'Spacious 7-seater self drive SUVs in Hyderabad for family vacations & group road trips. Security Deposit options, 24/7 delivery.',
       url: 'https://www.driveitcars.in/suv7',
-      siteName: 'DRIVEIT Cars Hyderabad',
+      siteName: 'DriveItCars Hyderabad',
    },
 };
 

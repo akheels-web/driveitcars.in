@@ -7,6 +7,7 @@ import { useSiteSettings } from '../context/SiteSettingsContext';
 export default function Footer() {
   const pathname = usePathname();
   const settings = useSiteSettings();
+  const isBlog = pathname === '/blog' || pathname?.startsWith('/blog/');
 
   // Do not render website footer or floating buttons inside Sanity Studio
   if (pathname?.startsWith('/studio')) {
@@ -225,6 +226,7 @@ export default function Footer() {
       </footer>
 
       {/* Floating Action Buttons */}
+      {!isBlog && <>
       <a
         href={`https://api.whatsapp.com/send?phone=${(settings.whatsappNumber || '+916300041186').replace(/[^0-9]/g, '')}&text=${encodeURIComponent(
           'Hi DRIVEIT Cars, I would like to enquire about renting a car in Hyderabad. Please share available models, tariffs, and booking process.'
@@ -257,6 +259,7 @@ export default function Footer() {
         <i className="fa fa-phone" />
         <span className="tooltip-float">Call Us</span>
       </a>
+      </>}
     </>
   );
 }

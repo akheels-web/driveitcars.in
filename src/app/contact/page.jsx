@@ -2,11 +2,11 @@ import ContactClient from '@/components/ContactClient';
 import FaqSection from '@/components/FaqSection';
 
 export const metadata = {
-  title: 'Contact Us | DriveIt Cars Hyderabad - Self Drive & Luxury Car Rentals',
-  description: 'Get in touch with DriveIt Cars Hyderabad for self-drive car rentals, luxury wedding cars, and outstation bus hires. Call +91 6300041186 or visit our Masab Tank hub.',
+  title: 'Contact Us | DriveItCars Hyderabad - Self Drive & Luxury Car Rentals',
+  description: 'Get in touch with DriveItCars Hyderabad for self-drive car rentals, luxury wedding cars, and outstation bus hires. Call +91 6300041186 or visit our Masab Tank hub.',
   keywords: 'contact driveit cars, self drive car hyderabad phone number, car rental masab tank hyderabad, driveit cars contact number, rent car hyderabad whatsapp',
   openGraph: {
-    title: 'Contact DriveIt Cars Hyderabad - Self Drive & Luxury Car Rentals',
+    title: 'Contact DriveItCars Hyderabad - Self Drive & Luxury Car Rentals',
     description: 'Call +91 6300041186 or WhatsApp for instant car rental bookings in Hyderabad. Hub at Mehar Mansion, Masab Tank.',
     url: 'https://driveitcars.in/contact',
   },

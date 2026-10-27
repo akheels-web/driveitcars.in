@@ -21,9 +21,9 @@ const DEFAULT_SETTINGS = {
   workingHours: 'Mon - Sun: 7:00 AM – 10:00 PM',
   logoUrl: '/logo.png',
   footerLogoUrl: '/logo2.png',
-  footerAbout: 'DriveIt is Hyderabad’s leading car rental platform offering premium self-drive cars, luxury wedding cars, and group travel buses with transparent pricing and doorstep delivery.',
+  footerAbout: 'DriveItCars offers self-drive cars, luxury wedding cars and group travel buses in Hyderabad. Contact the team for availability, rental terms and pickup arrangements.',
   footerTrustTags: ['100% Insured', '24/7 Road Support', 'Sanitized Cars'],
-  copyrightText: 'Copyright © 2026. DRIVEIT CARS. All Rights Reserved.',
+  copyrightText: 'Copyright © 2026. DriveItCars. All Rights Reserved.',
   socialLinks: [],
 };
 

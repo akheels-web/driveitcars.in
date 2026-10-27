@@ -7,18 +7,18 @@ import SeoSchema, {
 } from '@/components/SeoSchema';
 
 export const metadata = {
-   title: 'Self Drive Cars in Hyderabad | Limited KMs, Security Deposit | DRIVEIT',
+   title: 'Self Drive Cars in Hyderabad | Limited KMs, Security Deposit | DriveItCars',
    description:
-      'Book self drive cars in Hyderabad with DRIVEIT. Wide range of hatchbacks, sedans, SUVs & luxury cars. Doorstep delivery across HITEC City, Gachibowli & Airport. Enquire for best rates.',
+      'Book self drive cars in Hyderabad with DriveItCars. Wide range of hatchbacks, sedans, SUVs & luxury cars. Doorstep delivery across HITEC City, Gachibowli & Airport. Enquire for best rates.',
    alternates: {
       canonical: 'https://www.driveitcars.in/self-drive-car',
    },
    openGraph: {
-      title: 'Self Drive Cars in Hyderabad | DRIVEIT Car Rentals',
+      title: 'Self Drive Cars in Hyderabad | DriveItCars Car Rentals',
       description:
          'Rent sanitized self drive cars in Hyderabad with Security Deposit & doorstep delivery. Hatchbacks, sedans, 5 & 7 seater SUVs, and luxury cars.',
       url: 'https://www.driveitcars.in/self-drive-car',
-      siteName: 'DRIVEIT Cars Hyderabad',
+      siteName: 'DriveItCars Hyderabad',
       locale: 'en_IN',
       type: 'website',
       images: [
@@ -32,7 +32,7 @@ export const metadata = {
    },
    twitter: {
       card: 'summary_large_image',
-      title: 'Self Drive Cars in Hyderabad | Limited KMs | DRIVEIT',
+      title: 'Self Drive Cars in Hyderabad | Limited KMs | DriveItCars',
       description: 'Best self drive car rental in Hyderabad with Limited KMs, Security Deposit, and 24/7 delivery.',
    },
 };

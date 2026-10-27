@@ -1,8 +1,8 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Privacy Policy | DriveIt Self Drive Cars Hyderabad',
-  description: 'Understand how DriveIt Cars protects your personal data, KYC documents, and telematics information. Transparent privacy and security policies.',
+  title: 'Privacy Policy | DriveItCars Self Drive Cars Hyderabad',
+  description: 'Understand how DriveItCars protects your personal data, KYC documents, and telematics information. Transparent privacy and security policies.',
 };
 
 export default function PrivacyPage() {

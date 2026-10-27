@@ -7,18 +7,18 @@ import SeoSchema, {
 } from '@/components/SeoSchema';
 
 export const metadata = {
-  title: 'Premium & Luxury Car Rental in Hyderabad | Weddings, VIP & Chauffeur | DRIVEIT',
+  title: 'Premium & Luxury Car Rental in Hyderabad | Weddings, VIP & Chauffeur | DriveItCars',
   description:
-    'Experience red-carpet luxury car rentals in Hyderabad for weddings, VIP arrivals, corporate travel & chauffeur services. Rent Mercedes, BMW, Audi & Range Rover with DRIVEIT.',
+    'Experience red-carpet luxury car rentals in Hyderabad for weddings, VIP arrivals, corporate travel & chauffeur services. Rent Mercedes, BMW, Audi & Range Rover with DriveItCars.',
   alternates: {
     canonical: 'https://www.driveitcars.in/luxury-car-in-hyderabad',
   },
   openGraph: {
-    title: 'Luxury Car Rental in Hyderabad | DRIVEIT Cars',
+    title: 'Luxury Car Rental in Hyderabad | DriveItCars',
     description:
       'Premier luxury car rental in Hyderabad. Drive Mercedes, BMW, Audi, Range Rover & Rolls Royce with white-glove doorstep delivery and executive chauffeurs.',
     url: 'https://www.driveitcars.in/luxury-car-in-hyderabad',
-    siteName: 'DRIVEIT Cars Hyderabad',
+    siteName: 'DriveItCars Hyderabad',
     locale: 'en_IN',
     type: 'article',
   },

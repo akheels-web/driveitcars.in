@@ -7,18 +7,18 @@ import SeoSchema, {
 } from '@/components/SeoSchema';
 
 export const metadata = {
-  title: 'Audi Rental Hyderabad | Audi A6, Q7 & A4 Luxury Car Hire | DRIVEIT',
+  title: 'Audi Rental Hyderabad | Audi A6, Q7 & A4 Luxury Car Hire | DriveItCars',
   description:
-    'Rent Audi in Hyderabad with DRIVEIT. Showroom-condition Audi A6, Audi Q7 & Audi A4 available for self drive, corporate meetings, weddings & RGIA airport transfers.',
+    'Rent Audi in Hyderabad with DriveItCars. Showroom-condition Audi A6, Audi Q7 & Audi A4 available for self drive, corporate meetings, weddings & RGIA airport transfers.',
   alternates: {
     canonical: 'https://www.driveitcars.in/audi-rental-hyderabad',
   },
   openGraph: {
-    title: 'Audi Rental Hyderabad | Audi A6 & Audi Q7 Car Hire | DRIVEIT',
+    title: 'Audi Rental Hyderabad | Audi A6 & Audi Q7 Car Hire | DriveItCars',
     description:
       'Premier Audi car rental in Hyderabad. Drive Audi A6, Q7 & sports roadsters with Quattro performance and white-glove delivery in Banjara Hills, Jubilee Hills & HITEC City.',
     url: 'https://www.driveitcars.in/audi-rental-hyderabad',
-    siteName: 'DRIVEIT Cars Hyderabad',
+    siteName: 'DriveItCars Hyderabad',
     locale: 'en_IN',
     type: 'website',
     images: [
@@ -32,9 +32,9 @@ export const metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Audi Rental Hyderabad | DRIVEIT Cars',
+    title: 'Audi Rental Hyderabad | DriveItCars',
     description:
-      'Rent Audi luxury cars in Hyderabad. Quattro technology, matrix LED styling, self-drive and executive chauffeur options with DRIVEIT.',
+      'Rent Audi luxury cars in Hyderabad. Quattro technology, matrix LED styling, self-drive and executive chauffeur options with DriveItCars.',
   },
 };
 

@@ -7,18 +7,18 @@ import SeoSchema, {
 } from '@/components/SeoSchema';
 
 export const metadata = {
-  title: 'VIP Car Rental Hyderabad | CEO & Executive Car Hire Services | DRIVEIT',
+  title: 'VIP Car Rental Hyderabad | CEO & Executive Car Hire Services | DriveItCars',
   description:
-    'Premier VIP car rental, CEO car rental & executive car hire in Hyderabad with DRIVEIT. Mercedes Maybach, S-Class, BMW 7 Series, Rolls Royce & Fortuner convoys for board meetings, CXO visits & delegates.',
+    'Premier VIP car rental, CEO car rental & executive car hire in Hyderabad with DriveItCars. Mercedes Maybach, S-Class, BMW 7 Series, Rolls Royce & Fortuner convoys for board meetings, CXO visits & delegates.',
   alternates: {
     canonical: 'https://www.driveitcars.in/vip-car-rental-hyderabad',
   },
   openGraph: {
-    title: 'VIP & CEO Car Rental Hyderabad | Executive Luxury Hire | DRIVEIT',
+    title: 'VIP & CEO Car Rental Hyderabad | Executive Luxury Hire | DriveItCars',
     description:
       'Hyderabad’s #1 VIP, CEO and executive car rental service. Tailored for corporate boards, visiting CXOs, international delegations & high-profile events with discreet security protocol.',
     url: 'https://www.driveitcars.in/vip-car-rental-hyderabad',
-    siteName: 'DRIVEIT Cars Hyderabad',
+    siteName: 'DriveItCars Hyderabad',
     locale: 'en_IN',
     type: 'website',
     images: [
@@ -32,7 +32,7 @@ export const metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'VIP Car Rental Hyderabad | Executive & CEO Car Hire | DRIVEIT',
+    title: 'VIP Car Rental Hyderabad | Executive & CEO Car Hire | DriveItCars',
     description:
       'Book executive VIP and CEO car rentals in Hyderabad. Mercedes Maybach, S-Class, BMW 7 Series & convoy vehicles with protocol chauffeurs.',
   },

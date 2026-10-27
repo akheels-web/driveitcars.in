@@ -9,16 +9,16 @@ import SeoSchema, {
 export const metadata = {
   title: 'Luxury & Premium Self Drive Cars Hyderabad | BMW, Audi, Mercedes, Evoque',
   description:
-    'Rent luxury self drive cars & premium cars in Hyderabad with DRIVEIT. Showroom-condition BMW, Mercedes-Benz, Audi, Range Rover Evoque, Fortuner Legender & Thar.',
+    'Rent luxury self drive cars & premium cars in Hyderabad with DriveItCars. Showroom-condition BMW, Mercedes-Benz, Audi, Range Rover Evoque, Fortuner Legender & Thar.',
   alternates: {
     canonical: 'https://www.driveitcars.in/luxurycars',
   },
   openGraph: {
-    title: 'Luxury & Premium Self Drive Cars Hyderabad | DRIVEIT',
+    title: 'Luxury & Premium Self Drive Cars Hyderabad | DriveItCars',
     description:
       'Book luxury self drive cars in Hyderabad. Drive BMW, Mercedes, Audi, Range Rover Evoque & Fortuner Legender. VIP, wedding & executive travel.',
     url: 'https://www.driveitcars.in/luxurycars',
-    siteName: 'DRIVEIT Cars Hyderabad',
+    siteName: 'DriveItCars Hyderabad',
     locale: 'en_IN',
     type: 'website',
     images: [
@@ -32,8 +32,8 @@ export const metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Luxury & Premium Self Drive Cars Hyderabad | DRIVEIT',
-    description: 'Rent exotic & luxury self drive cars in Hyderabad. BMW, Audi, Mercedes, Evoque with DRIVEIT.',
+    title: 'Luxury & Premium Self Drive Cars Hyderabad | DriveItCars',
+    description: 'Rent exotic & luxury self drive cars in Hyderabad. BMW, Audi, Mercedes, Evoque with DriveItCars.',
   },
 };
 

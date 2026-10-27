@@ -7,18 +7,18 @@ import SeoSchema, {
 } from '@/components/SeoSchema';
 
 export const metadata = {
-  title: 'Bridal Entry Car Hyderabad | Open-Top & Luxury Cars for Bride Entry | DRIVEIT',
+  title: 'Bridal Entry Car Hyderabad | Open-Top & Luxury Cars for Bride Entry | DriveItCars',
   description:
-    'Book the perfect bridal entry car in Hyderabad with DRIVEIT. Open-top convertibles, floral decorated vintage cars & luxury SUVs for breathtaking, cinematic bride arrivals.',
+    'Book the perfect bridal entry car in Hyderabad with DriveItCars. Open-top convertibles, floral decorated vintage cars & luxury SUVs for breathtaking, cinematic bride arrivals.',
   alternates: {
     canonical: 'https://www.driveitcars.in/bridal-entry-car-hyderabad',
   },
   openGraph: {
-    title: 'Bridal Entry Car Hyderabad | Luxury Bride Entry Cars | DRIVEIT',
+    title: 'Bridal Entry Car Hyderabad | Luxury Bride Entry Cars | DriveItCars',
     description:
       'Make your bride entrance unforgettable. Rent open-top convertibles, vintage tourers & luxury sunroof SUVs with flower decoration and smoke effect coordination.',
     url: 'https://www.driveitcars.in/bridal-entry-car-hyderabad',
-    siteName: 'DRIVEIT Cars Hyderabad',
+    siteName: 'DriveItCars Hyderabad',
     locale: 'en_IN',
     type: 'website',
     images: [
@@ -32,7 +32,7 @@ export const metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Bridal Entry Car Hyderabad | DRIVEIT Cars',
+    title: 'Bridal Entry Car Hyderabad | DriveItCars',
     description:
       'Rent open-top convertible and vintage cars for bride entry in Hyderabad. Floral decoration & professional chauffeur included.',
   },

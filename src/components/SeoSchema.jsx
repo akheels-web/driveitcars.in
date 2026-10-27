@@ -5,13 +5,13 @@ export default function SeoSchema({ schema }) {
   return (
     <script
       type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(schema).replace(/</g, '\\u003c') }}
     />
   );
 }
 
 export function buildCarRentalSchema({
-  name = 'DRIVEIT Self Drive Cars Hyderabad',
+  name = 'DriveItCars Self Drive Cars Hyderabad',
   description = 'Premier self drive car rentals in Hyderabad with doorstep delivery, Security Deposit options, and well-maintained fleet.',
   url = 'https://www.driveitcars.in',
   areaServed = 'Hyderabad',
