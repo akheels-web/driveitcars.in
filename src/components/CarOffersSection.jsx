@@ -1,5 +1,8 @@
 'use client';
 
+import { VERIFIED_VEHICLE_IMAGES } from '../data/vehicle-images';
+
+
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 
@@ -245,7 +248,7 @@ export const TOP_DEMANDING_CARS = [
     seats: 5,
     transmission: 'Manual & Automatic',
     fuel: 'Diesel mHawk',
-    image: '/assets/img/cars/5-Thar.png',
+    image: VERIFIED_VEHICLE_IMAGES.roxx,
     features: ['Spacious 5-Door Cabin', 'Panoramic Skyroof', 'Harman Kardon Audio'],
   },
 
@@ -332,7 +335,7 @@ export const TOP_DEMANDING_CARS = [
     seats: 7,
     transmission: 'Automatic (Self-Charging Hybrid)',
     fuel: 'Strong Hybrid Petrol',
-    image: '/assets/img/cars/7-Innova Crysta.png',
+    image: VERIFIED_VEHICLE_IMAGES.hycross,
     features: ['Ottoman Reclining Captain Seats', 'Panoramic Sunroof', 'Silent EV Mode Driving'],
   },
   {
@@ -437,7 +440,7 @@ export const TOP_DEMANDING_CARS = [
     seats: 5,
     transmission: 'Manual & Automatic (DSG)',
     fuel: 'TSI Turbo Petrol',
-    image: '/assets/img/cars/seden-City.png',
+    image: VERIFIED_VEHICLE_IMAGES.virtus,
     features: ['5-Star Global NCAP Safety', '521L Massive Boot', 'Dynamic Paddle Shifters'],
   },
   {
@@ -455,7 +458,7 @@ export const TOP_DEMANDING_CARS = [
     seats: 5,
     transmission: 'Automatic Only (Torque Converter / DSG)',
     fuel: 'TSI Turbo Petrol',
-    image: '/assets/img/cars/seden-City.png',
+    image: VERIFIED_VEHICLE_IMAGES.slavia,
     features: ['Ventilated Front Seats', 'Electric Sunroof', 'Precision Steering Dynamics'],
   },
   {
@@ -473,7 +476,7 @@ export const TOP_DEMANDING_CARS = [
     seats: 7,
     transmission: 'Automatic Only (4x4 Ready)',
     fuel: '2.2L mHawk Diesel',
-    image: '/assets/img/cars/7-Compass.png',
+    image: VERIFIED_VEHICLE_IMAGES.scorpio,
     features: ['Frequency Selective Damping', 'Sony 12-Speaker 3D Audio', 'Muscular Road Stance'],
   },
   {
@@ -491,7 +494,7 @@ export const TOP_DEMANDING_CARS = [
     seats: 6,
     transmission: 'Manual & Automatic',
     fuel: 'Smart Hybrid Petrol',
-    image: '/assets/img/cars/7-Ertiga.png',
+    image: VERIFIED_VEHICLE_IMAGES.xl6,
     features: ['All-Black Leather Interiors', 'Ventilated Front Seats', 'Cruise Control & Captain Chairs'],
   },
 ];
@@ -635,7 +638,7 @@ export default function CarOffersSection({ initialCars = [] }) {
             Daily, Weekly &amp; Monthly Car Rentals in Hyderabad
           </h2>
           <p style={{ color: '#64748b', fontSize: '15px', margin: 0, lineHeight: 1.6 }}>
-            Explore Hyderabad's most popular, top-demanding self drive cars with <strong>Manual &amp; Automatic</strong> transmissions.
+            Explore Hyderabad&apos;s most popular, top-demanding self drive cars with <strong>Manual &amp; Automatic</strong> transmissions.
             Choose between <strong>Daily Deals</strong>, <strong>Weekly Rentals</strong>, or <strong>Monthly Subscriptions</strong> with Security Deposit and doorstep delivery. Enquire now for custom rates and instant delivery.
           </p>
         </div>

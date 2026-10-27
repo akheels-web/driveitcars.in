@@ -10,7 +10,7 @@ import SeoSchema, {
 
 export default async function LocationPageContent({ slug }) {
   const loc = await getLocationData(slug);
-  const cars = await getCarsForPage(slug);
+  const cars = await getCarsForPage(slug, null, 'self-drive-car');
   const cleanSlug = slug.replace(/-luxury-car-rental$/, '');
   const pageUrl = `https://www.driveitcars.in/${cleanSlug}`;
 
@@ -170,7 +170,7 @@ export default async function LocationPageContent({ slug }) {
               Sanitized Fleet in {loc.name}
             </span>
             <h2 style={{ fontSize: '32px', fontWeight: 800, color: '#111827' }}>
-              DRIVEIT Available Cars in {loc.name}
+              DriveItCars available cars in {loc.name}
             </h2>
           </div>
 

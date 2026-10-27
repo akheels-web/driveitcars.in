@@ -26,6 +26,8 @@ The shared page checklist is: compact white header; light gray, left-aligned mas
 
 Shared component owners: `PremiumHeroSection.module.css` controls the landing booking/showcase area; `FaqSection.module.css` controls the first-open, single-open accordion with unique answer IDs; `Footer.module.css` controls four responsive columns and three closed specialist link groups. All existing footer destinations remain available. Homepage rental plan/category filtering and service redirects retain their existing values and events.
 
+Fleet cards must show the named model, never an unrelated vehicle or promotional poster. `src/data/vehicle-images.js` owns the model-specific Sanity URLs needed by both fallback fleet sources. Locality pages prefer explicit CMS assignments and fall back to the shared self-drive CMS fleet when unassigned. Verify this behavior with `node --experimental-vm-modules --test scripts/location-fleet.test.mjs`. Check rendered card counts as well as page headers. Call actions use white text and a gold icon on charcoal; hover and keyboard focus use ink text and icon on gold. WhatsApp actions retain green text and icons in every state. Contact information cards need padding inside all borders. The footer's white wordmark sits directly on its dark surface, with a transparent link background.
+
 | Role | Runtime token | Value |
 | --- | --- | --- |
 | Brand gold | `--journal-gold` | `#ffb907` from existing site identity |

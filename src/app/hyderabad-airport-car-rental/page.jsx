@@ -85,7 +85,7 @@ const AIRPORT_TRANSFERS = [
   {
     name: 'Airport Chauffeur Sedan (Dzire / Etios)',
     type: 'Airport Pickup & Drop',
-    image: '/assets/img/Sedan.jpg',
+    image: '/assets/img/cars/seden-dzire.png',
     rate: 'Fixed Rate • No Surge',
     features: ['Punctual Chauffeur', 'Flight Delay Tracking', 'Luggage Loading', 'AC Sedan'],
     desc: 'Zero-stress airport transfer with meet-and-greet placard at RGIA arrivals.',
@@ -93,7 +93,7 @@ const AIRPORT_TRANSFERS = [
   {
     name: 'Innova Crysta Executive Transfer',
     type: 'Airport Chauffeur Service',
-    image: '/banner8.avif',
+    image: '/assets/img/cars/7-Innova Crysta.png',
     rate: 'Fixed Rate • Premium MUV',
     features: ['Plush Captain Chairs', 'Huge Boot Space', 'Highway Expert Driver', 'FASTag Included'],
     desc: 'The gold standard for corporate delegations, NRI visitors, and family airport pickups.',
@@ -101,7 +101,7 @@ const AIRPORT_TRANSFERS = [
   {
     name: 'Mercedes-Benz / BMW VIP Transfer',
     type: 'Airport Luxury Car Rental',
-    image: '/assets/img/jagg.png',
+    image: '/assets/img/benz2.png',
     rate: 'VIP Chauffeur Package',
     features: ['Uniformed Chauffeur', 'Red Carpet Cleanliness', 'Bottled Water & Mints', 'VIP Terminal Access'],
     desc: 'For high-profile executives, celebrity arrivals, weddings, and foreign dignitaries.',
@@ -217,7 +217,7 @@ export default function HyderabadAirportCarRentalPage() {
                   Hyderabad Airport Car Rental — 24/7 Self Drive &amp; Chauffeur Transfers
                 </h1>
                 <p style={{ textAlign: 'justify', fontSize: '15px', lineHeight: '1.8', color: '#4b5563', marginBottom: '16px' }}>
-                  Landing at Rajiv Gandhi International Airport (RGIA Shamshabad)? Skip painful taxi queues, surge pricing, and sudden driver cancellations with DRIVEIT's premier <strong>Hyderabad Airport car rental</strong> service. Whether you require a flexible <strong>HYD airport self drive</strong> car ready at Aero Plaza to hit the Outer Ring Road (ORR) immediately, a punctual <strong>airport pickup Hyderabad</strong> transfer to your hotel, or a seamless early-morning <strong>airport drop Hyderabad</strong>, we deliver unmatched convenience 24 hours a day, 7 days a week.
+                  Landing at Rajiv Gandhi International Airport (RGIA Shamshabad)? Skip painful taxi queues, surge pricing, and sudden driver cancellations with DRIVEIT&apos;s premier <strong>Hyderabad Airport car rental</strong> service. Whether you require a flexible <strong>HYD airport self drive</strong> car ready at Aero Plaza to hit the Outer Ring Road (ORR) immediately, a punctual <strong>airport pickup Hyderabad</strong> transfer to your hotel, or a seamless early-morning <strong>airport drop Hyderabad</strong>, we deliver unmatched convenience 24 hours a day, 7 days a week.
                 </p>
                 <p style={{ textAlign: 'justify', fontSize: '15px', lineHeight: '1.8', color: '#4b5563', marginBottom: '20px' }}>
                   Our diverse fleet caters to every travel profile: executive sedans for business professionals heading to HITEC City, spacious <strong>airport SUV rental Hyderabad</strong> options like the Toyota Innova Crysta and Fortuner for families with heavy luggage, and <strong>airport luxury car rental Hyderabad</strong> models (BMW, Mercedes-Benz, Audi) for VIP delegations and weddings. Enjoy our dedicated <strong>airport chauffeur service Hyderabad</strong> with flight delay tracking, meet-and-greet placard service, and luggage assistance.
@@ -401,7 +401,7 @@ export default function HyderabadAirportCarRentalPage() {
                         loading="lazy"
                         src={cab.image}
                         alt={cab.name}
-                        style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+                        style={{ width: '100%', height: '100%', objectFit: 'contain', padding: '16px' }}
                       />
                     </div>
                     <div style={{ padding: '22px', flexGrow: 1, display: 'flex', flexDirection: 'column' }}>
@@ -422,7 +422,7 @@ export default function HyderabadAirportCarRentalPage() {
                           </div>
                         ))}
                       </div>
-                      <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '8px', marginTop: 'auto' }}>
+                      <div className="offer-action" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '8px', marginTop: 'auto' }}>
                         <a href="tel:+916300041186" className="offer-btn-1" style={{ textAlign: 'center', borderRadius: '6px', padding: '8px' }}>
                           <i className="fa fa-phone" /> Call
                         </a>

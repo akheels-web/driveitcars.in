@@ -1,3 +1,4 @@
+import { VERIFIED_VEHICLE_IMAGES } from '../../data/vehicle-images';
 import { client } from './client'
 import { urlForImage } from './image'
 
@@ -272,7 +273,7 @@ export const DEFAULT_FLEET = [
     id: 'thar-roxx',
     name: 'Mahindra Thar Roxx 5-Door Manual & Automatic',
     category: 'suv5',
-    image: '/assets/img/cars/5-Thar.png',
+    image: VERIFIED_VEHICLE_IMAGES.roxx,
     seats: 5,
     modelYear: '2024',
     transmission: 'Manual & Automatic',
@@ -374,7 +375,7 @@ export const DEFAULT_FLEET = [
     id: 'innova-hycross',
     name: 'Toyota Innova Hycross Automatic',
     category: 'suv7',
-    image: '/assets/img/cars/7-Innova Crysta.png',
+    image: VERIFIED_VEHICLE_IMAGES.hycross,
     seats: 7,
     modelYear: '2024',
     transmission: 'Automatic (Hybrid)',
@@ -496,7 +497,7 @@ export const DEFAULT_FLEET = [
     id: 'virtus',
     name: 'Volkswagen Virtus Manual & Automatic',
     category: 'sedan',
-    image: '/assets/img/cars/seden-City.png',
+    image: VERIFIED_VEHICLE_IMAGES.virtus,
     seats: 5,
     modelYear: '2023',
     transmission: 'Manual & Automatic (DSG)',
@@ -516,7 +517,7 @@ export const DEFAULT_FLEET = [
     id: 'slavia',
     name: 'Skoda Slavia Automatic Only',
     category: 'sedan',
-    image: '/assets/img/cars/seden-City.png',
+    image: VERIFIED_VEHICLE_IMAGES.slavia,
     seats: 5,
     modelYear: '2023',
     transmission: 'Automatic Only (Torque Converter / DSG)',
@@ -536,7 +537,7 @@ export const DEFAULT_FLEET = [
     id: 'scorpio',
     name: 'Mahindra Scorpio-N Automatic Only',
     category: 'suv7',
-    image: '/assets/img/cars/7-Compass.png',
+    image: VERIFIED_VEHICLE_IMAGES.scorpio,
     seats: 7,
     modelYear: '2023',
     transmission: 'Automatic Only',
@@ -556,7 +557,7 @@ export const DEFAULT_FLEET = [
     id: 'xl6',
     name: 'Maruti Suzuki XL6 Manual & Automatic',
     category: 'suv7',
-    image: '/assets/img/cars/7-Ertiga.png',
+    image: VERIFIED_VEHICLE_IMAGES.xl6,
     seats: 6,
     modelYear: '2023',
     transmission: 'Manual & Automatic',
@@ -617,7 +618,7 @@ export const DEFAULT_FLEET = [
 /**
  * Fetch cars for a specific page slug or category from Sanity CMS with instant fallback.
  */
-export async function getCarsForPage(pageSlug, defaultCategory = null) {
+export async function getCarsForPage(pageSlug, defaultCategory = null, fallbackPageSlug = null) {
   try {
     const query = `*[_type == "car" && ($pageSlug in displayPages || category == $defaultCategory || ($pageSlug == "home" && isFeatured == true))] | order(sortOrder asc, _createdAt desc) {
       _id,
@@ -683,6 +684,11 @@ export async function getCarsForPage(pageSlug, defaultCategory = null) {
     }
   } catch (error) {
     console.warn(`Sanity getCarsForPage error for [${pageSlug}]:`, error.message);
+  }
+
+  // Locality assignments are optional. Use the shared CMS fleet when absent.
+  if (fallbackPageSlug && fallbackPageSlug !== pageSlug) {
+    return getCarsForPage(fallbackPageSlug);
   }
 
   // Fallback to default fleet filtered by category or page

@@ -115,11 +115,20 @@
 .driveit-site .site-content .gauto-btn::before,
 .driveit-site .site-content .gauto-btn::after { display: none !important; }
 .driveit-site .site-content :is(.car-card-btn,.offer-action a) { border-radius: 8px !important; box-shadow: none !important; min-height: 44px; }
-.driveit-site .site-content .car-card-call { background: var(--site-ink) !important; }
-.driveit-site .site-content .car-card-whatsapp { background: var(--site-paper) !important; border: 1px solid #a8c7b3 !important; color: #17643b !important; }
-.driveit-site .site-content .single-offers .offer-action .offer-btn-1 { background: var(--site-ink) !important; color: var(--site-paper) !important; }
-.driveit-site .site-content .single-offers .offer-action .offer-btn-2 { background: var(--site-paper) !important; border: 1px solid #a8c7b3 !important; color: #17643b !important; }
-.driveit-site .site-content .single-offers .offer-action .offer-btn-2 i { color: #17643b !important; }
+.driveit-site .site-content .offer-action a.offer-btn-1,
+.driveit-site .site-content a.car-card-call { background: var(--site-ink) !important; color: var(--site-paper) !important; }
+.driveit-site .site-content .offer-action a.offer-btn-1 i,
+.driveit-site .site-content a.car-card-call i { color: var(--site-gold) !important; }
+.driveit-site .site-content .offer-action a.offer-btn-1:is(:hover,:focus-visible),
+.driveit-site .site-content a.car-card-call:is(:hover,:focus-visible) { background: var(--site-gold) !important; color: var(--site-ink) !important; transform: none !important; box-shadow: none !important; }
+.driveit-site .site-content .offer-action a.offer-btn-1:is(:hover,:focus-visible) i,
+.driveit-site .site-content a.car-card-call:is(:hover,:focus-visible) i { color: var(--site-ink) !important; }
+.driveit-site .site-content .offer-action a.offer-btn-2,
+.driveit-site .site-content a.car-card-whatsapp { background: var(--site-paper) !important; border: 1px solid #a8c7b3 !important; color: #17643b !important; }
+.driveit-site .site-content .offer-action a.offer-btn-2:is(:hover,:focus-visible),
+.driveit-site .site-content a.car-card-whatsapp:is(:hover,:focus-visible) { background: #eaf5ee !important; color: #17643b !important; transform: none !important; box-shadow: none !important; }
+.driveit-site .site-content .offer-action a.offer-btn-2 i,
+.driveit-site .site-content a.car-card-whatsapp i { color: #17643b !important; }
 .driveit-site .site-content .offer-text h3 { letter-spacing: -.02em; }
 .driveit-site .site-content .offer-tabs > .nav-tabs { display: flex; justify-content: flex-start; margin-bottom: 28px; border: 0; }
 .driveit-site .site-content .offer-tabs > .nav-tabs .nav-item { width: auto !important; margin: 0; }
@@ -140,6 +149,11 @@
 
 /* Contact keeps its existing fields and feedback behavior. */
 .driveit-site .site-content :is(.contact-quick-card,.contact-box-panel,.info-block-card,.rental-trust-summary,.map-card-wrapper) { border: 1px solid var(--site-line); border-radius: var(--site-radius); box-shadow: none !important; }
+.driveit-site .site-content .info-block-card { padding: 20px; align-items: flex-start; }
+.driveit-site .site-content .info-block-content { min-width: 0; flex: 1; overflow-wrap: anywhere; }
+.driveit-site .site-content .info-block-content h4 { line-height: 1.5; }
+.driveit-site .site-content .phone-action-row { flex-wrap: wrap; }
+.driveit-site .site-content .schedule-list li { flex-wrap: wrap; gap: 4px 16px; }
 .driveit-site .site-content .contact-redesign-wrapper { background: var(--site-paper); }
 .driveit-site .site-content .gauto-login-area { background: var(--site-paper); }
 .driveit-site .site-content .partner-inquiry-panel { padding: 28px; background: var(--site-soft); border: 1px solid var(--site-line); border-radius: var(--site-radius); }

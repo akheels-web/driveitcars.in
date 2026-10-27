@@ -62,7 +62,7 @@ const DEFAULT_CARS = [
     seats: 5,
     transmission: 'Manual',
     fuelType: 'Diesel',
-    image: '/seadns.jpg',
+    image: '/assets/img/cars/seden-dzire.png',
   },
   {
     name: 'Hyundai Creta',
@@ -70,7 +70,7 @@ const DEFAULT_CARS = [
     seats: 5,
     transmission: 'Automatic',
     fuelType: 'Petrol',
-    image: '/suv.jpg',
+    image: '/assets/img/2023-6.png',
   },
   {
     name: 'Toyota Innova Crysta',
@@ -78,7 +78,7 @@ const DEFAULT_CARS = [
     seats: 7,
     transmission: 'Manual',
     fuelType: 'Diesel',
-    image: '/banner8.avif',
+    image: '/assets/img/cars/7-Innova Crysta.png',
   },
   {
     name: 'Range Rover Evoque',

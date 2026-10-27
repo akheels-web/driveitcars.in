@@ -27,9 +27,8 @@
   display: inline-flex;
   align-items: center;
   margin-bottom: 24px;
-  padding: 12px 16px;
-  border-radius: 8px;
-  background: var(--site-paper, #fff);
+  padding: 0;
+  background: transparent;
 }
 
 .logo {

@@ -84,7 +84,7 @@ const CABS_FLEET = [
     seats: '7 / 8 Seater',
     model: '2023 - 2024',
     idealFor: 'Luxury family travel, corporate delegations & weddings',
-    image: '/banner8.avif',
+    image: '/assets/img/cars/7-Innova Crysta.png',
     features: ['Plush Leather Seats', 'Superior Suspension', 'Expansive Luggage Room'],
   },
   {
