@@ -1,0 +1,12 @@
+@media (max-width: 767px) {
+  .visual > img {
+    max-height: none !important;
+  }
+
+  .visual .statistics {
+    position: static !important;
+    margin-top: 12px;
+    box-shadow: none !important;
+    backdrop-filter: none !important;
+  }
+}

@@ -1,6 +1,7 @@
 import { client } from '../../src/sanity/lib/client';
 import { createImageUrlBuilder } from '@sanity/image-url';
 import Link from 'next/link';
+import aboutStyles from './homepage-about.module.css';
 
 import HeroSlider from '../components/HeroSlider';
 import PremiumHeroSection from '../components/PremiumHeroSection';
@@ -281,7 +282,7 @@ export default async function Page() {
             {/* Right Visual Image */}
             <div className="col-lg-6">
               <div
-                className="about-modern-visual"
+                className={`about-modern-visual ${aboutStyles.visual}`}
                 style={{
                   position: 'relative',
                   padding: '10px',
@@ -305,6 +306,7 @@ export default async function Page() {
                   }}
                 />
                 <div
+                  className={aboutStyles.statistics}
                   style={{
                     position: 'absolute',
                     bottom: '24px',
