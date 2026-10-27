@@ -6,7 +6,13 @@ DriveItCars is a Hyderabad car rental business. The blog helps visitors compare 
 
 ## Existing identity
 
-Keep the established shared black-and-gold header, footer and navigation. The site uses Poppins for headings and Rubik for body text via the existing stylesheet. Do not introduce a font download or a new UI library for the blog.
+Keep the established black-and-gold identity and shared footer. The site uses Poppins for headings and Rubik for body text via the existing stylesheet. Do not introduce another font download or UI library for these surfaces.
+
+## Shared header
+
+The header is a single compact white navigation bar with the existing logo, dark navigation and a gold call action. The former hours/address blocks and utility strip are removed. Desktop service links are grouped under Services; the existing locality links are grouped under Locations. Home, Self-drive cars, Guides and Contact remain direct links. Use the CMS phone number and logo, with existing local fallback assets.
+
+`src/components/Header.jsx` is the canonical shared header and `Header.module.css` owns its scoped runtime styles: brand gold `#ffb907`, ink `#191c20`, muted text `#60656d`, divider `#e3e5e8`, white surfaces and a dark mobile drawer. Keep active-route indicators, native links/buttons, visible keyboard focus and reduced-motion support. Desktop dropdowns close on Escape or outside interaction. On smaller screens, use a modal navigation drawer with background inertness, focus containment, Escape dismissal and trigger-focus restoration. All service and locality destinations remain available. The header is absent in Studio. A sticky header must reserve anchor-scroll clearance so it cannot cover article section headings.
 
 ## Blog direction
 
