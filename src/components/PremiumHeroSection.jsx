@@ -1,12 +1,12 @@
 'use client';
 
 import { useState, useRef, useEffect } from 'react';
-import Link from 'next/link';
+import styles from './PremiumHeroSection.module.css';
 
 const SHOWCASE_VEHICLES = [
   {
     id: 'suv',
-    tabLabel: '🔥 SUVs & 4x4',
+    tabLabel: 'SUVs & 4x4',
     name: 'Mahindra Thar 4x4 & Roxx',
     badge: 'Off-Road Champion • VIP Road Presence',
     image: '/assets/img/cars/5-Thar.png',
@@ -18,7 +18,7 @@ const SHOWCASE_VEHICLES = [
   },
   {
     id: 'suv7',
-    tabLabel: '👑 7-Seater',
+    tabLabel: '7-Seater',
     name: 'Toyota Innova Crysta & Fortuner',
     badge: 'Undisputed Highway & Family Legend',
     image: '/assets/img/cars/7-Innova Crysta.png',
@@ -30,7 +30,7 @@ const SHOWCASE_VEHICLES = [
   },
   {
     id: 'luxury',
-    tabLabel: '💎 Luxury',
+    tabLabel: 'Luxury',
     name: 'Mercedes-Benz & BMW Flagship',
     badge: 'Executive CXO & Wedding Splendor',
     image: '/assets/img/benz2.png',
@@ -42,7 +42,7 @@ const SHOWCASE_VEHICLES = [
   },
   {
     id: 'hatchback',
-    tabLabel: '🚗 Hatchback',
+    tabLabel: 'Hatchback',
     name: 'Maruti Swift & Nexa Baleno',
     badge: 'Smart City Drive • 22+ km/l Mileage',
     image: '/assets/img/cars/Swift.png',
@@ -92,6 +92,43 @@ export default function PremiumHeroSection() {
   const [activeShowcaseIdx, setActiveShowcaseIdx] = useState(0);
   const [openDropdown, setOpenDropdown] = useState(null); // 'location' | 'plan' | 'category' | null
   const bookingFormRef = useRef(null);
+
+  useEffect(() => {
+    if (!openDropdown) return;
+    bookingFormRef.current
+      ?.querySelector(`#hero-${openDropdown}-options [aria-selected="true"]`)
+      ?.focus();
+  }, [openDropdown]);
+
+  const closeDropdown = () => {
+    bookingFormRef.current
+      ?.querySelector(`[aria-controls="hero-${openDropdown}-options"]`)
+      ?.focus();
+    setOpenDropdown(null);
+  };
+
+  const handleDropdownKeys = (event) => {
+    const option = event.target.closest('[role="option"]');
+    const trigger = event.target.closest('[aria-haspopup="listbox"]');
+    if (trigger && ['ArrowDown', 'ArrowUp'].includes(event.key)) {
+      event.preventDefault();
+      setOpenDropdown(trigger.getAttribute('aria-controls').replace('hero-', '').replace('-options', ''));
+      return;
+    }
+    if (!option) return;
+    const options = Array.from(option.parentElement.querySelectorAll('[role="option"]'));
+    const index = options.indexOf(option);
+    const targetIndex = event.key === 'Home' ? 0 : event.key === 'End' ? options.length - 1
+      : event.key === 'ArrowDown' ? (index + 1) % options.length
+        : event.key === 'ArrowUp' ? (index - 1 + options.length) % options.length : null;
+    if (targetIndex !== null) {
+      event.preventDefault();
+      options[targetIndex].focus();
+    } else if (event.key === 'Escape') {
+      event.preventDefault();
+      closeDropdown();
+    }
+  };
 
   useEffect(() => {
     function handleClickOutside(event) {
@@ -162,7 +199,7 @@ export default function PremiumHeroSection() {
     const catLabel =
       CATEGORIES.find((c) => c.key === selectedCategory)?.label || selectedCategory;
 
-    const message = `Hi DRIVEIT Cars, I would like to enquire about:
+    const message = `Hi DriveItCars, I would like to enquire about:
 • Service: ${serviceLabels[serviceType] || 'Car Rental'}
 • Pickup Hub: ${selectedLocation}
 • Plan / Duration: ${selectedPlan}
@@ -175,13 +212,7 @@ Please share vehicle availability, best tariffs, and booking confirmation.`;
   };
 
   return (
-    <section className="premium-hero-wrapper">
-      {/* Light Ambient Decorative Background Accents */}
-      <div className="hero-light-bg-decor">
-        <div className="hero-glow-gold" />
-        <div className="hero-glow-slate" />
-        <div className="hero-grid-pattern" />
-      </div>
+    <section className={`${styles.hero} premium-hero-wrapper`}>
 
       <div className="container position-relative" style={{ zIndex: 2 }}>
         {/* Top Trust & Authority Eyebrow */}
@@ -223,6 +254,7 @@ Please share vehicle availability, best tariffs, and booking confirmation.`;
                     type="button"
                     className={`service-tab-btn ${serviceType === 'self-drive' ? 'active' : ''}`}
                     onClick={() => setServiceType('self-drive')}
+                    aria-pressed={serviceType === 'self-drive'}
                   >
                     <i className="fa fa-car" /> Self Drive
                   </button>
@@ -230,6 +262,7 @@ Please share vehicle availability, best tariffs, and booking confirmation.`;
                     type="button"
                     className={`service-tab-btn ${serviceType === 'chauffeur' ? 'active' : ''}`}
                     onClick={() => setServiceType('chauffeur')}
+                    aria-pressed={serviceType === 'chauffeur'}
                   >
                     <i className="fa fa-user-circle-o" /> Chauffeur
                   </button>
@@ -237,6 +270,7 @@ Please share vehicle availability, best tariffs, and booking confirmation.`;
                     type="button"
                     className={`service-tab-btn ${serviceType === 'airport' ? 'active' : ''}`}
                     onClick={() => setServiceType('airport')}
+                    aria-pressed={serviceType === 'airport'}
                   >
                     <i className="fa fa-plane" /> Airport
                   </button>
@@ -244,13 +278,17 @@ Please share vehicle availability, best tariffs, and booking confirmation.`;
                     type="button"
                     className={`service-tab-btn ${serviceType === 'wedding' ? 'active' : ''}`}
                     onClick={() => setServiceType('wedding')}
+                    aria-pressed={serviceType === 'wedding'}
                   >
                     <i className="fa fa-diamond" /> Wedding
                   </button>
                 </div>
 
                 {/* Form Controls */}
-                <div className="booking-form-grid" ref={bookingFormRef}>
+                <div className="booking-form-grid" ref={bookingFormRef} onKeyDown={handleDropdownKeys}
+                  onBlur={(event) => {
+                    if (!event.currentTarget.contains(event.relatedTarget)) setOpenDropdown(null);
+                  }}>
                   {/* Field 1: Pickup Location */}
                   <div className={`booking-form-group ${openDropdown === 'location' ? 'dropdown-active' : ''}`}>
                     <label className="form-field-label">
@@ -262,6 +300,8 @@ Please share vehicle availability, best tariffs, and booking confirmation.`;
                         className={`custom-dropdown-trigger ${openDropdown === 'location' ? 'is-open' : ''}`}
                         onClick={() => setOpenDropdown(openDropdown === 'location' ? null : 'location')}
                         aria-haspopup="listbox"
+                        aria-label={`Pickup hub / location: ${selectedLocation}`}
+                        aria-controls="hero-location-options"
                         aria-expanded={openDropdown === 'location'}
                       >
                         <span className="dropdown-trigger-content">
@@ -275,31 +315,32 @@ Please share vehicle availability, best tariffs, and booking confirmation.`;
                       </button>
 
                       {openDropdown === 'location' && (
-                        <div className="custom-dropdown-menu" role="listbox">
+                        <div id="hero-location-options" className="custom-dropdown-menu" role="listbox" aria-label="Pickup hub / location">
                           {LOCATIONS.map((loc, idx) => {
                             const isSelected = loc === selectedLocation;
                             return (
-                              <div
+                              <button type="button"
                                 key={idx}
                                 className={`custom-dropdown-option ${isSelected ? 'selected' : ''}`}
                                 onClick={() => {
                                   setSelectedLocation(loc);
-                                  setOpenDropdown(null);
+                                  closeDropdown();
                                 }}
                                 role="option"
                                 aria-selected={isSelected}
+                                tabIndex={isSelected ? 0 : -1}
                               >
-                                <div className="option-text-group">
+                                <span className="option-text-group">
                                   <span className="option-main-text">
                                     <i className="fa fa-map-marker option-icon" /> {loc}
                                   </span>
-                                </div>
+                                </span>
                                 {isSelected && (
                                   <span className="option-checkmark">
                                     <i className="fa fa-check" />
                                   </span>
                                 )}
-                              </div>
+                              </button>
                             );
                           })}
                         </div>
@@ -322,6 +363,8 @@ Please share vehicle availability, best tariffs, and booking confirmation.`;
                               className={`custom-dropdown-trigger ${openDropdown === 'plan' ? 'is-open' : ''}`}
                               onClick={() => setOpenDropdown(openDropdown === 'plan' ? null : 'plan')}
                               aria-haspopup="listbox"
+                              aria-label={`Rental plan: ${currentPlanObj.label}`}
+                              aria-controls="hero-plan-options"
                               aria-expanded={openDropdown === 'plan'}
                             >
                               <span className="dropdown-trigger-content">
@@ -338,26 +381,27 @@ Please share vehicle availability, best tariffs, and booking confirmation.`;
                             </button>
 
                             {openDropdown === 'plan' && (
-                              <div className="custom-dropdown-menu" role="listbox">
+                              <div id="hero-plan-options" className="custom-dropdown-menu" role="listbox" aria-label="Rental plan">
                                 {PLANS.map((p, idx) => {
                                   const isSelected = p.value === selectedPlan;
                                   return (
-                                    <div
+                                    <button type="button"
                                       key={idx}
                                       className={`custom-dropdown-option ${isSelected ? 'selected' : ''}`}
                                       onClick={() => {
                                         setSelectedPlan(p.value);
-                                        setOpenDropdown(null);
+                                        closeDropdown();
                                       }}
                                       role="option"
                                       aria-selected={isSelected}
+                                      tabIndex={isSelected ? 0 : -1}
                                     >
-                                      <div className="option-text-group">
+                                      <span className="option-text-group">
                                         <span className="option-main-text">
                                           <i className="fa fa-calendar-check-o option-icon" /> {p.label}
                                         </span>
-                                      </div>
-                                      <div className="option-meta-group">
+                                      </span>
+                                      <span className="option-meta-group">
                                         {p.badge && (
                                           <span className="option-deal-badge">{p.badge}</span>
                                         )}
@@ -366,8 +410,8 @@ Please share vehicle availability, best tariffs, and booking confirmation.`;
                                             <i className="fa fa-check" />
                                           </span>
                                         )}
-                                      </div>
-                                    </div>
+                                      </span>
+                                    </button>
                                   );
                                 })}
                               </div>
@@ -393,6 +437,8 @@ Please share vehicle availability, best tariffs, and booking confirmation.`;
                               className={`custom-dropdown-trigger ${openDropdown === 'category' ? 'is-open' : ''}`}
                               onClick={() => setOpenDropdown(openDropdown === 'category' ? null : 'category')}
                               aria-haspopup="listbox"
+                              aria-label={`Fleet category: ${currentCatObj.label}${currentCatObj.subtitle ? `, ${currentCatObj.subtitle}` : ''}`}
+                              aria-controls="hero-category-options"
                               aria-expanded={openDropdown === 'category'}
                             >
                               <span className="dropdown-trigger-content">
@@ -409,34 +455,35 @@ Please share vehicle availability, best tariffs, and booking confirmation.`;
                             </button>
 
                             {openDropdown === 'category' && (
-                              <div className="custom-dropdown-menu" role="listbox">
+                              <div id="hero-category-options" className="custom-dropdown-menu" role="listbox" aria-label="Fleet category">
                                 {CATEGORIES.map((cat, idx) => {
                                   const isSelected = cat.key === selectedCategory;
                                   return (
-                                    <div
+                                    <button type="button"
                                       key={idx}
                                       className={`custom-dropdown-option ${isSelected ? 'selected' : ''}`}
                                       onClick={() => {
                                         setSelectedCategory(cat.key);
-                                        setOpenDropdown(null);
+                                        closeDropdown();
                                       }}
                                       role="option"
                                       aria-selected={isSelected}
+                                      tabIndex={isSelected ? 0 : -1}
                                     >
-                                      <div className="option-text-group">
+                                      <span className="option-text-group">
                                         <span className="option-main-text">
                                           <i className="fa fa-car option-icon" /> {cat.label}
                                         </span>
                                         {cat.subtitle && (
                                           <span className="option-sub-text">{cat.subtitle}</span>
                                         )}
-                                      </div>
+                                      </span>
                                       {isSelected && (
                                         <span className="option-checkmark">
                                           <i className="fa fa-check" />
                                         </span>
                                       )}
-                                    </div>
+                                    </button>
                                   );
                                 })}
                               </div>
@@ -494,6 +541,7 @@ Please share vehicle availability, best tariffs, and booking confirmation.`;
                     type="button"
                     className={`showroom-pill-btn ${activeShowcaseIdx === idx ? 'active' : ''}`}
                     onClick={() => handleShowcaseSelect(idx)}
+                    aria-pressed={activeShowcaseIdx === idx}
                   >
                     {vehicle.tabLabel}
                   </button>
@@ -504,35 +552,29 @@ Please share vehicle availability, best tariffs, and booking confirmation.`;
               <div className="showroom-stage-viewport">
                 {/* Center Showroom Car */}
                 <div className="showroom-car-container">
-                  <div className="showroom-halo-aura" />
                   <img
                     key={activeCar.id}
                     src={activeCar.image}
                     alt={activeCar.name}
                     className="showroom-car-image animate-fade-in"
                   />
-                  {/* Realistic Studio Ground Shadow */}
-                  <div className="showroom-ground-shadow" />
                 </div>
 
                 {/* Micro-Trust Capsules Cluster (Floating on Desktop, Clean Centered Row on Mobile/Tablet) */}
                 <div className="showroom-badges-cluster">
                   <div className="floating-badge badge-top-left">
-                    <span className="badge-icon">🛡️</span>
                     <span className="badge-text">
                       <strong>Security Deposit</strong> on select cars
                     </span>
                   </div>
 
                   <div className="floating-badge badge-top-right">
-                    <span className="badge-icon">⚡</span>
                     <span className="badge-text">
                       <strong>10-Min KYC</strong> instant approval
                     </span>
                   </div>
 
                   <div className="floating-badge badge-bottom-right">
-                    <span className="badge-icon">📍</span>
                     <span className="badge-text">
                       <strong>Doorstep Drop</strong> across 26 Hubs
                     </span>

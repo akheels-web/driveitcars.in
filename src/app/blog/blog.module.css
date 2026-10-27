@@ -1,11 +1,11 @@
 .page {
-  --journal-gold: #ffb907;
-  --journal-ink: #191c20;
-  --journal-muted: #60656d;
-  --journal-soft: #f5f6f7;
-  --journal-line: #e3e5e8;
-  --journal-paper: #ffffff;
-  --journal-width: 1184px;
+  --journal-gold: var(--site-gold, #ffb907);
+  --journal-ink: var(--site-ink, #191c20);
+  --journal-muted: var(--site-muted, #60656d);
+  --journal-soft: var(--site-soft, #f5f6f7);
+  --journal-line: var(--site-line, #e3e5e8);
+  --journal-paper: var(--site-paper, #fff);
+  --journal-width: var(--site-container, 1184px);
   --journal-display: 'Poppins', sans-serif;
   --journal-body: 'Rubik', sans-serif;
   background: var(--journal-paper);

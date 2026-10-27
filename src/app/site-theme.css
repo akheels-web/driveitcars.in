@@ -1,0 +1,161 @@
+/* Canonical public-site tokens. Studio never receives this scope. */
+.driveit-site {
+  --site-gold: #ffb907;
+  --site-ink: #191c20;
+  --site-muted: #60656d;
+  --site-soft: #f5f6f7;
+  --site-line: #e3e5e8;
+  --site-paper: #fff;
+  --site-dark: #14181d;
+  --site-container: 1184px;
+  --site-radius: 16px;
+  --site-font-display: 'Poppins', sans-serif;
+  --site-font-body: 'Rubik', sans-serif;
+  color: var(--site-ink);
+  background: var(--site-paper);
+  font-family: var(--site-font-body);
+}
+.driveit-site .site-content { font-size: 16px; line-height: 1.75; }
+.driveit-site .site-content .container { width: calc(100% - 80px); max-width: var(--site-container); padding-left: 0; padding-right: 0; }
+.driveit-site .site-content .section_70 { padding-top: 72px; padding-bottom: 72px; }
+.driveit-site .site-content :is(h1,h2,h3,h4,h5,h6) { font-family: var(--site-font-display); text-transform: none; }
+.driveit-site .site-content :is(a,button,input,select,textarea,summary):focus-visible { outline: 2px solid var(--site-ink); outline-offset: 4px; }
+
+/* One light page masthead across service, locality and information routes. */
+.driveit-site .site-content .gauto-breadcromb-area {
+  background: var(--site-soft) !important;
+  padding: 56px 0 !important;
+  border-bottom: 1px solid var(--site-line);
+}
+.driveit-site .site-content .gauto-breadcromb-area::after { display: none !important; }
+.driveit-site .site-content .breadcromb-box { align-items: flex-start !important; text-align: left !important; }
+.driveit-site .site-content .breadcromb-box :is(h1,h2,h3) {
+  max-width: 1000px;
+  color: var(--site-ink) !important;
+  font-size: clamp(30px, 3.4vw, 44px) !important;
+  line-height: 1.2 !important;
+  font-weight: 600 !important;
+  letter-spacing: -.035em !important;
+  text-transform: none !important;
+  text-shadow: none !important;
+  margin: 0 0 20px !important;
+}
+.driveit-site .site-content .breadcromb-box ul {
+  justify-content: flex-start;
+  padding: 0 !important;
+  margin: 0 !important;
+  background: transparent !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  backdrop-filter: none !important;
+  text-align: left !important;
+}
+.driveit-site .site-content .breadcromb-box ul :is(li,a,i) { color: var(--site-muted) !important; font-size: 13px !important; line-height: 1.7 !important; text-shadow: none; }
+.driveit-site .site-content .breadcromb-box ul a:hover { color: var(--site-ink) !important; text-decoration: underline; }
+.driveit-site .site-content .breadcromb-box > p { color: var(--site-muted) !important; font-size: 17px !important; line-height: 1.8 !important; text-align: left; margin: 0 0 24px !important; max-width: 760px; }
+.driveit-site .site-content .breadcromb-box > span { color: #806000 !important; }
+
+/* Readable introductory text and a single heading scale. */
+.driveit-site .site-content :is(.about-page-left,.about-modern-content,.cabs-intro-content) :is(h1,h2),
+.driveit-site .site-content .site-heading :is(h1,h2) {
+  color: var(--site-ink) !important;
+  font-size: clamp(28px, 3vw, 36px) !important;
+  font-weight: 600 !important;
+  line-height: 1.3 !important;
+  letter-spacing: -.035em;
+  text-transform: none !important;
+}
+.driveit-site .site-content :is(.about-page-left,.about-modern-content) > p,
+.driveit-site .site-content .site-heading p {
+  color: var(--site-muted) !important;
+  font-size: 17px !important;
+  line-height: 1.8 !important;
+  text-align: left !important;
+}
+.driveit-site .site-content .site-heading { margin-bottom: 36px; }
+.driveit-site .site-content .site-heading p { text-align: center !important; margin-top: 16px; }
+.driveit-site .site-content .site-heading :is(h2,h4)::after,
+.driveit-site .site-content .site-heading :is(h2,h4)::before { display: none; }
+.driveit-site .site-content .site-heading h4 { color: var(--site-muted) !important; font-size: 13px !important; font-weight: 500 !important; letter-spacing: .08em; }
+.driveit-site .site-content .about-modern-visual { background: var(--site-soft) !important; box-shadow: none !important; border: 1px solid var(--site-line) !important; border-radius: var(--site-radius) !important; }
+
+/* Fleet cards share surfaces without cropping the vehicle imagery. */
+.driveit-site .site-content :is(.gauto-offers-area,.car-offers-section) { background: var(--site-soft) !important; }
+.driveit-site .site-content :is(.single-offers,.car-explore-card) {
+  background: var(--site-paper) !important;
+  border: 1px solid var(--site-line) !important;
+  border-radius: var(--site-radius) !important;
+  box-shadow: none !important;
+  overflow: hidden;
+  transition: border-color .2s ease;
+}
+.driveit-site .site-content :is(.single-offers,.car-explore-card):hover { box-shadow: none !important; transform: none !important; border-color: #b6bbc1 !important; }
+.driveit-site .site-content :is(.single-offers .offer-image,.car-explore-card > div:first-child) { background: var(--site-soft) !important; }
+.driveit-site .site-content :is(.single-offers .offer-image,.car-explore-card > div:first-child) img { object-fit: contain !important; }
+.driveit-site .site-content :is(.offer-text,.car-explore-card) :is(h2,h3,h4) { color: var(--site-ink) !important; font-size: 20px !important; line-height: 1.4; font-weight: 600 !important; }
+.driveit-site .site-content .car-explore-card > div:first-child > span { box-shadow: none !important; }
+.driveit-site .site-content .gauto-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 48px;
+  padding: 12px 24px;
+  background: var(--site-gold) !important;
+  color: var(--site-ink) !important;
+  border: 1px solid var(--site-gold) !important;
+  border-radius: 10px !important;
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: none;
+  box-shadow: none !important;
+  line-height: 1.5;
+}
+.driveit-site .site-content .gauto-btn::before,
+.driveit-site .site-content .gauto-btn::after { display: none !important; }
+.driveit-site .site-content :is(.car-card-btn,.offer-action a) { border-radius: 8px !important; box-shadow: none !important; min-height: 44px; }
+.driveit-site .site-content .car-card-call { background: var(--site-ink) !important; }
+.driveit-site .site-content .car-card-whatsapp { background: var(--site-paper) !important; border: 1px solid #a8c7b3 !important; color: #17643b !important; }
+.driveit-site .site-content .single-offers .offer-action .offer-btn-1 { background: var(--site-ink) !important; color: var(--site-paper) !important; }
+.driveit-site .site-content .single-offers .offer-action .offer-btn-2 { background: var(--site-paper) !important; border: 1px solid #a8c7b3 !important; color: #17643b !important; }
+.driveit-site .site-content .single-offers .offer-action .offer-btn-2 i { color: #17643b !important; }
+.driveit-site .site-content .offer-text h3 { letter-spacing: -.02em; }
+.driveit-site .site-content .offer-tabs > .nav-tabs { display: flex; justify-content: flex-start; margin-bottom: 28px; border: 0; }
+.driveit-site .site-content .offer-tabs > .nav-tabs .nav-item { width: auto !important; margin: 0; }
+.driveit-site .site-content .offer-tabs > .nav-tabs .nav-link { background: var(--site-paper) !important; color: var(--site-ink) !important; border: 1px solid var(--site-line) !important; border-radius: 8px; padding: 10px 20px !important; font-size: 13px; text-transform: none; }
+.driveit-site .site-content .offer-tabs > .nav-tabs .nav-link::before,
+.driveit-site .site-content .offer-tabs > .nav-tabs .nav-link::after { display: none !important; }
+.driveit-site .site-content .pricing-plan-toggle { background: var(--site-paper) !important; border: 1px solid var(--site-line); border-radius: 12px !important; box-shadow: none !important; }
+.driveit-site .site-content .plan-toggle-btn { color: var(--site-muted); border-radius: 8px !important; box-shadow: none !important; }
+.driveit-site .site-content .plan-toggle-btn.active { background: var(--site-ink) !important; color: var(--site-paper) !important; }
+.driveit-site .site-content :is(.plan-badge-weekly,.plan-badge-monthly) { background: var(--site-gold) !important; color: var(--site-ink) !important; box-shadow: none !important; }
+.driveit-site .site-content .seo-keyword-strip-card { background: var(--site-paper) !important; border: 1px solid var(--site-line) !important; border-radius: var(--site-radius) !important; box-shadow: none !important; }
+.driveit-site .site-content :is(.step-box,.icon-box,.single-service,.testimonial-card) { border: 1px solid var(--site-line); border-radius: var(--site-radius); box-shadow: none !important; background: var(--site-paper); }
+.driveit-site .site-content .single-service { padding: 28px; }
+.driveit-site .site-content .service-text p { font-size: 16px; line-height: 1.8; color: var(--site-muted); }
+.driveit-site .site-content .service-text h3 { color: var(--site-ink); font-size: 20px; }
+.driveit-site .site-content .about-page-right img { border-radius: var(--site-radius); }
+.driveit-site .site-content .driveit-advantage-strip { background: var(--site-dark) !important; border: 0 !important; }
+
+/* Contact keeps its existing fields and feedback behavior. */
+.driveit-site .site-content :is(.contact-quick-card,.contact-box-panel,.info-block-card,.rental-trust-summary,.map-card-wrapper) { border: 1px solid var(--site-line); border-radius: var(--site-radius); box-shadow: none !important; }
+.driveit-site .site-content .contact-redesign-wrapper { background: var(--site-paper); }
+.driveit-site .site-content .gauto-login-area { background: var(--site-paper); }
+.driveit-site .site-content .partner-inquiry-panel { padding: 28px; background: var(--site-soft); border: 1px solid var(--site-line); border-radius: var(--site-radius); }
+.driveit-site .site-content .partner-inquiry-panel .form-control { min-height: 48px; padding: 12px 16px; border: 1px solid var(--site-line); border-radius: 8px; font-size: 16px; color: var(--site-ink); background: var(--site-paper); }
+.driveit-site .site-content .partner-inquiry-panel .mybtn { min-height: 48px; border-radius: 8px; border: 0; background: var(--site-gold); color: var(--site-ink); font-weight: 600; }
+.driveit-site .site-content .faq-section-area { padding: 72px 40px !important; }
+
+@media (max-width: 767px) {
+  .driveit-site .site-content .container { width: calc(100% - 40px); }
+  .driveit-site .site-content .section_70 { padding-top: 48px; padding-bottom: 48px; }
+  .driveit-site .site-content .gauto-breadcromb-area { padding: 36px 0 !important; }
+  .driveit-site .site-content .faq-section-area { padding: 48px 20px !important; }
+  .driveit-site .site-content .breadcromb-box :is(h1,h2,h3) { font-size: 30px !important; }
+  .driveit-site .site-content :is(.about-page-left,.about-modern-content) > p,
+  .driveit-site .site-content .site-heading p { font-size: 16px !important; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .driveit-site .site-content :is(.single-offers,.car-explore-card,.car-explore-card img) { transition: none !important; }
+}

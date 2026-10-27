@@ -6,7 +6,7 @@ export default function partnerPage() {
             <div className="row">
                <div className="col-md-12">
                   <div className="breadcromb-box">
-                     <h3>Partner With Us</h3>
+                     <h1>Partner With Us</h1>
                      <ul>
                         <li><i className="fa fa-home"></i></li>
                         <li><a href="/">Home</a></li>
@@ -37,7 +37,7 @@ export default function partnerPage() {
                </div>
             
 			<div className="col-md-5">
-                  <div className="" style={{"padding":"27px","background":"#ffc10714","border":"2px solid #fca130"}}>
+                  <div className="partner-inquiry-panel">
                      <div className="login-page-heading">
                        
                         <h3>Partner With Us</h3>

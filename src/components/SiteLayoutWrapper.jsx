@@ -16,10 +16,12 @@ export default function SiteLayoutWrapper({ children }) {
 
   return (
     <SiteSettingsProvider>
+      <div className="driveit-site">
       <GlobalFaqHandler />
       <Header />
-      {children}
+      <div className={pathname?.startsWith('/blog') ? 'journal-content' : 'site-content'}>{children}</div>
       <Footer />
+      </div>
     </SiteSettingsProvider>
   );
 }

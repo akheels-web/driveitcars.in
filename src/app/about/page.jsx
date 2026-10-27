@@ -6,7 +6,7 @@ export default function aboutPage() {
             <div className="row">
                <div className="col-md-12">
                   <div className="breadcromb-box">
-                     <h3>About Us</h3>
+                     <h1>About Us</h1>
                      <ul>
                         <li><i className="fa fa-home"></i></li>
                         <li><a href="/">Home</a></li>
@@ -27,9 +27,9 @@ export default function aboutPage() {
             <div className="row">
                <div className="col-lg-6">
                   <div className="about-page-left">
-                     <h2 style={{"color":"#ffb907"}}>About<br /><b>Drive It</b></h2>
+                     <h2 style={{"color":"#ffb907"}}>About DriveItCars</h2>
                       
-                     <p>   At Drive It, we believe in giving you the freedom to explore your world on your own terms. Specializing in self-drive car rentals, we offer a wide range of vehicles to suit every journey. Whether you're cruising through the city in a Hatchback, enjoying the comfort of a Sedan, or embarking on an adventure with our spacious SUV 5 Seaters or SUV 7 Seaters, we have the perfect car for you. For those seeking a touch of elegance, our Luxury Cars ensure a premium driving experience. At Drive It, we put you in the driver's seat—literally.
+                     <p>   At DriveItCars, we believe in giving you the freedom to explore your world on your own terms. Specializing in self-drive car rentals, we offer a wide range of vehicles to suit every journey. Whether you're cruising through the city in a Hatchback, enjoying the comfort of a Sedan, or embarking on an adventure with our spacious SUV 5 Seaters or SUV 7 Seaters, we have the perfect car for you. For those seeking a touch of elegance, our Luxury Cars ensure a premium driving experience. At DriveItCars, we put you in the driver's seat—literally.
 
 </p>
                       

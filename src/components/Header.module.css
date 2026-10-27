@@ -1,10 +1,10 @@
 .header {
-  --header-gold: #ffb907;
-  --header-ink: #191c20;
-  --header-muted: #60656d;
-  --header-line: #e3e5e8;
+  --header-gold: var(--site-gold, #ffb907);
+  --header-ink: var(--site-ink, #191c20);
+  --header-muted: var(--site-muted, #60656d);
+  --header-line: var(--site-line, #e3e5e8);
   --header-white: #fff;
-  --header-dark: #14181d;
+  --header-dark: var(--site-dark, #14181d);
   position: sticky;
   top: 0;
   z-index: 2000;

@@ -1,13 +1,14 @@
 'use client';
 
-import { useState } from 'react';
+import { useId, useState } from 'react';
+import styles from './FaqSection.module.css';
 
 const FAQ_DATA = [
   {
     id: 1,
-    question: 'Does DriveIt offer self drive cars in Hyderabad?',
+    question: 'Does DriveItCars offer self drive cars in Hyderabad?',
     answer:
-      'Yes, DriveIt offers a premium fleet of self drive cars in Hyderabad. Choose from popular hatchbacks, comfortable sedans, compact SUVs, and 7-seater vehicles like Hyundai Creta, Maruti Suzuki Baleno, Mahindra Thar, Toyota Innova Crysta, and Fortuner with zero driver interference.'
+      'Yes, DriveItCars offers a premium fleet of self drive cars in Hyderabad. Choose from popular hatchbacks, comfortable sedans, compact SUVs, and 7-seater vehicles like Hyundai Creta, Maruti Suzuki Baleno, Mahindra Thar, Toyota Innova Crysta, and Fortuner with zero driver interference.'
   },
   {
     id: 2,
@@ -17,9 +18,9 @@ const FAQ_DATA = [
   },
   {
     id: 3,
-    question: 'Does DriveIt provide luxury car rentals for weddings and VIP events?',
+    question: 'Does DriveItCars provide luxury car rentals for weddings and VIP events?',
     answer:
-      'Yes! DriveIt features Hyderabad’s finest luxury car fleet including BMW 5 & 7 Series, Mercedes-Benz E & S Class, Audi A6, Jaguar XF, Range Rover, and Toyota Vellfire. Perfect for grand weddings, VIP delegation transfers, photo shoots, and prestigious corporate gatherings.'
+      'Yes! DriveItCars features Hyderabad’s finest luxury car fleet including BMW 5 & 7 Series, Mercedes-Benz E & S Class, Audi A6, Jaguar XF, Range Rover, and Toyota Vellfire. Perfect for grand weddings, VIP delegation transfers, photo shoots, and prestigious corporate gatherings.'
   },
   {
     id: 4,
@@ -44,123 +45,64 @@ const FAQ_DATA = [
 export default function FaqSection({ items, title, subtitle, badge }) {
   const data = items && items.length > 0 ? items : FAQ_DATA;
   const [openId, setOpenId] = useState(data[0]?.id || 1);
+  const instanceId = useId();
 
   const toggleFaq = (id) => {
     setOpenId((prev) => (prev === id ? null : id));
   };
 
   return (
-    <section className="faq-section-area section_70" style={{ background: '#fbfbfb' }}>
-      <div className="container">
-        <div className="site-heading text-center" style={{ marginBottom: 45 }}>
-          <span
-            style={{
-              color: '#ffb907',
-              fontWeight: 700,
-              fontSize: '13px',
-              letterSpacing: '1px',
-              textTransform: 'uppercase',
-              display: 'inline-block',
-              marginBottom: '8px'
-            }}
-          >
+    <section className={`faq-section-area section_70 ${styles.section}`}>
+      <div className={styles.container}>
+        <header className={styles.header}>
+          <span className={styles.badge}>
             {badge || 'Got Questions? We Have Answers'}
           </span>
-          <h2 style={{ fontSize: '32px', fontWeight: 800, color: '#111827' }}>
+          <h2 className={styles.title}>
             {title || 'Frequently Asked Questions'}
           </h2>
-          <p style={{ color: '#6b7280', maxWidth: '620px', margin: '10px auto 0', fontSize: '15px' }}>
+          <p className={styles.subtitle}>
             {subtitle || 'Everything you need to know about booking self-drive cars, luxury rentals, and monthly packages in Hyderabad.'}
           </p>
-        </div>
+        </header>
 
-        <div className="row justify-content-center">
-          <div className="col-lg-10">
-            <div className="faq-accordion-container" style={{ display: 'flex', flexDirection: 'column', gap: '14px' }}>
-              {data.map((faq, index) => {
-                const faqId = faq.id || index + 1;
-                const isOpen = openId === faqId;
-                return (
-                  <div
-                    key={faqId}
-                    className={`faq-item ${isOpen ? 'active' : ''}`}
-                    style={{
-                      background: '#ffffff',
-                      borderRadius: '12px',
-                      border: isOpen ? '1px solid #ffb907' : '1px solid #e5e7eb',
-                      boxShadow: isOpen
-                        ? '0 8px 24px rgba(255, 185, 7, 0.12)'
-                        : '0 2px 6px rgba(0, 0, 0, 0.03)',
-                      transition: 'all 0.25s ease',
-                      overflow: 'hidden'
-                    }}
-                  >
-                    <button
-                      type="button"
-                      onClick={() => toggleFaq(faqId)}
-                      aria-expanded={isOpen}
-                      style={{
-                        width: '100%',
-                        textAlign: 'left',
-                        padding: '18px 22px',
-                        background: 'transparent',
-                        border: 'none',
-                        cursor: 'pointer',
-                        display: 'flex',
-                        alignItems: 'center',
-                        justifyContent: 'space-between',
-                        gap: '16px'
-                      }}
-                    >
-                      <span
-                        style={{
-                          fontSize: '16px',
-                          fontWeight: 700,
-                          color: isOpen ? '#111827' : '#1f2937',
-                          lineHeight: 1.4
-                        }}
-                      >
-                        {faq.question}
-                      </span>
-                      <span
-                        style={{
-                          flexShrink: 0,
-                          width: '32px',
-                          height: '32px',
-                          borderRadius: '50%',
-                          background: isOpen ? '#ffb907' : '#f3f4f6',
-                          color: isOpen ? '#111827' : '#4b5563',
-                          display: 'flex',
-                          alignItems: 'center',
-                          justifyContent: 'center',
-                          fontSize: '18px',
-                          fontWeight: 700,
-                          transition: 'all 0.2s ease',
-                          transform: isOpen ? 'rotate(180deg)' : 'rotate(0deg)'
-                        }}
-                      >
-                        {isOpen ? '−' : '+'}
-                      </span>
-                    </button>
+        <div className={`faq-accordion-container ${styles.accordion}`}>
+          {data.map((faq, index) => {
+            const faqId = faq.id || index + 1;
+            const isOpen = openId === faqId;
+            const questionId = `${instanceId}-question-${index}`;
+            const answerId = `${instanceId}-answer-${index}`;
 
-                    {isOpen && (
-                      <div
-                        style={{
-                          padding: '0 22px 20px',
-                          color: '#4b5563',
-                          fontSize: '15px',
-                          lineHeight: 1.65,
-                          borderTop: '1px solid #f9fafb'
-                        }}
-                      >
-                        {faq.answer}
-                      </div>
-                    )}
-                  </div>
-                );
-              })}
-            </div>
-          </div>
+            return (
+              <div
+                key={faqId}
+                className={`faq-item ${styles.item} ${isOpen ? `active ${styles.open}` : ''}`}
+              >
+                <button
+                  id={questionId}
+                  className={styles.question}
+                  type="button"
+                  onClick={() => toggleFaq(faqId)}
+                  aria-expanded={isOpen}
+                  aria-controls={answerId}
+                >
+                  <span>{faq.question}</span>
+                  <span className={styles.icon} aria-hidden="true">
+                    {isOpen ? '−' : '+'}
+                  </span>
+                </button>
+                <div
+                  id={answerId}
+                  className={styles.answer}
+                  role="region"
+                  aria-labelledby={questionId}
+                  hidden={!isOpen}
+                >
+                  {faq.answer}
+                </div>
+              </div>
+            );
+          })}
         </div>
       </div>
     </section>

@@ -8,7 +8,7 @@ export default function sedanPage() {
                <div className="col-md-12">
                   <div className="site-heading">
                     
-                     <h2>Sedan</h2>
+                     <h1>Sedan</h1>
                   </div>
                </div>
             </div>

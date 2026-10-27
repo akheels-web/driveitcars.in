@@ -26,7 +26,7 @@ export default function suvPage() {
                   <div className="col-md-12">
                      <div className="site-heading">
 
-                        <h2>Suv 7 Seaters </h2>
+                        <h1>Suv 7 Seaters </h1>
                      </div>
                   </div>
                </div>

@@ -6,7 +6,7 @@ DriveItCars is a Hyderabad car rental business. The blog helps visitors compare 
 
 ## Existing identity
 
-Keep the established black-and-gold identity and shared footer. The site uses Poppins for headings and Rubik for body text via the existing stylesheet. Do not introduce another font download or UI library for these surfaces.
+Keep the established black-and-gold identity. The site uses Poppins for headings and Rubik for body text via the existing stylesheet. Do not introduce another font download or UI library for these surfaces.
 
 ## Shared header
 
@@ -20,7 +20,11 @@ An automotive travel journal: clear white space, large dark type, expansive car 
 
 ## Runtime ownership
 
-Model B: runtime CSS remains canonical. Blog visual tokens live once in `src/app/blog/blog.module.css` on `.page`, shared by both routes and `BlogChrome.jsx`. Other site routes keep their current CSS. These are scoped tokens, not a global site redesign.
+Runtime CSS is canonical. `src/app/site-theme.css` owns the public site's `--site-*` palette, typography, 1184px container and 16px radius. `SiteLayoutWrapper.jsx` applies `.driveit-site` only outside Studio. Header and blog tokens alias these shared values; component modules own hero, FAQ, footer and blog layouts. `.site-content` scopes the common skin for legacy public pages; `.journal-content` keeps the journal's dedicated editorial layout.
+
+The shared page checklist is: compact white header; light gray, left-aligned masthead with ink title and plain breadcrumb; white introductory section with readable left-aligned text; soft fleet section with flat bordered vehicle cards and contained images; charcoal primary and outlined WhatsApp enquiry actions; gold booking actions; consistent FAQ accordion; dark footer with native expandable specialist links. Desktop gutters are 40px and mobile gutters 20px. Use 72px section spacing on desktop and 48px on mobile. Preserve prices, rental conditions, CMS content, metadata and contact destinations. Do not apply public-site resets inside Studio or force legacy card styles into the blog.
+
+Shared component owners: `PremiumHeroSection.module.css` controls the landing booking/showcase area; `FaqSection.module.css` controls the first-open, single-open accordion with unique answer IDs; `Footer.module.css` controls four responsive columns and three closed specialist link groups. All existing footer destinations remain available. Homepage rental plan/category filtering and service redirects retain their existing values and events.
 
 | Role | Runtime token | Value |
 | --- | --- | --- |

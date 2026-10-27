@@ -1,4 +1,5 @@
 import './globals.css'
+import './site-theme.css'
 import SiteLayoutWrapper from '@/components/SiteLayoutWrapper'
 
 export const metadata = {

@@ -6,7 +6,7 @@ export default function outstationBusPage() {
             <div className="row">
                <div className="col-md-12">
                   <div className="breadcromb-box">
-                     <h3>Outstation</h3>
+                     <h1>Outstation</h1>
                      <ul>
                         <li><i className="fa fa-home"></i></li>
                         <li><a href="/">Home</a></li>

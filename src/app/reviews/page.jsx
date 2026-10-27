@@ -6,7 +6,7 @@ export default function reviewsPage() {
             <div className="row">
                <div className="col-md-12">
                   <div className="breadcromb-box">
-                     <h3>Google Reviews</h3>
+                     <h1>Google Reviews</h1>
                      <ul>
                         <li><i className="fa fa-home"></i></li>
                         <li><a href="/">Home</a></li>

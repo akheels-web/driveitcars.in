@@ -8,7 +8,7 @@ export default function hatchbackPage() {
                <div className="col-md-12">
                   <div className="site-heading">
                     
-                     <h2>Hatchback</h2>
+                     <h1>Hatchback</h1>
                   </div>
                </div>
             </div>
