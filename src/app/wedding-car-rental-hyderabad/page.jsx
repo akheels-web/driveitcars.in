@@ -1,3 +1,5 @@
+import { SERVICE_VEHICLE_IMAGES } from '@/data/service-vehicle-images';
+import fleetStyles from '@/components/ServiceFleet.module.css';
 import Link from 'next/link';
 import FaqSection from '@/components/FaqSection';
 import SeoSchema, {
@@ -23,9 +25,9 @@ export const metadata = {
     type: 'website',
     images: [
       {
-        url: 'https://www.driveitcars.in/assets/img/rollsp.png',
+        url: SERVICE_VEHICLE_IMAGES.rolls,
         width: 1200,
-        height: 630,
+        height: 800,
         alt: 'Wedding Car Rental Hyderabad - Rolls Royce & Mercedes',
       },
     ],
@@ -76,7 +78,7 @@ const WEDDING_FLEET = [
     id: 'rolls-royce-phantom',
     name: 'Rolls Royce Phantom / Ghost',
     badge: 'Royal Nizami Grandeur',
-    image: '/assets/img/rollsp.png',
+    image: SERVICE_VEHICLE_IMAGES.rolls,
     rateBaraat: 'Tariff on Request',
     rateFullDay: 'Custom Quote',
     features: ['Starlight Headliner', 'Coach Doors for Photos', 'Suited Executive Chauffeur', 'Red-Carpet Protocol'],
@@ -87,7 +89,7 @@ const WEDDING_FLEET = [
     id: 'mercedes-maybach-s-class',
     name: 'Mercedes-Maybach / S-Class',
     badge: 'Presidential Elegance',
-    image: '/assets/img/benz3.png',
+    image: SERVICE_VEHICLE_IMAGES.maybach,
     rateBaraat: 'Tariff on Request',
     rateFullDay: 'Custom Quote',
     features: ['First-Class Rear Lounge', 'Burmester 3D Sound', 'Floral Decoration Ready', 'Maximum VIP Prestige'],
@@ -98,7 +100,7 @@ const WEDDING_FLEET = [
     id: 'mercedes-convertible',
     name: 'Mercedes 2-Seater Open-Top Convertible',
     badge: 'Cinematic Bridal Entry',
-    image: '/assets/img/benz2s.png',
+    image: SERVICE_VEHICLE_IMAGES.roadster,
     rateBaraat: 'Tariff on Request',
     rateFullDay: 'Custom Quote',
     features: ['Drop-Top Open Air', 'Ideal for Flower Shower Entry', 'Exotic Sports Styling', 'Pre-Wedding Shoot Ready'],
@@ -109,7 +111,7 @@ const WEDDING_FLEET = [
     id: 'range-rover-sport',
     name: 'Range Rover Sport / Vogue',
     badge: 'Dominant Groom Baraat',
-    image: '/assets/img/range-rover1.png',
+    image: SERVICE_VEHICLE_IMAGES.rangerover,
     rateBaraat: 'Tariff on Request',
     rateFullDay: 'Custom Quote',
     features: ['Commanding High Stature', 'Panoramic Glass Sunroof', 'Air Suspension Comfort', 'Groom Sunroof Standing'],
@@ -120,7 +122,7 @@ const WEDDING_FLEET = [
     id: 'vintage-royal-car',
     name: 'Classic Vintage Open Tourer',
     badge: 'Timeless Heritage Romance',
-    image: '/assets/img/bentely.png',
+    image: SERVICE_VEHICLE_IMAGES.vintage,
     rateBaraat: 'Tariff on Request',
     rateFullDay: 'Custom Quote',
     features: ['Open-Top Nizami Aesthetic', 'Slow Baraat Crawl Gearing', 'Photogenic Masterpiece', 'White-Glove Driver'],
@@ -131,7 +133,7 @@ const WEDDING_FLEET = [
     id: 'audi-q7-suv',
     name: 'Audi Q7 7-Seater Luxury SUV',
     badge: 'VIP Family & Baraat Escort',
-    image: '/assets/img/audi.png',
+    image: SERVICE_VEHICLE_IMAGES.audiq7,
     rateBaraat: 'Tariff on Request',
     rateFullDay: 'Custom Quote',
     features: ['7-Passenger Capacity', 'Dual Climate AC Control', 'Massive Luggage Room', 'VIP Convoy Ready'],
@@ -149,6 +151,9 @@ export default function WeddingCarRentalHyderabadPage() {
     areaServed: ['Hyderabad', 'Banjara Hills', 'Jubilee Hills', 'Gachibowli', 'Shamshabad', 'Secunderabad', 'Telangana'],
     priceRange: 'Tariff on Request',
   });
+
+  rentalSchema.image = SERVICE_VEHICLE_IMAGES.rolls;
+  rentalSchema.makesOffer = [{ '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Luxury wedding car rental with chauffeur', description: 'Luxury wedding cars for bridal entry, groom arrival and wedding travel in Hyderabad with a professional chauffeur.' } }];
 
   const breadcrumbSchema = buildBreadcrumbSchema([
     { name: 'Home', url: '/' },
@@ -258,7 +263,7 @@ export default function WeddingCarRentalHyderabadPage() {
       </section>
 
       {/* Wedding Fleet Grid */}
-      <section className="section_70" style={{ background: '#f8fafc', paddingTop: '40px' }}>
+      <section id="wedding-fleet" className={[fleetStyles.fleet, 'section_70'].join(' ')} style={{ background: '#f8fafc', paddingTop: '40px' }}>
         <div className="container">
           <div className="row">
             <div className="col-12 text-center mb-5">
@@ -274,6 +279,7 @@ export default function WeddingCarRentalHyderabadPage() {
             </div>
           </div>
 
+          <p className={fleetStyles.illustrationNote}>Representative vehicle illustrations. Exact model, trim, colour and availability are confirmed when booking.</p>
           <div className="row">
             {WEDDING_FLEET.map((car) => (
               <div key={car.id} className="col-lg-4 col-md-6 mb-4">
@@ -320,7 +326,7 @@ export default function WeddingCarRentalHyderabadPage() {
                     <img
                       loading="lazy"
                       src={car.image}
-                      alt={`${car.name} wedding car rental Hyderabad`}
+                      alt={`${car.name} wedding car rental Hyderabad`} width="1200" height="800"
                       style={{ maxHeight: '160px', width: 'auto', maxWidth: '90%', objectFit: 'contain' }}
                     />
                   </div>

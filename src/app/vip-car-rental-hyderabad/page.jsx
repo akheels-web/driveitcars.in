@@ -1,3 +1,5 @@
+import { SERVICE_VEHICLE_IMAGES } from '@/data/service-vehicle-images';
+import fleetStyles from '@/components/ServiceFleet.module.css';
 import Link from 'next/link';
 import FaqSection from '@/components/FaqSection';
 import SeoSchema, {
@@ -23,9 +25,9 @@ export const metadata = {
     type: 'website',
     images: [
       {
-        url: 'https://www.driveitcars.in/assets/img/benz3.png',
+        url: SERVICE_VEHICLE_IMAGES.maybach,
         width: 1200,
-        height: 630,
+        height: 800,
         alt: 'VIP Car Rental Hyderabad - CEO & Executive Car Hire',
       },
     ],
@@ -71,7 +73,7 @@ const VIP_FLEET = [
     id: 'maybach-vip',
     name: 'Mercedes-Maybach S-Class',
     role: 'CEO & Head of State Flagship',
-    image: '/assets/img/benz3.png',
+    image: SERVICE_VEHICLE_IMAGES.maybach,
     rate: 'Tariff on Request',
     features: ['First-Class Rear Lounge', 'Acoustic Sound Isolation', 'Executive Chauffeur Included', 'Champagne Console'],
     whatsappMsg: 'Hi DRIVEIT Cars, I want to book the Mercedes-Maybach for CEO VIP car rental in Hyderabad.',
@@ -80,7 +82,7 @@ const VIP_FLEET = [
     id: 's-class-vip',
     name: 'Mercedes-Benz S-Class 500',
     role: 'Executive Board Member Sedan',
-    image: '/assets/img/benz.png',
+    image: SERVICE_VEHICLE_IMAGES.sclass,
     rate: 'Tariff on Request',
     features: ['Massaging Reclining Seats', 'Burmester High-End Audio', 'Air Suspension Comfort', 'Privacy Sunblinds'],
     whatsappMsg: 'Hi DRIVEIT Cars, I want to book the Mercedes-Benz S-Class for executive car rental in Hyderabad.',
@@ -89,7 +91,7 @@ const VIP_FLEET = [
     id: 'bmw-7-vip',
     name: 'BMW 7 Series Flagship',
     role: 'CXO & Venture Capital Dignitaries',
-    image: '/assets/img/bmw11.png',
+    image: SERVICE_VEHICLE_IMAGES.bmw7,
     rate: 'Tariff on Request',
     features: ['Executive Sky Lounge', 'Rear Touch Control Tablet', 'Dynamic Whisper Ride', 'High-Speed Wi-Fi Ready'],
     whatsappMsg: 'Hi DRIVEIT Cars, I want to book the BMW 7 Series for VIP car rental in Hyderabad.',
@@ -98,7 +100,7 @@ const VIP_FLEET = [
     id: 'fortuner-escort',
     name: 'Toyota Fortuner Legender Convoy',
     role: 'VIP Security & Escort SUV',
-    image: '/assets/img/fortuner2.jpg',
+    image: SERVICE_VEHICLE_IMAGES.fortuner,
     rate: 'Tariff on Request',
     features: ['Commanding Pilot Stature', '4x4 Convoy Lead / Escort', 'Heavy Luggage Support', 'Executive Security Driver'],
     whatsappMsg: 'Hi DRIVEIT Cars, I want to book the Fortuner Legender for VIP escort convoy in Hyderabad.',
@@ -107,7 +109,7 @@ const VIP_FLEET = [
     id: 'rolls-royce-vip',
     name: 'Rolls Royce Phantom / Ghost',
     role: 'Royal, Celebrity & Billionaire Stature',
-    image: '/assets/img/rollsp.png',
+    image: SERVICE_VEHICLE_IMAGES.rolls,
     rate: 'Price On Consultation',
     features: ['Starlight Headliner', 'Coach Doors Opening', 'Unrivaled Global Status', 'Red Carpet Protocol'],
     whatsappMsg: 'Hi DRIVEIT Cars, I want to enquire about Rolls Royce presidential car rental in Hyderabad.',
@@ -123,6 +125,9 @@ export default function VipCarRentalHyderabadPage() {
     areaServed: ['Hyderabad', 'HITEC City', 'Financial District Gachibowli', 'Jubilee Hills', 'Banjara Hills', 'RGIA Shamshabad Airport'],
     priceRange: 'Tariff on Request',
   });
+
+  rentalSchema.image = SERVICE_VEHICLE_IMAGES.maybach;
+  rentalSchema.makesOffer = [{ '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'VIP and executive chauffeur car rental', description: 'Luxury chauffeur-driven vehicles for executive visits, corporate events and VIP transfers in Hyderabad.' } }];
 
   const breadcrumbSchema = buildBreadcrumbSchema([
     { name: 'Home', url: '/' },
@@ -198,7 +203,7 @@ export default function VipCarRentalHyderabadPage() {
                   VIP Car Rental Hyderabad — Executive &amp; CEO Luxury Car Hire
                 </h1>
                 <p style={{ textAlign: 'justify', fontSize: '15px', lineHeight: '1.8', color: '#4b5563', marginBottom: '16px' }}>
-                  DRIVEIT is Hyderabad's trusted authority for high-stakes <strong>VIP car rental Hyderabad</strong>, <strong>executive car rental Hyderabad</strong>, and dedicated <strong>CEO car rental Hyderabad</strong>. When world-renowned business leaders, enterprise board members, venture capitalists, and foreign dignitaries visit Hyderabad's global tech capital in <strong>HITEC City, Gachibowli Financial District, Mindspace</strong>, and <strong>HICC Novotel</strong>, compromise is not an option.
+                  DRIVEIT is Hyderabad&apos;s trusted authority for high-stakes <strong>VIP car rental Hyderabad</strong>, <strong>executive car rental Hyderabad</strong>, and dedicated <strong>CEO car rental Hyderabad</strong>. When world-renowned business leaders, enterprise board members, venture capitalists, and foreign dignitaries visit Hyderabad&apos;s global tech capital in <strong>HITEC City, Gachibowli Financial District, Mindspace</strong>, and <strong>HICC Novotel</strong>, compromise is not an option.
                 </p>
                 <p style={{ textAlign: 'justify', fontSize: '15px', lineHeight: '1.8', color: '#4b5563', marginBottom: '22px' }}>
                   We provide discreet, synchronized ground logistics deploying flagship vehicles — including the <strong>Mercedes-Maybach, Mercedes-Benz S-Class, BMW 7 Series, Rolls Royce</strong>, and <strong>Toyota Fortuner Legender convoy escorts</strong>. Every assignment is backed by strict non-disclosure compliance, suited executive chauffeurs, corporate GST invoicing, and 24/7 dedicated operations dispatch.
@@ -229,7 +234,7 @@ export default function VipCarRentalHyderabadPage() {
       </section>
 
       {/* VIP Fleet Grid */}
-      <section className="section_70" style={{ background: '#f8fafc', paddingTop: '40px' }}>
+      <section id="vip-fleet" className={[fleetStyles.fleet, 'section_70'].join(' ')} style={{ background: '#f8fafc', paddingTop: '40px' }}>
         <div className="container">
           <div className="row">
             <div className="col-12 text-center mb-5">
@@ -245,6 +250,7 @@ export default function VipCarRentalHyderabadPage() {
             </div>
           </div>
 
+          <p className={fleetStyles.illustrationNote}>Representative vehicle illustrations. Exact model, trim, colour and availability are confirmed when booking.</p>
           <div className="row">
             {VIP_FLEET.map((car) => (
               <div key={car.id} className="col-lg-4 col-md-6 mb-4">
@@ -291,7 +297,7 @@ export default function VipCarRentalHyderabadPage() {
                     <img
                       loading="lazy"
                       src={car.image}
-                      alt={`${car.name} VIP car rental Hyderabad`}
+                      alt={`${car.name} VIP car rental Hyderabad`} width="1200" height="800"
                       style={{ maxHeight: '160px', width: 'auto', maxWidth: '90%', objectFit: 'contain' }}
                     />
                   </div>
