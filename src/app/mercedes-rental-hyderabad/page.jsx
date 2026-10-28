@@ -1,5 +1,7 @@
 import Link from 'next/link';
 import FaqSection from '@/components/FaqSection';
+import { SERVICE_VEHICLE_IMAGES } from '@/data/service-vehicle-images';
+import fleetStyles from '@/components/ServiceFleet.module.css';
 import SeoSchema, {
   buildCarRentalSchema,
   buildFaqSchema,
@@ -23,9 +25,9 @@ export const metadata = {
     type: 'website',
     images: [
       {
-        url: 'https://www.driveitcars.in/assets/img/benz.png',
+        url: SERVICE_VEHICLE_IMAGES.sclass,
         width: 1200,
-        height: 630,
+        height: 800,
         alt: 'Mercedes Rental Hyderabad - Mercedes Benz S-Class & E-Class',
       },
     ],
@@ -71,8 +73,7 @@ const MERCEDES_FLEET = [
     id: 'mercedes-s-class',
     name: 'Mercedes-Benz S-Class 500',
     tag: 'Flagship Luxury',
-    image: '/assets/img/benz.png',
-    model: '2023 Edition',
+    image: SERVICE_VEHICLE_IMAGES.sclass,
     seats: '5 Seats',
     fuel: 'Petrol / Automatic',
     rateDay: 'Tariff on Request',
@@ -84,21 +85,19 @@ const MERCEDES_FLEET = [
     id: 'mercedes-e-class',
     name: 'Mercedes-Benz E-Class 250',
     tag: 'Executive Elegance',
-    image: '/assets/img/benz2.png',
-    model: '2023 Edition',
+    image: SERVICE_VEHICLE_IMAGES.eclass,
     seats: '5 Seats',
     fuel: 'Diesel / Automatic',
     rateDay: 'Tariff on Request',
     weddingRate: 'Custom Quote',
-    features: ['Panamerica Grille', 'Dual Panoramic Sunroof', 'Chauffeur Package', 'Superior Legroom'],
+    features: ['Executive Sedan', 'Airport Transfers', 'Chauffeur Package', 'Superior Legroom'],
     whatsappMsg: 'Hi DRIVEIT Cars, I want to enquire about booking the Mercedes-Benz E-Class in Hyderabad.',
   },
   {
     id: 'mercedes-maybach',
     name: 'Mercedes-Maybach S-Class',
     tag: 'Ultra VIP Luxury',
-    image: '/assets/img/benz3.png',
-    model: '2023 Edition',
+    image: SERVICE_VEHICLE_IMAGES.maybach,
     seats: '4-5 Seats',
     fuel: 'Twin-Turbo / Automatic',
     rateDay: 'Tariff on Request',
@@ -110,8 +109,7 @@ const MERCEDES_FLEET = [
     id: 'mercedes-g-wagon',
     name: 'Mercedes-AMG G-Wagon (G63)',
     tag: 'Celebrity Icon',
-    image: '/assets/img/g-wagon.png',
-    model: '2023 Edition',
+    image: SERVICE_VEHICLE_IMAGES.gwagon,
     seats: '5 Seats',
     fuel: 'V8 Biturbo / 4MATIC',
     rateDay: 'Tariff on Request',
@@ -123,8 +121,7 @@ const MERCEDES_FLEET = [
     id: 'mercedes-cabriolet',
     name: 'Mercedes-Benz 2-Seater Convertible',
     tag: 'Sport & Romance',
-    image: '/assets/img/benz2s.png',
-    model: '2023 Edition',
+    image: SERVICE_VEHICLE_IMAGES.roadster,
     seats: '2 Seats',
     fuel: 'Turbo Petrol / Automatic',
     rateDay: 'Tariff on Request',
@@ -143,6 +140,7 @@ export default function MercedesRentalHyderabadPage() {
     areaServed: ['Hyderabad', 'Banjara Hills', 'Jubilee Hills', 'HITEC City', 'Gachibowli', 'RGIA Shamshabad Airport'],
     priceRange: 'Tariff on Request',
   });
+  rentalSchema.image = SERVICE_VEHICLE_IMAGES.sclass;
 
   const breadcrumbSchema = buildBreadcrumbSchema([
     { name: 'Home', url: '/' },
@@ -218,7 +216,7 @@ export default function MercedesRentalHyderabadPage() {
                   Mercedes Rental Hyderabad — Luxury Self Drive &amp; Chauffeur Hire
                 </h1>
                 <p style={{ textAlign: 'justify', fontSize: '15px', lineHeight: '1.8', color: '#4b5563', marginBottom: '16px' }}>
-                  Experience the pinnacle of German automotive prestige with DRIVEIT's dedicated <strong>Mercedes rental Hyderabad</strong> service. Whether you require an imposing <strong>Mercedes-Benz S-Class</strong> for a state visit or CEO board meeting in HITEC City, an executive <strong>E-Class</strong> for airport transfers at Rajiv Gandhi International Airport (RGIA), or a thunderous <strong>Mercedes-AMG G-Wagon</strong> for a celebrity grand entry, DRIVEIT delivers showroom-immaculate Mercedes vehicles across Hyderabad with unmatched professionalism.
+                  Experience the pinnacle of German automotive prestige with DRIVEIT&apos;s dedicated <strong>Mercedes rental Hyderabad</strong> service. Whether you require an imposing <strong>Mercedes-Benz S-Class</strong> for a state visit or CEO board meeting in HITEC City, an executive <strong>E-Class</strong> for airport transfers at Rajiv Gandhi International Airport (RGIA), or a thunderous <strong>Mercedes-AMG G-Wagon</strong> for a celebrity grand entry, DRIVEIT delivers showroom-immaculate Mercedes vehicles across Hyderabad with unmatched professionalism.
                 </p>
                 <p style={{ textAlign: 'justify', fontSize: '15px', lineHeight: '1.8', color: '#4b5563', marginBottom: '22px' }}>
                   Choose complete driving sovereignty with our <strong>Mercedes self drive rental in Hyderabad</strong>, or sit back in serene comfort with our suited, uniformed executive chauffeurs. With doorstep delivery to <strong>Banjara Hills, Jubilee Hills, Gachibowli, Madhapur, Kondapur</strong>, and 5-star hotels like Taj Falaknuma Palace and ITC Kohenur, we guarantee a red-carpet experience every single mile.
@@ -249,7 +247,7 @@ export default function MercedesRentalHyderabadPage() {
       </section>
 
       {/* Fleet Showcase Grid */}
-      <section className="section_70" style={{ background: '#f8fafc', paddingTop: '40px' }}>
+      <section id="mercedes-fleet" className={[fleetStyles.fleet, 'section_70'].join(' ')}>
         <div className="container">
           <div className="row">
             <div className="col-12 text-center mb-5">
@@ -265,6 +263,7 @@ export default function MercedesRentalHyderabadPage() {
             </div>
           </div>
 
+          <p className={fleetStyles.illustrationNote}>Representative vehicle illustrations. Exact model year, trim, colour and features are confirmed when booking.</p>
           <div className="row">
             {MERCEDES_FLEET.map((car) => (
               <div key={car.id} className="col-lg-4 col-md-6 mb-4">
@@ -312,7 +311,8 @@ export default function MercedesRentalHyderabadPage() {
                       loading="lazy"
                       src={car.image}
                       alt={`${car.name} Mercedes rental Hyderabad`}
-                      style={{ maxHeight: '160px', width: 'auto', maxWidth: '90%', objectFit: 'contain' }}
+                      width="1200"
+                      height="800"
                     />
                   </div>
 
@@ -329,7 +329,6 @@ export default function MercedesRentalHyderabadPage() {
                     </div>
 
                     <ul style={{ listStyle: 'none', padding: 0, margin: '0 0 16px', fontSize: '13px', color: '#475569' }}>
-                      <li style={{ marginBottom: 6 }}><i className="fa fa-car" style={{ color: '#ffb907', width: 20 }} /> {car.model}</li>
                       <li style={{ marginBottom: 6 }}><i className="fa fa-users" style={{ color: '#ffb907', width: 20 }} /> {car.seats}</li>
                       <li style={{ marginBottom: 6 }}><i className="fa fa-cogs" style={{ color: '#ffb907', width: 20 }} /> {car.fuel}</li>
                     </ul>

@@ -1,3 +1,4 @@
+import { SERVICE_VEHICLE_IMAGES } from '@/data/service-vehicle-images';
 import Link from 'next/link';
 import FaqSection from '@/components/FaqSection';
 import SeoSchema, {
@@ -79,13 +80,13 @@ const VINTAGE_MODELS = [
   },
   {
     id: 'classic-cabriolet',
-    name: 'Mercedes Classic Open-Top Roadster',
+    name: 'Mercedes-Benz Open-Top Roadster',
     badge: 'Romantic Elegance',
-    image: '/assets/img/benz2s.png',
+    image: SERVICE_VEHICLE_IMAGES.roadster,
     rateBaraat: 'Tariff on Request',
     rateFullDay: 'Custom Quote',
-    features: ['Convertible Soft-Top', 'Pre-Wedding Shoot Ready', 'Spotless White Exterior', 'Red-Carpet Chauffeur'],
-    whatsappMsg: 'Hi DRIVEIT Cars, I want to book the Mercedes Classic Roadster for our wedding in Hyderabad.',
+    features: ['Retractable Convertible Roof', 'Pre-Wedding Shoot Ready', 'Colour Confirmed at Booking', 'Red-Carpet Chauffeur'],
+    whatsappMsg: 'Hi DRIVEIT Cars, I want to book the Mercedes-Benz Open-Top Roadster for our wedding in Hyderabad.',
   },
 ];
 
@@ -173,7 +174,7 @@ export default function VintageWeddingCarHyderabadPage() {
                   Vintage Wedding Car Hyderabad — Classic &amp; Open-Top Wedding Car Hire
                 </h1>
                 <p style={{ textAlign: 'justify', fontSize: '15px', lineHeight: '1.8', color: '#4b5563', marginBottom: '16px' }}>
-                  Step into an era of aristocratic romance and Nizami splendor with DRIVEIT's exclusive <strong>vintage wedding car Hyderabad</strong> collection. Classic cars evoke a sense of timeless charm that modern vehicles simply cannot duplicate. With polished chrome grilles, wide flowing fenders, dual trumpet horns, and open-air convertible tops, our vintage cars provide the perfect canvas for rose-petal showers, emotional vidai departures, and show-stopping groom baraat arrivals.
+                  Step into an era of aristocratic romance and Nizami splendor with DRIVEIT&apos;s exclusive <strong>vintage wedding car Hyderabad</strong> collection. Classic cars evoke a sense of timeless charm that modern vehicles simply cannot duplicate. With polished chrome grilles, wide flowing fenders, dual trumpet horns, and open-air convertible tops, our vintage cars provide the perfect canvas for rose-petal showers, emotional vidai departures, and show-stopping groom baraat arrivals.
                 </p>
                 <p style={{ textAlign: 'justify', fontSize: '15px', lineHeight: '1.8', color: '#4b5563', marginBottom: '22px' }}>
                   Our vintage vehicles are maintained by master mechanics and piloted by uniformed chauffeurs, delivering unforgettable arrivals across <strong>Taj Falaknuma, Banjara Hills, Jubilee Hills, and Golconda Resorts</strong>.

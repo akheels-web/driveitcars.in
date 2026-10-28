@@ -1,3 +1,4 @@
+import { SERVICE_VEHICLE_IMAGES } from '@/data/service-vehicle-images';
 import Link from 'next/link';
 import FaqSection from '@/components/FaqSection';
 import SeoSchema, {
@@ -23,9 +24,9 @@ export const metadata = {
     type: 'website',
     images: [
       {
-        url: 'https://www.driveitcars.in/assets/img/benz2.png',
+        url: SERVICE_VEHICLE_IMAGES.eclass,
         width: 1200,
-        height: 630,
+        height: 800,
         alt: 'Corporate Car Rental Hyderabad - Executive Business Fleet',
       },
     ],
@@ -91,7 +92,7 @@ const CORPORATE_FLEET = [
     id: 'mercedes-e-class-corp',
     name: 'Mercedes-Benz E-Class Executive',
     category: 'CXO & Board Member Travel',
-    image: '/assets/img/benz2.png',
+    image: SERVICE_VEHICLE_IMAGES.eclass,
     rate8hr: 'Tariff on Request',
     rateMonthly: 'Custom Retainer',
     features: ['Panoramic Sunroof', 'Burmester Sound System', 'Suited Protocol Chauffeur', 'Red-Carpet Corporate Presence'],

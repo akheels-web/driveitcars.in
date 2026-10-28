@@ -1,3 +1,4 @@
+import { SERVICE_VEHICLE_IMAGES } from '@/data/service-vehicle-images';
 import Link from 'next/link';
 import FaqSection from '@/components/FaqSection';
 import SeoSchema, {
@@ -23,9 +24,9 @@ export const metadata = {
     type: 'website',
     images: [
       {
-        url: 'https://www.driveitcars.in/assets/img/g-wagon.png',
+        url: SERVICE_VEHICLE_IMAGES.gwagon,
         width: 1200,
-        height: 630,
+        height: 800,
         alt: 'Groom Entry Luxury Car Hyderabad - Mercedes G Wagon',
       },
     ],
@@ -71,7 +72,7 @@ const GROOM_FLEET = [
     id: 'mercedes-g-wagon-groom',
     name: 'Mercedes-AMG G-Wagon (G63)',
     badge: '#1 Celebrity Groom Arrival',
-    image: '/assets/img/g-wagon.png',
+    image: SERVICE_VEHICLE_IMAGES.gwagon,
     rate: 'Tariff on Request',
     features: ['Thunderous V8 Biturbo Roar', 'Side-Exit Exhaust Soundtrack', 'Unmatched Street Dominance', 'VIP Escort Stature'],
     whatsappMsg: 'Hi DRIVEIT Cars, I want to book the Mercedes G-Wagon for groom entry in Hyderabad.',
@@ -189,7 +190,7 @@ export default function GroomEntryLuxuryCarHyderabadPage() {
                   Groom Entry Luxury Car Hyderabad — Grand Baraat Car Hire &amp; Royal Processions
                 </h1>
                 <p style={{ textAlign: 'justify', fontSize: '15px', lineHeight: '1.8', color: '#4b5563', marginBottom: '16px' }}>
-                  Lead your wedding procession with unstoppable authority and regal magnetism. With DRIVEIT's dedicated <strong>groom entry luxury car Hyderabad</strong> fleet, the groom's baraat arrival becomes the crowning highlight of the evening. Whether you choose the thunderous V8 side-exhaust roar of a <strong>Mercedes-AMG G-Wagon</strong>, the timeless imperial poise of a <strong>Rolls Royce Phantom</strong>, or a high-stance <strong>Range Rover Sport</strong> with a panoramic sunroof, your entrance sets an unforgettable tone.
+                  Lead your wedding procession with unstoppable authority and regal magnetism. With DRIVEIT&apos;s dedicated <strong>groom entry luxury car Hyderabad</strong> fleet, the groom&apos;s baraat arrival becomes the crowning highlight of the evening. Whether you choose the thunderous V8 side-exhaust roar of a <strong>Mercedes-AMG G-Wagon</strong>, the timeless imperial poise of a <strong>Rolls Royce Phantom</strong>, or a high-stance <strong>Range Rover Sport</strong> with a panoramic sunroof, your entrance sets an unforgettable tone.
                 </p>
                 <p style={{ textAlign: 'justify', fontSize: '15px', lineHeight: '1.8', color: '#4b5563', marginBottom: '22px' }}>
                   Our suited chauffeurs are experienced with the crawl pace of Indian baraat music bands, dhol players, and celebratory firework displays, providing flawless performance at venues across <strong>Banjara Hills, Jubilee Hills, Gachibowli, Shamshabad, and Secunderabad</strong>.

@@ -1,3 +1,4 @@
+import { SERVICE_VEHICLE_IMAGES } from '@/data/service-vehicle-images';
 import Link from 'next/link';
 import FaqSection from '@/components/FaqSection';
 import SeoSchema, {
@@ -127,7 +128,7 @@ export default function luxurycarsPage() {
                         Luxury Self Drive Cars Hyderabad — Premium &amp; Exotic Car Rentals
                      </h1>
                      <p style={{ textAlign: 'justify', fontSize: '15px', lineHeight: '1.8', color: '#4b5563', marginBottom: '16px' }}>
-                        Step into a realm of supreme prestige with DRIVEIT's <strong>luxury self drive cars Hyderabad</strong> collection. Designed for leaders, discerning executives, celebrities, and grand wedding celebrations, our fleet delivers uncompromising luxury and exhilarating horsepower. Drive showroom-conditioned <strong>BMW sedans, Mercedes-Benz, Audi, Range Rover Evoque, Jaguar XF, and Toyota Fortuner Legender</strong> on your own terms.
+                        Step into a realm of supreme prestige with DRIVEIT&apos;s <strong>luxury self drive cars Hyderabad</strong> collection. Designed for leaders, discerning executives, celebrities, and grand wedding celebrations, our fleet delivers uncompromising luxury and exhilarating horsepower. Drive showroom-conditioned <strong>BMW sedans, Mercedes-Benz, Audi, Range Rover Evoque, Jaguar XF, and Toyota Fortuner Legender</strong> on your own terms.
                      </p>
                      <p style={{ textAlign: 'justify', fontSize: '15px', lineHeight: '1.8', color: '#4b5563', marginBottom: '20px' }}>
                         Whether hosting high-profile corporate delegates in <strong>HITEC City</strong>, making an unforgettable grand entrance at a royal <strong>Banjara Hills or Jubilee Hills</strong> wedding, or experiencing the thrill of open-throttle driving along Hyderabad Outer Ring Road, DRIVEIT provides immaculate, fully insured <strong>premium self drive cars in Hyderabad</strong> with discreet white-glove doorstep delivery.
@@ -399,7 +400,7 @@ export default function luxurycarsPage() {
                     <div className="single-offers">
                         <div className="offer-image">
                             <a href="#">
-                                <img loading="lazy" src="assets/img/benz.png" className="cstimg" alt="offer 1" />
+                                <img loading="lazy" src={SERVICE_VEHICLE_IMAGES.sclass} width="1200" height="800" alt="Mercedes-Benz S-Class rental in Hyderabad" />
                             </a>
                         </div>
                         <div className="offer-text">
@@ -408,7 +409,7 @@ export default function luxurycarsPage() {
                             </a>
             
                             <ul>
-                                <li><i className="fa fa-car"></i>Model:2023</li>
+                                <li><i className="fa fa-car"></i>Year / trim: confirm at booking</li>
                                 <li><i className="fa fa-users"></i>5 People</li>
                                 <li><i className="fas fa-gas-pump"></i>Petrol/Diesel</li>
                             </ul>
@@ -424,7 +425,7 @@ export default function luxurycarsPage() {
                     <div className="single-offers">
                         <div className="offer-image">
                             <a href="#">
-                                <img loading="lazy" src="assets/img/benz2.png" alt="offer 1" />
+                                <img loading="lazy" src={SERVICE_VEHICLE_IMAGES.eclass} width="1200" height="800" alt="Mercedes-Benz E-Class rental in Hyderabad" />
                             </a>
                         </div>
                         <div className="offer-text">
@@ -433,7 +434,7 @@ export default function luxurycarsPage() {
                             </a>
             
                             <ul>
-                                <li><i className="fa fa-car"></i>Model:2023</li>
+                                <li><i className="fa fa-car"></i>Year / trim: confirm at booking</li>
                                 <li><i className="fa fa-users"></i>5 People</li>
                                 <li><i className="fas fa-gas-pump"></i>Petrol/Diesel</li>
                             </ul>
@@ -449,7 +450,7 @@ export default function luxurycarsPage() {
                     <div className="single-offers">
                         <div className="offer-image">
                             <a href="#">
-                                <img loading="lazy" src="assets/img/benz3.png" className="cstimg" alt="offer 1" />
+                                <img loading="lazy" src={SERVICE_VEHICLE_IMAGES.maybach} width="1200" height="800" alt="Mercedes-Maybach S-Class rental in Hyderabad" />
                             </a>
                         </div>
                         <div className="offer-text">
@@ -458,7 +459,7 @@ export default function luxurycarsPage() {
                             </a>
             
                             <ul>
-                                <li><i className="fa fa-car"></i>Model:2023</li>
+                                <li><i className="fa fa-car"></i>Year / trim: confirm at booking</li>
                                 <li><i className="fa fa-users"></i>5 People</li>
                                 <li><i className="fas fa-gas-pump"></i>Petrol/Diesel</li>
                             </ul>
@@ -474,7 +475,7 @@ export default function luxurycarsPage() {
                         <div className="single-offers">
                             <div className="offer-image">
                                 <a href="#">
-                                    <img loading="lazy" src="assets/img/g-wagon.png" className="cstimg" alt="offer 1" />
+                                    <img loading="lazy" src={SERVICE_VEHICLE_IMAGES.gwagon} width="1200" height="800" alt="Mercedes-AMG G63 rental in Hyderabad" />
                                 </a>
                             </div>
                             <div className="offer-text">
@@ -483,7 +484,7 @@ export default function luxurycarsPage() {
                                 </a>
                 
                                 <ul>
-                                    <li><i className="fa fa-car"></i>Model:2023</li>
+                                    <li><i className="fa fa-car"></i>Year / trim: confirm at booking</li>
                                     <li><i className="fa fa-users"></i>5 People</li>
                                     <li><i className="fas fa-gas-pump"></i>Petrol/Diesel</li>
                                 </ul>
@@ -499,7 +500,7 @@ export default function luxurycarsPage() {
                         <div className="single-offers">
                             <div className="offer-image">
                                 <a href="#">
-                                    <img loading="lazy" src="assets/img/benz2s.png" alt="offer 1" />
+                                    <img loading="lazy" src={SERVICE_VEHICLE_IMAGES.roadster} width="1200" height="800" alt="Mercedes-Benz two-seat roadster rental in Hyderabad" />
                                 </a>
                             </div>
                             <div className="offer-text">
@@ -508,8 +509,8 @@ export default function luxurycarsPage() {
                                 </a>
                 
                                 <ul>
-                                    <li><i className="fa fa-car"></i>Model:2023</li>
-                                    <li><i className="fa fa-users"></i>5 People</li>
+                                    <li><i className="fa fa-car"></i>Year / trim: confirm at booking</li>
+                                    <li><i className="fa fa-users"></i>2 People</li>
                                     <li><i className="fas fa-gas-pump"></i>Petrol/Diesel</li>
                                 </ul>
                                 <div className="offer-action">

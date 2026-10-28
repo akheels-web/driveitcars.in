@@ -1,3 +1,4 @@
+import { SERVICE_VEHICLE_IMAGES } from '@/data/service-vehicle-images';
 import Link from 'next/link';
 import FaqSection from '@/components/FaqSection';
 import SeoSchema, {
@@ -23,9 +24,9 @@ export const metadata = {
     type: 'website',
     images: [
       {
-        url: 'https://www.driveitcars.in/assets/img/benz2.png',
+        url: SERVICE_VEHICLE_IMAGES.eclass,
         width: 1200,
-        height: 630,
+        height: 800,
         alt: 'Monthly Corporate Car Rental Hyderabad - Fleet Lease',
       },
     ],
@@ -93,7 +94,7 @@ const MONTHLY_PACKAGES = [
     id: 'monthly-luxury',
     name: 'Mercedes-Benz E-Class / BMW 5',
     target: 'CXOs, MDs & Expat Directors',
-    image: '/assets/img/benz2.png',
+    image: SERVICE_VEHICLE_IMAGES.eclass,
     rateSelfDrive: 'Tariff on Request',
     rateWithChauffeur: 'Custom Retainer',
     savings: 'Monthly Deal',
@@ -186,7 +187,7 @@ export default function MonthlyCorporateCarRentalHyderabadPage() {
                   Monthly Corporate Car Rental Hyderabad — Long-Term Fleet Lease &amp; Subscriptions
                 </h1>
                 <p style={{ textAlign: 'justify', fontSize: '15px', lineHeight: '1.8', color: '#4b5563', marginBottom: '16px' }}>
-                  Eliminate the capital strain and administrative headaches of purchasing, maintaining, and managing company cars. DRIVEIT's dedicated <strong>monthly corporate car rental Hyderabad</strong> program empowers enterprises in <strong>HITEC City, Gachibowli Financial District, Mindspace, and Kokapet</strong> with fully managed, long-term fleet subscriptions. Whether you need executive sedans for daily project managers or luxury Mercedes/BMW sedans for resident directors and expatriates, our monthly retainers deliver up to <strong>45% cost savings</strong> over daily spot rentals.
+                  Eliminate the capital strain and administrative headaches of purchasing, maintaining, and managing company cars. DRIVEIT&apos;s dedicated <strong>monthly corporate car rental Hyderabad</strong> program empowers enterprises in <strong>HITEC City, Gachibowli Financial District, Mindspace, and Kokapet</strong> with fully managed, long-term fleet subscriptions. Whether you need executive sedans for daily project managers or luxury Mercedes/BMW sedans for resident directors and expatriates, our monthly retainers deliver up to <strong>45% cost savings</strong> over daily spot rentals.
                 </p>
                 <p style={{ textAlign: 'justify', fontSize: '15px', lineHeight: '1.8', color: '#4b5563', marginBottom: '22px' }}>
                   Enjoy 100% operational tax deductions, monthly GST input tax credit invoices, routine vehicle servicing with doorstep replacement car guarantees, and dedicated corporate account support.

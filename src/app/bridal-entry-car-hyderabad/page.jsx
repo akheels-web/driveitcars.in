@@ -1,3 +1,4 @@
+import { SERVICE_VEHICLE_IMAGES } from '@/data/service-vehicle-images';
 import Link from 'next/link';
 import FaqSection from '@/components/FaqSection';
 import SeoSchema, {
@@ -23,9 +24,9 @@ export const metadata = {
     type: 'website',
     images: [
       {
-        url: 'https://www.driveitcars.in/assets/img/benz2s.png',
+        url: SERVICE_VEHICLE_IMAGES.roadster,
         width: 1200,
-        height: 630,
+        height: 800,
         alt: 'Bridal Entry Car Hyderabad - Convertible Luxury Car',
       },
     ],
@@ -71,9 +72,9 @@ const BRIDAL_FLEET = [
     id: 'mercedes-convertible-bride',
     name: 'Mercedes-Benz Open-Top Cabriolet',
     badge: '#1 Most Popular Bride Entry',
-    image: '/assets/img/benz2s.png',
+    image: SERVICE_VEHICLE_IMAGES.roadster,
     rate: 'Tariff on Request',
-    features: ['Drop-Top Open Air', 'Rose Petal Shower Ready', 'White Pearl Body', 'Pre-Wedding Shoot Ready'],
+    features: ['Drop-Top Open Air', 'Rose Petal Shower Ready', 'Colour Confirmed at Booking', 'Pre-Wedding Shoot Ready'],
     whatsappMsg: 'Hi DRIVEIT Cars, I want to book the Mercedes Cabriolet for bridal entry in Hyderabad.',
   },
   {
@@ -189,7 +190,7 @@ export default function BridalEntryCarHyderabadPage() {
                   Bridal Entry Car Hyderabad — Open-Top &amp; Luxury Cars for the Bride’s Grand Arrival
                 </h1>
                 <p style={{ textAlign: 'justify', fontSize: '15px', lineHeight: '1.8', color: '#4b5563', marginBottom: '16px' }}>
-                  The bridal entry is the emotional highlight of every Indian wedding — the moment all eyes, cameras, and hearts turn to witness the bride's breathtaking arrival. With DRIVEIT's dedicated <strong>bridal entry car Hyderabad</strong> collection, you can step away from ordinary entries and create a movie-like spectacle. Arrive gracefully in an <strong>open-top Mercedes convertible</strong> showered with rose petals, a fairytale <strong>vintage open-air tourer</strong>, or a regal <strong>Range Rover Evoque</strong> decorated with fresh designer blossoms.
+                  The bridal entry is the emotional highlight of every Indian wedding — the moment all eyes, cameras, and hearts turn to witness the bride&apos;s breathtaking arrival. With DRIVEIT&apos;s dedicated <strong>bridal entry car Hyderabad</strong> collection, you can step away from ordinary entries and create a movie-like spectacle. Arrive gracefully in an <strong>open-top Mercedes convertible</strong> showered with rose petals, a fairytale <strong>vintage open-air tourer</strong>, or a regal <strong>Range Rover Evoque</strong> decorated with fresh designer blossoms.
                 </p>
                 <p style={{ textAlign: 'justify', fontSize: '15px', lineHeight: '1.8', color: '#4b5563', marginBottom: '22px' }}>
                   We coordinate with your event planner, wedding decorators, and cinematography crew for seamless timing, smoke effects, and slow rolling pacing down the wedding aisle.
@@ -225,7 +226,7 @@ export default function BridalEntryCarHyderabadPage() {
           <div className="row">
             <div className="col-12 text-center mb-5">
               <span style={{ color: '#d49500', fontWeight: 700, fontSize: '13px', textTransform: 'uppercase', letterSpacing: '1px' }}>
-                THE QUEEN'S CHARIOT
+                THE QUEEN&apos;S CHARIOT
               </span>
               <h2 style={{ fontSize: '30px', fontWeight: 800, color: '#0f172a', marginTop: '6px' }}>
                 Featured Bridal Entry Cars in Hyderabad

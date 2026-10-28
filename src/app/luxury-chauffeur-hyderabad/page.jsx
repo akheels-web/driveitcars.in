@@ -1,3 +1,4 @@
+import { SERVICE_VEHICLE_IMAGES } from '@/data/service-vehicle-images';
 import Link from 'next/link';
 import FaqSection from '@/components/FaqSection';
 import SeoSchema, {
@@ -23,9 +24,9 @@ export const metadata = {
     type: 'website',
     images: [
       {
-        url: 'https://www.driveitcars.in/assets/img/benz2.png',
+        url: SERVICE_VEHICLE_IMAGES.eclass,
         width: 1200,
-        height: 630,
+        height: 800,
         alt: 'Executive Chauffeur Service Hyderabad - DriveItCars',
       },
     ],
@@ -71,7 +72,7 @@ const CHAUFFEUR_PACKAGES = [
     id: 'mercedes-chauffeur',
     name: 'Mercedes-Benz Executive Chauffeur',
     tag: 'Corporate & Board Meetings',
-    image: '/assets/img/benz2.png',
+    image: SERVICE_VEHICLE_IMAGES.eclass,
     rate8hr: 'Tariff on Request',
     airportRate: 'Custom Quote',
     features: ['Suited Executive Chauffeur', 'Flight Delay Monitoring', 'Mineral Water & Mints', 'High-Speed Wi-Fi on Request'],
@@ -193,7 +194,7 @@ export default function LuxuryChauffeurHyderabadPage() {
                   Executive Chauffeur Hyderabad — Luxury Chauffeur &amp; Corporate Driver Services
                 </h1>
                 <p style={{ textAlign: 'justify', fontSize: '15px', lineHeight: '1.8', color: '#4b5563', marginBottom: '16px' }}>
-                  Elevate your business and VIP travel with DRIVEIT's dedicated <strong>executive chauffeur Hyderabad</strong> and <strong>luxury chauffeur service</strong>. Designed for discerning corporate executives, visiting CEOs, foreign delegates, high-net-worth families, and celebrity VIPs, our chauffeur service guarantees an oasis of tranquility and punctuality amid Hyderabad's bustling traffic. Travel seamlessly between corporate hubs in <strong>HITEC City, Gachibowli Financial District, Mindspace, Banjara Hills</strong>, and <strong>Rajiv Gandhi International Airport (RGIA)</strong>.
+                  Elevate your business and VIP travel with DRIVEIT&apos;s dedicated <strong>executive chauffeur Hyderabad</strong> and <strong>luxury chauffeur service</strong>. Designed for discerning corporate executives, visiting CEOs, foreign delegates, high-net-worth families, and celebrity VIPs, our chauffeur service guarantees an oasis of tranquility and punctuality amid Hyderabad&apos;s bustling traffic. Travel seamlessly between corporate hubs in <strong>HITEC City, Gachibowli Financial District, Mindspace, Banjara Hills</strong>, and <strong>Rajiv Gandhi International Airport (RGIA)</strong>.
                 </p>
                 <p style={{ textAlign: 'justify', fontSize: '15px', lineHeight: '1.8', color: '#4b5563', marginBottom: '22px' }}>
                   Every chauffeur is uniformed, polite, background-verified, and trained in executive etiquette and defensive driving. With zero surge pricing, flight-delay tracking, and corporate GST billing, you are guaranteed on-time pickup and complete peace of mind.

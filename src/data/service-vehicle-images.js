@@ -12,5 +12,7 @@ export const SERVICE_VEHICLE_IMAGES = {
   "cabSwift": "https://cdn.sanity.io/images/g0myfztr/production/d8b9cb4adbdf2f47a84876058c04adff30fbb3be-1200x800.webp?fm=webp",
   "cabDzire": "https://cdn.sanity.io/images/g0myfztr/production/02776cdec79ffcdc9e9fef93a3df0e6efc0e343a-1200x800.webp?fm=webp",
   "cabErtiga": "https://cdn.sanity.io/images/g0myfztr/production/aa05db5c383d6d5d5d15246d5d2817f0855242c0-1200x800.webp?fm=webp",
-  "cabCrysta": "https://cdn.sanity.io/images/g0myfztr/production/e34f923512374b3261f2cf5572c7001ded7ba3e2-1200x800.webp?fm=webp"
+  "cabCrysta": "https://cdn.sanity.io/images/g0myfztr/production/e34f923512374b3261f2cf5572c7001ded7ba3e2-1200x800.webp?fm=webp",
+  "eclass": "https://cdn.sanity.io/images/g0myfztr/production/6ce5122c7257c1517663ac8396aa4bedace54a7e-1200x800.webp?fm=webp",
+  "gwagon": "https://cdn.sanity.io/images/g0myfztr/production/896d1265aeb9d1f0d3d81edceaff6b14fdfd0b45-1200x800.webp?fm=webp"
 };

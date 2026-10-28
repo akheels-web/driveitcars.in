@@ -1,5 +1,7 @@
 'use client';
 
+import { SERVICE_VEHICLE_IMAGES } from '@/data/service-vehicle-images';
+
 import { useState, useRef, useEffect } from 'react';
 import styles from './PremiumHeroSection.module.css';
 
@@ -31,12 +33,12 @@ const SHOWCASE_VEHICLES = [
   {
     id: 'luxury',
     tabLabel: 'Luxury',
-    name: 'Mercedes-Benz & BMW Flagship',
+    name: 'Mercedes-Benz E-Class',
     badge: 'Executive CXO & Wedding Splendor',
-    image: '/assets/img/benz2.png',
+    image: SERVICE_VEHICLE_IMAGES.eclass,
     seats: '5 Seater Luxury',
-    transmission: '9G-Tronic Automatic',
-    fuel: 'Turbo Petrol',
+    transmission: 'Automatic',
+    fuel: 'Diesel',
     feature: 'Suited Chauffeur or Self-Drive',
     categoryKey: 'all',
   },

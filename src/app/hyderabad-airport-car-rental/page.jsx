@@ -1,3 +1,4 @@
+import { SERVICE_VEHICLE_IMAGES } from '@/data/service-vehicle-images';
 import Link from 'next/link';
 import FaqSection from '@/components/FaqSection';
 import SeoSchema, {
@@ -101,7 +102,7 @@ const AIRPORT_TRANSFERS = [
   {
     name: 'Mercedes-Benz / BMW VIP Transfer',
     type: 'Airport Luxury Car Rental',
-    image: '/assets/img/benz2.png',
+    image: SERVICE_VEHICLE_IMAGES.eclass,
     rate: 'VIP Chauffeur Package',
     features: ['Uniformed Chauffeur', 'Red Carpet Cleanliness', 'Bottled Water & Mints', 'VIP Terminal Access'],
     desc: 'For high-profile executives, celebrity arrivals, weddings, and foreign dignitaries.',
