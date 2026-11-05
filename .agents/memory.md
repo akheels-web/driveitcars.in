@@ -504,3 +504,11 @@
 - **Live Verification**:
   - Live HTTP verification on `https://www.driveitcars.in` confirmed 200 OK with custom hero booking engine, showroom switcher, tariff masking, high-res brand logos, and structured JSON-LD schemas actively serving.
 
+## Google Search Console Verification
+- **Verification Meta Tag**:
+  - Added Google Search Console site verification tag (`cZGlAnJhowYYzapWgJZ_osSl1--cKmvsgDtKjePxuh0`) to `metadata.verification.google` in [src/app/layout.jsx](file:///e:/Github/driveitcars/public_html/src/app/layout.jsx).
+  - Generates `<meta name="google-site-verification" content="cZGlAnJhowYYzapWgJZ_osSl1--cKmvsgDtKjePxuh0" />` across all pages in the root `<head>`.
+  - Added `*.log` to `.gitignore` to prevent local execution logs from polluting git commits.
+  - Verified static page generation and metadata output with 0 errors via `npm run build`.
+
+

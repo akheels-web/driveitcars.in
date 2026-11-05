@@ -6,6 +6,9 @@ export const metadata = {
   metadataBase: new URL('https://www.driveitcars.in'),
   title: 'Self Drive Car Rentals in Hyderabad | DriveItCars',
   description: 'Explore self drive cars, daily, weekly and monthly rentals in Hyderabad with DriveItCars. Enquire about hatchbacks, sedans, SUVs and luxury cars.',
+  verification: {
+    google: 'cZGlAnJhowYYzapWgJZ_osSl1--cKmvsgDtKjePxuh0',
+  },
 }
 
 export const viewport = {
