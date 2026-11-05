@@ -548,6 +548,24 @@
   - Uploaded assets to Sanity Asset CDN and published structured PortableText documents with schema markup and internal links.
   - Live blog index (`/blog`) and `sitemap.xml` automatically updated.
 
+## Blog Pagination, Icon Rendering & Showroom Asset Fixes
+- **Blog Guides Pagination**:
+  - Upgraded [src/app/blog/page.jsx](file:///e:/Github/driveitcars/public_html/src/app/blog/page.jsx) with clean server-side pagination (`searchParams.page`).
+  - Set `PAGE_SIZE = 6` guides per page. On Page 1, displays the featured guide hero + first 6 guides. On Page 2+, displays subsequent guides with a context return banner.
+  - Implemented accessible pagination nav bar (`Previous`, numbered page links `/blog?page=X#guides`, `Next`) with gold active indicators and responsive layout in [src/app/blog/blog.module.css](file:///e:/Github/driveitcars/public_html/src/app/blog/blog.module.css).
+  - Configured dynamic canonical and OpenGraph metadata reflecting current page numbers for SEO (`Car Rental Guides in Hyderabad - Page X | DriveItCars`).
+- **Markdown Asterisk Sanitization in PortableText**:
+  - Updated [src/app/blog/[slug]/page.jsx](file:///e:/Github/driveitcars/public_html/src/app/blog/[slug]/page.jsx) with an automatic inline markdown tokenizer in `portableTextComponents`.
+  - Ensures any raw `**text**` strings in Sanity body blocks or list items render cleanly as `<strong>` HTML elements, permanently preventing raw asterisks on live articles.
+- **Hyderabad Airport Rental Missing Icons**:
+  - Diagnosed blank yellow icon boxes in [src/app/hyderabad-airport-car-rental/page.jsx](file:///e:/Github/driveitcars/public_html/src/app/hyderabad-airport-car-rental/page.jsx).
+  - Root cause: FontAwesome 5 classes (`fa fa-plane-arrival`, `fa fa-gem`) were used, but the site stylesheet uses FontAwesome 4.7 (`font-awesome.min.css`).
+  - Fix: Updated to valid FA 4.7 classes `fa fa-plane` for "Airport Pickup Hyderabad" and `fa fa-diamond` for "Airport Luxury Car Rental".
+- **Homepage Showroom Luxury Car Image Blending**:
+  - In [src/components/PremiumHeroSection.jsx](file:///e:/Github/driveitcars/public_html/src/components/PremiumHeroSection.jsx), replaced opaque studio-background WebP (`SERVICE_VEHICLE_IMAGES.eclass`) with transparent RGBA cutout [public/assets/img/benz2.png](file:///e:/Github/driveitcars/public_html/public/assets/img/benz2.png).
+  - The Mercedes-Benz E-Class now seamlessly blends into the card background matching the Thar, Innova Crysta, and Swift cutouts without any box borders.
+
+
 
 
 
