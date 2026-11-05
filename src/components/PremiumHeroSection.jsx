@@ -35,7 +35,7 @@ const SHOWCASE_VEHICLES = [
     tabLabel: 'Luxury',
     name: 'Mercedes-Benz E-Class',
     badge: 'Executive CXO & Wedding Splendor',
-    image: SERVICE_VEHICLE_IMAGES.eclass,
+    image: '/assets/img/benz2.png',
     seats: '5 Seater Luxury',
     transmission: 'Automatic',
     fuel: 'Diesel',

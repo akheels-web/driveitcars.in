@@ -264,7 +264,7 @@ export default function HyderabadAirportCarRentalPage() {
             <div className="col-lg-3 col-md-6">
               <div style={{ background: '#fff', padding: '24px', borderRadius: '14px', border: '1px solid #e2e8f0', height: '100%', boxShadow: '0 4px 15px rgba(0,0,0,0.03)' }}>
                 <div style={{ width: '46px', height: '46px', borderRadius: '10px', background: 'rgba(255, 185, 7, 0.15)', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#d49500', fontSize: '20px', marginBottom: '14px' }}>
-                  <i className="fa fa-plane-arrival" />
+                  <i className="fa fa-plane" />
                 </div>
                 <h4 style={{ fontSize: '17px', fontWeight: 700, color: '#0f172a', marginBottom: '8px' }}>Airport Pickup Hyderabad</h4>
                 <p style={{ fontSize: '13px', color: '#64748b', lineHeight: '1.6', margin: 0 }}>
@@ -276,7 +276,7 @@ export default function HyderabadAirportCarRentalPage() {
             <div className="col-lg-3 col-md-6">
               <div style={{ background: '#fff', padding: '24px', borderRadius: '14px', border: '1px solid #e2e8f0', height: '100%', boxShadow: '0 4px 15px rgba(0,0,0,0.03)' }}>
                 <div style={{ width: '46px', height: '46px', borderRadius: '10px', background: 'rgba(255, 185, 7, 0.15)', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#d49500', fontSize: '20px', marginBottom: '14px' }}>
-                  <i className="fa fa-gem" />
+                  <i className="fa fa-diamond" />
                 </div>
                 <h4 style={{ fontSize: '17px', fontWeight: 700, color: '#0f172a', marginBottom: '8px' }}>
                   <Link href="/luxurycars" style={{ color: '#0f172a' }}>Airport Luxury Car Rental</Link>

@@ -38,13 +38,43 @@ function coverFor(post) {
   return postImage(post) || undefined;
 }
 
+function formatInlineMarkdown(text) {
+  if (typeof text !== 'string' || !text.includes('**')) return text;
+  const parts = text.split(/(\*\*[^*]+\*\*)/g);
+  return parts.map((part, i) => {
+    if (part.startsWith('**') && part.endsWith('**')) {
+      return <strong key={i}>{part.slice(2, -2)}</strong>;
+    }
+    return part;
+  });
+}
+
+function renderWithMarkdown(children) {
+  if (typeof children === 'string') {
+    return formatInlineMarkdown(children);
+  }
+  if (Array.isArray(children)) {
+    return children.map((child, idx) => {
+      if (typeof child === 'string') {
+        return <span key={idx}>{formatInlineMarkdown(child)}</span>;
+      }
+      return child;
+    });
+  }
+  return children;
+}
+
 const portableTextComponents = {
   block: {
-    h1: ({ children, value }) => <h2 id={sectionId(value)}>{children}</h2>,
-    h2: ({ children, value }) => <h2 id={sectionId(value)}>{children}</h2>,
-    h3: ({ children }) => <h3>{children}</h3>,
+    normal: ({ children }) => <p>{renderWithMarkdown(children)}</p>,
+    h1: ({ children, value }) => <h2 id={sectionId(value)}>{renderWithMarkdown(children)}</h2>,
+    h2: ({ children, value }) => <h2 id={sectionId(value)}>{renderWithMarkdown(children)}</h2>,
+    h3: ({ children }) => <h3>{renderWithMarkdown(children)}</h3>,
+    blockquote: ({ children }) => <blockquote>{renderWithMarkdown(children)}</blockquote>,
   },
+  listItem: ({ children }) => <li>{renderWithMarkdown(children)}</li>,
   marks: {
+    strong: ({ children }) => <strong>{children}</strong>,
     link: ({ children, value }) => {
       const href = typeof value?.href === 'string' ? value.href.trim() : '';
       const isInternal = href.startsWith('/') && !/^[\\/]{2}/.test(href);

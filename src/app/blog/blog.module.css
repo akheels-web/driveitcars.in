@@ -75,6 +75,91 @@
 .callout p, .sideCallout p { color: var(--journal-muted); font-size: 15px; line-height: 1.85; max-width: 580px; }
 .button { display: inline-flex; align-items: center; justify-content: center; flex: 0 0 auto; gap: 16px; min-height: 48px; padding: 12px 24px; background: var(--journal-gold); color: var(--journal-ink); font-weight: 500; font-size: 14px; line-height: 1.6; border-radius: 8px; border: 0; cursor: pointer; }
 .button:hover { background: #e9a900; color: var(--journal-ink); }
+
+/* Page context banner for pagination */
+.pageBanner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  padding: 16px 24px;
+  background: var(--journal-soft);
+  border-radius: 12px;
+  margin-bottom: 32px;
+  font-size: 14px;
+  color: var(--journal-muted);
+}
+.pageBannerLink {
+  color: var(--journal-ink);
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  transition: color 0.2s ease;
+}
+.pageBannerLink:hover {
+  color: #b78200;
+}
+
+/* Pagination controls */
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 56px;
+  padding-top: 36px;
+  border-top: 1px solid var(--journal-line);
+}
+.pageNumbers {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.pageNum,
+.pageNavBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-width: 42px;
+  height: 42px;
+  padding: 0 16px;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--journal-ink);
+  background: var(--journal-paper);
+  border: 1px solid var(--journal-line);
+  transition: all 0.2s ease;
+  text-decoration: none;
+}
+.pageNum {
+  padding: 0;
+  width: 42px;
+}
+.pageNum:hover,
+.pageNavBtn:hover:not(.pageNavDisabled) {
+  background: var(--journal-soft);
+  border-color: #cbd5e1;
+  color: #000;
+}
+.pageNumActive {
+  background: var(--journal-gold) !important;
+  border-color: var(--journal-gold) !important;
+  color: #000 !important;
+  font-weight: 700;
+  cursor: default;
+  box-shadow: 0 4px 12px rgba(255, 185, 7, 0.35);
+}
+.pageNavDisabled {
+  color: #94a3b8;
+  border-color: #e2e8f0;
+  background: #f8fafc;
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
 .empty { padding: 64px 32px; text-align: center; background: var(--journal-soft); border-radius: 16px; }
 .empty h2 { font-size: 28px; line-height: 1.4; color: var(--journal-ink); margin-bottom: 16px; }
 .empty p { color: var(--journal-muted); font-size: 16px; line-height: 1.8; max-width: 520px; margin: 0 auto 24px; }
@@ -183,6 +268,10 @@
   .related { margin-top: 40px; padding-top: 40px; }
   .related .sectionHeading { align-items: baseline; }
   .related .textLink { font-size: 12px; gap: 6px; }
+  .pagination { margin-top: 40px; padding-top: 24px; gap: 8px; }
+  .pageNum, .pageNavBtn { min-width: 38px; height: 38px; font-size: 13px; padding: 0 12px; }
+  .pageNum { width: 38px; padding: 0; }
+  .pageBanner { padding: 14px 18px; font-size: 13px; }
 }
 
 @media (prefers-reduced-motion: reduce) {

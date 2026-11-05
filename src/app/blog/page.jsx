@@ -10,23 +10,36 @@ export const revalidate = 0;
 const title = 'Car Rental Guides in Hyderabad | DriveItCars';
 const description = 'Explore DriveItCars guides to daily, weekly and monthly car rentals in Hyderabad, with practical advice on hatchbacks, sedans, SUVs and family travel.';
 const url = 'https://www.driveitcars.in/blog';
+const PAGE_SIZE = 6;
 
-export const metadata = {
-  title,
-  description,
-  alternates: { canonical: url },
-  openGraph: {
-    title,
+export async function generateMetadata(props) {
+  const searchParams = await props?.searchParams;
+  const rawPage = parseInt(searchParams?.page, 10);
+  const pageNum = Number.isInteger(rawPage) && rawPage > 1 ? rawPage : 1;
+  const pageSuffix = pageNum > 1 ? ` - Page ${pageNum}` : '';
+  const pageUrl = pageNum > 1 ? `${url}?page=${pageNum}` : url;
+
+  return {
+    title: `${title}${pageSuffix}`,
     description,
-    url,
-    siteName: 'DriveItCars',
-    locale: 'en_IN',
-    type: 'website',
-  },
-  twitter: { card: 'summary', title, description },
-};
+    alternates: { canonical: pageUrl },
+    openGraph: {
+      title: `${title}${pageSuffix}`,
+      description,
+      url: pageUrl,
+      siteName: 'DriveItCars',
+      locale: 'en_IN',
+      type: 'website',
+    },
+    twitter: { card: 'summary', title: `${title}${pageSuffix}`, description },
+  };
+}
 
-export default async function BlogIndex() {
+export default async function BlogIndex(props) {
+  const searchParams = await props?.searchParams;
+  const rawPage = parseInt(searchParams?.page, 10);
+  const requestedPage = Number.isInteger(rawPage) && rawPage > 0 ? rawPage : 1;
+
   let posts = [];
   let unavailable = false;
 
@@ -40,7 +53,12 @@ export default async function BlogIndex() {
     unavailable = true;
   }
 
-  const [featured, ...guides] = posts || [];
+  const [featured, ...allGuides] = posts || [];
+  const totalGuides = allGuides.length;
+  const totalPages = Math.max(1, Math.ceil(totalGuides / PAGE_SIZE));
+  const currentPage = Math.min(requestedPage, totalPages);
+  const startIndex = (currentPage - 1) * PAGE_SIZE;
+  const displayedGuides = allGuides.slice(startIndex, startIndex + PAGE_SIZE);
   const featuredImage = featured ? postImage(featured, 1200, 720) : null;
 
   return (
@@ -50,7 +68,15 @@ export default async function BlogIndex() {
         <nav className={styles.breadcrumb} aria-label="Breadcrumb">
           <Link href="/">Home</Link>
           <span aria-hidden="true">/</span>
-          <span aria-current="page">Journal</span>
+          {currentPage > 1 ? (
+            <>
+              <Link href="/blog">Journal</Link>
+              <span aria-hidden="true">/</span>
+              <span aria-current="page">Page {currentPage}</span>
+            </>
+          ) : (
+            <span aria-current="page">Journal</span>
+          )}
         </nav>
 
         <header className={styles.masthead}>
@@ -66,39 +92,98 @@ export default async function BlogIndex() {
 
         {featured ? (
           <>
-            <article className={styles.featured} id={guides.length ? undefined : 'guides'}>
-              <Link href={'/blog/' + featured.slug.current} className={styles.featuredImage}>
-                {featuredImage ? (
-                  <img
-                    src={featuredImage}
-                    alt={featured.mainImage.alt || featured.title}
-                    width={1200}
-                    height={720}
-                    loading="eager"
-                    fetchPriority="high"
-                  />
-                ) : <span className={styles.imageFallback}>DriveItCars <span>Rental guides</span></span>}
-              </Link>
-              <div className={styles.featuredCopy}>
-                <span className={styles.eyebrow}>FEATURED GUIDE</span>
-                <PostMeta post={featured} />
-                <h2><Link href={'/blog/' + featured.slug.current}>{featured.title}</Link></h2>
-                <p className={styles.featuredExcerpt}>{postExcerpt(featured)}</p>
-                <Link href={'/blog/' + featured.slug.current} className={styles.textLink}>
-                  Read the guide <ArrowIcon />
+            {currentPage === 1 && (
+              <article className={styles.featured} id={allGuides.length ? undefined : 'guides'}>
+                <Link href={'/blog/' + featured.slug.current} className={styles.featuredImage}>
+                  {featuredImage ? (
+                    <img
+                      src={featuredImage}
+                      alt={featured.mainImage.alt || featured.title}
+                      width={1200}
+                      height={720}
+                      loading="eager"
+                      fetchPriority="high"
+                    />
+                  ) : <span className={styles.imageFallback}>DriveItCars <span>Rental guides</span></span>}
+                </Link>
+                <div className={styles.featuredCopy}>
+                  <span className={styles.eyebrow}>FEATURED GUIDE</span>
+                  <PostMeta post={featured} />
+                  <h2><Link href={'/blog/' + featured.slug.current}>{featured.title}</Link></h2>
+                  <p className={styles.featuredExcerpt}>{postExcerpt(featured)}</p>
+                  <Link href={'/blog/' + featured.slug.current} className={styles.textLink}>
+                    Read the guide <ArrowIcon />
+                  </Link>
+                </div>
+              </article>
+            )}
+
+            {currentPage > 1 && (
+              <div className={styles.pageBanner}>
+                <span>Viewing Page <strong>{currentPage}</strong> of <strong>{totalPages}</strong></span>
+                <Link href="/blog#guides" className={styles.pageBannerLink}>
+                  &larr; Return to Featured Guide (Page 1)
                 </Link>
               </div>
-            </article>
+            )}
 
-            {guides.length > 0 && (
+            {displayedGuides.length > 0 && (
               <section id="guides" className={styles.guides} aria-labelledby="more-guides-heading">
                 <div className={styles.sectionHeading}>
-                  <h2 id="more-guides-heading">More for the road</h2>
-                  <span>{guides.length} {guides.length === 1 ? 'guide' : 'guides'}</span>
+                  <h2 id="more-guides-heading">{currentPage === 1 ? 'More for the road' : `All Guides — Page ${currentPage}`}</h2>
+                  <span>Showing {startIndex + 1}–{Math.min(startIndex + PAGE_SIZE, totalGuides)} of {totalGuides} {totalGuides === 1 ? 'guide' : 'guides'}</span>
                 </div>
                 <div className={styles.grid}>
-                  {guides.map((post) => <GuideCard key={post._id} post={post} />)}
+                  {displayedGuides.map((post) => <GuideCard key={post._id} post={post} />)}
                 </div>
+
+                {totalPages > 1 && (
+                  <nav className={styles.pagination} aria-label="Guides pagination">
+                    {currentPage > 1 ? (
+                      <Link
+                        href={currentPage === 2 ? '/blog#guides' : `/blog?page=${currentPage - 1}#guides`}
+                        className={styles.pageNavBtn}
+                        aria-label="Previous page"
+                      >
+                        <i className="fa fa-angle-left" aria-hidden="true" /> Previous
+                      </Link>
+                    ) : (
+                      <span className={`${styles.pageNavBtn} ${styles.pageNavDisabled}`} aria-disabled="true">
+                        <i className="fa fa-angle-left" aria-hidden="true" /> Previous
+                      </span>
+                    )}
+
+                    <div className={styles.pageNumbers}>
+                      {Array.from({ length: totalPages }, (_, i) => i + 1).map((p) => {
+                        const isCurrent = p === currentPage;
+                        const href = p === 1 ? '/blog#guides' : `/blog?page=${p}#guides`;
+                        return isCurrent ? (
+                          <span key={p} className={`${styles.pageNum} ${styles.pageNumActive}`} aria-current="page">
+                            {p}
+                          </span>
+                        ) : (
+                          <Link key={p} href={href} className={styles.pageNum}>
+                            {p}
+                          </Link>
+                        );
+                      })}
+                    </div>
+
+                    {currentPage < totalPages ? (
+                      <Link
+                        href={`/blog?page=${currentPage + 1}#guides`}
+                        className={styles.pageNavBtn}
+                        aria-label="Next page"
+                      >
+                        Next <i className="fa fa-angle-right" aria-hidden="true" />
+                      </Link>
+                    ) : (
+                      <span className={`${styles.pageNavBtn} ${styles.pageNavDisabled}`} aria-disabled="true">
+                        Next <i className="fa fa-angle-right" aria-hidden="true" />
+                      </span>
+                    )}
+                  </nav>
+                )}
               </section>
             )}
           </>
