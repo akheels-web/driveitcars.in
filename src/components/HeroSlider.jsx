@@ -92,6 +92,9 @@ export default function HeroSlider({ customBanners = null }) {
                 src={slide.src || slide}
                 alt={slide.alt || `DriveIt Slide ${idx + 1}`}
                 className="hero-slider-img"
+                loading={idx === 0 ? "eager" : "lazy"}
+                fetchPriority={idx === 0 ? "high" : "low"}
+                decoding="async"
               />
             </Link>
           </div>

@@ -26,7 +26,7 @@ export default function CarCard({ car }) {
           {car.kmPerDay && <li><i className="fa fa-car" /> Km: {car.kmPerDay}</li>}
           {car.seats && <li><i className="fa fa-users" /> {car.seats} Seats</li>}
           {car.extraKmRate && <li><i className="fa fa-road" /> Extra: {car.extraKmRate}</li>}
-          {car.extraHrRate && <li><i className="fas fa-gas-pump" /> Extra: {car.extraHrRate}</li>}
+          {car.extraHrRate && <li><i className="fa fa-clock-o" /> Extra: {car.extraHrRate}</li>}
         </ul>
         <div className="offer-action">
           <a href="tel:+916300041186" className="offer-btn-1">

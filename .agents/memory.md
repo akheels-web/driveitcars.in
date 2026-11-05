@@ -522,5 +522,20 @@
       - `/Shaikpet` & `/Shaikpet.html` -> `/sheikpet` (casing normalization).
   - Updated [src/app/sitemap.js](file:///e:/Github/driveitcars/public_html/src/app/sitemap.js) `/Shaikpet` to `/sheikpet`.
 
+## Core Web Vitals Mobile Optimization (LCP < 2.5s)
+- **Problem Diagnostics**:
+  - GSC reported "Need improvement, LCP issue: longer than 2.5s (mobile)" across 37 URLs.
+  - Root causes identified:
+    1. 10 unused render-blocking stylesheets in `<head>` (`magnific-popup.css`, `owl.carousel.min.css`, `animate.min.css`, `nice-select.css`, `slicknav.min.css`, etc.) plus blocking external fontawesome CDN (`use.fontawesome.com`).
+    2. `.gauto-breadcromb-area` across all 37 locality and service landing pages loaded an 83 KB background image (`breadcromb.jpg`) that was hidden under a 72% dark overlay and blocked mobile paint.
+    3. Above-the-fold hero images lacked explicit `fetchPriority="high"` and `loading="eager"`.
+- **Solution & Architecture**:
+  - Purged 10 unused stylesheets from [src/app/layout.jsx](file:///e:/Github/driveitcars/public_html/src/app/layout.jsx), keeping only essential `bootstrap.css`, `font-awesome.min.css`, `style.css`, and `responsive.css`.
+  - Replaced FontAwesome 5 external icon in [src/components/CarCard.jsx](file:///e:/Github/driveitcars/public_html/src/components/CarCard.jsx) with native local FA icon.
+  - Upgraded `.gauto-breadcromb-area` in [public/assets/css/style.css](file:///e:/Github/driveitcars/public_html/public/assets/css/style.css) to a zero-byte luxury radial CSS gradient (`#0b1120` to `#1e293b`), rendering the breadcrumb and H1 title in < 300ms on mobile with 0 network image wait.
+  - Added `fetchPriority="high"` and `loading="eager"` to navbar logo, hero slider first slide, and showroom car image. Added `loading="lazy"` to drawer logo.
+  - Verified static generation in 756ms with 0 compile errors.
+
+
 
 

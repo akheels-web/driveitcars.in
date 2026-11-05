@@ -45,8 +45,16 @@ function Logo({ settings, light = false, onNavigate }) {
   const fallback = light ? '/logo2.png' : '/logo.png';
   return (
     <Link href="/" className={styles.brand} onClick={onNavigate} aria-label="DriveItCars home">
-      <img src={(light ? settings.footerLogoUrl : settings.logoUrl) || fallback} alt="DriveItCars" width={176} height={50}
-        onError={(event) => { if (event.currentTarget.getAttribute('src') !== fallback) event.currentTarget.src = fallback; }} />
+      <img
+        src={(light ? settings.footerLogoUrl : settings.logoUrl) || fallback}
+        alt="DriveItCars"
+        width={176}
+        height={50}
+        loading={light ? "lazy" : "eager"}
+        fetchPriority={light ? "low" : "high"}
+        decoding="async"
+        onError={(event) => { if (event.currentTarget.getAttribute('src') !== fallback) event.currentTarget.src = fallback; }}
+      />
       <span>Hyderabad car rentals</span>
     </Link>
   );

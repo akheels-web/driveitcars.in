@@ -559,6 +559,9 @@ Please share vehicle availability, best tariffs, and booking confirmation.`;
                     src={activeCar.image}
                     alt={activeCar.name}
                     className="showroom-car-image animate-fade-in"
+                    loading="eager"
+                    fetchPriority="high"
+                    decoding="async"
                   />
                 </div>
 
