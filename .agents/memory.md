@@ -565,6 +565,24 @@
   - In [src/components/PremiumHeroSection.jsx](file:///e:/Github/driveitcars/public_html/src/components/PremiumHeroSection.jsx), replaced opaque studio-background WebP (`SERVICE_VEHICLE_IMAGES.eclass`) with transparent RGBA cutout [public/assets/img/benz2.png](file:///e:/Github/driveitcars/public_html/public/assets/img/benz2.png).
   - The Mercedes-Benz E-Class now seamlessly blends into the card background matching the Thar, Innova Crysta, and Swift cutouts without any box borders.
 
+## Fleet Vehicle Cutouts Modernization (Theme Alignment)
+- **Problem**:
+  - 4 fleet vehicle cards had mismatched, unaligned images breaking the site's transparent cutout theme:
+    1. **Skoda Slavia**: Had an outdoor landscape sunset beach photo with two cars.
+    2. **Volkswagen Virtus**: Had a lifestyle promo shot with a person walking in front of a building.
+    3. **Toyota Innova Hycross**: Had a low-res (350x150) blurry white box asset.
+    4. **Maruti Suzuki XL6**: Had a pitch-black rectangular background block.
+- **Solution**:
+  - Generated commercial studio photography for all 4 models centered at 3/4 front studio angle with pristine automotive lighting.
+  - Processed images using `sharp` into standard `400 x 213` transparent RGBA PNG cutouts matching `Swift.png`, `5-Thar.png`, and `7-Innova Crysta.png` (21–29% transparency ratio, zero border/background artifacts).
+  - Created new local assets in [public/assets/img/cars/](file:///e:/Github/driveitcars/public_html/public/assets/img/cars/):
+    - [slavia.png](file:///e:/Github/driveitcars/public_html/public/assets/img/cars/slavia.png) (Crystal Blue metallic)
+    - [virtus.png](file:///e:/Github/driveitcars/public_html/public/assets/img/cars/virtus.png) (Wild Cherry Red GT)
+    - [hycross.png](file:///e:/Github/driveitcars/public_html/public/assets/img/cars/hycross.png) (Pearl White hybrid)
+    - [xl6.png](file:///e:/Github/driveitcars/public_html/public/assets/img/cars/xl6.png) (Nexa Blue metallic)
+  - Updated [src/data/vehicle-images.js](file:///e:/Github/driveitcars/public_html/src/data/vehicle-images.js) to reference the local transparent assets, syncing both [CarOffersSection.jsx](file:///e:/Github/driveitcars/public_html/src/components/CarOffersSection.jsx) and [cars.js](file:///e:/Github/driveitcars/public_html/src/sanity/lib/cars.js).
+
+
 
 
 
