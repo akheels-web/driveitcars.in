@@ -445,15 +445,13 @@ A monthly car subscription from DriveItCars is a modern **all-inclusive mobility
 
 Let us look at real numbers for a popular 5-seater compact SUV over a 12-month period:
 
-| Expense Category | Buying New Car (12-Month Window) | DriveItCars Monthly Subscription |
-| :--- | :--- | :--- |
-| **Initial Capital / Down Payment** | ₹3,00,000 (Down payment + Road tax) | **₹0** (Only small refundable deposit) |
-| **Monthly Outflow (EMI vs Fee)** | ₹24,500 $\\times$ 12 = ₹2,94,000 | ₹34,999 $\\times$ 12 = ₹4,19,988 |
-| **Annual Comprehensive Insurance** | ₹42,000 | **₹0** (Included) |
-| **Scheduled Servicing & Wear** | ₹14,000 | **₹0** (Included) |
-| **1st Year Asset Depreciation** | ₹2,80,000 (Lost vehicle equity) | **₹0** (Zero asset risk) |
-| **Total 1-Year Financial Outflow** | **₹6,30,000+** | **₹4,19,988** |
-| **Relocation / Resale Headaches** | High (must find buyer or ship interstate) | **Zero (Return car with 1-day notice)** |
+- **Initial Capital / Down Payment:** Buying New Car: ₹3,00,000 (Down payment + Road tax) vs. DriveItCars Subscription: **₹0** (Only modest refundable security deposit).
+- **Monthly Outflow:** Buying New Car: ₹24,500 monthly EMI (₹2,94,000/year) vs. DriveItCars Subscription: ₹34,999/month (₹4,19,988/year all-inclusive).
+- **Annual Comprehensive Insurance:** Buying New Car: ₹42,000 out-of-pocket vs. DriveItCars Subscription: **₹0** (Full comprehensive insurance included).
+- **Scheduled Servicing & Wear:** Buying New Car: ₹14,000 out-of-pocket vs. DriveItCars Subscription: **₹0** (All scheduled servicing and wear included).
+- **First-Year Asset Depreciation:** Buying New Car: ₹2,80,000 lost in market value vs. DriveItCars Subscription: **₹0** (Zero depreciation or asset value risk).
+- **Total 1-Year Financial Outflow:** Buying New Car: **₹6,30,000+** vs. DriveItCars Subscription: **₹4,19,988**.
+- **Relocation & Resale Headaches:** Buying New Car: High (must find buyers, settle loans, or ship interstate) vs. DriveItCars Subscription: **Zero** (Return or swap vehicles anytime with 24-hour notice).
 
 When you factor in depreciation, upfront taxes, and capital opportunity cost, **subscribing saves you over ₹2,00,000 in your first year alone**, while preserving your liquid capital.
 
@@ -610,3 +608,4 @@ Experience the Pearl City on your own terms. [Reserve your self-drive car with D
 `
   }
 ];
+

@@ -1,5 +1,3 @@
-import fs from 'fs';
-import path from 'path';
 import crypto from 'crypto';
 import { createClient } from 'next-sanity';
 import { blogArticles } from './blog-articles-data.mjs';
@@ -12,26 +10,33 @@ const client = createClient({
   useCdn: false,
 });
 
-const imagePaths = {
-  image1: 'C:\\Users\\Akheel\\.gemini\\antigravity\\brain\\8b4b59e3-ccdf-4bdc-ac35-37f55ac12e2f\\blog_weekend_road_trips_hyderabad_1793877750380.jpg',
-  image2: 'C:\\Users\\Akheel\\.gemini\\antigravity\\brain\\8b4b59e3-ccdf-4bdc-ac35-37f55ac12e2f\\blog_airport_car_rental_hyderabad_1793877771137.jpg',
-  image3: 'C:\\Users\\Akheel\\.gemini\\antigravity\\brain\\8b4b59e3-ccdf-4bdc-ac35-37f55ac12e2f\\blog_luxury_wedding_car_rental_1793877797055.jpg',
-  image4: 'C:\\Users\\Akheel\\.gemini\\antigravity\\brain\\8b4b59e3-ccdf-4bdc-ac35-37f55ac12e2f\\blog_monthly_corporate_car_rental_1793877816943.jpg',
-  image5: 'C:\\Users\\Akheel\\.gemini\\antigravity\\brain\\8b4b59e3-ccdf-4bdc-ac35-37f55ac12e2f\\blog_hyderabad_orr_cable_bridge_1793877839683.jpg',
-};
-
 function randomKey() {
   return crypto.randomBytes(8).toString('hex');
 }
 
-function parseParagraphLine(text, style = 'normal', listItem = undefined) {
-  const linkRegex = /\[([^\]]+)\]\(([^)]+)\)/g;
-  const children = [];
-  const markDefs = [];
+function cleanText(text) {
+  return text
+    .replace(/\\\$\\s*\\\\+rightarrow\\s*\\\$/g, ' → ')
+    .replace(/\\\\+rightarrow/g, ' → ')
+    .replace(/\\\$\\s*\\\\+times\\s*\\\$/g, ' × ')
+    .replace(/\\\\+times/g, ' × ');
+}
+
+function parseParagraphLine(rawText, style = 'normal') {
+  const text = cleanText(rawText);
+  // Pattern matches:
+  // 1. **[text](url)** or [**text**](url) (bold link)
+  // 2. [text](url) (link)
+  // 3. **bold**: \*\*([^*]+)\*\*
+  // 4. *italic*: \*([^*]+)\*
+  const pattern = /(\*\*\[([^\]]+)\]\(([^)]+)\)\*\*|\[\*\*([^\]]+)\*\*\]\(([^)]+)\)|\[([^\]]+)\]\(([^)]+)\)|\*\*([^*]+)\*\*|\*([^*]+)\*)/g;
+
   let lastIndex = 0;
   let match;
+  const children = [];
+  const markDefs = [];
 
-  while ((match = linkRegex.exec(text)) !== null) {
+  while ((match = pattern.exec(text)) !== null) {
     if (match.index > lastIndex) {
       children.push({
         _key: randomKey(),
@@ -40,19 +45,44 @@ function parseParagraphLine(text, style = 'normal', listItem = undefined) {
         marks: [],
       });
     }
-    const markKey = 'link_' + randomKey();
-    markDefs.push({
-      _key: markKey,
-      _type: 'link',
-      href: match[2],
-    });
-    children.push({
-      _key: randomKey(),
-      _type: 'span',
-      text: match[1],
-      marks: [markKey],
-    });
-    lastIndex = linkRegex.lastIndex;
+
+    if (match[1].startsWith('**[') || match[1].startsWith('[**')) {
+      const linkText = match[2] || match[4];
+      const linkUrl = match[3] || match[5];
+      const linkKey = 'link_' + randomKey();
+      markDefs.push({ _key: linkKey, _type: 'link', href: linkUrl });
+      children.push({
+        _key: randomKey(),
+        _type: 'span',
+        text: linkText,
+        marks: ['strong', linkKey],
+      });
+    } else if (match[6] !== undefined) {
+      const linkKey = 'link_' + randomKey();
+      markDefs.push({ _key: linkKey, _type: 'link', href: match[7] });
+      children.push({
+        _key: randomKey(),
+        _type: 'span',
+        text: match[6],
+        marks: [linkKey],
+      });
+    } else if (match[8] !== undefined) {
+      children.push({
+        _key: randomKey(),
+        _type: 'span',
+        text: match[8],
+        marks: ['strong'],
+      });
+    } else if (match[9] !== undefined) {
+      children.push({
+        _key: randomKey(),
+        _type: 'span',
+        text: match[9],
+        marks: ['em'],
+      });
+    }
+
+    lastIndex = pattern.lastIndex;
   }
 
   if (lastIndex < text.length) {
@@ -93,7 +123,7 @@ function parseMarkdownToBlocks(markdown) {
         _key: randomKey(),
         _type: 'block',
         style: 'h3',
-        children: [{ _key: randomKey(), _type: 'span', text: rawLine.replace(/^###\s+/, ''), marks: [] }],
+        children: [{ _key: randomKey(), _type: 'span', text: cleanText(rawLine.replace(/^###\s+/, '')), marks: [] }],
         markDefs: [],
       });
     } else if (rawLine.startsWith('## ')) {
@@ -101,7 +131,7 @@ function parseMarkdownToBlocks(markdown) {
         _key: randomKey(),
         _type: 'block',
         style: 'h2',
-        children: [{ _key: randomKey(), _type: 'span', text: rawLine.replace(/^##\s+/, ''), marks: [] }],
+        children: [{ _key: randomKey(), _type: 'span', text: cleanText(rawLine.replace(/^##\s+/, '')), marks: [] }],
         markDefs: [],
       });
     } else if (rawLine.startsWith('- ') || rawLine.startsWith('* ')) {
@@ -115,70 +145,40 @@ function parseMarkdownToBlocks(markdown) {
   return blocks;
 }
 
-async function uploadImageToSanity(filePath, filename) {
-  console.log(`Uploading ${filename} to Sanity...`);
-  const stream = fs.createReadStream(filePath);
-  const asset = await client.assets.upload('image', stream, {
-    filename: filename,
-    contentType: 'image/jpeg',
-  });
-  console.log(`Uploaded ${filename} => Asset ID: ${asset._id}`);
-  return asset;
-}
-
-async function publishAll() {
-  console.log('=== STARTING 5 BLOG PUBLICATION VIA SANITY CMS ===');
+async function updateAll() {
+  console.log('=== UPDATING 5 BLOGS WITH PROPER PORTABLETEXT FORMATTING ===\n');
 
   for (let i = 0; i < blogArticles.length; i++) {
     const article = blogArticles[i];
-    console.log(`\nProcessing [${i + 1}/5]: ${article.title}`);
-
-    // 1. Upload image
-    const imgPath = imagePaths[article.imageKey];
-    const asset = await uploadImageToSanity(imgPath, `${article.slug}.jpg`);
-
-    // 2. Parse body blocks
-    const bodyBlocks = parseMarkdownToBlocks(article.content);
-    console.log(`Generated ${bodyBlocks.length} content blocks.`);
-
-    // 3. Prepare document
     const docId = `driveitcars-guide-${article.slug}`;
-    const doc = {
-      _id: docId,
-      _type: 'post',
-      title: article.title,
-      slug: {
-        _type: 'slug',
-        current: article.slug,
-      },
-      excerpt: article.excerpt,
-      seoTitle: article.seoTitle,
-      seoDescription: article.seoDescription,
-      author: 'DriveItCars',
-      keywords: article.keywords,
-      publishedAt: new Date().toISOString(),
-      mainImage: {
-        _type: 'image',
-        asset: {
-          _type: 'reference',
-          _ref: asset._id,
-        },
-        alt: article.alt,
-        caption: 'DriveItCars editorial guide illustration.',
-      },
-      body: bodyBlocks,
-    };
+    console.log(`Processing [${i + 1}/5]: ${article.title}`);
 
-    // 4. Create or replace in Sanity
-    console.log(`Writing document ${docId} to Sanity...`);
-    const result = await client.createOrReplace(doc);
-    console.log(`Successfully published: ${result._id} (Slug: /blog/${article.slug})`);
+    // Fetch existing post to preserve mainImage asset
+    const existing = await client.fetch(`*[_id == $docId][0]`, { docId });
+    if (!existing) {
+      console.warn(`Warning: Existing document not found for ${docId}`);
+      continue;
+    }
+
+    // Parse blocks with strong / em / link marks
+    const bodyBlocks = parseMarkdownToBlocks(article.content);
+    console.log(`Generated ${bodyBlocks.length} formatted blocks.`);
+
+    // Patch document
+    await client
+      .patch(docId)
+      .set({
+        body: bodyBlocks,
+      })
+      .commit();
+
+    console.log(`✓ Updated ${docId} successfully! (No raw asterisks)\n`);
   }
 
-  console.log('\n=== ALL 5 BLOGS PUBLISHED SUCCESSFULLY ===');
+  console.log('=== ALL 5 BLOGS UPDATED CLEANLY ===');
 }
 
-publishAll().catch((err) => {
-  console.error('Fatal error during publication:', err);
+updateAll().catch((err) => {
+  console.error('Fatal error updating blogs:', err);
   process.exit(1);
 });
