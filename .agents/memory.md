@@ -504,11 +504,23 @@
 - **Live Verification**:
   - Live HTTP verification on `https://www.driveitcars.in` confirmed 200 OK with custom hero booking engine, showroom switcher, tariff masking, high-res brand logos, and structured JSON-LD schemas actively serving.
 
-## Google Search Console Verification
+## Google Search Console Verification & Legacy 404 Redirects
 - **Verification Meta Tag**:
   - Added Google Search Console site verification tag (`cZGlAnJhowYYzapWgJZ_osSl1--cKmvsgDtKjePxuh0`) to `metadata.verification.google` in [src/app/layout.jsx](file:///e:/Github/driveitcars/public_html/src/app/layout.jsx).
   - Generates `<meta name="google-site-verification" content="cZGlAnJhowYYzapWgJZ_osSl1--cKmvsgDtKjePxuh0" />` across all pages in the root `<head>`.
   - Added `*.log` to `.gitignore` to prevent local execution logs from polluting git commits.
   - Verified static page generation and metadata output with 0 errors via `npm run build`.
+- **Legacy .html 301/308 Permanent Redirects**:
+  - Configured permanent redirects in [next.config.mjs](file:///e:/Github/driveitcars/public_html/next.config.mjs) resolving legacy 404 issues reported in Google Search Console:
+    - Catch-all `/:path*.html` -> `/:path*` for all 45+ legacy HTML files (e.g. `self-drive-car.html`, `hitech-city.html`, `sedan.html`, `suv5.html`, `suv7.html`, `luxurycars.html`, `contact.html`, `ameerpet.html`, `gachibowli-luxury-car-rental.html`, etc.).
+    - Special legacy mappings:
+      - `/index.html`, `/index-2.html`, `/index-2`, `/index` -> `/`
+      - `/nagar-luxury-car-rental.html` -> `/lb-nagar-luxury-car-rental`
+      - `/airport-pickup-&-Drop.html` (and encoded variants) -> `/hyderabad-airport-car-rental`
+      - `/in-station-bus.html` -> `/luxury-buses`
+      - `/www.googletagmanager.com/:path*` -> `/` (broken relative tag manager script URL from old static site).
+      - `/Shaikpet` & `/Shaikpet.html` -> `/sheikpet` (casing normalization).
+  - Updated [src/app/sitemap.js](file:///e:/Github/driveitcars/public_html/src/app/sitemap.js) `/Shaikpet` to `/sheikpet`.
+
 
 

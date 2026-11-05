@@ -68,7 +68,7 @@ export default async function sitemap() {
     '/nampally',
     '/outstation-bus',
     '/secunderabad',
-    '/Shaikpet',
+    '/sheikpet',
     '/sr-nagar',
     '/sun-city',
     '/tarnaka',
