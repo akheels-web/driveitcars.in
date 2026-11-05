@@ -536,6 +536,19 @@
   - Added `fetchPriority="high"` and `loading="eager"` to navbar logo, hero slider first slide, and showroom car image. Added `loading="lazy"` to drawer logo.
   - Verified static generation in 756ms with 0 compile errors.
 
+## Content Marketing & Sanity CMS Blog Publication
+- **Published 5 Fresh High-Intent SEO Articles (1,150–1,300 Words Each)**:
+  1. `/blog/weekend-road-trips-from-hyderabad-self-drive-guide`: Comprehensive 7-destination weekend guide (Ananthagiri Hills, Nagarjuna Sagar, Srisailam, Warangal, Gandikota, Bidar, Medak) with route maps, vehicle matching, toll guides, and checklists.
+  2. `/blog/hyderabad-airport-car-rental-vs-cabs-cost-guide`: Real-world cost comparison between RGIA airport app cabs vs self-drive car rentals over 3 days, surge pricing analysis, and baggage logistics.
+  3. `/blog/luxury-wedding-car-rental-hyderabad-planning-guide`: Guide for Hyderabadi weddings, covering vintage convertibles, Rolls-Royce, Mercedes E-Class, VIP convoys, floral decoration timings, and venue routes.
+  4. `/blog/monthly-car-rental-hyderabad-subscription-benefits`: Financial analysis of monthly self-drive subscriptions vs car ownership/EMI for IT professionals across HITEC City and Financial District.
+  5. `/blog/hyderabad-driving-guide-orr-hitec-city-traffic-tips`: Practical driving guide covering Nehru ORR speed lanes (120 km/h), Durgam Cheruvu cable bridge, traffic cameras/e-challans, and Old City parking.
+- **Media & Sanity CMS Pipeline**:
+  - Generated 5 custom high-resolution editorial illustrations in 16:9 landscape aspect ratio.
+  - Uploaded assets to Sanity Asset CDN and published structured PortableText documents with schema markup and internal links.
+  - Live blog index (`/blog`) and `sitemap.xml` automatically updated.
+
+
 
 
 
